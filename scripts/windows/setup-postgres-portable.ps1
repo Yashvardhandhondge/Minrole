@@ -124,8 +124,8 @@ Ok "Schema dev is there."
 # ---------------------------------------------------------------- 6. connection string
 $conn = "Host=127.0.0.1;Port=$Port;Database=$Database;Username=postgres;Password=$password"
 Set-Content -Path $connFile -Value $conn -NoNewline -Encoding ascii
-Step "Done. Connection string (also saved in $connFile):"
-Write-Host $conn
+Step "Done. Connection string (saved in $connFile; the password is not shown here):"
+Write-Host ($conn -replace 'Password=.*', 'Password=********')
 Write-Host ""
 Write-Host "Use it in this PowerShell window:"
 Write-Host "  `$env:ConnectionStrings__SecureShiftDb = Get-Content $connFile"
