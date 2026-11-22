@@ -70,6 +70,19 @@ See the list at the end of this file; it is copied into the final report.
 19. Plan decisions lock the row (SELECT ... FOR UPDATE): two Executives cannot decide the same plan.
 20. An approval without a comment stores "Approved." (review-plan.js does the same).
 
+## Bugs found in the manual run / rehearsal (all fixed, with a test)
+
+1. Windows PowerShell 5.1 pipes input as UTF-8 WITH a byte-order mark: the first typed line ("1") was not recognised.
+   Fix: input is read as UTF-8 and the BOM is stripped (SystemConsoleIO.StripBom, ConsoleIoTests).
+2. Super Admin > Edit user: the role question was inside roles.First(...), so it was asked again for every role
+   and pressing Enter could change the role (Executive -> Admin). Fix: ask once (ManualRunRegressionTests).
+3. Same bug in the Analysis Wizard company question (company 2+ was asked twice). Fixed the same way.
+4. A wrong number in a choice list said "Target is required"; now "Type a number from 1 to N" (the
+   "required" text is only for an empty answer).
+5. setup-postgres-portable.ps1 hung after "server started": the server kept the script's output pipe open.
+   Fix: pg_ctl is started in its own hidden window (Start-Process + WaitForExit).
+6. Docker Desktop: Host=localhost timed out (IPv6 ::1). Fix: docs and scripts use 127.0.0.1.
+
 ## Known bugs
 
-(none yet)
+(none open)

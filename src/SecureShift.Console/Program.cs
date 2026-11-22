@@ -6,7 +6,8 @@ using SecureShift.ConsoleApp.Hosting;
 using SecureShift.ConsoleApp.Menus;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
-if (!Console.IsInputRedirected) Console.InputEncoding = System.Text.Encoding.UTF8;
+// Typed AND piped input is read as UTF-8 (names, ₹ ...). Some hosts do not allow changing it: then keep the default.
+try { Console.InputEncoding = new System.Text.UTF8Encoding(false); } catch (IOException) { } catch (PlatformNotSupportedException) { }
 
 // Ctrl+C: stop cleanly (no stack trace). Every write runs in a transaction, so a half-done action is rolled back.
 Console.CancelKeyPress += (_, e) =>

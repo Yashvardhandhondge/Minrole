@@ -181,9 +181,9 @@ public sealed class CloudAdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu 
         ui.WriteLine("Type 'cancel' at any question to stop. Nothing is saved before step 3.");
         var companies = await gov.CompaniesAsync();
         if (companies.Count == 0) throw new UserFacingException("Add a company first (Companies > A).");
-        var company = companyId is null
-            ? companies.First(c => c.CompanyName == ui.AskChoice("Company", companies.Select(c => c.CompanyName).ToList()))
-            : companies.First(c => c.CompanyId == companyId);
+        // ask ONCE, then look the answer up (a question inside First(...) would be asked again for every company)
+        var picked = companyId is null ? ui.AskChoice("Company", companies.Select(c => c.CompanyName).ToList()) : null;
+        var company = companyId is null ? companies.First(c => c.CompanyName == picked) : companies.First(c => c.CompanyId == companyId);
         ui.WriteLine($"Company: {company.CompanyName}");
 
         // fixed analysis period (From / To), default from Rule Settings

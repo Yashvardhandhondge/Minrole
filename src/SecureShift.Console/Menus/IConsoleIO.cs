@@ -49,12 +49,33 @@ public sealed class SystemConsoleIO : IConsoleIO
 
     public void WriteErrorLine(string text) => Console.Error.WriteLine(text);
 
-    public string? ReadLine() => Console.ReadLine();
+    private bool firstLine = true;
+
+    public string? ReadLine() => Clean(Console.ReadLine());
+
+    /// <summary>
+    /// Windows PowerShell 5.1 pipes text to programs as UTF-8 WITH a byte-order mark, so the first line of
+    /// piped input would start with an invisible U+FEFF (or "ï»¿" when read with an old code page).
+    /// </summary>
+    public static string? StripBom(string? line)
+    {
+        if (line is null) return null;
+        line = line.TrimStart('﻿');
+        return line.StartsWith("ï»¿", StringComparison.Ordinal) ? line[3..] : line;
+    }
+
+    private string? Clean(string? line)
+    {
+        if (!firstLine || line is null) return line;
+        firstLine = false;
+        return StripBom(line);
+    }
 
     public string? ReadPassword()
     {
         // Piped input (CI end-to-end test): there are no keys to read, just read the line.
-        if (Console.IsInputRedirected) return Console.ReadLine();
+        if (Console.IsInputRedirected) return Clean(Console.ReadLine());
+        firstLine = false;
 
         var chars = new List<char>();
         while (true)

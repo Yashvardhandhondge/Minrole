@@ -153,9 +153,10 @@ public sealed class ConsoleUi(IConsoleIO io)
             if (answer.Length == 0 && current is not null) return current;
             if (int.TryParse(answer, NumberStyles.None, CultureInfo.InvariantCulture, out var n) && n >= 1 && n <= options.Count)
                 return options[n - 1];
-            var exact = options.FirstOrDefault(o => string.Equals(o, answer, StringComparison.OrdinalIgnoreCase));
+            var exact = options.FirstOrDefault(o => string.Equals(o.Trim(), answer, StringComparison.OrdinalIgnoreCase));
             if (exact is not null) return exact;
-            Error(requiredMessage ?? $"Type a number from 1 to {options.Count}");
+            // empty answer = the prototype's "required" message; anything else = a wrong number
+            Error(answer.Length == 0 && requiredMessage is not null ? requiredMessage : $"Type a number from 1 to {options.Count}");
         }
     }
 

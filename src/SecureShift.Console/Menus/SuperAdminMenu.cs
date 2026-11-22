@@ -164,7 +164,11 @@ public sealed class SuperAdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu 
         var phone = ui.AskValid("Phone Number", Validation.Phone, u.Phone?.Trim() ?? "");
         var roleId = u.RoleId;
         if (u.Role.RoleCode == RoleCodes.SuperAdmin) ui.WriteLine("Role: Super Admin (a Super Admin role cannot be removed).");
-        else roleId = roles.First(r => r.RoleName == ui.AskChoice("Role", roles.Select(r => r.RoleName).ToList(), u.Role.RoleName)).RoleId;
+        else
+        {
+            var roleName = ui.AskChoice("Role", roles.Select(r => r.RoleName).ToList(), u.Role.RoleName);   // ask once, then look it up
+            roleId = roles.First(r => r.RoleName == roleName).RoleId;
+        }
         await users.UpdateAsync(userId, name, email, phone, roleId, me.UserId);
         ui.Ok($"{name} updated");
     }

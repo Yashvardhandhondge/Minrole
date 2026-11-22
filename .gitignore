@@ -16,3 +16,4 @@ appsettings.Local.json
 
 # Downloaded CI artifacts
 scaffold-output/
+exports/

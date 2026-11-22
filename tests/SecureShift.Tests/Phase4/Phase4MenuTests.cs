@@ -43,14 +43,15 @@ public class Phase4MenuTests(FreshDatabase db) : IClassFixture<FreshDatabase>
     {
         var (_, output) = await db.RunAppAsync([
             .. Login,
-            "2", "X", "Contoso Retail", "Eastwind Foods", "9", "1", "P1", "Pune", "Asha Rao", "asha", "asha@eastwind.com", "123", "9812300099",
+            "2", "X", "Contoso Retail", "Eastwind Foods", "", "9", "1", "P1", "Pune", "Asha Rao", "asha", "asha@eastwind.com", "123", "9812300099",
             "4", "0",
             "3", "1",                                 // current enterprise: Northwind Bank
             "7", "L", "1", "1", "2", "", "n", "0",   // a link from an application to itself is refused
             .. Logout]);
         Assert.Contains("[ERROR] 3-100 characters: letters, numbers, space, & . -", output);
         Assert.Contains("[ERROR] This enterprise is already registered", output);
-        Assert.Contains("[ERROR] Select an industry", output);
+        Assert.Contains("[ERROR] Select an industry", output);        // empty answer
+        Assert.Contains("[ERROR] Type a number from 1 to 8", output); // wrong number
         Assert.Contains("[ERROR] Letters only, 3-50 characters", output);
         Assert.Contains("[ERROR] Enter a valid email", output);
         Assert.Contains("[ERROR] 10 digits starting with 6, 7, 8 or 9", output);
