@@ -46,6 +46,7 @@ public sealed class PlanScreens(ConsoleUi ui)
     /// <summary>The 4 phases (read-only weeks) with the total check "22 = 22 weeks".</summary>
     public void Phases(IReadOnlyList<(int No, string Name, string Pct, int Weeks)> phases, int effort)
     {
+        ui.WriteLine("Phases:");
         ui.Table(["#", "Phase", "Share", "Weeks"], phases.Select(p => (IReadOnlyList<string>)[p.No.ToString(), p.Name, p.Pct, p.Weeks.ToString()]).ToList(), 0, 3);
         var total = phases.Sum(p => p.Weeks);
         ui.WriteLine(total == effort ? $"Total estimated effort: {total} = {effort} weeks" : $"Total estimated effort: {total} - Does not match effort ({effort} weeks)");

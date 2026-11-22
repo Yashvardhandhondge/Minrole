@@ -299,7 +299,7 @@ public sealed class ArchitectMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu p
         planUi.Snapshot(sim);
         ui.WriteLine($"System recommendation: {sim.Recommendation}");
         planUi.Affected(sim);
-        ui.WriteLine("Phases (weeks are calculated from the effort and cannot be edited):");
+        ui.WriteLine("(The phase weeks are calculated from the effort and cannot be edited.)");
         planUi.Phases(PlanScreens.PhasesOf(sim.EffortWeeks), sim.EffortWeeks);
         ui.WriteLine("Type 'cancel' at any question to go back. Nothing is saved until you choose Save or Submit.");
         var all = await planning.PlansAsync();

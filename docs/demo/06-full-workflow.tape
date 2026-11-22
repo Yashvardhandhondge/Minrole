@@ -289,9 +289,11 @@ Enter
 Sleep 1.5s
 
 # ---- 6. live change: psql updates a row while the app is open
-Type "# Live change: in 25 seconds a teammate renames Tejas Pathak with psql, while the app is open"
+Type "# Live change: in 12 seconds a teammate renames Tejas Pathak with psql, while the app is open"
 Enter
-Type `$job = Start-Job { Start-Sleep 25; & C:\SecureShiftTools\pgsql\bin\psql.exe -h 127.0.0.1 -p 5434 -U postgres -d secureshift -c "UPDATE dev.""Users"" SET ""FullName"" = 'Tejas Pathak Live' WHERE ""UserId"" = 3" }`
+Type `Set-Content $env:TEMP\live-change.sql 'UPDATE dev."Users" SET "FullName" = ''Tejas Pathak Live'' WHERE "UserId" = 3;'`
+Enter
+Type `$job = Start-Job { Start-Sleep 12; & C:\SecureShiftTools\pgsql\bin\psql.exe -h 127.0.0.1 -p 5434 -U postgres -d secureshift -f $env:TEMP\live-change.sql }`
 Enter
 Sleep 1s
 Type "dotnet $app"

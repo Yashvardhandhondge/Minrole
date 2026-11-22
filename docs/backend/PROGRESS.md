@@ -17,11 +17,14 @@ Read this after CLAUDE.md when a session starts (or after a context reset).
 | 5 | Architect + Executive | DONE – CI green run 45059083751 (152 tests, e2e phase2-5 + full workflow PASS) |
 | 6 | Full e2e, manual run, Windows rehearsal, videos, docs | in progress (full workflow e2e DONE) |
 
-## Next step
+## Phase 6 checklist
 
-Phase 6: Windows rehearsal from a fresh clone (scripts/windows/*.ps1), manual run of every menu on Docker
-Postgres + live psql change, VHS videos (docs/demo/*.tape), docs (TCS_LAPTOP_SETUP.md, USER_GUIDE.md,
-DEMO_SCRIPT.md, RUNNING.md, README.md), final PR text, cleanup (docker compose down -v, stop portable PG).
+- [x] Full-workflow e2e (tests/e2e/phase6-full-workflow.sh + FullWorkflowTests) - CI green
+- [x] Manual run on Docker Postgres: db setup / status / smoke, every menu of every role, live psql change (bugs 1-4 below fixed)
+- [x] Windows rehearsal from a fresh clone (no Docker): setup-postgres-portable.ps1 -> run.ps1 -SetupOnly -> app (bug 5 fixed)
+- [x] Docs: TCS_LAPTOP_SETUP.md, USER_GUIDE.md, DEMO_SCRIPT.md, RUNNING.md, README.md, CLAUDE.md
+- [ ] Videos 00-06 recorded with VHS (PowerShell) and checked frame by frame
+- [ ] Final CI green, PR description, cleanup (docker compose down -v, stop portable PostgreSQL, temp images)
 
 ## Environment notes (this laptop)
 

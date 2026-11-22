@@ -126,6 +126,6 @@ public sealed class ExecutiveMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu p
         }
         ui.Table(["Plan ID", "Plan", "Application", "Status", "Decided By", "Decided On", "Comment"],
             decided.Select(p => (IReadOnlyList<string>)[p.PlanCode ?? "", Fmt.Cut(p.PlanName, 34), p.ApplicationName ?? "", p.Status ?? "", p.DecidedByName ?? "-",
-                Fmt.Date(p.DecidedAt), Fmt.Cut(p.ExecutiveComment, 50)]).ToList());
+                Fmt.Date(p.DecidedAt), Fmt.Cut(p.ExecutiveComment, 36)]).ToList());
     }
 }

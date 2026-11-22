@@ -11,7 +11,7 @@ public class ManualRunRegressionTests(FreshDatabase db) : IClassFixture<FreshDat
     {
         // bug: the role question was inside roles.First(...) and was asked again for every role
         var (_, output) = await db.RunAppAsync("1", "arya.mujumdar@secureshift.io", "Super@2026", "2", "5", "1", "", "", "", "", "0", "0", "0", "y", "0");
-        Assert.Equal(1, Regex.Matches(output, "Choose 1-4 \\[Executive\\]").Count);
+        Assert.Single(Regex.Matches(output, "Choose 1-4 \\[Executive\\]"));
         await using var ctx = db.CreateContext();
         Assert.Equal("Executive", (await ctx.Users.AsNoTracking().Include(u => u.Role).SingleAsync(u => u.UserId == 5)).Role.RoleName);   // Sonal Shende
     }
@@ -22,7 +22,7 @@ public class ManualRunRegressionTests(FreshDatabase db) : IClassFixture<FreshDat
         // same bug in the Analysis Wizard: choosing company 2 asked the question twice
         var (_, output) = await db.RunAppAsync("1", "aarav.mehta@secureshift.io", "Cloud@2026", "3", "2", "4", "08/12/2026", "11/09/2026",
             Samples.Assignments, Samples.Activity, Samples.Catalog, "n", "0", "y", "0");
-        Assert.Equal(1, Regex.Matches(output, "Choose 1-10: ").Count);
+        Assert.Single(Regex.Matches(output, "Choose 1-10: "));
         Assert.Contains("Company: Contoso Retail", output);
         Assert.Contains("for Contoso Retail", output);
     }

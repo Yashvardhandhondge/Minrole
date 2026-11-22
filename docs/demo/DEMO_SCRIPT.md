@@ -185,8 +185,11 @@ In a **second** PowerShell window:
 
 ```powershell
 $env:PGPASSWORD = Get-Content C:\SecureShiftTools\postgres-password.txt
-C:\SecureShiftTools\pgsql\bin\psql.exe -h 127.0.0.1 -p 5434 -U postgres -d secureshift -c "UPDATE dev.""Users"" SET ""FullName"" = 'Tejas Pathak Live' WHERE ""UserId"" = 3"
+Set-Content $env:TEMP\live-change.sql 'UPDATE dev."Users" SET "FullName" = ''Tejas Pathak Live'' WHERE "UserId" = 3;'
+C:\SecureShiftTools\pgsql\bin\psql.exe -h 127.0.0.1 -p 5434 -U postgres -d secureshift -f $env:TEMP\live-change.sql
 ```
+
+(The SQL goes through a file because Windows PowerShell 5.1 removes the `"` quotes from the arguments of programs.)
 
 In the app (logged in as Super Admin, User Management open) type `C`: the new name shows at once, because every
 screen reads fresh from the database. Put it back the same way with `'Tejas Pathak'`.
