@@ -65,11 +65,13 @@ public static class AppHost
         services.AddSingleton<Services.Governance.GovernanceService>();
         services.AddSingleton<Services.Governance.AnalysisService>();
         services.AddSingleton<Services.Modernization.ModernizationService>();
+        services.AddSingleton<Services.Modernization.PlanningService>();
 
         // Menus
         services.AddSingleton<MenuRunner>();
         services.AddSingleton<ProfileMenu>();
         services.AddSingleton<ModernizationScreens>();
+        services.AddSingleton<PlanScreens>();
         services.AddSingleton<SuperAdminMenu>();
         services.AddSingleton<CloudAdminMenu>();
         services.AddSingleton<AdminMenu>();
