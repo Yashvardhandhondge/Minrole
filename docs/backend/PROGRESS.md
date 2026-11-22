@@ -12,22 +12,23 @@ Read this after CLAUDE.md when a session starts (or after a context reset).
 |---|---|---|
 | 1 | Foundation (scripts, solution, scaffold, db commands, CI) | DONE (PR #1 merged) |
 | 2 | Login / logout / profile / change password, Super Admin (dashboard, users, audit logs) | DONE – CI green run 45055891860 (76 tests, e2e phase2 PASS) |
-| 3 | Cloud Admin – Governance | in progress |
-| 4 | Admin – Modernization | todo |
+| 3 | Cloud Admin – Governance | DONE – CI green run 45057316072 (124 tests, e2e phase2+3 PASS) |
+| 4 | Admin – Modernization | in progress |
 | 5 | Architect + Executive | todo |
 | 6 | Full e2e, manual run, Windows rehearsal, videos, docs | todo |
 
 ## Next step
 
-Phase 3: Governance – sample JSON files (samples/governance), input validation, scoring (GovernanceScoring.cs),
-analysis saved in ONE transaction, dashboard / companies / identities / findings / roles / rules / patterns /
-reports / notifications menus, tests + tests/e2e/phase3.sh.
+Phase 4: Admin – EmdtCalc.cs (port of emdt-calc.js, tested against tests/SecureShift.Tests/Data/prototype-expected.json),
+enterprises (register / view / edit), EMSI classification, applications, components, dependencies (+ DI),
+digital twin text view, tests + tests/e2e/phase4.sh.
 
 ## Environment notes (this laptop)
 
 - RAM: keep everything < 4 GB (another agent shares the laptop). `dotnet build -m:1`, `DOTNET_gcServer=0`.
-- Docker Desktop is installed but NOT running (starting it costs a lot of RAM). Local development uses the
-  portable PostgreSQL 16 in `C:\SecureShiftTools\pgsql` (port 5434). Docker is used only for the manual run in Phase 6.
+- Docker Desktop is running (the owner switched it on). Local dev DB: `docker compose -f docker-compose.dev.yml up -d`
+  (container secureshift-pg, 512 MB limit, port 5433, use Host=127.0.0.1). Databases: `secureshift` (manual play),
+  `secureshift_ci` (pristine seed for the read-only tests). Portable PostgreSQL zip is in C:\SecureShiftTools (for the rehearsal).
 - Tools allowed without asking: VHS, ttyd, ffmpeg, portable PostgreSQL 16 → all in `C:\SecureShiftTools\`.
 
 ## Decisions (prototype vs DB, and other choices)
@@ -46,6 +47,19 @@ See the list at the end of this file; it is copied into the final report.
 6. Testing: tests that write data get their own fresh database (CREATE DATABASE + db setup); the shared seeded
    database stays untouched for the read-only checks (569 rows).
 7. Docker Desktop on Windows: use Host=127.0.0.1, not localhost (localhost goes to IPv6 ::1 and times out).
+8. Governance scoring: the prototype has no formula (it only shows 3 signals with weights 50/30/20). SecureShift:
+   ratio = Math.round((1-used/granted)*100); high-risk = min(100, 10 x unused high-risk actions);
+   scope = Subscription/MG 100, RG 40, Resource 10; score = Math.round(weighted sum / 100). Gives 91 for svc-webapp-deploy.
+9. Findings: only the 4 DB categories (Delete, Network, Key Vault, Role Assignment); severity HIGH for Subscription /
+   Management Group scope or Role Assignment, MEDIUM for Resource Group, LOW for Resource.
+10. Generated roles only for identities that used something but not everything; actions used fewer than RareThreshold
+    times are "rare" (note "used once, 85 days ago" counted from the period end) and are not in the role JSON.
+11. Analysis code = "AN-<year>-" + (1111 + number of analyses) like analysis.js (next free number if taken);
+    report code = RPT-(highest number + 1) like reports.js.
+12. Rule Settings are saved as a NEW active row (old row IsActive = false) so the history is kept.
+13. Analysis Wizard: the "Last N days" presets end yesterday (prototype); the sample files cover 08/12/2026-11/09/2026,
+    so demos use "Custom range". Companies without an analysis show "Not analysed" / PENDING (no invented numbers).
+14. Identity evidence rows (SS.GOV.evidence) are fake in the prototype and not stored in the DB: not shown.
 
 ## Known bugs
 
