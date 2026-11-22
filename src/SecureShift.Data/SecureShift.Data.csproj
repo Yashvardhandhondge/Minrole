@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    SecureShift.Data: the EF Core model, Database-First.
+      Context/Generated  SecureShiftDbContext   (scaffolded - never edit by hand)
+      Models/Generated   one class per table/view (scaffolded - never edit by hand)
+      Partials/          our own partial classes, if a generated class needs extra code
+    Re-generate with the "scaffold" GitHub Actions workflow (see docs/backend/RUNNING.md).
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SecureShift.Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0BA67ECD-2FCF-4832-89CF-0127058FA4F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureShift.Data", "src\SecureShift.Data\SecureShift.Data.csproj", "{97A0361F-D59E-469A-A985-93943BFE945B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureShift.Application", "src\SecureShift.Application\SecureShift.Application.csproj", "{20F4D90E-E77F-43FE-91E6-B85334C1B103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureShift.Console", "src\SecureShift.Console\SecureShift.Console.csproj", "{8C916031-DAAA-4761-8E0F-CFC41EF33976}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E79B1505-F476-4791-9B81-D622BE0D157A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureShift.Tests", "tests\SecureShift.Tests\SecureShift.Tests.csproj", "{5280A805-894A-4A65-A0B8-ED2452326BA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97A0361F-D59E-469A-A985-93943BFE945B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A0361F-D59E-469A-A985-93943BFE945B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A0361F-D59E-469A-A985-93943BFE945B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A0361F-D59E-469A-A985-93943BFE945B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F4D90E-E77F-43FE-91E6-B85334C1B103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F4D90E-E77F-43FE-91E6-B85334C1B103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F4D90E-E77F-43FE-91E6-B85334C1B103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F4D90E-E77F-43FE-91E6-B85334C1B103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C916031-DAAA-4761-8E0F-CFC41EF33976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C916031-DAAA-4761-8E0F-CFC41EF33976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C916031-DAAA-4761-8E0F-CFC41EF33976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C916031-DAAA-4761-8E0F-CFC41EF33976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5280A805-894A-4A65-A0B8-ED2452326BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5280A805-894A-4A65-A0B8-ED2452326BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5280A805-894A-4A65-A0B8-ED2452326BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5280A805-894A-4A65-A0B8-ED2452326BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97A0361F-D59E-469A-A985-93943BFE945B} = {0BA67ECD-2FCF-4832-89CF-0127058FA4F0}
+		{20F4D90E-E77F-43FE-91E6-B85334C1B103} = {0BA67ECD-2FCF-4832-89CF-0127058FA4F0}
+		{8C916031-DAAA-4761-8E0F-CFC41EF33976} = {0BA67ECD-2FCF-4832-89CF-0127058FA4F0}
+		{5280A805-894A-4A65-A0B8-ED2452326BA0} = {E79B1505-F476-4791-9B81-D622BE0D157A}
+	EndGlobalSection
+EndGlobal

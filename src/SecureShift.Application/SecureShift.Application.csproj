@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    SecureShift.Application: placeholder (kept in the solution on purpose).
+    Later the Services/ code from SecureShift.Console can move here unchanged,
+    so that a web front end could reuse it. Empty for now.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SecureShift.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SecureShift.Data\SecureShift.Data.csproj" />
+  </ItemGroup>
+
+</Project>

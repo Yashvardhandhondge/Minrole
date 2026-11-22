@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    SecureShift.Console: the console app (menus + db commands).
+    OutputType MUST stay Exe (otherwise error CS8805 for Program.cs).
+    RootNamespace is SecureShift.ConsoleApp (not SecureShift.Console) so that
+    "Console.WriteLine" still means System.Console everywhere in this project.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>SecureShift.Console</AssemblyName>
+    <RootNamespace>SecureShift.ConsoleApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.34" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SecureShift.Application\SecureShift.Application.csproj" />
+    <ProjectReference Include="..\SecureShift.Data\SecureShift.Data.csproj" />
+  </ItemGroup>
+
+  <!-- Settings: appsettings.json has PLACEHOLDERS only. Real values come from the
+       env var ConnectionStrings__SecureShiftDb or the gitignored appsettings.Local.json. -->
+  <ItemGroup>
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="appsettings.Local.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- The Postgres scripts are copied next to the .exe (bin/.../database/postgres/...),
+       so the db commands also work on a machine that only has the build output (Accops). -->
+  <ItemGroup>
+    <None Include="..\..\database\postgres\*.sql" LinkBase="database\postgres" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+    <None Include="..\..\database\postgres\migrations\*.sql" LinkBase="database\postgres\migrations" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+  </ItemGroup>
+
+</Project>
