@@ -71,7 +71,10 @@ jobs:
           dotnet tool install --global dotnet-ef --version 8.0.11
           echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
 
-      - name: Restore and build
+      # Our own code (Partials/, Services/, tests) uses the generated classes, so the projects can only
+      # build WHILE the old generated files are still there. Build first, then delete them, then scaffold
+      # with --no-build (dotnet ef uses the build output from this step).
+      - name: Restore and build (with the current generated files)
         run: |
           dotnet restore SecureShift.sln
           dotnet build SecureShift.sln --no-restore
@@ -82,7 +85,7 @@ jobs:
       - name: Scaffold
         run: |
           set -o pipefail
-          dotnet ef dbcontext scaffold "$SCAFFOLD_CONNECTION" Npgsql.EntityFrameworkCore.PostgreSQL --project src/SecureShift.Data --startup-project src/SecureShift.Console --schema dev --context SecureShiftDbContext --context-dir Context/Generated --output-dir Models/Generated --namespace SecureShift.Data.Models.Generated --context-namespace SecureShift.Data.Context.Generated --no-onconfiguring 2>&1 | tee scaffold-log.txt
+          dotnet ef dbcontext scaffold "$SCAFFOLD_CONNECTION" Npgsql.EntityFrameworkCore.PostgreSQL --project src/SecureShift.Data --startup-project src/SecureShift.Console --schema dev --context SecureShiftDbContext --context-dir Context/Generated --output-dir Models/Generated --namespace SecureShift.Data.Models.Generated --context-namespace SecureShift.Data.Context.Generated --no-onconfiguring --no-build 2>&1 | tee scaffold-log.txt
 
       - name: Check the result (32 entity classes + SecureShiftDbContext.cs)
         run: |
