@@ -1,0 +1,164 @@
+# SecureShift CI: real PostgreSQL 16 -> run the SQL scripts -> build -> tests -> console commands.
+# The postgres password below belongs to a throwaway CI container, it is not a real password.
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    name: DB scripts, build, tests, console commands
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ci_only_password
+          POSTGRES_DB: secureshift
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    env:
+      PGHOST: localhost
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGPASSWORD: ci_only_password
+      PGDATABASE: secureshift
+      ConnectionStrings__SecureShiftDb: Host=localhost;Port=5432;Database=secureshift;Username=postgres;Password=ci_only_password
+      DOTNET_NOLOGO: "true"
+      DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+      APP: src/SecureShift.Console/bin/Release/net8.0/SecureShift.Console.dll
+      VERIFY_OK: "VERIFY RESULT: PASS (tables=28, views=4, fks=46, rows=569)"
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 8.0.x
+
+      # ---------------------------------------------------------------- database scripts (psql)
+      - name: Seed password hashes are Identity V3 of the expected passwords
+        run: node database/postgres/tools/hash_passwords.js check-seed
+
+      - name: Create schema dev (the faculty DB already has it)
+        run: psql -v ON_ERROR_STOP=1 -c 'CREATE SCHEMA dev;'
+
+      - name: 01 create 28 tables + 4 views
+        run: psql -v ON_ERROR_STOP=1 -f database/postgres/01_create_secureshift_in_dev.sql
+
+      - name: 02 seed 569 rows
+        run: psql -v ON_ERROR_STOP=1 -f database/postgres/02_seed_data_postgresql_dev.sql
+
+      - name: 03 verify (fails unless 28 tables, 4 views, 46 FKs, 569 rows)
+        run: |
+          psql -v ON_ERROR_STOP=1 -f database/postgres/03_verify_dev.sql | tee verify.txt
+          grep -qF "$VERIFY_OK" verify.txt
+
+      - name: Safety - 01 and 02 refuse to run twice and change nothing
+        run: |
+          if psql -v ON_ERROR_STOP=1 -f database/postgres/01_create_secureshift_in_dev.sql > rerun01.txt 2>&1; then echo "01 ran twice!"; exit 1; fi
+          grep -q 'already exists' rerun01.txt || { cat rerun01.txt; exit 1; }
+          echo "01 refused as expected: $(grep ERROR rerun01.txt)"
+          if psql -v ON_ERROR_STOP=1 -f database/postgres/02_seed_data_postgresql_dev.sql > rerun02.txt 2>&1; then echo "02 ran twice!"; exit 1; fi
+          grep -q 'already has rows' rerun02.txt || { cat rerun02.txt; exit 1; }
+          echo "02 refused as expected: $(grep ERROR rerun02.txt)"
+          psql -v ON_ERROR_STOP=1 -f database/postgres/03_verify_dev.sql | grep -F "$VERIFY_OK"
+
+      # ---------------------------------------------------------------- .NET
+      - name: Restore
+        run: dotnet restore SecureShift.sln
+
+      - name: Build
+        run: dotnet build SecureShift.sln -c Release --no-restore
+
+      - name: Test (unit + database tests against the seeded DB)
+        run: dotnet test SecureShift.sln -c Release --no-build --logger "console;verbosity=normal" --logger "trx;LogFileName=test-results.trx"
+
+      # ---------------------------------------------------------------- console commands, seeded DB
+      - name: Console - db status
+        run: dotnet "$APP" db status
+
+      - name: Console - setup / seed / migrate / baseline refuse when they must
+        run: |
+          if dotnet "$APP" db setup --yes;   then echo "db setup did not refuse on a seeded DB!"; exit 1; fi
+          if dotnet "$APP" db seed --yes;    then echo "db seed did not refuse on a seeded DB!"; exit 1; fi
+          if dotnet "$APP" db migrate --yes; then echo "db migrate ran without a baseline!"; exit 1; fi
+          if echo "no" | dotnet "$APP" db baseline; then echo "db baseline ran without YES!"; exit 1; fi
+          psql -v ON_ERROR_STOP=1 -f database/postgres/03_verify_dev.sql | grep -F "$VERIFY_OK"
+
+      - name: Console - db baseline + db migrate (the faculty DB path)
+        run: |
+          dotnet "$APP" db baseline --yes
+          dotnet "$APP" db baseline --yes | tee baseline2.txt
+          grep -q "Already baselined" baseline2.txt
+          dotnet "$APP" db migrate --yes | tee migrate.txt
+          grep -q "up to date" migrate.txt
+          dotnet "$APP" db status
+
+      # ---------------------------------------------------------------- console commands, new DBs
+      - name: Console - db setup on a brand-new empty dev schema
+        env:
+          ConnectionStrings__SecureShiftDb: Host=localhost;Port=5432;Database=setup_test;Username=postgres;Password=ci_only_password
+        run: |
+          psql -v ON_ERROR_STOP=1 -c 'CREATE DATABASE setup_test;'
+          psql -v ON_ERROR_STOP=1 -d setup_test -c 'CREATE SCHEMA dev;'
+          if dotnet "$APP" db status; then echo "db status should report the empty schema"; exit 1; fi
+          dotnet "$APP" db setup --yes
+          psql -v ON_ERROR_STOP=1 -d setup_test -f database/postgres/03_verify_dev.sql | grep -F "$VERIFY_OK"
+          dotnet "$APP" db status
+
+      - name: Console - db seed into empty tables
+        env:
+          ConnectionStrings__SecureShiftDb: Host=localhost;Port=5432;Database=seed_test;Username=postgres;Password=ci_only_password
+        run: |
+          psql -v ON_ERROR_STOP=1 -c 'CREATE DATABASE seed_test;'
+          psql -v ON_ERROR_STOP=1 -d seed_test -c 'CREATE SCHEMA dev;'
+          psql -v ON_ERROR_STOP=1 -d seed_test -f database/postgres/01_create_secureshift_in_dev.sql
+          dotnet "$APP" db seed --yes
+          psql -v ON_ERROR_STOP=1 -d seed_test -f database/postgres/03_verify_dev.sql | grep -F "$VERIFY_OK"
+
+      - name: Console - db migrate applies a test migration and rolls back a broken one
+        env:
+          ConnectionStrings__SecureShiftDb: Host=localhost;Port=5432;Database=setup_test;Username=postgres;Password=ci_only_password
+        run: |
+          mig=src/SecureShift.Console/bin/Release/net8.0/database/postgres/migrations
+          mkdir -p "$mig"
+          printf '%s\n' '-- CI only: proves db migrate works' 'CREATE TABLE dev."CiMigrationProbe" ("Id" INTEGER PRIMARY KEY);' > "$mig/V900__ci_probe.sql"
+          dotnet "$APP" db migrate --yes
+          test "$(psql -tA -d setup_test -c 'SELECT COUNT(*) FROM dev."__SchemaMigrations" WHERE "Version" = 900')" = "1"
+          test "$(psql -tA -d setup_test -c "SELECT to_regclass('dev.\"CiMigrationProbe\"') IS NOT NULL")" = "t"
+          dotnet "$APP" db migrate --yes | tee migrate2.txt
+          grep -q "up to date" migrate2.txt
+          printf '%s\n' 'CREATE TABLE dev."CiBroken" ("Id" INTEGER);' 'SELECT 1/0;' > "$mig/V901__ci_broken.sql"
+          if dotnet "$APP" db migrate --yes; then echo "a broken migration did not fail!"; exit 1; fi
+          test "$(psql -tA -d setup_test -c "SELECT to_regclass('dev.\"CiBroken\"') IS NULL")" = "t"
+          test "$(psql -tA -d setup_test -c 'SELECT COUNT(*) FROM dev."__SchemaMigrations" WHERE "Version" = 901')" = "0"
+          rm "$mig"/V90*.sql
+          echo "db migrate: applied V900, skipped it the second time, rolled back V901 completely."
+
+      # ---------------------------------------------------------------- EF Core smoke test
+      - name: Console - smoke (EF Core counts 25 / 5 / 10 / 3)
+        run: dotnet "$APP" smoke
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-results
+          path: "**/TestResults/*.trx"
+          if-no-files-found: ignore

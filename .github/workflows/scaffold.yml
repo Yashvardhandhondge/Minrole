@@ -1,0 +1,117 @@
+# SecureShift scaffold: builds the schema in a throwaway PostgreSQL 16 (01 + any migrations/V*.sql,
+# no seed data needed) and runs "dotnet ef dbcontext scaffold" to (re)generate
+#   src/SecureShift.Data/Models/Generated   and   src/SecureShift.Data/Context/Generated
+# The files are uploaded as the artifact "scaffold-output". Download them, copy them over, commit.
+#
+#   gh workflow run scaffold.yml --ref <branch>
+#   gh run watch
+#   gh run download <run-id> -n scaffold-output -D scaffold-output
+#
+# The postgres password below belongs to a throwaway CI container, it is not a real password.
+name: scaffold
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scaffold:
+    name: Scaffold EF Core models from schema dev
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ci_only_password
+          POSTGRES_DB: secureshift
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    env:
+      PGHOST: localhost
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGPASSWORD: ci_only_password
+      PGDATABASE: secureshift
+      SCAFFOLD_CONNECTION: Host=localhost;Port=5432;Database=secureshift;Username=postgres;Password=ci_only_password
+      DOTNET_NOLOGO: "true"
+      DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Create schema dev and run 01 (tables + views only, no seed)
+        run: |
+          psql -v ON_ERROR_STOP=1 -c 'CREATE SCHEMA dev;'
+          psql -v ON_ERROR_STOP=1 -f database/postgres/01_create_secureshift_in_dev.sql
+
+      - name: Apply migrations/V*.sql in version order (schema changes after the baseline)
+        run: |
+          shopt -s nullglob
+          files=(database/postgres/migrations/V*.sql)
+          if [ ${#files[@]} -eq 0 ]; then echo "No migration files."; exit 0; fi
+          for f in $(printf '%s\n' "${files[@]}" | sort -V); do
+            echo "== $f"
+            psql -v ON_ERROR_STOP=1 --single-transaction -f "$f"
+          done
+
+      - name: Install dotnet-ef 8 (same version as the EF Core packages)
+        run: |
+          dotnet tool install --global dotnet-ef --version 8.0.11
+          echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
+
+      - name: Restore and build
+        run: |
+          dotnet restore SecureShift.sln
+          dotnet build SecureShift.sln --no-restore
+
+      - name: Remove the old generated files (so dropped tables/columns disappear)
+        run: rm -rf src/SecureShift.Data/Models/Generated src/SecureShift.Data/Context/Generated
+
+      - name: Scaffold
+        run: |
+          set -o pipefail
+          dotnet ef dbcontext scaffold "$SCAFFOLD_CONNECTION" Npgsql.EntityFrameworkCore.PostgreSQL --project src/SecureShift.Data --startup-project src/SecureShift.Console --schema dev --context SecureShiftDbContext --context-dir Context/Generated --output-dir Models/Generated --namespace SecureShift.Data.Models.Generated --context-namespace SecureShift.Data.Context.Generated --no-onconfiguring 2>&1 | tee scaffold-log.txt
+
+      - name: Check the result (32 entity classes + SecureShiftDbContext.cs)
+        run: |
+          models=$(find src/SecureShift.Data/Models/Generated -name '*.cs' | wc -l)
+          {
+            echo "## Scaffold result"
+            echo ""
+            echo "Entity classes: **$models** (expected 32 = 28 tables + 4 views)"
+            echo ""
+            echo '```'
+            ls -1 src/SecureShift.Data/Models/Generated src/SecureShift.Data/Context/Generated
+            echo '```'
+            echo "Warnings from dotnet ef (UX_Deps_Pair / collation warnings are expected):"
+            echo '```'
+            grep -iE "warn|could not|unable|skip" scaffold-log.txt || echo "(none)"
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+          test -f src/SecureShift.Data/Context/Generated/SecureShiftDbContext.cs
+          test "$models" -eq 32
+
+      - name: Build with the generated files
+        run: dotnet build SecureShift.sln -c Release
+
+      - name: Upload scaffold-output
+        uses: actions/upload-artifact@v7
+        with:
+          name: scaffold-output
+          path: |
+            src/SecureShift.Data/Models/Generated
+            src/SecureShift.Data/Context/Generated
+            scaffold-log.txt
+          if-no-files-found: error
