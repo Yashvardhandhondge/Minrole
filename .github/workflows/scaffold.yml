@@ -12,11 +12,6 @@ name: scaffold
 
 on:
   workflow_dispatch:
-  # TEMPORARY (removed in the next commit): GitHub only lets you dispatch a workflow that exists on
-  # the default branch, so this one push run registers it and does the first scaffold.
-  push:
-    branches: [sprint4-console]
-    paths: [.github/workflows/scaffold.yml]
 
 jobs:
   scaffold:
@@ -102,7 +97,7 @@ jobs:
             echo '```'
             echo "Warnings from dotnet ef (UX_Deps_Pair / collation warnings are expected):"
             echo '```'
-            grep -iE "warn|could not|unable|skip" scaffold-log.txt || echo "(none)"
+            grep -iE "warn|could not|cannot|unable|skip|collation" scaffold-log.txt || echo "(none)"
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
           test -f src/SecureShift.Data/Context/Generated/SecureShiftDbContext.cs
