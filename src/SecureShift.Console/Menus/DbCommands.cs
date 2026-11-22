@@ -8,10 +8,12 @@ namespace SecureShift.ConsoleApp.Menus;
 /// The "db ..." commands. This class only prints and asks; the work is done by the Services.
 /// </summary>
 public sealed class DbCommands(
+    DbSettings settings,
     DatabaseInspector inspector,
     SqlScriptRunner runner,
     SqlScriptFiles files,
-    MigrationService migrations)
+    MigrationService migrations,
+    SmokeService smoke)
 {
     private static string N(long n) => n.ToString("N0", CultureInfo.InvariantCulture);
 
@@ -263,10 +265,28 @@ public sealed class DbCommands(
 
     /* ------------------------------------------------------------------ smoke */
 
-    public Task<int> SmokeAsync()
+    public async Task<int> SmokeAsync()
     {
-        ConsoleUi.Error("smoke needs the scaffolded EF Core models (Models/Generated). Run the scaffold workflow first.");
-        return Task.FromResult(1);
+        ConsoleUi.Title("SecureShift - smoke (EF Core reads the database)");
+        Console.WriteLine($"Database : {settings.Describe()}");
+        Console.WriteLine();
+
+        var counts = await smoke.CountAsync();
+        ConsoleUi.Table(
+            ["Table", "Rows (EF Core)", "Fresh seed", "Check"],
+            counts.Select(c => (IReadOnlyList<string>)new[] { c.Name, N(c.Actual), N(c.Expected), c.Matches ? "ok" : "DIFFERENT" }).ToList(),
+            1, 2);
+
+        Console.WriteLine();
+        if (counts.All(c => c.Matches))
+        {
+            ConsoleUi.Ok("EF Core can read the database and the counts match the fresh seed (25 / 5 / 10 / 3).");
+            return 0;
+        }
+
+        ConsoleUi.Error("EF Core can read the database, but the counts differ from the fresh seed (25 / 5 / 10 / 3).");
+        Console.Error.WriteLine("That is normal on a database people already use; on a freshly seeded database it means something is wrong.");
+        return 1;
     }
 
     /* ------------------------------------------------------------------ helpers */

@@ -1,8 +1,10 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SecureShift.ConsoleApp.Menus;
 using SecureShift.ConsoleApp.Services;
+using SecureShift.Data.Context.Generated;
 
 namespace SecureShift.ConsoleApp.Hosting;
 
@@ -42,6 +44,12 @@ public static class AppHost
         services.AddSingleton<SqlScriptRunner>();
         services.AddSingleton<DatabaseInspector>();
         services.AddSingleton<MigrationService>();
+
+        // EF Core: every screen/action asks the factory for a NEW DbContext (fresh data, no stale cache).
+        // The options (and so the connection string check) are only built when a DB command needs them.
+        services.AddDbContextFactory<SecureShiftDbContext>((sp, options) =>
+            options.UseNpgsql(sp.GetRequiredService<DbSettings>().GetConnectionString()));
+        services.AddSingleton<SmokeService>();
 
         services.AddSingleton<DbCommands>();
         services.AddSingleton<CommandRouter>();

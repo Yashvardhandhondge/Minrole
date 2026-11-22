@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
 using SecureShift.ConsoleApp.Services;
 
@@ -11,7 +12,7 @@ namespace SecureShift.ConsoleApp.Menus;
 ///   help
 /// Exit code: 0 = success, 1 = failed / refused / cancelled, 2 = unknown command.
 /// </summary>
-public sealed class CommandRouter(DbCommands db)
+public sealed class CommandRouter(IServiceProvider services)
 {
     private static readonly HashSet<string> KnownFlags = ["--yes", "--help", "-h"];
 
@@ -36,16 +37,19 @@ public sealed class CommandRouter(DbCommands db)
 
         try
         {
+            // Resolved here (not in the constructor) so a missing connection string becomes a clear message below.
+            DbCommands Db() => services.GetRequiredService<DbCommands>();
+
             return words switch
             {
                 [] => RunApp(),
                 ["help"] => PrintHelp(),
-                ["db", "status"] => await db.StatusAsync(),
-                ["db", "setup"] => await db.SetupAsync(yes),
-                ["db", "seed"] => await db.SeedAsync(yes),
-                ["db", "migrate"] => await db.MigrateAsync(yes),
-                ["db", "baseline"] => await db.BaselineAsync(yes),
-                ["smoke"] => await db.SmokeAsync(),
+                ["db", "status"] => await Db().StatusAsync(),
+                ["db", "setup"] => await Db().SetupAsync(yes),
+                ["db", "seed"] => await Db().SeedAsync(yes),
+                ["db", "migrate"] => await Db().MigrateAsync(yes),
+                ["db", "baseline"] => await Db().BaselineAsync(yes),
+                ["smoke"] => await Db().SmokeAsync(),
                 _ => Unknown(args),
             };
         }
