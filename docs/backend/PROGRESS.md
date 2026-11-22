@@ -11,16 +11,17 @@ Read this after CLAUDE.md when a session starts (or after a context reset).
 | Phase | What | Status |
 |---|---|---|
 | 1 | Foundation (scripts, solution, scaffold, db commands, CI) | DONE (PR #1 merged) |
-| 2 | Login / logout / profile / change password, Super Admin (dashboard, users, audit logs) | in progress |
-| 3 | Cloud Admin – Governance | todo |
+| 2 | Login / logout / profile / change password, Super Admin (dashboard, users, audit logs) | DONE – CI green run 45055891860 (76 tests, e2e phase2 PASS) |
+| 3 | Cloud Admin – Governance | in progress |
 | 4 | Admin – Modernization | todo |
 | 5 | Architect + Executive | todo |
 | 6 | Full e2e, manual run, Windows rehearsal, videos, docs | todo |
 
 ## Next step
 
-Phase 2: IConsoleIO + Ui helpers, AuthService (V3 + legacy SHA-256 upgrade), session re-check, profile,
-Super Admin menus, tests (service + scripted menu + CI e2e pipe).
+Phase 3: Governance – sample JSON files (samples/governance), input validation, scoring (GovernanceScoring.cs),
+analysis saved in ONE transaction, dashboard / companies / identities / findings / roles / rules / patterns /
+reports / notifications menus, tests + tests/e2e/phase3.sh.
 
 ## Environment notes (this laptop)
 
@@ -39,6 +40,12 @@ See the list at the end of this file; it is copied into the final report.
 2. A Super Admin can never be deactivated or have the role changed (prototype rule). This also covers
    "cannot deactivate yourself" and "keep at least one active Super Admin".
 3. No lockout (the prototype has none).
+4. Login also writes "Login Failed" (known email, wrong password) and "Login Blocked" (inactive) audit rows;
+   the message on screen stays the generic "Invalid email or password." for unknown email and wrong password.
+5. Times are stored in UTC and shown in the local time of the machine (seed times therefore show +5:30 in India).
+6. Testing: tests that write data get their own fresh database (CREATE DATABASE + db setup); the shared seeded
+   database stays untouched for the read-only checks (569 rows).
+7. Docker Desktop on Windows: use Host=127.0.0.1, not localhost (localhost goes to IPv6 ::1 and times out).
 
 ## Known bugs
 
