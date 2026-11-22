@@ -137,8 +137,15 @@ Do one phase per session unless the owner says otherwise. Finish each phase with
   ```
   dotnet ef dbcontext scaffold "<conn>" Npgsql.EntityFrameworkCore.PostgreSQL --project src/SecureShift.Data --startup-project src/SecureShift.Console --schema dev --context SecureShiftDbContext --context-dir Context/Generated --output-dir Models/Generated --namespace SecureShift.Data.Models.Generated --context-namespace SecureShift.Data.Context.Generated --no-onconfiguring
   ```
+  The workflow builds first (old generated files present), deletes the Generated folders, then runs the
+  command above **plus `--no-build`** — our own code uses the generated classes, so the projects cannot
+  build while the folders are empty. dotnet-ef tool = 8.0.11 (same as the EF packages).
   Expected: 32 entity classes (28 tables + 4 keyless views) + `SecureShiftDbContext.cs`.
-  Warnings about `"UX_Deps_Pair"` (expression index cannot be scaffolded) and collations are expected.
+  Only message in CI: `Expression index 'UX_Deps_Pair' ... cannot be scaffolded` (expected).
+  Collation warnings may appear on the faculty DB (expected); CI's postgres:16 shows none.
+- scaffold.yml is `workflow_dispatch` only. It became dispatchable from a non-default branch after one
+  temporary push-triggered run registered it (GitHub otherwise requires the file on `main`).
+  `gh workflow run scaffold.yml --ref <branch>` works now.
 
 ## 6. Technical notes (gotchas)
 
@@ -150,6 +157,17 @@ Do one phase per session unless the owner says otherwise. Finish each phase with
 - `timestamptz` columns map to `DateTime` with `Kind = Utc`. Always write `DateTime.UtcNow`
   (Npgsql throws for Local/Unspecified kinds). `date` columns map to `DateOnly`.
 - Generated columns (`Code`, `PeriodDays`, `RiskLevel`, `Category`) are read-only; never set them.
+- Entity / DbSet names: tables are singular entities with plural DbSets (`User` / `db.Users`,
+  `Analysis` / `db.Analyses`, `Identity` / `db.Identities`, **`PermissionUsage` / `db.PermissionUsages`**);
+  views are `VwUserLogin` / `db.VwUserLogins`, `VwLatestAssessment`, `VwPlanSummary` (`db.VwPlanSummaries`), `VwIdentityRisk`.
+- Bool columns whose DB default is TRUE (`Users.MustChangePassword`, `GeneratedRoles.IncludeBaselineRead`,
+  `RuleSettings.IsActive`, `HighRiskPatterns.IsEnabled`) are set to `ValueGeneratedNever()` in
+  `src/SecureShift.Data/Partials/SecureShiftDbContext.Partial.cs`; otherwise EF would turn an inserted `false` into TRUE.
+  Always set these explicitly when inserting.
+- `DbCommands` / future menus are resolved inside `CommandRouter`'s try block, so a missing connection
+  string shows a clear message instead of a crash (the DbContext options are built on first resolve).
+- "No DTOs" = never copy entity data into look-alike classes. Small result records for things that are
+  not entities (db status info, migration history rows, smoke counts) are fine.
 - Postgres names are case-sensitive: always quote, e.g. `SELECT * FROM dev."Users"`.
 - Npgsql EF maps the views as keyless entities (`HasNoKey()`); query them with `AsNoTracking()`.
 - `OutputType` must be `Exe` for the console (otherwise CS8805 with top-level statements).
