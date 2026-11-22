@@ -1,0 +1,202 @@
+[
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleAssignments/e761d871-56eb-2913-93e1-8bf9d63f126f",
+    "principalId": "b48a8909-d21f-ae37-7c1a-604a09e4eeab",
+    "principalName": "svc-webapp-deploy",
+    "principalType": "ServicePrincipal",
+    "displayName": "Web App Deploy Pipeline",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/f9dfd92a-ac58-3758-85fa-47de73e7f136",
+    "roleDefinitionName": "Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleAssignments/408302a1-a6a8-ed57-82a6-0de4bf101c74",
+    "principalId": "19b63642-eba1-c1cc-a0b1-62ce427ccee6",
+    "principalName": "rahul.verma@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Rahul Verma",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/733d3049-c773-157f-dacc-a955905e2d21",
+    "roleDefinitionName": "Owner",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-sales/providers/Microsoft.Authorization/roleAssignments/4900a6f5-796b-f283-1454-773361fdbec0",
+    "principalId": "b3fd8791-d348-1258-5e3e-471bbc2a0d6f",
+    "principalName": "priya.sharma@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Priya Sharma",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/f9dfd92a-ac58-3758-85fa-47de73e7f136",
+    "roleDefinitionName": "Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-sales"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-data/providers/Microsoft.Authorization/roleAssignments/55305fed-c467-423e-608b-e2531df22559",
+    "principalId": "29c288ed-5a6b-3a4e-a5bf-b1e26d49c047",
+    "principalName": "svc-data-pipeline",
+    "principalType": "ServicePrincipal",
+    "displayName": "Data Pipeline Service",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/e4a78ec5-0574-ae4e-64d2-3363f0e31127",
+    "roleDefinitionName": "Virtual Machine Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-data"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-orders/providers/Microsoft.Authorization/roleAssignments/b355a209-b4d3-af22-b54a-dfb1d969d7b1",
+    "principalId": "6be9161f-a2bc-aa80-d8e2-4d2ea5c36a10",
+    "principalName": "mi-orders-api",
+    "principalType": "ManagedIdentity",
+    "displayName": "Orders API (Managed)",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/4806d83f-a485-3507-9c43-c9b9bcc8fe71",
+    "roleDefinitionName": "Reader",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-orders"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-backup/providers/Microsoft.Authorization/roleAssignments/602cde9c-9b38-8526-ae41-4550595a08b8",
+    "principalId": "ebb913a8-8faa-05f6-52fb-c1baa247075f",
+    "principalName": "svc-backup",
+    "principalType": "ServicePrincipal",
+    "displayName": "Backup Service",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/e86ca3ae-5475-90d2-4fba-65c6de328d88",
+    "roleDefinitionName": "Backup Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-backup"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-network/providers/Microsoft.Authorization/roleAssignments/22147952-aa0f-a3bd-3460-1b4b7a7243f8",
+    "principalId": "49d0bdce-58e5-7849-e162-845b1420928a",
+    "principalName": "neha.kulkarni@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Neha Kulkarni",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/ba4abfba-dacc-14df-b1aa-9a26a22b63a2",
+    "roleDefinitionName": "Network Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-network"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-reports/providers/Microsoft.Authorization/roleAssignments/f5a8781b-3f2f-abee-0079-903b5cd5c568",
+    "principalId": "5de75425-ac35-31fc-8d73-a4fc56878e12",
+    "principalName": "mi-reports-func",
+    "principalType": "ManagedIdentity",
+    "displayName": "Reports Function (Managed)",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/f9dfd92a-ac58-3758-85fa-47de73e7f136",
+    "roleDefinitionName": "Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-reports"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-hr/providers/Microsoft.Authorization/roleAssignments/3e330df7-6e76-2038-463b-6d3fd2af00fd",
+    "principalId": "ae82c590-83c2-dddf-c5f0-92767bc83ff7",
+    "principalName": "amit.joshi@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Amit Joshi",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/f9dfd92a-ac58-3758-85fa-47de73e7f136",
+    "roleDefinitionName": "Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-hr"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-aks/providers/Microsoft.Authorization/roleAssignments/e8134dac-ccf1-0dc8-7bad-3c8776f8fe37",
+    "principalId": "1350481f-f9cf-dc8d-4ab2-cec8a4152e37",
+    "principalName": "svc-aks-ops",
+    "principalType": "ServicePrincipal",
+    "displayName": "AKS Operations Service",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/96a6f89d-b8b0-1143-61db-04850774ac5a",
+    "roleDefinitionName": "AKS Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-aks"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleAssignments/8d6a4a9c-438a-b7de-a553-343ccbb41ba4",
+    "principalId": "a38a370a-e090-e795-a57b-28f0b74d3c11",
+    "principalName": "kavya.iyer@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Kavya Iyer",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/4806d83f-a485-3507-9c43-c9b9bcc8fe71",
+    "roleDefinitionName": "Reader",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-billing/providers/Microsoft.Authorization/roleAssignments/63f2c620-214f-d7c8-6e15-14f22e89af8d",
+    "principalId": "d35b681e-964e-7f3f-4aab-39fe0b7a011f",
+    "principalName": "mi-billing-job",
+    "principalType": "ManagedIdentity",
+    "displayName": "Billing Job (Managed)",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/26ad6ac7-157f-e2b6-9e6c-629285b1e2ea",
+    "roleDefinitionName": "Storage Blob Data Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-billing"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-webapp-prod/providers/Microsoft.Authorization/roleAssignments/5f9e8583-aff0-1698-8f26-1d9e199ed975",
+    "principalId": "b73df728-54f0-cb92-8c87-c1c10efe4054",
+    "principalName": "svc-github-ci",
+    "principalType": "ServicePrincipal",
+    "displayName": "GitHub CI Pipeline",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/733d3049-c773-157f-dacc-a955905e2d21",
+    "roleDefinitionName": "Owner",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-webapp-prod"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-data/providers/Microsoft.Authorization/roleAssignments/f53ea695-57b4-e8b4-a3e4-905e1ff3dde2",
+    "principalId": "acc3f92a-3f52-fc30-2bea-6d2e432e8e0c",
+    "principalName": "rohan.desai@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Rohan Desai",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/c28f5962-eda4-dad5-04b8-4e905cc120f7",
+    "roleDefinitionName": "SQL DB Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-data"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-notify/providers/Microsoft.Authorization/roleAssignments/7f1e0fb8-1c34-8ac8-8efc-a07350221a30",
+    "principalId": "00374538-82aa-7676-4782-805c131f8cd1",
+    "principalName": "mi-notify-func",
+    "principalType": "ManagedIdentity",
+    "displayName": "Notify Function (Managed)",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/f9dfd92a-ac58-3758-85fa-47de73e7f136",
+    "roleDefinitionName": "Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-notify"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-security/providers/Microsoft.Authorization/roleAssignments/6d40cde7-02ca-e12c-6ed5-f855cba76633",
+    "principalId": "282e100b-4d56-ad09-249a-8d5d3556791e",
+    "principalName": "sneha.patil@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Sneha Patil",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/c01407ef-3f4d-89c7-480a-f10011837ba6",
+    "roleDefinitionName": "Key Vault Officer",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-security"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-catalog/providers/Microsoft.Authorization/roleAssignments/d89d280d-bfb0-b8c8-3e6c-f104d6c97ed8",
+    "principalId": "0b3ccf2e-9b84-b18b-caa1-66cf15abc239",
+    "principalName": "deepak.shinde@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Deepak Shinde",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/ab87c26a-692e-eaaa-f088-78dab4c248a1",
+    "roleDefinitionName": "Website Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-catalog"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-etl/providers/Microsoft.Authorization/roleAssignments/ac70cb68-aca6-fb27-dbcd-1aa911761013",
+    "principalId": "efc350e3-d76a-099b-68d2-5806f4436059",
+    "principalName": "svc-etl-020",
+    "principalType": "ServicePrincipal",
+    "displayName": "Etl Service",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/f9dfd92a-ac58-3758-85fa-47de73e7f136",
+    "roleDefinitionName": "Contributor",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-etl"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-search/providers/Microsoft.Authorization/roleAssignments/54e249eb-bbc0-29d4-72d1-f78c70d5d8d4",
+    "principalId": "88fadbd2-3c30-baef-75bc-a3ff635abcf2",
+    "principalName": "mi-search-021",
+    "principalType": "ManagedIdentity",
+    "displayName": "Search Function (Managed)",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/3b3c3008-bcf1-5fad-d34a-5f37d1b1a517",
+    "roleDefinitionName": "Monitoring Reader",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-search"
+  },
+  {
+    "id": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-crm/providers/Microsoft.Authorization/roleAssignments/672d01f3-6185-45e8-ec0f-75f8f7844c5a",
+    "principalId": "9808475e-14fa-232d-37f9-53fbd521d4a9",
+    "principalName": "pooja.patil@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Pooja Patil",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/4806d83f-a485-3507-9c43-c9b9bcc8fe71",
+    "roleDefinitionName": "Reader",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/resourceGroups/rg-crm"
+  }
+]

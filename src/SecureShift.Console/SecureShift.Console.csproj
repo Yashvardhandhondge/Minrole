@@ -43,4 +43,10 @@
     <None Include="..\..\database\postgres\migrations\*.sql" LinkBase="database\postgres\migrations" CopyToOutputDirectory="PreserveNewest" Visible="false" />
   </ItemGroup>
 
+  <!-- The Governance sample input files are copied too (samples/governance/...), so the Analysis Wizard
+       can offer them as defaults on any machine. -->
+  <ItemGroup>
+    <None Include="..\..\samples\governance\**\*.json" LinkBase="samples\governance" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+  </ItemGroup>
+
 </Project>

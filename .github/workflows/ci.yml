@@ -55,6 +55,11 @@ jobs:
       - name: Seed password hashes are Identity V3 of the expected passwords
         run: node database/postgres/tools/hash_passwords.js check-seed
 
+      - name: Prototype numbers are up to date (runs the prototype JavaScript formulas in Node)
+        run: |
+          node tests/prototype/prototype-expected.js --check
+          node samples/governance/make-samples.js > /dev/null && git diff --exit-code -- samples/governance
+
       - name: Create schema dev (the faculty DB already has it)
         run: psql -v ON_ERROR_STOP=1 -c 'CREATE SCHEMA dev;'
 

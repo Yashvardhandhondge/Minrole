@@ -4,12 +4,6 @@ namespace SecureShift.ConsoleApp.Menus;
 
 // Temporary role menus (Phase 2). Each one is replaced by the real menu in its phase.
 
-public sealed class CloudAdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu profile)
-{
-    public Task RunAsync(Session session) => runner.RunAsync(session, "Cloud Admin", me =>
-        (IReadOnlyList<MenuItem>)[new("Governance menus (Phase 3)", _ => { ui.Info("Comes in Phase 3."); return Task.CompletedTask; }), .. profile.CommonItems(session)], topLevel: true);
-}
-
 public sealed class AdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu profile)
 {
     public Task RunAsync(Session session) => runner.RunAsync(session, "Admin", me =>

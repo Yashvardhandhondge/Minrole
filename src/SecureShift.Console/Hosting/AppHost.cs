@@ -62,6 +62,8 @@ public static class AppHost
         services.AddSingleton<AuthService>();
         services.AddSingleton<UserAdminService>();
         services.AddSingleton<AuditLogService>();
+        services.AddSingleton<Services.Governance.GovernanceService>();
+        services.AddSingleton<Services.Governance.AnalysisService>();
 
         // Menus
         services.AddSingleton<MenuRunner>();
