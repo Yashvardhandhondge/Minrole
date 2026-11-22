@@ -64,10 +64,12 @@ public static class AppHost
         services.AddSingleton<AuditLogService>();
         services.AddSingleton<Services.Governance.GovernanceService>();
         services.AddSingleton<Services.Governance.AnalysisService>();
+        services.AddSingleton<Services.Modernization.ModernizationService>();
 
         // Menus
         services.AddSingleton<MenuRunner>();
         services.AddSingleton<ProfileMenu>();
+        services.AddSingleton<ModernizationScreens>();
         services.AddSingleton<SuperAdminMenu>();
         services.AddSingleton<CloudAdminMenu>();
         services.AddSingleton<AdminMenu>();
