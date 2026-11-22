@@ -12,6 +12,11 @@ name: scaffold
 
 on:
   workflow_dispatch:
+  # TEMPORARY (removed in the next commit): GitHub only lets you dispatch a workflow that exists on
+  # the default branch, so this one push run registers it and does the first scaffold.
+  push:
+    branches: [sprint4-console]
+    paths: [.github/workflows/scaffold.yml]
 
 jobs:
   scaffold:
