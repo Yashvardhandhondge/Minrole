@@ -13,15 +13,15 @@ Read this after CLAUDE.md when a session starts (or after a context reset).
 | 1 | Foundation (scripts, solution, scaffold, db commands, CI) | DONE (PR #1 merged) |
 | 2 | Login / logout / profile / change password, Super Admin (dashboard, users, audit logs) | DONE – CI green run 45055891860 (76 tests, e2e phase2 PASS) |
 | 3 | Cloud Admin – Governance | DONE – CI green run 45057316072 (124 tests, e2e phase2+3 PASS) |
-| 4 | Admin – Modernization | in progress |
-| 5 | Architect + Executive | todo |
-| 6 | Full e2e, manual run, Windows rehearsal, videos, docs | todo |
+| 4 | Admin – Modernization | DONE – CI green run 45058221064 (143 tests, e2e phase2-4 PASS) |
+| 5 | Architect + Executive | DONE – CI green run 45059083751 (152 tests, e2e phase2-5 + full workflow PASS) |
+| 6 | Full e2e, manual run, Windows rehearsal, videos, docs | in progress (full workflow e2e DONE) |
 
 ## Next step
 
-Phase 4: Admin – EmdtCalc.cs (port of emdt-calc.js, tested against tests/SecureShift.Tests/Data/prototype-expected.json),
-enterprises (register / view / edit), EMSI classification, applications, components, dependencies (+ DI),
-digital twin text view, tests + tests/e2e/phase4.sh.
+Phase 6: Windows rehearsal from a fresh clone (scripts/windows/*.ps1), manual run of every menu on Docker
+Postgres + live psql change, VHS videos (docs/demo/*.tape), docs (TCS_LAPTOP_SETUP.md, USER_GUIDE.md,
+DEMO_SCRIPT.md, RUNNING.md, README.md), final PR text, cleanup (docker compose down -v, stop portable PG).
 
 ## Environment notes (this laptop)
 
@@ -60,6 +60,15 @@ See the list at the end of this file; it is copied into the final report.
 13. Analysis Wizard: the "Last N days" presets end yesterday (prototype); the sample files cover 08/12/2026-11/09/2026,
     so demos use "Custom range". Companies without an analysis show "Not analysed" / PENDING (no invented numbers).
 14. Identity evidence rows (SS.GOV.evidence) are fake in the prototype and not stored in the DB: not shown.
+15. Classification limits follow the DB where it is stricter: Total applications 1-10,000 (prototype 1-100,000).
+    Cloud types are the prototype's 4; "Multi-Cloud" is stored as "Multi Cloud" (DB spelling); On-Premise scores 0.
+16. Applications: age 0-50 (DB; prototype 0-60); status Active / Legacy (prototype list); description of a link max 200 (DB; prototype 500).
+17. An application with assessments or simulations cannot be deleted (the DB keeps the history; the prototype deletes it).
+18. Simulation uses the TD, GR AND DI of the latest assessment (the DB stores DI with the assessment); the prototype
+    recalculates DI at simulation time. Same numbers unless the dependencies changed after the assessment (re-assess).
+    Raw dependency points of a stored simulation are not stored, so the plan snapshot shows DI only.
+19. Plan decisions lock the row (SELECT ... FOR UPDATE): two Executives cannot decide the same plan.
+20. An approval without a comment stores "Approved." (review-plan.js does the same).
 
 ## Known bugs
 
