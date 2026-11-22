@@ -155,6 +155,25 @@ jobs:
       - name: Console - smoke (EF Core counts 25 / 5 / 10 / 3)
         run: dotnet "$APP" smoke
 
+      - name: E2E - pipe keystrokes into the real console app (every tests/e2e/phase*.sh, each on a fresh DB)
+        env:
+          APP_CMD: dotnet src/SecureShift.Console/bin/Release/net8.0/SecureShift.Console.dll
+          E2E_CONN: Host=localhost;Port=5432;Username=postgres;Password=ci_only_password
+          OUT_DIR: e2e-output
+        run: |
+          for f in $(ls tests/e2e/phase*.sh | sort -V); do
+            echo "### $f"
+            bash "$f"
+          done
+
+      - name: Upload e2e output (what the app printed)
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: e2e-output
+          path: e2e-output
+          if-no-files-found: ignore
+
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v7
