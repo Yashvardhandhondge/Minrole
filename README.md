@@ -8,6 +8,29 @@ TCS Training · Cloud Domain · Group 3 (Nimbus) + Group 4 (ModernOps)
 | **Cloud Governance** | Group 3 · Nimbus | Compares the Azure permissions an identity was *given* with what it *used* in a fixed analysis period, gives a 0-100 Over-Privilege Score and builds a least-privilege custom role. |
 | **Application Modernization (EMDT)** | Group 4 · ModernOps | Onboards enterprises, classifies them with the EMSI score, maps application dependencies, assesses Technical Debt and Governance Risk, simulates modernization and sends plans to an Executive for approval. |
 
+## How to run the Sprint 4 console app (C# .NET 8 + PostgreSQL)
+
+The `src/` folder holds the complete console version of SecureShift (all 5 roles) on a PostgreSQL database.
+
+| I want to ... | Read |
+|---|---|
+| set it up on a laptop that has only .NET 8 (no Docker, no admin) | [docs/backend/TCS_LAPTOP_SETUP.md](docs/backend/TCS_LAPTOP_SETUP.md) |
+| know every menu and the exact keys to type | [docs/backend/USER_GUIDE.md](docs/backend/USER_GUIDE.md) |
+| the database commands, the faculty DB, tests, schema changes | [docs/backend/RUNNING.md](docs/backend/RUNNING.md) |
+| give a 10-minute live demo / watch the videos | [docs/demo/DEMO_SCRIPT.md](docs/demo/DEMO_SCRIPT.md), [docs/demo/](docs/demo/) |
+| the sprint status, decisions and fixed bugs | [docs/backend/PROGRESS.md](docs/backend/PROGRESS.md) |
+
+Quick start (Windows PowerShell, in this folder):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\windows\run.ps1
+```
+
+It starts a portable PostgreSQL 16 (port 5434), creates the tables and sample data the first time, and opens the
+login screen. Log in with one of the 5 accounts below (the console uses the same accounts as the prototype).
+
+---
+
 **Sprint 1 rules:** only HTML, CSS and JavaScript. No backend, no libraries, no CDN. All demo data is hardcoded in `js/data/`. Changes are saved in the browser (localStorage).
 
 ---

@@ -3,6 +3,10 @@
 This guide is for Windows and PowerShell. Copy the grey boxes one by one.
 Run every command from the **repo folder** (the folder that has `SecureShift.sln`).
 
+> **New laptop with only .NET (no Docker, no PostgreSQL)?** Follow [TCS_LAPTOP_SETUP.md](TCS_LAPTOP_SETUP.md):
+> one script starts a portable PostgreSQL 16 without admin rights. **What every menu does:** [USER_GUIDE.md](USER_GUIDE.md).
+> Live status of the sprint: [PROGRESS.md](PROGRESS.md). Demo videos and the live-demo keystrokes: [../demo/](../demo/).
+
 ```powershell
 cd C:\path\to\secure-shift      # change this to where your copy of the repo is
 ```
@@ -140,7 +144,12 @@ The last line of `03` must say `VERIFY RESULT: PASS (tables=28, views=4, fks=46,
 dotnet run --project src/SecureShift.Console
 ```
 
-For now it prints `Login menu comes in Phase 2`. The login and role menus come in Phase 2.
+You get the login screen. After login you only see the menu of your role (Super Admin, Cloud Admin, Admin,
+Architect, Executive). Every menu, with the exact keys to type, is in [USER_GUIDE.md](USER_GUIDE.md).
+Faster to start (no build check each time): `dotnet build -c Release` once, then
+`dotnet src\SecureShift.Console\bin\Release\net8.0\SecureShift.Console.dll`.
+
+Leave with `0` (Logout) → `y` → `0` (Exit). `Ctrl+C` or closing the input also exits cleanly.
 
 ### Login accounts (seeded)
 
@@ -276,8 +285,21 @@ dotnet test
 Only the unit tests (no database):
 
 ```powershell
-dotnet test --filter "FullyQualifiedName~MigrationServiceTests"
+dotnet test --filter "FullyQualifiedName~MigrationServiceTests|FullyQualifiedName~FormulaTests|FullyQualifiedName~GovernanceInputTests"
 ```
+
+The database user must be allowed to `CREATE DATABASE`: tests that write data make their own fresh database
+(CREATE DATABASE + db setup) and drop it at the end, so the shared seeded database is never changed.
+
+What the tests cover:
+
+- **Formulas = prototype:** `tests/prototype/prototype-expected.js` runs the prototype JavaScript (`js/data/*.js`) in Node
+  and writes the numbers to `tests/SecureShift.Tests/Data/prototype-expected.json`; the C# tests compare against it
+  (EMSI, assessment factors, simulations, plan phases, governance ratios). CI checks the file is up to date:
+  `node tests/prototype/prototype-expected.js --check`.
+- **Services** against real PostgreSQL, **menus** with scripted keyboard input (IConsoleIO),
+- **End-to-end:** `tests/e2e/phase*.sh` pipe keystrokes into the real built app and check the database with psql
+  (`phase6-full-workflow.sh` = Super Admin → Admin → Architect → Executive → Cloud Admin in one run).
 
 GitHub Actions (`.github/workflows/ci.yml`) runs everything on every push against a real PostgreSQL 16.
 
