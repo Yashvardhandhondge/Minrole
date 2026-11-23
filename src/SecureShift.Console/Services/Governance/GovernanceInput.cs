@@ -190,13 +190,13 @@ public static class GovernanceInputReader
         // ---- 4. Activity coverage ----
         var known = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         foreach (var ra in assignments) { known.Add(ra.PrincipalId); known.Add(ra.PrincipalName); known.Add(ra.UserName); }
-        bool InPeriod(ActivityEventRow ev) { var d = DateOnly.FromDateTime(ev.Timestamp.UtcDateTime); return d >= from && d <= to; }
+        bool InPeriod(ActivityEventRow ev) { var d = AppTime.DateOf(ev.Timestamp); return d >= from && d <= to; }
         var usable = events.Where(ev => known.Contains(ev.Caller) && ev.Status.Equals("Succeeded", StringComparison.OrdinalIgnoreCase) && InPeriod(ev)).ToList();
         var periodText = $"{Fmt.Date(from)} - {Fmt.Date(to)}";
         if (usable.Count == 0)
         {
             var range = events.Count == 0 ? "the file has no events at all"
-                : $"the file has events from {Fmt.Date(DateOnly.FromDateTime(events.Min(x => x.Timestamp).UtcDateTime))} to {Fmt.Date(DateOnly.FromDateTime(events.Max(x => x.Timestamp).UtcDateTime))}; choose a period that covers them";
+                : $"the file has events from {Fmt.Date(AppTime.DateOf(events.Min(x => x.Timestamp)))} to {Fmt.Date(AppTime.DateOf(events.Max(x => x.Timestamp)))}; choose a period that covers them";
             Fail("Activity coverage", $"the Activity Log has no successful events of these identities between {periodText} ({range})");
         }
         steps.Add(new ValidationStep("Activity coverage", true, $"Activity Log covers {periodText} ({to.DayNumber - from.DayNumber + 1} days) for {companyName}"));

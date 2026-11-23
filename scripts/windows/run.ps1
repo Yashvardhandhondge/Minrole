@@ -6,6 +6,7 @@
   1. Starts the portable PostgreSQL (setup-postgres-portable.ps1 does the first-time setup)
   2. Sets ConnectionStrings__SecureShiftDb for THIS PowerShell window only
   3. Builds the app (Release) the first time, or with -Build
+     (in the OFFLINE package the app is already published in app\, so nothing is built)
   4. First run on the empty database: "db setup --yes" (28 tables, 4 views, 569 sample rows)
   5. Starts the app (login screen)
 
@@ -29,14 +30,24 @@ param(
 # Native programs (pg_ctl, psql, dotnet) print to stderr; with "Stop" PowerShell 5.1 would treat that as a crash.
 # Every step checks $LASTEXITCODE instead.
 $ErrorActionPreference = "Continue"
-$repo = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $connFile = Join-Path $ToolsDir "connection-string.txt"
-$app = Join-Path $repo "src\SecureShift.Console\bin\Release\net8.0\SecureShift.Console.dll"
+
+# Two layouts: the OFFLINE package (run.ps1 next to app\SecureShift.Console.dll, already published - no build,
+# no Git, no internet) or the Git repository (scripts\windows\run.ps1, the app is built the first time).
+$packagedApp = Join-Path $PSScriptRoot "app\SecureShift.Console.dll"
+$packaged = Test-Path $packagedApp
+if ($packaged) {
+    $repo = $PSScriptRoot
+    $app = $packagedApp
+} else {
+    $repo = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+    $app = Join-Path $repo "src\SecureShift.Console\bin\Release\net8.0\SecureShift.Console.dll"
+}
 
 function Step($text) { Write-Host ""; Write-Host "== $text" -ForegroundColor Cyan }
 
 if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
-    Write-Host "[ERROR] 'dotnet' was not found. Install the .NET 8 SDK first (see docs/backend/TCS_LAPTOP_SETUP.md)." -ForegroundColor Red
+    Write-Host "[ERROR] 'dotnet' was not found. Install the .NET 8 runtime or SDK first (see TCS_LAPTOP_SETUP.md)." -ForegroundColor Red
     exit 1
 }
 
@@ -56,7 +67,9 @@ if ($Reset) {
     Write-Host "[OK] Empty database secureshift with schema dev." -ForegroundColor Green
 }
 
-if ($Build -or -not (Test-Path $app)) {
+if ($packaged) {
+    Write-Host "[OK] Offline package: using the published app $app (nothing to build)." -ForegroundColor Green
+} elseif ($Build -or -not (Test-Path $app)) {
     Step "Build (Release)"
     $env:DOTNET_CLI_TELEMETRY_OPTOUT = "1"
     $env:DOTNET_NOLOGO = "1"

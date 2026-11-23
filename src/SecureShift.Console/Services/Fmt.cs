@@ -13,14 +13,16 @@ public static class Fmt
 
     public static string Date(DateOnly? d) => d is null ? "-" : Date(d.Value);
 
-    /// <summary>11/22/2026 04:12 PM in the local time of this machine (the database stores UTC).</summary>
+    /// <summary>11/22/2026 04:12 PM in the app time zone (App:TimeZone, India by default; the database stores UTC).</summary>
     public static string DateTime(System.DateTime utc) =>
         ToLocal(utc).ToString("MM/dd/yyyy hh:mm tt", Inv);
 
     public static string DateTime(System.DateTime? utc) => utc is null ? "-" : DateTime(utc.Value);
 
-    public static System.DateTime ToLocal(System.DateTime utc) =>
-        System.DateTime.SpecifyKind(utc, DateTimeKind.Utc).ToLocalTime();
+    public static System.DateTime ToLocal(System.DateTime utc) => AppTime.ToZone(utc);
+
+    /// <summary>The date (in the app time zone) of a UTC timestamp, e.g. the date a report was generated.</summary>
+    public static string DateOf(System.DateTime utc) => Date(AppTime.DateOf(utc));
 
     /// <summary>Accepts MM/DD/YYYY (like the prototype), M/D/YYYY or YYYY-MM-DD.</summary>
     public static bool TryParseDate(string text, out DateOnly date) =>

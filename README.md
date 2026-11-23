@@ -15,6 +15,7 @@ The `src/` folder holds the complete console version of SecureShift (all 5 roles
 | I want to ... | Read |
 |---|---|
 | set it up on a laptop that has only .NET 8 (no Docker, no admin) | [docs/backend/TCS_LAPTOP_SETUP.md](docs/backend/TCS_LAPTOP_SETUP.md) |
+| run it with no Git, no build, no internet | `SecureShift-offline.zip` in the [sprint4-demo release](https://github.com/Yashvardhandhondge/Minrole/releases/tag/sprint4-demo) (paths B-D in TCS_LAPTOP_SETUP.md) |
 | know every menu and the exact keys to type | [docs/backend/USER_GUIDE.md](docs/backend/USER_GUIDE.md) |
 | the database commands, the faculty DB, tests, schema changes | [docs/backend/RUNNING.md](docs/backend/RUNNING.md) |
 | give a 10-minute live demo / watch the videos | [docs/demo/DEMO_SCRIPT.md](docs/demo/DEMO_SCRIPT.md), [docs/demo/](docs/demo/) |

@@ -375,7 +375,7 @@ public sealed partial class GovernanceService(IDbContextFactory<SecureShiftDbCon
         sb.Append("<!DOCTYPE html><html><head><meta charset='UTF-8'><title>").Append(E(report.Code)).Append("</title><style>body{font-family:Arial,sans-serif;max-width:860px;margin:30px auto;color:#111}")
           .Append("table{border-collapse:collapse;width:100%;margin-top:10px}th,td{border:1px solid #ccc;padding:8px;text-align:left;font-size:13px}th{background:#f5f5f5}")
           .Append(".k{display:inline-block;border:1px solid #ccc;border-radius:6px;padding:10px 16px;margin:4px;text-align:center}.k b{display:block;font-size:22px}</style></head><body>")
-          .Append("<h1>Cloud Governance Report</h1><p>").Append(E(report.Code)).Append(" · ").Append(E(report.Analysis.Company.CompanyName)).Append(" · Generated ").Append(Fmt.Date(DateOnly.FromDateTime(report.GeneratedAt))).Append("</p>")
+          .Append("<h1>Cloud Governance Report</h1><p>").Append(E(report.Code)).Append(" · ").Append(E(report.Analysis.Company.CompanyName)).Append(" · Generated ").Append(Fmt.DateOf(report.GeneratedAt)).Append("</p>")
           .Append("<div><span class='k'><b>").Append(report.IdentityCount).Append("</b>Identities</span><span class='k'><b>").Append(Fmt.Dec2(report.AvgScore)).Append("</b>Average score</span><span class='k'><b>")
           .Append(report.HighRiskCount).Append("</b>High-risk unused</span></div><h2>Identities</h2><table><tr><th>Identity</th><th>Type</th><th>Role</th><th>Scope</th><th>Granted</th><th>Used</th><th>Score</th></tr>");
         foreach (var i in ids)

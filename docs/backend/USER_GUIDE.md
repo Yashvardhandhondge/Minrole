@@ -16,6 +16,8 @@ powershell -ExecutionPolicy Bypass -File scripts\windows\run.ps1
 - Every screen reads fresh data from the database, so changes made by others (or in SQLTools / psql) show at once.
 - If the Super Admin deactivates you (or changes your role) while you are logged in, the next action logs you out.
 - No email is ever sent. Temporary passwords are shown on screen to the Super Admin, who shares them by hand.
+- Times and dates are India time (`"App": { "TimeZone": "Asia/Kolkata" }` in appsettings.json): at 01:00 in India
+  "Submitted On" and other dates already show the new day.
 
 The examples below use the sample data (a fresh database: `run.ps1 -Reset`).
 
@@ -191,6 +193,30 @@ Nothing was saved. Fix the file (or choose another one) and run the wizard again
 
 `samples\governance\bad\activity-log-broken.json` shows `... is not valid JSON (line 3, position 3)`; a path that does
 not exist shows `file not found ... Check the path` and asks again. The whole result is saved in ONE transaction.
+
+### How the Governance risk score is calculated (team to confirm)
+
+> **Team to confirm.** The prototype only shows the 3 signals and their weights; it never calculates a score from files.
+> This is the formula the console uses (code: `src/SecureShift.Console/Services/Governance/GovernanceScoring.cs`).
+> The weights come from **Rule Settings** (default 50 / 30 / 20).
+
+| Signal | Weight | How it is measured (0-100) |
+|---|---|---|
+| Unused permission ratio | 50% | `(1 - used / granted) x 100`, rounded |
+| Unused high-risk actions | 30% | 10 points for every granted action that matches a high-risk pattern and was never used (max 100) |
+| Scope breadth | 20% | Management Group or Subscription = 100, Resource Group = 40, one Resource = 10 |
+
+**Score = (50 x ratio + 30 x high-risk + 20 x scope) / 100**, rounded.
+Risk level: 70-100 HIGH, 40-69 MEDIUM, 0-39 LOW.
+
+**Worked example – svc-webapp-deploy** (Contributor on the whole subscription, sample files):
+
+- It was given 76 actions and used 14 of them → unused ratio = (1 - 14 / 76) x 100 = 81.6 → **82**
+- 20 of its unused actions are high-risk (deletes, Key Vault, NSG writes) → 20 x 10 = 200 → capped at **100**
+- Its scope is the whole Subscription → **100**
+- Score = (50 x 82 + 30 x 100 + 20 x 100) / 100 = (4,100 + 3,000 + 2,000) / 100 = **91** → **HIGH**
+
+(91 is also the score this identity has in the prototype's sample data.)
 
 ### 4. Previous Analyses
 All analyses, newest first (ID, company, period, days, completed, identities, average score, status).

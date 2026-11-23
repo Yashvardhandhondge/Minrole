@@ -2,13 +2,13 @@
 
 Read this after CLAUDE.md when a session starts (or after a context reset).
 
-- Branch: `sprint4-full` (from `main`, after PR #1 was merged). One PR to main, ready for review, NOT merged.
+- Sprint 4 was built on branch `sprint4-full` (from `main`, after PR #1) and squash-merged into `main` as PR #2.
 - Owner instructions for this run: build Phases 2–6 fully, test, record videos, write docs. Don't ask questions;
   pick what is closest to the prototype + CLAUDE.md and write the choice down (section "Decisions" below).
 
 ## Status
 
-**Sprint 4 console app complete** (2026-11-23). PR #2 (sprint4-full -> main) is ready for review, not merged.
+**Sprint 4 console app complete** (2026-11-23). PR #2 squash-merged into main; branch sprint4-full deleted.
 
 | Phase | What | Status |
 |---|---|---|
@@ -74,6 +74,20 @@ See the list at the end of this file; it is copied into the final report.
     Raw dependency points of a stored simulation are not stored, so the plan snapshot shows DI only.
 19. Plan decisions lock the row (SELECT ... FOR UPDATE): two Executives cannot decide the same plan.
 20. An approval without a comment stores "Approved." (review-plan.js does the same).
+
+Owner decisions after the final report (2026-11-23):
+
+21. Super Admin dashboard "Recent activity" hides the sign-in rows (Logged In, Logged Out, Login Failed,
+    Login Blocked); the Audit Logs page still shows them.
+22. Governance scoring formula kept; explained with a worked example in USER_GUIDE.md ("team to confirm").
+23. Time zone: App:TimeZone = Asia/Kolkata (fallback "India Standard Time", then UTC). All times on screen and
+    every date-only column (Submitted On, decision dates, report dates, "today") use the India date - at 01:00 IST
+    it is already the next day (replaces decision 5).
+24. Videos are only in the GitHub release sprint4-demo (docs/demo keeps the .tape files; *.mp4 / *.gif are ignored).
+25. Notification preferences (profile tab of the prototype): SKIPPED by the owner - no table, no menu.
+26. Offline package SecureShift-offline.zip (scripts/windows/make-offline-package.ps1): published app + scripts +
+    database scripts + samples + docs; run.ps1 / setup-postgres-portable.ps1 work from it with no Git, no build and
+    no internet when the PostgreSQL zip is next to run.ps1 (or in C:\SecureShiftTools).
 
 ## Bugs found in the manual run / rehearsal (all fixed, with a test)
 

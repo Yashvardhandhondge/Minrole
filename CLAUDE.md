@@ -81,7 +81,7 @@ References: Application -> Data; Console -> Application + Data; Tests -> Console
 
 ## 3. Phase plan
 
-Status (2026-11-23): **all phases built** in branch `sprint4-full` (PR to main, not merged). Live status: docs/backend/PROGRESS.md.
+Status (2026-11-23): **all phases built** and squash-merged into `main` (PR #2). Live status: docs/backend/PROGRESS.md.
 
 1. **Foundation** — DONE in branch `sprint4-console` (scripts, solution, scaffold, db commands, CI, tests, RUNNING.md).
 2. Login, logout, change password, role menus; Super Admin: dashboard, users

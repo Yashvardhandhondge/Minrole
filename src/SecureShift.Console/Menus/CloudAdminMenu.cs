@@ -34,7 +34,7 @@ public sealed class CloudAdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu 
             ];
         }, topLevel: true);
 
-    private DateOnly Today => DateOnly.FromDateTime(clock.GetUtcNow().UtcDateTime);
+    private DateOnly Today => AppTime.DateOf(clock.GetUtcNow());
 
     /* ------------------------------------------------------------------ dashboard */
 
@@ -105,7 +105,7 @@ public sealed class CloudAdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu 
                 {
                     var l = LatestOf(c);
                     return (IReadOnlyList<string>)[(i + 1).ToString(), c.CompanyName, l is null ? "0" : (l.IdentityCount ?? 0).ToString(), l is null ? "0" : Fmt.Dec2(l.AvgScore ?? 0),
-                        l is null ? "0" : (l.HighRiskCount ?? 0).ToString(), l is null ? "Not analysed" : Fmt.Date(DateOnly.FromDateTime(l.RunAt)),
+                        l is null ? "0" : (l.HighRiskCount ?? 0).ToString(), l is null ? "Not analysed" : Fmt.DateOf(l.RunAt),
                         l is null ? "PENDING" : GovernanceScoring.RiskBand(l.AvgScore ?? 0)];
                 }).ToList(), 0, 2, 3, 4);
             ui.WriteLine(ListNav.Footer(p, "companies"));
@@ -633,7 +633,7 @@ public sealed class CloudAdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu 
             var reports = await gov.ReportsAsync();
             ui.Section("Reports");
             ui.Table(["#", "Report ID", "Company", "Date", "Identities", "Avg Score", "High-Risk"],
-                reports.Select((r, i) => (IReadOnlyList<string>)[(i + 1).ToString(), r.Code, r.Analysis.Company.CompanyName, Fmt.Date(DateOnly.FromDateTime(r.GeneratedAt)),
+                reports.Select((r, i) => (IReadOnlyList<string>)[(i + 1).ToString(), r.Code, r.Analysis.Company.CompanyName, Fmt.DateOf(r.GeneratedAt),
                     r.IdentityCount.ToString(), Fmt.Dec2(r.AvgScore), r.HighRiskCount.ToString()]).ToList(), 0, 4, 5, 6);
             ui.WriteLine("Type a row number to preview a report, or: G generate new report · 0 back");
             var answer = ui.Ask("Choose: ");
@@ -659,7 +659,7 @@ public sealed class CloudAdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu 
     {
         var (fix, high, medium, low) = await gov.ReportDetailAsync(r.AnalysisId);
         ui.Section($"Report Preview - {r.Code}");
-        ui.WriteLine($"Cloud Governance Report · {r.Code} · {r.Analysis.Company.CompanyName} · {Fmt.Date(DateOnly.FromDateTime(r.GeneratedAt))} · analysis {r.Analysis.Code}");
+        ui.WriteLine($"Cloud Governance Report · {r.Code} · {r.Analysis.Company.CompanyName} · {Fmt.DateOf(r.GeneratedAt)} · analysis {r.Analysis.Code}");
         ui.KeyValues([("Identities", r.IdentityCount.ToString()), ("Avg score", Fmt.Dec2(r.AvgScore)), ("High-risk unused", r.HighRiskCount.ToString())]);
         ui.WriteLine("Fix First:");
         for (var i = 0; i < fix.Count; i++) ui.WriteLine($"  {i + 1}. {fix[i].DisplayName} ({fix[i].UserName}) - score {fix[i].RiskScore} ({fix[i].AssignedRole})");

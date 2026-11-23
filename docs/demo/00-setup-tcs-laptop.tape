@@ -24,7 +24,7 @@ Enter
 Type "dotnet --version"
 Enter
 Sleep 2s
-Type "git clone -b sprint4-full https://github.com/Yashvardhandhondge/Minrole.git C:\Temp\SecureShiftDemo"
+Type "git clone https://github.com/Yashvardhandhondge/Minrole.git C:\Temp\SecureShiftDemo"
 Enter
 Wait@180s
 Type "cd C:\Temp\SecureShiftDemo"

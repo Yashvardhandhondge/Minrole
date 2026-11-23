@@ -27,6 +27,9 @@ public sealed partial class UserAdminService(IDbContextFactory<SecureShiftDbCont
 
     [GeneratedRegex("Role|Created|Deactivated|Activated|Password")] private static partial Regex AccessChangeRx();
 
+    /// <summary>Sign-in rows: kept on the Audit Logs page, hidden from the dashboard's "Recent activity".</summary>
+    public static readonly string[] SignInActions = ["Logged In", "Logged Out", "Login Failed", "Login Blocked"];
+
     private static IQueryable<User> Managed(SecureShiftDbContext db) =>
         db.Users.Include(u => u.Role).Where(u => u.Role.Product == RoleCodes.ProductModernization);
 
@@ -71,7 +74,7 @@ public sealed partial class UserAdminService(IDbContextFactory<SecureShiftDbCont
         var users = await Managed(db).AsNoTracking().ToListAsync();
         var roles = await db.Roles.AsNoTracking().Where(r => r.Product == RoleCodes.ProductModernization).OrderBy(r => r.RoleId).ToListAsync();
         var byRole = roles.Select(r => (r.RoleName, users.Count(u => u.RoleId == r.RoleId))).ToList();
-        var logs = await db.AuditLogs.AsNoTracking().Include(a => a.User)
+        var logs = await db.AuditLogs.AsNoTracking().Include(a => a.User).Where(a => !SignInActions.Contains(a.Action))
             .OrderByDescending(a => a.CreatedAt).ThenByDescending(a => a.AuditLogId).Take(200).ToListAsync();
         var active = users.Count(u => u.Status == "Active");
         return new SuperAdminDashboard(users.Count, active, users.Count - active, byRole,

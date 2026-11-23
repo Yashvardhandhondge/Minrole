@@ -4,7 +4,7 @@ using SecureShift.Data.Models.Generated;
 
 namespace SecureShift.ConsoleApp.Services;
 
-/// <summary>Filters of the Audit Logs page: action, performed by, date range (local dates, both included), search text.</summary>
+/// <summary>Filters of the Audit Logs page: action, performed by, date range (dates in the app time zone, both included), search text.</summary>
 public sealed record AuditFilter(string? Action = null, int? UserId = null, DateOnly? From = null, DateOnly? To = null, string? Search = null);
 
 /// <summary>Super Admin > Audit Logs (modernization/js/audit-logs.js): newest first, 10 per page, filters.</summary>
@@ -49,6 +49,5 @@ public sealed class AuditLogService(IDbContextFactory<SecureShiftDbContext> fact
         return await db.Users.AsNoTracking().Where(u => ids.Contains(u.UserId)).OrderBy(u => u.FullName).ToListAsync();
     }
 
-    private static DateTime LocalMidnightUtc(DateOnly localDate) =>
-        TimeZoneInfo.ConvertTimeToUtc(DateTime.SpecifyKind(localDate.ToDateTime(TimeOnly.MinValue), DateTimeKind.Unspecified), TimeZoneInfo.Local);
+    private static DateTime LocalMidnightUtc(DateOnly date) => AppTime.StartOfDayUtc(date);
 }

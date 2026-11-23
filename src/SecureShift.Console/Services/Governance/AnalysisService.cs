@@ -79,8 +79,8 @@ public sealed class AnalysisService(IDbContextFactory<SecureShiftDbContext> fact
                 .Select(g => new
                 {
                     Action = g.Key,
-                    First = DateOnly.FromDateTime(g.Min(x => x.Timestamp).UtcDateTime),
-                    Last = DateOnly.FromDateTime(g.Max(x => x.Timestamp).UtcDateTime),
+                    First = AppTime.DateOf(g.Min(x => x.Timestamp)),
+                    Last = AppTime.DateOf(g.Max(x => x.Timestamp)),
                     Count = g.Count(),
                     Rg = g.Where(x => x.ResourceGroup is not null).GroupBy(x => x.ResourceGroup!).OrderByDescending(x => x.Count()).ThenBy(x => x.Key).Select(x => x.Key).FirstOrDefault(),
                 }).OrderBy(u => u.Action, StringComparer.OrdinalIgnoreCase).ToList();

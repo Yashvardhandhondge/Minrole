@@ -1,10 +1,104 @@
 # SecureShift on a TCS laptop – step by step (from zero)
 
-This guide is for a laptop that has **only the .NET 8 SDK**. You do **not** need Docker, a PostgreSQL
-installer or admin rights. A "portable" PostgreSQL 16 runs from a folder (`C:\SecureShiftTools`).
+This guide is for a laptop that has **only .NET 8**. You do **not** need Docker, a PostgreSQL installer or admin
+rights. A "portable" PostgreSQL 16 runs from a folder (`C:\SecureShiftTools`, port 5434, this computer only).
+Every command is for **Windows PowerShell**: copy one block at a time, paste it, press Enter.
+Video: [00-setup-tcs-laptop.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/sprint4-demo/00-setup-tcs-laptop.mp4).
 
-Every command below is for **Windows PowerShell**. Copy one block at a time, paste it, press Enter.
-Video of all these steps: `docs/demo/00-setup-tcs-laptop.mp4`.
+## Choose your path
+
+You need two files in every path except A:
+
+| File | Where to get it | Size |
+|---|---|---|
+| `SecureShift-offline.zip` (the app, ready to run - no Git, no build) | https://github.com/Yashvardhandhondge/Minrole/releases/download/sprint4-demo/SecureShift-offline.zip | ~3.5 MB |
+| `postgresql-16.11-1-windows-x64-binaries.zip` (PostgreSQL) | https://get.enterprisedb.com/postgresql/postgresql-16.11-1-windows-x64-binaries.zip | ~309 MB |
+
+> **On the owner's laptop the PostgreSQL zip is already here:**
+> `C:\SecureShiftTools\postgresql-16.11-1-windows-x64-binaries.zip` (324,093,756 bytes).
+> Copy it (and `SecureShift-offline.zip`) to a pen drive for paths C and D.
+
+### A) The laptop has Git and internet
+
+```powershell
+git clone https://github.com/Yashvardhandhondge/Minrole.git C:\Temp\SecureShift
+cd C:\Temp\SecureShift
+powershell -ExecutionPolicy Bypass -File scripts\windows\run.ps1
+```
+
+`run.ps1` downloads PostgreSQL the first time, builds the app, creates the tables + sample data and opens the login
+screen. The detailed steps are in sections 0-7 below.
+
+### B) No Git (internet works)
+
+1. Download `SecureShift-offline.zip` (link above), right-click it → **Extract All** → `C:\SecureShift`.
+2. Open PowerShell and type:
+
+```powershell
+cd C:\SecureShift
+powershell -ExecutionPolicy Bypass -File run.ps1
+```
+
+PostgreSQL is downloaded the first time (about 310 MB). Nothing is built: the app is already in `C:\SecureShift\app`.
+
+### C) No internet (files from a pen drive)
+
+1. Copy `SecureShift-offline.zip` and `postgresql-16.11-1-windows-x64-binaries.zip` from the pen drive.
+2. Right-click `SecureShift-offline.zip` → **Extract All** → `C:\SecureShift`.
+3. Put `postgresql-16.11-1-windows-x64-binaries.zip` **next to `run.ps1`** (in `C:\SecureShift`).
+4. Open PowerShell and type:
+
+```powershell
+cd C:\SecureShift
+powershell -ExecutionPolicy Bypass -File run.ps1
+```
+
+You see `Using the zip C:\SecureShift\postgresql-16.11-1-windows-x64-binaries.zip (no download needed)` and
+`Offline package: using the published app ... (nothing to build)`. Nothing is downloaded and nothing is built.
+
+### D) PowerShell scripts are blocked by policy (no .ps1 files at all)
+
+Do steps 1-3 of path C, then type these commands **by hand, one by one** (typed commands are allowed even when
+scripts are blocked):
+
+```powershell
+cd C:\SecureShift
+mkdir C:\SecureShiftTools
+tar -xf C:\SecureShift\postgresql-16.11-1-windows-x64-binaries.zip -C C:\SecureShiftTools
+```
+
+Create the database folder. It asks for a password twice: type one and remember it.
+
+```powershell
+C:\SecureShiftTools\pgsql\bin\initdb.exe -D C:\SecureShiftTools\pgdata -U postgres -A scram-sha-256 -E UTF8 --no-locale --pwprompt
+```
+
+Start PostgreSQL in the background (port 5434, this computer only), then wait 5 seconds:
+
+```powershell
+Start-Process C:\SecureShiftTools\pgsql\bin\pg_ctl.exe -WindowStyle Hidden -ArgumentList '-D','C:\SecureShiftTools\pgdata','-l','C:\SecureShiftTools\postgres.log','-o','"-p 5434 -c listen_addresses=localhost"','start'
+Start-Sleep 5
+```
+
+Create the database and the schema (put YOUR password between the quotes):
+
+```powershell
+$env:PGPASSWORD = "the-password-you-typed"
+C:\SecureShiftTools\pgsql\bin\psql.exe -h 127.0.0.1 -p 5434 -U postgres -c "CREATE DATABASE secureshift"
+C:\SecureShiftTools\pgsql\bin\psql.exe -h 127.0.0.1 -p 5434 -U postgres -d secureshift -c "CREATE SCHEMA dev"
+```
+
+Tables + sample data, then the app:
+
+```powershell
+$env:ConnectionStrings__SecureShiftDb = "Host=127.0.0.1;Port=5434;Database=secureshift;Username=postgres;Password=$env:PGPASSWORD"
+dotnet app\SecureShift.Console.dll db setup --yes
+dotnet app\SecureShift.Console.dll
+```
+
+Next day in path D: the `Start-Process ... pg_ctl` line, then the two `$env:` lines, then
+`dotnet app\SecureShift.Console.dll`. Stop PostgreSQL:
+`C:\SecureShiftTools\pgsql\bin\pg_ctl.exe -D C:\SecureShiftTools\pgdata stop`
 
 ---
 
@@ -14,7 +108,8 @@ Video of all these steps: `docs/demo/00-setup-tcs-laptop.mp4`.
 dotnet --list-sdks
 ```
 
-You must see a line that starts with `8.0.` (for example `8.0.428`).
+You must see a line that starts with `8.0.` (for example `8.0.428`). For the offline package (paths B, C, D)
+the runtime is enough: `dotnet --list-runtimes` must show `Microsoft.NETCore.App 8.0.x`.
 If you see "dotnet is not recognized", see **Troubleshooting → 'dotnet' is not recognized** at the end.
 
 ---
@@ -25,12 +120,12 @@ If you see "dotnet is not recognized", see **Troubleshooting → 'dotnet' is not
 
 ```powershell
 cd C:\Temp
-git clone -b sprint4-full https://github.com/Yashvardhandhondge/Minrole.git SecureShift
+git clone https://github.com/Yashvardhandhondge/Minrole.git SecureShift
 cd C:\Temp\SecureShift
 ```
 
-**Without Git:** on GitHub choose the branch, click **Code → Download ZIP**, right-click the zip → **Extract All**
-to `C:\Temp\SecureShift`, then:
+**Without Git:** use path B or C above (the offline zip). Or on GitHub click **Code → Download ZIP**,
+right-click the zip → **Extract All** to `C:\Temp\SecureShift`, then:
 
 ```powershell
 cd C:\Temp\SecureShift
@@ -48,7 +143,8 @@ powershell -ExecutionPolicy Bypass -File scripts\windows\setup-postgres-portable
 
 What it does (it never needs admin):
 
-1. downloads the PostgreSQL 16 zip (about 310 MB) to `C:\SecureShiftTools`
+1. uses `postgresql-16*-windows-x64-binaries.zip` if it is already next to the script, in the current folder or in
+   `C:\SecureShiftTools` (no internet needed); otherwise downloads it (about 310 MB) to `C:\SecureShiftTools`
 2. unzips it to `C:\SecureShiftTools\pgsql`
 3. creates the data folder `C:\SecureShiftTools\pgdata` and a random password for the local `postgres` user
 4. starts the server on **port 5434**, only for this computer (localhost)

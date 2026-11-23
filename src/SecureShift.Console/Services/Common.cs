@@ -74,6 +74,6 @@ public abstract class ServiceBase(IDbContextFactory<SecureShiftDbContext> factor
     /// <summary>Now as a UTC DateTime (Npgsql only accepts Kind=Utc for timestamptz).</summary>
     protected DateTime UtcNow => clock.GetUtcNow().UtcDateTime;
 
-    /// <summary>Today's date (UTC), used for the DATE columns (same as the DB default).</summary>
-    protected DateOnly Today => DateOnly.FromDateTime(UtcNow);
+    /// <summary>Today's date in the app time zone (India), used for the DATE columns (Submitted On, decisions ...).</summary>
+    protected DateOnly Today => AppTime.DateOf(UtcNow);
 }

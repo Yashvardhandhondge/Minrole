@@ -3,7 +3,8 @@
   Portable PostgreSQL 16 for SecureShift on a laptop WITHOUT admin rights and WITHOUT Docker.
 
 .DESCRIPTION
-  1. Downloads the PostgreSQL 16 zip from EnterpriseDB (or uses a zip you already downloaded)
+  1. Uses a PostgreSQL 16 zip that is already here (next to this script, in the current folder or in
+     C:\SecureShiftTools: postgresql-16*-windows-x64-binaries.zip) - NO internet needed - or downloads it
   2. Unzips it to C:\SecureShiftTools\pgsql   (nothing is installed, no Windows service, no admin)
   3. Creates the data folder C:\SecureShiftTools\pgdata (initdb) the first time
   4. Starts the server on port 5434, only on this computer (localhost), with pg_ctl
@@ -48,15 +49,25 @@ Step "1. PostgreSQL 16 binaries in $pgDir"
 if (Test-Path (Join-Path $bin "pg_ctl.exe")) {
     Ok "Already unzipped."
 } else {
-    if ($ZipPath -eq "") { $ZipPath = Join-Path $ToolsDir "postgresql-$Version-windows-x64-binaries.zip" }
-    if (-not (Test-Path $ZipPath)) {
+    # No internet needed when a PostgreSQL 16 zip is already here: next to this script (offline package),
+    # in the current folder, or in C:\SecureShiftTools. Only when none is found, it is downloaded.
+    if ($ZipPath -eq "") {
+        foreach ($dir in @($PSScriptRoot, (Get-Location).Path, $ToolsDir) | Select-Object -Unique) {
+            $found = Get-ChildItem -Path $dir -Filter "postgresql-16*-windows-x64-binaries.zip" -File -ErrorAction SilentlyContinue |
+                Sort-Object Name -Descending | Select-Object -First 1
+            if ($found) { $ZipPath = $found.FullName; break }
+        }
+    }
+    if ($ZipPath -ne "" -and -not (Test-Path $ZipPath)) { Fail "The zip $ZipPath does not exist." }
+    if ($ZipPath -eq "") {
+        $ZipPath = Join-Path $ToolsDir "postgresql-$Version-windows-x64-binaries.zip"
         $url = "https://get.enterprisedb.com/postgresql/postgresql-$Version-windows-x64-binaries.zip"
-        Write-Host "Downloading $url"
-        Write-Host "(about 310 MB, this can take a few minutes)"
+        Write-Host "No PostgreSQL zip found next to this script or in $ToolsDir, so it is downloaded:"
+        Write-Host "$url  (about 310 MB, this can take a few minutes)"
         try { Invoke-WebRequest -Uri $url -OutFile $ZipPath -UseBasicParsing -ErrorAction Stop }
-        catch { Fail "Download failed: $($_.Exception.Message). Download the zip in a browser and run again with -ZipPath <file>." }
+        catch { Fail "Download failed: $($_.Exception.Message). No internet? Copy postgresql-$Version-windows-x64-binaries.zip next to this script (e.g. from a pen drive) and run again." }
     } else {
-        Write-Host "Using the zip $ZipPath"
+        Write-Host "Using the zip $ZipPath (no download needed)"
     }
     Write-Host "Unzipping to $ToolsDir (about 1 minute) ..."
     # .NET's ZipFile instead of Expand-Archive: much faster, and no progress bar drawn over the window
@@ -134,4 +145,4 @@ Write-Host ($conn -replace 'Password=.*', 'Password=********')
 Write-Host ""
 Write-Host "Use it in this PowerShell window:"
 Write-Host "  `$env:ConnectionStrings__SecureShiftDb = Get-Content $connFile"
-Write-Host "Or simply run:  powershell -ExecutionPolicy Bypass -File scripts\windows\run.ps1"
+Write-Host "Or simply run:  powershell -ExecutionPolicy Bypass -File `"$(Join-Path $PSScriptRoot 'run.ps1')`""
