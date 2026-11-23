@@ -82,22 +82,35 @@ function Snapshot($mode, $file) {
     if ($LASTEXITCODE -ne 0) { Fail "$mode snapshot $file failed." }
 }
 
-# ---------------------------------------------------------------- RAM monitor (VHS + its children, PostgreSQL, ffmpeg, node)
+# ---------------------------------------------------------------- RAM monitor: only THIS script's processes
+# VHS (+ ttyd, PowerShell, the app, the headless Edge), the demo PostgreSQL, ffmpeg/ffprobe, the pg tools and
+# node only when it runs clips.js. Other node.exe processes (an editor's TypeScript server, another agent) are not
+# ours and are not counted. Each line: time, total MB, then MB per group.
 $ramFile = Join-Path $work "ram-samples.txt"
 $script:ramJob = $null
 function Start-RamMonitor {
     if ($script:ramJob) { return }
-    $script:ramJob = Start-Job -ArgumentList $ramFile -ScriptBlock {
-        param($file)
+    $script:ramJob = Start-Job -ArgumentList $ramFile, $ToolsDir, $DemoDir -ScriptBlock {
+        param($file, $tools, $demo)
         while ($true) {
-            $all = Get-CimInstance Win32_Process -Property ProcessId, ParentProcessId, Name, WorkingSetSize
+            $all = Get-CimInstance Win32_Process -Property ProcessId, ParentProcessId, Name, WorkingSetSize, ExecutablePath, CommandLine
             $kids = @{}; foreach ($p in $all) { $kids[[int]$p.ParentProcessId] += @($p) }
-            $set = @{}
-            $roots = $all | Where-Object { $_.Name -in @("vhs.exe", "postgres.exe", "ffmpeg.exe", "ffprobe.exe", "node.exe") }
-            $stack = New-Object System.Collections.Stack; foreach ($r in $roots) { $stack.Push($r) }
-            while ($stack.Count) { $p = $stack.Pop(); if ($set.ContainsKey([int]$p.ProcessId)) { continue }; $set[[int]$p.ProcessId] = $p; foreach ($c in @($kids[[int]$p.ProcessId])) { if ($c) { $stack.Push($c) } } }
+            $set = @{}; $group = @{}
+            $roots = $all | Where-Object {
+                ($_.Name -in @("vhs.exe", "ffmpeg.exe", "ffprobe.exe", "pg_dump.exe", "pg_restore.exe", "psql.exe")) -or
+                ($_.Name -eq "postgres.exe" -and $_.ExecutablePath -and ($_.ExecutablePath.StartsWith($tools, "OrdinalIgnoreCase") -or $_.ExecutablePath.StartsWith($demo, "OrdinalIgnoreCase"))) -or
+                ($_.Name -eq "node.exe" -and $_.CommandLine -match "clips\.js") }
+            foreach ($r in $roots) {
+                $stack = New-Object System.Collections.Stack; $stack.Push($r)
+                while ($stack.Count) {
+                    $p = $stack.Pop(); if ($set.ContainsKey([int]$p.ProcessId)) { continue }
+                    $set[[int]$p.ProcessId] = $p; $group[$r.Name] += [double]$p.WorkingSetSize
+                    foreach ($c in @($kids[[int]$p.ProcessId])) { if ($c) { $stack.Push($c) } }
+                }
+            }
             $mb = [math]::Round((($set.Values | Measure-Object WorkingSetSize -Sum).Sum) / 1MB)
-            Add-Content -Path $file -Value ("{0:HH:mm:ss} {1}" -f (Get-Date), $mb)
+            $parts = ($group.Keys | Sort-Object | ForEach-Object { "{0}={1}" -f ($_ -replace '\.exe$', ''), [math]::Round($group[$_] / 1MB) }) -join " "
+            Add-Content -Path $file -Value ("{0:HH:mm:ss} {1} {2}" -f (Get-Date), $mb, $parts)
             Start-Sleep 3
         }
     }
@@ -212,16 +225,21 @@ if ($stepList -contains "assemble") {
         $big = Join-Path $cards "$($c.file)-title.txt"; $small = Join-Path $cards "$($c.file)-small.txt"
         [IO.File]::WriteAllText($big, $c.title, $enc8); [IO.File]::WriteAllText($small, $c.small, $enc8)
         $bigF = ($big -replace '\\', '/') -replace ':', '\:'; $smallF = ($small -replace '\\', '/') -replace ':', '\:'
-        $card = Join-Path $cards "$($c.file).mp4"
-        $vf = "drawtext=fontfile='$fontB':textfile='$bigF':fontsize=58:fontcolor=white:x=(w-text_w)/2:y=h*0.40," +
-              "drawtext=fontfile='$font':textfile='$smallF':fontsize=30:fontcolor=0xB8C4D0:x=(w-text_w)/2:y=h*0.40+110," +
+        $cardMp4 = Join-Path $cards "$($c.file).mp4"   # not $card: PowerShell names ignore case, $card IS the [double] -Card
+        # expansion=none: a "%" in a title (e.g. "15/20/45/20 %") is text, not a drawtext expansion
+        $vf = "drawtext=fontfile='$fontB':textfile='$bigF':expansion=none:fontsize=58:fontcolor=white:x=(w-text_w)/2:y=h*0.40," +
+              "drawtext=fontfile='$font':textfile='$smallF':expansion=none:fontsize=30:fontcolor=0xB8C4D0:x=(w-text_w)/2:y=h*0.40+110," +
               "drawtext=fontfile='$font':text='SecureShift console walkthrough':fontsize=26:fontcolor=0x6E8296:x=(w-text_w)/2:y=h*0.40-80"
-        & $ffmpeg -v error -y -f lavfi -i "color=c=0x0D1117:s=1920x1080:r=25:d=$Card" -f lavfi -i "anullsrc=channel_layout=stereo:sample_rate=48000" -t $Card -vf $vf @x264 $card
+        & $ffmpeg -v error -y -f lavfi -i "color=c=0x0D1117:s=1920x1080:r=25:d=$Card" -f lavfi -i "anullsrc=channel_layout=stereo:sample_rate=48000" -t $Card -vf $vf @x264 $cardMp4
         if ($LASTEXITCODE -ne 0) { Fail "Title card for $($c.file) failed." }
         $encFile = Join-Path $enc "$($c.file).mp4"
-        & $ffmpeg -v error -y -i $rawFile -f lavfi -i "anullsrc=channel_layout=stereo:sample_rate=48000" -map 0:v -map 1:a -shortest @x264 $encFile
-        if ($LASTEXITCODE -ne 0) { Fail "Encoding $($c.file) failed." }
-        $cd = Duration $card; $d = Duration $encFile
+        if ((Test-Path $encFile) -and (Get-Item $encFile).LastWriteTime -gt (Get-Item $rawFile).LastWriteTime) {
+            Write-Host "  $($c.file): already encoded (newer than the raw clip)"
+        } else {
+            & $ffmpeg -v error -y -i $rawFile -f lavfi -i "anullsrc=channel_layout=stereo:sample_rate=48000" -map 0:v -map 1:a -shortest @x264 $encFile
+            if ($LASTEXITCODE -ne 0) { Remove-Item $encFile -ErrorAction SilentlyContinue; Fail "Encoding $($c.file) failed." }
+        }
+        $cd = Duration $cardMp4; $d = Duration $encFile
         $timings.clips += @{ file = $c.file; start = [math]::Round($t, 3); card = $cd; duration = $d; video = $c.video }
         $t += $cd + $d
         Write-Host ("  {0}: {1:0.0} s" -f $c.file, $d)
