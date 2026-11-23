@@ -1,0 +1,7 @@
+# shell scripts must keep LF line endings (they run on Linux in CI)
+*.sh text eol=lf
+*.tape text eol=lf
+tests/SecureShift.Tests/Data/*.json text eol=lf
+samples/governance/**/*.json text eol=lf
+*.gif binary
+*.mp4 binary

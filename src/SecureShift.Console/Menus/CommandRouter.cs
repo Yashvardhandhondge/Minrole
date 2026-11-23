@@ -6,13 +6,13 @@ namespace SecureShift.ConsoleApp.Menus;
 
 /// <summary>
 /// Reads the command-line words and runs the matching command.
-///   (no arguments)  -> the app (login menu comes in Phase 2)
+///   (no arguments)  -> the app (login screen, then the menu of the user's role)
 ///   db status | db setup | db seed | db migrate | db baseline   [--yes]
 ///   smoke
 ///   help
 /// Exit code: 0 = success, 1 = failed / refused / cancelled, 2 = unknown command.
 /// </summary>
-public sealed class CommandRouter(IServiceProvider services)
+public sealed class CommandRouter(IServiceProvider services, ConsoleUi ui)
 {
     private static readonly HashSet<string> KnownFlags = ["--yes", "--help", "-h"];
 
@@ -25,7 +25,7 @@ public sealed class CommandRouter(IServiceProvider services)
         var unknownFlags = flags.Where(f => !KnownFlags.Contains(f)).ToList();
         if (unknownFlags.Count > 0)
         {
-            ConsoleUi.Error($"Unknown option: {string.Join(" ", unknownFlags)}");
+            ui.Error($"Unknown option: {string.Join(" ", unknownFlags)}");
             PrintHelp();
             return 2;
         }
@@ -42,7 +42,7 @@ public sealed class CommandRouter(IServiceProvider services)
 
             return words switch
             {
-                [] => RunApp(),
+                [] => await services.GetRequiredService<AppRunner>().RunAsync(),
                 ["help"] => PrintHelp(),
                 ["db", "status"] => await Db().StatusAsync(),
                 ["db", "setup"] => await Db().SetupAsync(yes),
@@ -55,54 +55,60 @@ public sealed class CommandRouter(IServiceProvider services)
         }
         catch (DbConfigurationException ex)
         {
-            ConsoleUi.Error(ex.Message);
+            ui.Error(ex.Message);
             return 1;
         }
         catch (SqlScriptException ex)
         {
-            ConsoleUi.Error(ex.Message);
+            ui.Error(ex.Message);
             return 1;
         }
         catch (FileNotFoundException ex)
         {
-            ConsoleUi.Error(ex.Message);
+            ui.Error(ex.Message);
             return 1;
         }
         catch (PostgresException ex)
         {
-            ConsoleUi.Error($"The database refused the request: {ex.MessageText} (SQLSTATE {ex.SqlState}).");
+            ui.Error($"The database refused the request: {ex.MessageText} (SQLSTATE {ex.SqlState}).");
+            return 1;
+        }
+        catch (InvalidOperationException ex) when (ex.InnerException is NpgsqlException or TimeoutException)
+        {
+            // EF Core wraps connection problems ("transient failure") in an InvalidOperationException
+            ui.Error($"Could not connect to the database: {ex.InnerException!.Message}");
+            ui.ErrorLine("Check the host, port, database name, user name and password in the connection string,");
+            ui.ErrorLine("and that this machine can reach the database server (VPN / firewall). Tip: use 127.0.0.1 instead of localhost.");
             return 1;
         }
         catch (NpgsqlException ex)
         {
-            ConsoleUi.Error($"Could not connect to the database: {ex.Message}");
-            Console.Error.WriteLine("Check the host, port, database name, user name and password in the connection string,");
-            Console.Error.WriteLine("and that this machine can reach the database server (VPN / firewall).");
+            ui.Error($"Could not connect to the database: {ex.Message}");
+            ui.ErrorLine("Check the host, port, database name, user name and password in the connection string,");
+            ui.ErrorLine("and that this machine can reach the database server (VPN / firewall).");
+            return 1;
+        }
+        catch (Exception ex)
+        {
+            // never show a stack trace to the user
+            ui.Error($"Unexpected problem ({ex.GetType().Name}): {ex.Message}");
             return 1;
         }
     }
 
-    private static int RunApp()
+    private int Unknown(string[] args)
     {
-        Console.WriteLine("SecureShift console");
-        Console.WriteLine("Login menu comes in Phase 2.");
-        Console.WriteLine("For database commands run:  dotnet run --project src/SecureShift.Console -- help");
-        return 0;
-    }
-
-    private static int Unknown(string[] args)
-    {
-        ConsoleUi.Error($"Unknown command: {string.Join(" ", args)}");
+        ui.Error($"Unknown command: {string.Join(" ", args)}");
         PrintHelp();
         return 2;
     }
 
-    private static int PrintHelp()
+    private int PrintHelp()
     {
-        Console.WriteLine("""
+        ui.WriteLine("""
 
             SecureShift console - commands
-              (no arguments)  start the app (login menu comes in Phase 2)
+              (no arguments)  start the app: login, then the menu of your role
               db status       show server, database, user, the 28 tables / 4 views, rows per table, migrations
               db setup        brand-new EMPTY dev schema only: runs 01 + 02 and records the baseline
               db seed         loads the 569 sample rows (only when all 28 tables are empty)

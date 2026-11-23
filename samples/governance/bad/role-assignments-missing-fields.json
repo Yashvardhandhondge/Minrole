@@ -1,0 +1,18 @@
+[
+  {
+    "principalId": "19b63642-eba1-c1cc-a0b1-62ce427ccee6",
+    "principalName": "rahul.verma@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Rahul Verma",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/733d3049-c773-157f-dacc-a955905e2d21",
+    "roleDefinitionName": "Owner",
+    "scope": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d"
+  },
+  {
+    "principalName": "priya.sharma@northwindtraders.com",
+    "principalType": "User",
+    "displayName": "Priya Sharma",
+    "roleDefinitionId": "/subscriptions/6f1c2a34-9d8e-4b7a-a1c2-3e4f5a6b7c8d/providers/Microsoft.Authorization/roleDefinitions/f9dfd92a-ac58-3758-85fa-47de73e7f136",
+    "roleDefinitionName": "Contributor"
+  }
+]

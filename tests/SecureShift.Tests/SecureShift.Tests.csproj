@@ -28,6 +28,11 @@
     <ProjectReference Include="..\..\src\SecureShift.Data\SecureShift.Data.csproj" />
   </ItemGroup>
 
+  <!-- numbers calculated by the prototype JavaScript (tests/prototype/prototype-expected.js) -->
+  <ItemGroup>
+    <None Update="Data\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>

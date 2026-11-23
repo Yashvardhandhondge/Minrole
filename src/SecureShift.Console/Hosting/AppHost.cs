@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using SecureShift.ConsoleApp.Menus;
 using SecureShift.ConsoleApp.Services;
@@ -39,6 +40,8 @@ public static class AppHost
 
     public static IServiceCollection AddSecureShift(IServiceCollection services, IConfiguration configuration)
     {
+        // all times on screen and every date-only column use this zone (India by default)
+        AppTime.Configure(configuration["App:TimeZone"]);
         services.AddSingleton(new DbSettings(configuration.GetConnectionString(DbSettings.ConnectionStringName)));
         services.AddSingleton(SqlScriptFiles.Default());
         services.AddSingleton<SqlScriptRunner>();
@@ -50,6 +53,33 @@ public static class AppHost
         services.AddDbContextFactory<SecureShiftDbContext>((sp, options) =>
             options.UseNpgsql(sp.GetRequiredService<DbSettings>().GetConnectionString()));
         services.AddSingleton<SmokeService>();
+        services.AddSingleton(TimeProvider.System);
+
+        // All terminal input/output goes through IConsoleIO (tests replace it with scripted input).
+        services.TryAddSingleton<IConsoleIO, SystemConsoleIO>();
+        services.AddSingleton<ConsoleUi>();
+
+        // Services: the logic, no Console calls (could move to SecureShift.Application later).
+        services.AddSingleton<PasswordService>();
+        services.AddSingleton<AuthService>();
+        services.AddSingleton<UserAdminService>();
+        services.AddSingleton<AuditLogService>();
+        services.AddSingleton<Services.Governance.GovernanceService>();
+        services.AddSingleton<Services.Governance.AnalysisService>();
+        services.AddSingleton<Services.Modernization.ModernizationService>();
+        services.AddSingleton<Services.Modernization.PlanningService>();
+
+        // Menus
+        services.AddSingleton<MenuRunner>();
+        services.AddSingleton<ProfileMenu>();
+        services.AddSingleton<ModernizationScreens>();
+        services.AddSingleton<PlanScreens>();
+        services.AddSingleton<SuperAdminMenu>();
+        services.AddSingleton<CloudAdminMenu>();
+        services.AddSingleton<AdminMenu>();
+        services.AddSingleton<ArchitectMenu>();
+        services.AddSingleton<ExecutiveMenu>();
+        services.AddSingleton<AppRunner>();
 
         services.AddSingleton<DbCommands>();
         services.AddSingleton<CommandRouter>();

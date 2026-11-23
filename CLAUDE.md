@@ -65,7 +65,12 @@ src/SecureShift.Data/          Models/Generated, Context/Generated (scaffolded, 
                                context class SecureShiftDbContext
 src/SecureShift.Application/   empty class library placeholder (keep in sln)
 src/SecureShift.Console/       Exe; Program.cs, appsettings.json, Menus/, Services/
-tests/SecureShift.Tests/       xUnit, runs in CI against a real Postgres
+tests/SecureShift.Tests/       xUnit, runs in CI against a real Postgres (Phase2..Phase6 folders, Data/prototype-expected.json)
+tests/e2e/                     phase*.sh: pipe keystrokes into the built app + check the DB with psql (CI runs them all)
+tests/prototype/               prototype-expected.js: runs js/data/*.js in Node -> expected numbers for the C# tests
+samples/governance/            Analysis Wizard input files (+ bad/ for the error demo), made by make-samples.js
+scripts/windows/               setup-postgres-portable.ps1 (no admin, no Docker), stop-postgres.ps1, run.ps1
+docs/demo/                     VHS .tape files, record.ps1, DEMO_SCRIPT.md, the videos (or a release asset link)
 database/postgres/             Postgres scripts (01 create, 02 seed, 03 verify, 04 migration history,
                                migrations/V00x__name.sql, tools/)
 docs/backend/RUNNING.md        beginner guide (PowerShell, simple English)
@@ -75,6 +80,8 @@ CLAUDE.md
 References: Application -> Data; Console -> Application + Data; Tests -> Console + Data.
 
 ## 3. Phase plan
+
+Status (2026-11-23): **all phases built** and squash-merged into `main` (PR #2). Live status: docs/backend/PROGRESS.md.
 
 1. **Foundation** — DONE in branch `sprint4-console` (scripts, solution, scaffold, db commands, CI, tests, RUNNING.md).
 2. Login, logout, change password, role menus; Super Admin: dashboard, users
@@ -171,3 +178,17 @@ Do one phase per session unless the owner says otherwise. Finish each phase with
 - Postgres names are case-sensitive: always quote, e.g. `SELECT * FROM dev."Users"`.
 - Npgsql EF maps the views as keyless entities (`HasNoKey()`); query them with `AsNoTracking()`.
 - `OutputType` must be `Exe` for the console (otherwise CS8805 with top-level statements).
+- All terminal I/O goes through `IConsoleIO` (SystemConsoleIO; tests use ScriptedConsoleIO). Menus use `ConsoleUi`
+  helpers (AskValid / AskChoice / AskMulti / AskDate / Table / Box) and `MenuRunner`, which re-reads the user before
+  every action (deactivated / re-roled users are logged out) and turns every exception into an `[ERROR]` line.
+- Never put a question inside a LINQ predicate (`list.First(x => x == ui.AskChoice(...))` asks again for every
+  element) - ask first, then look the answer up (a real bug found in the manual run).
+- Services throw `UserFacingException` for business rules; menus print it. Formulas: `EmdtCalc` (port of
+  emdt-calc.js, doubles + `JsMath` JavaScript rounding) and `GovernanceScoring`. Regenerate the prototype numbers
+  with `node tests/prototype/prototype-expected.js` after changing js/data/*.js.
+- Tests that write data use `FreshDatabase` (its own CREATE DATABASE + db setup per test class); the shared seeded DB
+  stays at 569 rows for the read-only tests. Local dev DB: `docker compose -f docker-compose.dev.yml up -d` (port 5433)
+  or the portable PostgreSQL (port 5434). On Windows use `Host=127.0.0.1` (localhost may go to IPv6 and time out).
+- Windows PowerShell 5.1 pipes text as UTF-8 WITH BOM (stripped by SystemConsoleIO) and `Set-Content -Encoding utf8`
+  writes a BOM (VHS tapes must be BOM-free). pg_ctl must be started in its own window (Start-Process), or the server
+  keeps the caller's output pipe open.

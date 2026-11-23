@@ -1,0 +1,28 @@
+# Local development database (OPTIONAL - the TCS laptop has no Docker, see docs/backend/TCS_LAPTOP_SETUP.md).
+#
+#   docker compose -f docker-compose.dev.yml up -d        start (port 5433 on this machine)
+#   docker compose -f docker-compose.dev.yml down -v      stop and delete the data
+#
+# The password below is for this throwaway local container only, it is not a real password.
+# Connection string for the console:
+#   Host=127.0.0.1;Port=5433;Database=secureshift;Username=postgres;Password=local_dev_only
+# The init script creates the empty schema "dev"; then run:  db setup --yes
+services:
+  secureshift-pg:
+    image: postgres:16
+    container_name: secureshift-pg
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: local_dev_only
+      POSTGRES_DB: secureshift
+    ports:
+      - "5433:5432"
+    command: ["postgres", "-c", "shared_buffers=64MB", "-c", "max_connections=40"]
+    volumes:
+      - ./database/postgres/tools/docker-init:/docker-entrypoint-initdb.d:ro
+    mem_limit: 512m
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d secureshift"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
