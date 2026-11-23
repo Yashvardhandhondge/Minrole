@@ -1,0 +1,357 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: sachin.kumar@secureshift.io
+Password: **********
+[OK] Signed in as Sachin Kumar (Admin).
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Northwind Bank (ENT-001)]: 4
+[OK] Current enterprise: Tailspin Airlines (ENT-004)
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 8
+
+Digital Twin - Tailspin Airlines (ENT-004)
+------------------------------------------
+Landscape Summary: Applications 2 · Services 0 · Databases 1 · APIs 1 · Links 2
+Filter - application: All · criticality: All
+
+[APP-011] Flight Booking  (Application · Critical · Dependency Impact 45/100)
+  depends on → Booking Database (Database)  [Critical]  DEP-021
+  used by    ← Crew Scheduler  [Critical]  DEP-022
+  ├─ [N-20] Booking Database (Database)
+  │    used by    ← Flight Booking  [Critical]  DEP-021
+  └─ [N-21] Booking API (API)
+
+[APP-012] Crew Scheduler  (Application · High · Dependency Impact 55/100)
+  depends on → Flight Booking (Application)  [Critical]  DEP-022
+
+A one application · K criticality filter · C clear · E choose enterprise · 0 back
+Choose: A
+Application:
+  1. Flight Booking (APP-011)
+  2. Crew Scheduler (APP-012)
+Choose 1-2: 1
+
+Digital Twin - Tailspin Airlines (ENT-004)
+------------------------------------------
+Landscape Summary: Applications 2 · Services 0 · Databases 1 · APIs 1 · Links 2
+Filter - application: Flight Booking · criticality: All
+
+[APP-011] Flight Booking  (Application · Critical · Dependency Impact 45/100)
+  depends on → Booking Database (Database)  [Critical]  DEP-021
+  used by    ← Crew Scheduler  [Critical]  DEP-022
+  ├─ [N-20] Booking Database (Database)
+  │    used by    ← Flight Booking  [Critical]  DEP-021
+  └─ [N-21] Booking API (API)
+
+A one application · K criticality filter · C clear · E choose enterprise · 0 back
+Choose: K
+Criticality:
+  1. All
+  2. Low
+  3. Medium
+  4. High
+  5. Critical
+Choose 1-5: Critical
+
+Digital Twin - Tailspin Airlines (ENT-004)
+------------------------------------------
+Landscape Summary: Applications 2 · Services 0 · Databases 1 · APIs 1 · Links 2
+Filter - application: Flight Booking · criticality: Critical
+
+[APP-011] Flight Booking  (Application · Critical · Dependency Impact 45/100)
+  depends on → Booking Database (Database)  [Critical]  DEP-021
+  used by    ← Crew Scheduler  [Critical]  DEP-022
+  ├─ [N-20] Booking Database (Database)
+  │    used by    ← Flight Booking  [Critical]  DEP-021
+  └─ [N-21] Booking API (API)
+
+A one application · K criticality filter · C clear · E choose enterprise · 0 back
+Choose: C
+
+Digital Twin - Tailspin Airlines (ENT-004)
+------------------------------------------
+Landscape Summary: Applications 2 · Services 0 · Databases 1 · APIs 1 · Links 2
+Filter - application: All · criticality: All
+
+[APP-011] Flight Booking  (Application · Critical · Dependency Impact 45/100)
+  depends on → Booking Database (Database)  [Critical]  DEP-021
+  used by    ← Crew Scheduler  [Critical]  DEP-022
+  ├─ [N-20] Booking Database (Database)
+  │    used by    ← Flight Booking  [Critical]  DEP-021
+  └─ [N-21] Booking API (API)
+
+[APP-012] Crew Scheduler  (Application · High · Dependency Impact 55/100)
+  depends on → Flight Booking (Application)  [Critical]  DEP-022
+
+A one application · K criticality filter · C clear · E choose enterprise · 0 back
+Choose: E
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Tailspin Airlines (ENT-004)]: 1
+[OK] Current enterprise: Northwind Bank (ENT-001)
+
+Digital Twin - Northwind Bank (ENT-001)
+---------------------------------------
+Landscape Summary: Applications 6 · Services 5 · Databases 5 · APIs 4 · Links 15
+Filter - application: All · criticality: All
+
+[APP-001] Trade Finance Portal  (Application · Critical · Dependency Impact 83/100)
+  depends on → Authentication Service (Service)  [Critical]  DEP-001
+  depends on → Reporting API (API)  [High]  DEP-002
+  depends on → Notification Service (Service)  [Medium]  DEP-003
+  ├─ [N-04] Trade Database (Database)
+  │    used by    ← Trade Service  [Critical]  DEP-004
+  └─ [N-05] Trade Service (Service)
+       depends on → Trade Database (Database)  [Critical]  DEP-004
+
+[APP-002] Customer360  (Application · High · Dependency Impact 59/100)
+  depends on → Banking API (API)  [High]  DEP-006
+  ├─ [N-01] Authentication Service (Service)
+  │    used by    ← Trade Finance Portal  [Critical]  DEP-001
+  │    used by    ← Payment Service  [High]  DEP-010
+  │    used by    ← HR System  [Medium]  DEP-015
+  ├─ [N-03] Notification Service (Service)
+  │    used by    ← Trade Finance Portal  [Medium]  DEP-003
+  ├─ [N-06] Customer API (API)
+  │    depends on → Customer Database (Database)  [Critical]  DEP-005
+  │    used by    ← Payment Service  [High]  DEP-007
+  └─ [N-07] Customer Database (Database)
+       used by    ← Customer API  [Critical]  DEP-005
+       used by    ← Payment Service  [Critical]  DEP-008
+
+[APP-003] Payment Gateway  (Application · Critical · Dependency Impact 83/100)
+  ├─ [N-08] Payment Service (Service)
+  │    depends on → Customer API (API)  [High]  DEP-007
+  │    depends on → Customer Database (Database)  [Critical]  DEP-008
+  │    depends on → Authentication Service (Service)  [High]  DEP-010
+  └─ [N-09] Payment API (API)
+       depends on → Banking API (API)  [Critical]  DEP-009
+
+[APP-004] Core Banking  (Application · Critical · Dependency Impact 45/100)
+  depends on → Core Ledger Database (Database)  [Critical]  DEP-011
+  used by    ← Reporting Hub  [High]  DEP-013
+  ├─ [N-10] Core Ledger Database (Database)
+  │    used by    ← Core Banking  [Critical]  DEP-011
+  └─ [N-11] Banking API (API)
+       used by    ← Customer360  [High]  DEP-006
+       used by    ← Payment API  [Critical]  DEP-009
+
+[APP-005] Reporting Hub  (Application · Medium · Dependency Impact 59/100)
+  depends on → Core Banking (Application)  [High]  DEP-013
+  ├─ [N-02] Reporting API (API)
+  │    depends on → Reports Database (Database)  [Medium]  DEP-012
+  │    used by    ← Trade Finance Portal  [High]  DEP-002
+  └─ [N-12] Reports Database (Database)
+       used by    ← Reporting API  [Medium]  DEP-012
+
+[APP-006] HR System  (Application · High · Dependency Impact 53/100)
+  depends on → Authentication Service (Service)  [Medium]  DEP-015
+  ├─ [N-13] Payroll Service (Service)
+  │    depends on → HR Database (Database)  [High]  DEP-014
+  └─ [N-14] HR Database (Database)
+       used by    ← Payroll Service  [High]  DEP-014
+
+A one application · K criticality filter · C clear · E choose enterprise · 0 back
+Choose: Z
+[ERROR] Type A, K, C, E or 0.
+
+Digital Twin - Northwind Bank (ENT-001)
+---------------------------------------
+Landscape Summary: Applications 6 · Services 5 · Databases 5 · APIs 4 · Links 15
+Filter - application: All · criticality: All
+
+[APP-001] Trade Finance Portal  (Application · Critical · Dependency Impact 83/100)
+  depends on → Authentication Service (Service)  [Critical]  DEP-001
+  depends on → Reporting API (API)  [High]  DEP-002
+  depends on → Notification Service (Service)  [Medium]  DEP-003
+  ├─ [N-04] Trade Database (Database)
+  │    used by    ← Trade Service  [Critical]  DEP-004
+  └─ [N-05] Trade Service (Service)
+       depends on → Trade Database (Database)  [Critical]  DEP-004
+
+[APP-002] Customer360  (Application · High · Dependency Impact 59/100)
+  depends on → Banking API (API)  [High]  DEP-006
+  ├─ [N-01] Authentication Service (Service)
+  │    used by    ← Trade Finance Portal  [Critical]  DEP-001
+  │    used by    ← Payment Service  [High]  DEP-010
+  │    used by    ← HR System  [Medium]  DEP-015
+  ├─ [N-03] Notification Service (Service)
+  │    used by    ← Trade Finance Portal  [Medium]  DEP-003
+  ├─ [N-06] Customer API (API)
+  │    depends on → Customer Database (Database)  [Critical]  DEP-005
+  │    used by    ← Payment Service  [High]  DEP-007
+  └─ [N-07] Customer Database (Database)
+       used by    ← Customer API  [Critical]  DEP-005
+       used by    ← Payment Service  [Critical]  DEP-008
+
+[APP-003] Payment Gateway  (Application · Critical · Dependency Impact 83/100)
+  ├─ [N-08] Payment Service (Service)
+  │    depends on → Customer API (API)  [High]  DEP-007
+  │    depends on → Customer Database (Database)  [Critical]  DEP-008
+  │    depends on → Authentication Service (Service)  [High]  DEP-010
+  └─ [N-09] Payment API (API)
+       depends on → Banking API (API)  [Critical]  DEP-009
+
+[APP-004] Core Banking  (Application · Critical · Dependency Impact 45/100)
+  depends on → Core Ledger Database (Database)  [Critical]  DEP-011
+  used by    ← Reporting Hub  [High]  DEP-013
+  ├─ [N-10] Core Ledger Database (Database)
+  │    used by    ← Core Banking  [Critical]  DEP-011
+  └─ [N-11] Banking API (API)
+       used by    ← Customer360  [High]  DEP-006
+       used by    ← Payment API  [Critical]  DEP-009
+
+[APP-005] Reporting Hub  (Application · Medium · Dependency Impact 59/100)
+  depends on → Core Banking (Application)  [High]  DEP-013
+  ├─ [N-02] Reporting API (API)
+  │    depends on → Reports Database (Database)  [Medium]  DEP-012
+  │    used by    ← Trade Finance Portal  [High]  DEP-002
+  └─ [N-12] Reports Database (Database)
+       used by    ← Reporting API  [Medium]  DEP-012
+
+[APP-006] HR System  (Application · High · Dependency Impact 53/100)
+  depends on → Authentication Service (Service)  [Medium]  DEP-015
+  ├─ [N-13] Payroll Service (Service)
+  │    depends on → HR Database (Database)  [High]  DEP-014
+  └─ [N-14] HR Database (Database)
+       used by    ← Payroll Service  [High]  DEP-014
+
+A one application · K criticality filter · C clear · E choose enterprise · 0 back
+Choose: 0
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 9
+
+Profile & Settings
+==================
+Manage your account details and password.
+  Full Name    : Sachin Kumar
+  Email        : sachin.kumar@secureshift.io
+  Role         : Admin
+  Product      : Application Modernization - EMDT
+  User ID      : USR-012
+  Phone        : 9876543221
+  Department   : Modernization Office
+  Logged in at : 11/23/2026 09:05 PM
+  1. Edit details (name, phone, department)
+  2. Change password
+  0. Back
+Choose: 0
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 10
+
+Change Password
+---------------
+Minimum 8 characters with an uppercase letter, a lowercase letter, a number and a special character.
+Current Password: **********
+New Password: ***********
+Confirm New Password: ***********
+[ERROR] Current password: Current password is wrong
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Sachin Kumar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

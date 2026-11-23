@@ -1,0 +1,664 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: sachin.kumar@secureshift.io
+Password: **********
+[OK] Signed in as Sachin Kumar (Admin).
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Northwind Bank (ENT-001)]: 4
+[OK] Current enterprise: Tailspin Airlines (ENT-004)
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 7
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 0 (0 svc / 0 db / 0 api)
+  Dependency Links : 0
+  Critical Links   : 0
+Components:
+#  ID  Component  Type  Application
+-  --  ---------  ----  -----------
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID  Source  Target  Type  Criticality  Description
+-  --  ------  ------  ----  -----------  -----------
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: A
+
+Add Component
+-------------
+Type 'cancel' at any question to go back.
+Type:
+  1. Service
+  2. Database
+  3. API
+Choose 1-3: 
+[ERROR] Select a type
+Choose 1-3: Database
+Parent Application:
+  1. Flight Booking (APP-011)
+  2. Crew Scheduler (APP-012)
+Choose 1-2: 1
+Component Name: Booking Database
+[OK] Database Booking Database added (N-20)
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 1 (0 svc / 1 db / 0 api)
+  Dependency Links : 0
+  Critical Links   : 0
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID  Source  Target  Type  Criticality  Description
+-  --  ------  ------  ----  -----------  -----------
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: A
+
+Add Component
+-------------
+Type 'cancel' at any question to go back.
+Type:
+  1. Service
+  2. Database
+  3. API
+Choose 1-3: API
+Parent Application:
+  1. Flight Booking (APP-011)
+  2. Crew Scheduler (APP-012)
+Choose 1-2: 1
+Component Name: Booking API
+[OK] API Booking API added (N-21)
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 2 (0 svc / 1 db / 1 api)
+  Dependency Links : 0
+  Critical Links   : 0
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID  Source  Target  Type  Criticality  Description
+-  --  ------  ------  ----  -----------  -----------
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: A
+
+Add Component
+-------------
+Type 'cancel' at any question to go back.
+Type:
+  1. Service
+  2. Database
+  3. API
+Choose 1-3: Service
+Parent Application:
+  1. Flight Booking (APP-011)
+  2. Crew Scheduler (APP-012)
+Choose 1-2: 2
+Component Name: Roster Service
+[OK] Service Roster Service added (N-22)
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 3 (1 svc / 1 db / 1 api)
+  Dependency Links : 0
+  Critical Links   : 0
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+3  N-22  Roster Service    Service   Crew Scheduler
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID  Source  Target  Type  Criticality  Description
+-  --  ------  ------  ----  -----------  -----------
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: L
+
+Add Dependency
+--------------
+The Source depends on the Target. The dependency type is the type of the target. Type 'cancel' to go back.
+Source (depends on something):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 1
+Target (is depended upon):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 2
+Dependency Type: Database
+Criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4: Critical
+Description (optional, max 200) []: Stores every booking
+[OK] Dependency DEP-021 saved
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 3 (1 svc / 1 db / 1 api)
+  Dependency Links : 1
+  Critical Links   : 1
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+3  N-22  Roster Service    Service   Crew Scheduler
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type      Criticality  Description
+-  -------  --------------  ----------------  --------  -----------  --------------------
+1  DEP-021  Flight Booking  Booking Database  Database  Critical     Stores every booking
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: L
+
+Add Dependency
+--------------
+The Source depends on the Target. The dependency type is the type of the target. Type 'cancel' to go back.
+Source (depends on something):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 4
+Target (is depended upon):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 1
+Dependency Type: Application
+Criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4: High
+Description (optional, max 200) []: Reads the flight times
+[OK] Dependency DEP-022 saved
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 3 (1 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 1
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+3  N-22  Roster Service    Service   Crew Scheduler
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  ----------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  High         Reads the flight times
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: L
+
+Add Dependency
+--------------
+The Source depends on the Target. The dependency type is the type of the target. Type 'cancel' to go back.
+Source (depends on something):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 1
+Target (is depended upon):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 2
+Dependency Type: Database
+Criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4: Critical
+Description (optional, max 200) []: 
+[ERROR] Target: This link already exists
+Try again? (y/n): n
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 3 (1 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 1
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+3  N-22  Roster Service    Service   Crew Scheduler
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  ----------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  High         Reads the flight times
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: L
+
+Add Dependency
+--------------
+The Source depends on the Target. The dependency type is the type of the target. Type 'cancel' to go back.
+Source (depends on something):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 1
+Target (is depended upon):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 1
+Dependency Type: Application
+Criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4: Low
+Description (optional, max 200) []: 
+[ERROR] Target: Source and target cannot be the same
+Try again? (y/n): y
+Source (depends on something):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 3
+Target (is depended upon):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 1
+Dependency Type: Application
+Criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4: Low
+Description (optional, max 200) []: 
+[ERROR] Target: A component cannot depend on its own parent application
+Try again? (y/n): y
+Source (depends on something):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 5
+Target (is depended upon):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5: 3
+Dependency Type: API
+Criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4: Medium
+Description (optional, max 200) []: Publishes the crew roster
+[OK] Dependency DEP-023 saved
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 3 (1 svc / 1 db / 1 api)
+  Dependency Links : 3
+  Critical Links   : 1
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+3  N-22  Roster Service    Service   Crew Scheduler
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  -------------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  High         Reads the flight times
+3  DEP-023  Roster Service  Booking API       API          Medium       Publishes the crew roster
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: E
+Link number (#): 2
+
+Edit Dependency DEP-022
+-----------------------
+The Source depends on the Target. The dependency type is the type of the target. Type 'cancel' to go back.
+Source (depends on something):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5 [Crew Scheduler (Application)]: 
+Target (is depended upon):
+  1. Flight Booking (Application)
+  2.    Booking Database (Database of Flight Booking)
+  3.    Booking API (API of Flight Booking)
+  4. Crew Scheduler (Application)
+  5.    Roster Service (Service of Crew Scheduler)
+Choose 1-5 [Flight Booking (Application)]: 
+Dependency Type: Application
+Criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4 [High]: Critical
+Description (optional, max 200) [Reads the flight times]: 
+[OK] Dependency DEP-022 updated
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 3 (1 svc / 1 db / 1 api)
+  Dependency Links : 3
+  Critical Links   : 2
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+3  N-22  Roster Service    Service   Crew Scheduler
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  -------------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  Critical     Reads the flight times
+3  DEP-023  Roster Service  Booking API       API          Medium       Publishes the crew roster
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: D
+Link number (#): 3
+Delete dependency? Remove link DEP-023 (y/n): y
+[OK] Dependency deleted
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 3 (1 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 2
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+3  N-22  Roster Service    Service   Crew Scheduler
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  ----------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  Critical     Reads the flight times
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: X
+Component number (#): 3
+Delete component? Delete Roster Service (y/n): y
+[OK] Component deleted
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 2 (0 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 2
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  ----------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  Critical     Reads the flight times
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: I
+
+Dependency Impact (outgoing links of each application)
+------------------------------------------------------
+Application     ID       Outgoing Links  Raw Points  Dependency Impact  Level
+--------------  -------  --------------  ----------  -----------------  ------
+Crew Scheduler  APP-012               1          16  55 ######....      Medium
+Flight Booking  APP-011               1          12  45 #####.....      Medium
+Dependency Impact = 100 x (1 - e^(-raw / 20)); raw = sum of type weight x criticality points.
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 2 (0 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 2
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  ----------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  Critical     Reads the flight times
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: S
+Search source, target, description or ID (Enter = no search): booking
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 2 (0 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 2
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+Dependency links (source depends on target) · Search: booking · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  ----------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  Critical     Reads the flight times
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: F
+Type (of the target):
+  1. All
+  2. Application
+  3. Service
+  4. Database
+  5. API
+Choose 1-5: Database
+Criticality:
+  1. All
+  2. Low
+  3. Medium
+  4. High
+  5. Critical
+Choose 1-5: All
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 2 (0 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 2
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+Dependency links (source depends on target) · Search: booking · Type: Database · Criticality: All:
+#  ID       Source          Target            Type      Criticality  Description
+-  -------  --------------  ----------------  --------  -----------  --------------------
+1  DEP-021  Flight Booking  Booking Database  Database  Critical     Stores every booking
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: C
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 2 (0 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 2
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  ----------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  Critical     Reads the flight times
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: Q
+[ERROR] Unknown choice. Type A, X, L, E, D, I, S, F, C or 0.
+
+Components & Dependencies - Tailspin Airlines (ENT-004)
+-------------------------------------------------------
+  Applications     : 2
+  Components       : 2 (0 svc / 1 db / 1 api)
+  Dependency Links : 2
+  Critical Links   : 2
+Components:
+#  ID    Component         Type      Application
+-  ----  ----------------  --------  --------------
+1  N-20  Booking Database  Database  Flight Booking
+2  N-21  Booking API       API       Flight Booking
+Dependency links (source depends on target) · Search: (none) · Type: All · Criticality: All:
+#  ID       Source          Target            Type         Criticality  Description
+-  -------  --------------  ----------------  -----------  -----------  ----------------------
+1  DEP-021  Flight Booking  Booking Database  Database     Critical     Stores every booking
+2  DEP-022  Crew Scheduler  Flight Booking    Application  Critical     Reads the flight times
+A add component · X delete component · L add link · E edit link · D delete link · I impact results · S search · F filter · C clear
+· 0 back
+Choose: 0
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Sachin Kumar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

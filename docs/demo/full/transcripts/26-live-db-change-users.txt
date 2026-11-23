@@ -1,0 +1,166 @@
+> # A teammate changes the database with psql -f while SecureShift is open (every screen reads fresh)
+> function Teammate($file, $seconds) { Start-Process -NoNewWindow powershell -ArgumentList '-NoProfile', '-Command', "Start-Sleep $seconds; & '$psql' -h 127.0.0.1 -p 5434 -U postgres -d secureshift -e -f $file; Write-Host -NoNewline '(psql done) '" }
+> Get-Content C:\Demo\live\01-rename-user.sql
+-- A teammate renames a user in psql while SecureShift is open
+UPDATE dev."Users" SET "FullName" = 'Tejas Pathak Live' WHERE "Email" = 'tejas.pathak@company.com';
+> Teammate C:\Demo\live\01-rename-user.sql
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: arya.mujumdar@secureshift.io
+Password: **********
+[OK] Signed in as Arya Mujumdar (Super Admin).
+
+Super Admin
+===========
+Logged in as Arya Mujumdar (Super Admin) · Application Modernization - EMDT
+  1. Dashboard
+  2. User Management
+  3. Audit Logs
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 2
+
+User Management - Users (25)
+----------------------------
+Search: (none) · Role: All · Status: All
+ #  ID       Full Name      Email                         Phone Number  Role         Status
+--  -------  -------------  ----------------------------  ------------  -----------  --------
+ 1  USR-001  Arya Mujumdar  arya.mujumdar@secureshift.io  9876543210    Super Admin  Active
+ 2  USR-002  Rohan Kapoor   rohan.kapoor@company.com      9876543211    Super Admin  Active
+ 3  USR-003  Tejas Pathak   tejas.pathak@company.com      9876543212    Executive    Active
+ 4  USR-004  Aditya Ghate   aditya.ghate@company.com      9876543213    Admin        Active
+ 5  USR-005  Sonal Shende   sonal.shende@company.com      9876543214    Executive    Active
+ 6  USR-006  Sakshi Patil   sakshi.patil@company.com      9876543215    Architect    Inactive
+ 7  USR-007  Vivek Randive  vivek.randive@company.com     9876543216    Admin        Active
+ 8  USR-008  Aditi Jain     aditi.jain@company.com        9876543217    Executive    Active
+ 9  USR-009  Rohit Kale     rohit.kale@company.com        9876543218    Architect    Inactive
+10  USR-010  Sneha Gupta    sneha.gupta@company.com       9876543219    Admin        Active
+Showing 1-10 of 25 users · Page 1 of 3
+Type a row number (#) to open a user, or: A add user · S search · R role filter · T status filter · C clear · N next · P previous
+· 0 back
+Choose: UPDATE dev."Users" SET "FullName" = 'Tejas Pathak Live' WHERE "Email" = 'tejas.pathak@company.com';
+UPDATE 1
+(psql done) C
+
+User Management - Users (25)
+----------------------------
+Search: (none) · Role: All · Status: All
+ #  ID       Full Name          Email                         Phone Number  Role         Status
+--  -------  -----------------  ----------------------------  ------------  -----------  --------
+ 1  USR-001  Arya Mujumdar      arya.mujumdar@secureshift.io  9876543210    Super Admin  Active
+ 2  USR-002  Rohan Kapoor       rohan.kapoor@company.com      9876543211    Super Admin  Active
+ 3  USR-003  Tejas Pathak Live  tejas.pathak@company.com      9876543212    Executive    Active
+ 4  USR-004  Aditya Ghate       aditya.ghate@company.com      9876543213    Admin        Active
+ 5  USR-005  Sonal Shende       sonal.shende@company.com      9876543214    Executive    Active
+ 6  USR-006  Sakshi Patil       sakshi.patil@company.com      9876543215    Architect    Inactive
+ 7  USR-007  Vivek Randive      vivek.randive@company.com     9876543216    Admin        Active
+ 8  USR-008  Aditi Jain         aditi.jain@company.com        9876543217    Executive    Active
+ 9  USR-009  Rohit Kale         rohit.kale@company.com        9876543218    Architect    Inactive
+10  USR-010  Sneha Gupta        sneha.gupta@company.com       9876543219    Admin        Active
+Showing 1-10 of 25 users · Page 1 of 3
+Type a row number (#) to open a user, or: A add user · S search · R role filter · T status filter · C clear · N next · P previous
+· 0 back
+Choose: 0
+
+Super Admin
+===========
+Logged in as Arya Mujumdar (Super Admin) · Application Modernization - EMDT
+  1. Dashboard
+  2. User Management
+  3. Audit Logs
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Arya Mujumdar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+
+> Get-Content C:\Demo\live\02-deactivate-admin.sql
+-- A teammate deactivates the Admin while the Admin is logged in
+UPDATE dev."Users" SET "Status" = 'Inactive' WHERE "Email" = 'sachin.kumar@secureshift.io';
+> Teammate C:\Demo\live\02-deactivate-admin.sql
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: sachin.kumar@secureshift.io
+Password: **********
+[OK] Signed in as Sachin Kumar (Admin).
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: UPDATE dev."Users" SET "Status" = 'Inactive' WHERE "Email" = 'sachin.kumar@secureshift.io';
+UPDATE 1
+(psql done) 1
+[WARNING] Your account is no longer active. You have been logged out.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: sachin.kumar@secureshift.io
+Password: **********
+[ERROR] Your account is inactive. Please contact your Super Admin.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+
+> & $psql -h 127.0.0.1 -p 5434 -U postgres -d secureshift -e -f C:\Demo\live\03-reactivate-admin.sql
+UPDATE dev."Users" SET "Status" = 'Active' WHERE "Email" = 'sachin.kumar@secureshift.io';
+UPDATE 1

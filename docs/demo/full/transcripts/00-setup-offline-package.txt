@@ -1,0 +1,215 @@
+> # SecureShift from zero: a laptop with only .NET 8 - no Git, no build, no internet, no admin rights
+> dotnet --list-runtimes
+Microsoft.AspNetCore.App 8.0.34 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+Microsoft.NETCore.App 8.0.14 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+Microsoft.NETCore.App 8.0.34 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+Microsoft.WindowsDesktop.App 8.0.34 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+> Get-ChildItem C:\Demo\PenDrive | Format-Table Name, Length -AutoSize
+
+Name                                           Length
+----                                           ------
+postgresql-16.11-1-windows-x64-binaries.zip 324093756
+SecureShift-offline.zip                       3686172
+> Expand-Archive C:\Demo\PenDrive\SecureShift-offline.zip -DestinationPath C:\Demo
+> Copy-Item C:\Demo\PenDrive\postgresql-16.11-1-windows-x64-binaries.zip C:\Demo\SecureShift
+> cd C:\Demo\SecureShift
+> Get-ChildItem | Format-Table Name, Length -AutoSize
+
+Name                                        Length   
+----                                        ------   
+app                                                  
+database                                             
+docs                                                 
+samples                                              
+postgresql-16.11-1-windows-x64-binaries.zip 324093756
+run.ps1                                     4228     
+setup-postgres-portable.ps1                 8332     
+START-HERE.txt                              1818     
+stop-postgres.ps1                           857      
+> powershell -ExecutionPolicy Bypass -File run.ps1 -SetupOnly
+
+== PostgreSQL
+
+== 1. PostgreSQL 16 binaries in C:\SecureShiftTools\pgsql
+Using the zip C:\Demo\SecureShift\postgresql-16.11-1-windows-x64-binaries.zip (no download needed)
+Unzipping to C:\SecureShiftTools (about 1 minute) ...
+[OK] Unzipped.
+postgres (PostgreSQL) 16.11
+
+== 2. Data folder C:\SecureShiftTools\pgdata
+The files belonging to this database system will be owned by user "yashv".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+creating directory C:/SecureShiftTools/pgdata ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... windows
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Asia/Calcutta
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    ^"C^:^\SecureShiftTools^\pgsql^\bin^\pg^_ctl^" -D ^"C^:^\SecureShiftTools^\pgdata^" -l logfile start
+
+[OK] Created. The password of the local 'postgres' user is in C:\SecureShiftTools\postgres-password.txt
+
+== 3. Start the server on port 5434 (localhost only)
+[OK] Started (log: C:\SecureShiftTools\postgres.log).
+
+== 4. Database 'secureshift' and schema 'dev'
+[OK] Database secureshift created.
+[OK] Schema dev is there.
+
+== Done. Connection string (saved in C:\SecureShiftTools\connection-string.txt; the password is not shown here):
+Host=127.0.0.1;Port=5434;Database=secureshift;Username=postgres;Password=********
+
+Use it in this PowerShell window:
+  $env:ConnectionStrings__SecureShiftDb = Get-Content C:\SecureShiftTools\connection-string.txt
+Or simply run:  powershell -ExecutionPolicy Bypass -File "C:\Demo\SecureShift\run.ps1"
+[OK] ConnectionStrings__SecureShiftDb is set for this window.
+[OK] Offline package: using the published app C:\Demo\SecureShift\app\SecureShift.Console.dll (nothing to build).
+
+== Database tables
+The database is empty: creating the 28 tables, 4 views and the sample data (db setup).
+
+SecureShift - db setup (brand-new EMPTY dev schema only)
+========================================================
+Server   : 127.0.0.1:5434 (PostgreSQL 16.11)
+Database : secureshift
+User     : postgres
+Schema   : dev
+
+This will:
+  1. run 01_create_secureshift_in_dev.sql  (create 28 tables + 4 views)
+  2. run 02_seed_data_postgresql_dev.sql  (load 569 sample rows)
+  3. run 04_migration_history.sql  (migration history + baseline)
+--yes was given, continuing without asking.
+Running 01_create_secureshift_in_dev.sql ... done
+[OK] 28 tables and 4 views created.
+Running 02_seed_data_postgresql_dev.sql ... done
+[OK] 569 sample rows loaded.
+Running 04_migration_history.sql ... done
+[OK] Migration history created, baseline (version 1) recorded.
+
+Now: 28 tables, 4 views, 46 foreign keys, 569 rows.
+[OK] Done. Run 'db status' or 'smoke' to check.
+> $env:ConnectionStrings__SecureShiftDb = Get-Content C:\SecureShiftTools\connection-string.txt
+> dotnet app\SecureShift.Console.dll db status
+
+SecureShift - db status
+=======================
+Server   : 127.0.0.1:5434 (PostgreSQL 16.11)
+Database : secureshift
+User     : postgres
+Schema   : dev
+
+SecureShift objects in schema dev
+---------------------------------
+Tables       : 28 of 28
+Views        : 4 of 4
+Foreign keys : 46 (expected 46)
+
+Rows per table
+--------------
+Table                             Rows  Fresh seed
+--------------------------------  ----  ----------
+dev."Roles"                          5           5
+dev."Users"                         25          25
+dev."AuditLogs"                      8           8
+dev."Companies"                     10          10
+dev."Analyses"                       4           4
+dev."Identities"                   128         128
+dev."IdentityScores"               128         128
+dev."PermissionUsage"               12          12
+dev."Findings"                      37          37
+dev."GeneratedRoles"                 5           5
+dev."GeneratedRoleActions"          16          16
+dev."RuleSettings"                   1           1
+dev."HighRiskPatterns"               4           4
+dev."Reports"                        4           4
+dev."Notifications"                  3           3
+dev."Enterprises"                    3           3
+dev."Classifications"                2           2
+dev."ClassificationTechnologies"     5           5
+dev."ClassificationPolicies"         6           6
+dev."Applications"                  10          10
+dev."Components"                    19          19
+dev."Dependencies"                  20          20
+dev."Assessments"                    5           5
+dev."AssessmentFactors"             55          55
+dev."Simulations"                    6           6
+dev."SimulationImpacts"             18          18
+dev."Plans"                          6           6
+dev."PlanPhases"                    24          24
+TOTAL                              569         569
+
+Migrations (dev."__SchemaMigrations")
+-------------------------------------
+Version  Name      Script                                                              Applied at (UTC)  By
+-------  --------  ------------------------------------------------------------------  ----------------  --------
+V001     baseline  01_create_secureshift_in_dev.sql + 02_seed_data_postgresql_dev.sql  2026-11-23 15:31  postgres
+Pending migration files: none
+
+[OK] All 28 tables, 4 views and 46 foreign keys are present.
+> dotnet app\SecureShift.Console.dll smoke
+
+SecureShift - smoke (EF Core reads the database)
+================================================
+Database : 127.0.0.1:5434 / secureshift / postgres
+
+Table        Rows (EF Core)  Fresh seed  Check
+-----------  --------------  ----------  -----
+Users                    25          25  ok
+Roles                     5           5  ok
+Companies                10          10  ok
+Enterprises               3           3  ok
+
+[OK] EF Core can read the database and the counts match the fresh seed (25 / 5 / 10 / 3).
+> powershell -ExecutionPolicy Bypass -File run.ps1
+
+== PostgreSQL
+
+== 1. PostgreSQL 16 binaries in C:\SecureShiftTools\pgsql
+[OK] Already unzipped.
+postgres (PostgreSQL) 16.11
+
+== 2. Data folder C:\SecureShiftTools\pgdata
+[OK] Already created.
+
+== 3. Start the server on port 5434 (localhost only)
+[OK] Already running.
+
+== 4. Database 'secureshift' and schema 'dev'
+[OK] Database secureshift already exists.
+[OK] Schema dev is there.
+
+== Done. Connection string (saved in C:\SecureShiftTools\connection-string.txt; the password is not shown here):
+Host=127.0.0.1;Port=5434;Database=secureshift;Username=postgres;Password=********
+
+Use it in this PowerShell window:
+  $env:ConnectionStrings__SecureShiftDb = Get-Content C:\SecureShiftTools\connection-string.txt
+Or simply run:  powershell -ExecutionPolicy Bypass -File "C:\Demo\SecureShift\run.ps1"
+[OK] ConnectionStrings__SecureShiftDb is set for this window.
+[OK] Offline package: using the published app C:\Demo\SecureShift\app\SecureShift.Console.dll (nothing to build).
+
+== Database tables
+[OK] All SecureShift tables are there.
+
+== SecureShift (type 0 on the login screen to exit)
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: Goodbye.

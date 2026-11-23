@@ -1,0 +1,6913 @@
+{
+ "00-setup-offline-package": [
+  {
+   "rows": 2
+  },
+  {
+   "rows": 6
+  },
+  {
+   "rows": 7
+  },
+  {
+   "rows": 2
+  },
+  {
+   "rows": 2
+  },
+  {
+   "rows": 2
+  },
+  {
+   "rows": 14
+  },
+  {
+   "rows": 77
+  },
+  {
+   "rows": 2
+  },
+  {
+   "rows": 58
+  },
+  {
+   "rows": 15
+  },
+  {
+   "rows": 40
+  }
+ ],
+ "01-login-errors-forced-change": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Current (temporary) password: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Current (temporary) password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm new password: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": true,
+   "ok": false,
+   "prompt": "Current (temporary) password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm new password: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Current (temporary) password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm new password: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "want to logout, Mohit Choudhary? (y/n): "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "want to logout, Mohit Choudhary? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "want to logout, Mohit Choudhary? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "02-super-admin-dashboard-users": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 45,
+   "lines": 43,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "me, email or phone (Enter = no search): "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "u want to logout, Arya Mujumdar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "03-super-admin-add-user": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Full Name: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Full Name: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Phone Number: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Phone Number: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 33,
+   "lines": 31,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Full Name: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Phone Number: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Full Name: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "me, email or phone (Enter = no search): "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "u want to logout, Arya Mujumdar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "04-super-admin-user-details": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "me, email or phone (Enter = no search): "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Full Name [Nisha Verma]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Email [nisha.verma@company.com]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Phone Number [9811223344]: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Architect]: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Architect]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Reason (optional): "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "rary password will be shown once (y/n): "
+  },
+  {
+   "rows": 32,
+   "lines": 30,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": " want to deactivate Nisha Verma? (y/n): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Reason (optional): "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "ou want to activate Nisha Verma? (y/n): "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Full Name [Rohan Kapoor]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Email [rohan.kapoor@company.com]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Phone Number [9876543211]: "
+  },
+  {
+   "rows": 23,
+   "lines": 21,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "u want to logout, Arya Mujumdar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "05-super-admin-audit-logs": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-16: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-7: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "From (MM/DD/YYYY) [none]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "To (MM/DD/YYYY) [none]: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "From (MM/DD/YYYY) [none]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "To (MM/DD/YYYY) [none]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " target or details (Enter = no search): "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Current Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm New Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "u want to logout, Arya Mujumdar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "06-cloud-admin-dashboard-companies": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 56,
+   "lines": 54,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "earch company name (Enter = no search): "
+  },
+  {
+   "rows": 11,
+   "lines": 9,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 11,
+   "lines": 9,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Company Name: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Company Name: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Azure Tenant ID: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Azure Tenant ID: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Subscriptions [1]: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Company Name: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Azure Tenant ID: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Subscriptions [1]: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 11,
+   "lines": 9,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "you want to logout, Aarav Mehta? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "07-cloud-admin-wizard-errors": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-11: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Last 90 days]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "From (MM/DD/YYYY): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "To (MM/DD/YYYY): "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose 1-4 [Last 90 days]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "From (MM/DD/YYYY): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "To (MM/DD/YYYY): "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose 1-4 [Last 90 days]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "From (MM/DD/YYYY): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "To (MM/DD/YYYY): "
+  },
+  {
+   "rows": 4,
+   "lines": 2,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\role-assignments.json]: "
+  },
+  {
+   "rows": 4,
+   "lines": 2,
+   "err": true,
+   "ok": false,
+   "prompt": "ples\\governance\\role-assignments.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "ples\\governance\\role-assignments.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\activity-log-90d.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "samples\\governance\\roles-catalog.json]: "
+  },
+  {
+   "rows": 27,
+   "lines": 25,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-11: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Last 90 days]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "From (MM/DD/YYYY): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "To (MM/DD/YYYY): "
+  },
+  {
+   "rows": 4,
+   "lines": 2,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\role-assignments.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\activity-log-90d.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "samples\\governance\\roles-catalog.json]: "
+  },
+  {
+   "rows": 27,
+   "lines": 25,
+   "err": true,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-11: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Last 90 days]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "From (MM/DD/YYYY): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "To (MM/DD/YYYY): "
+  },
+  {
+   "rows": 4,
+   "lines": 2,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\role-assignments.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\activity-log-90d.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "samples\\governance\\roles-catalog.json]: "
+  },
+  {
+   "rows": 27,
+   "lines": 25,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-11: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Last 90 days]: "
+  },
+  {
+   "rows": 4,
+   "lines": 2,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\role-assignments.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\activity-log-90d.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "samples\\governance\\roles-catalog.json]: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Run the analysis now? (y/n): "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "you want to logout, Aarav Mehta? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "08-cloud-admin-wizard-run": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 11,
+   "lines": 9,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Last 90 days]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "From (MM/DD/YYYY): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "To (MM/DD/YYYY): "
+  },
+  {
+   "rows": 4,
+   "lines": 2,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\role-assignments.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "ples\\governance\\activity-log-90d.json]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "samples\\governance\\roles-catalog.json]: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Run the analysis now? (y/n): "
+  },
+  {
+   "rows": 32,
+   "lines": 30,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 30,
+   "lines": 28,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 55,
+   "lines": 53,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "you want to logout, Aarav Mehta? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "09-cloud-admin-identities": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "ame, role or scope (Enter = no search): "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "rgie Travel · 08/12/2026 - 11/09/2026]: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "ind Traders · 08/12/2026 - 11/09/2026]: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 70,
+   "lines": 68,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 44,
+   "lines": 42,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 70,
+   "lines": 68,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "you want to logout, Aarav Mehta? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "10-cloud-admin-findings": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-17: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 23,
+   "lines": 21,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "rgie Travel · 08/12/2026 - 11/09/2026]: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 54,
+   "lines": 52,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 23,
+   "lines": 21,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "you want to logout, Aarav Mehta? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "11-cloud-admin-generated-roles": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 44,
+   "lines": 42,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 45,
+   "lines": 43,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 38,
+   "lines": 36,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 45,
+   "lines": 43,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 45,
+   "lines": 43,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "rgie Travel · 08/12/2026 - 11/09/2026]: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "you want to logout, Aarav Mehta? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "12-cloud-admin-rules-patterns": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 52,
+   "lines": 50,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "Unused permission ratio weight [50]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Unused high-risk actions weight [30]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Scope breadth weight [20]: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [90 days]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Rare action threshold [3]: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2 [Yes]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "Unused permission ratio weight [50]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Unused permission ratio weight [50]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Unused high-risk actions weight [30]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Scope breadth weight [20]: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [90 days]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Rare action threshold [3]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Rare action threshold [3]: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2 [Yes]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "ll go back to the default values (y/n): "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "Pattern: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Pattern: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "Pattern: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Pattern: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "e Microsoft.Sql/servers/*/delete (y/n): "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "you want to logout, Aarav Mehta? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "13-cloud-admin-reports-notifications": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-11: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-11: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "(open it in a browser to print)? (y/n): "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Mark all read? (y/n): "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 33,
+   "lines": 31,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Current Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm New Password: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "you want to logout, Aarav Mehta? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "14-admin-dashboard-enterprises": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "h name, ID or city (Enter = no search): "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 9,
+   "lines": 7,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-6: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 39,
+   "lines": 37,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Enterprise Name: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Enterprise Name: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Enterprise Name: "
+  },
+  {
+   "rows": 11,
+   "lines": 9,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-8: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose 1-8: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Headquarters City: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Headquarters City: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Contact Person: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Contact Email: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Contact Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Contact Phone: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Contact Phone: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "oose 1-4 [Tailspin Airlines (ENT-004)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Northwind Bank (ENT-001)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 23,
+   "lines": 21,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Headquarters City [Pune]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Contact Person [Kavita Desai]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "tact Email [kavita.desai@tailspin.com]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Contact Phone [9812300011]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "ou want to logout, Sachin Kumar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "15-admin-emsi-classification": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Northwind Bank (ENT-001)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Total applications: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Number of dependencies: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Number of APIs: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Lines of code: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Lines of code: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Databases: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Storage (GB): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Environments: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Environments: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Business units: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Active users: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "e the numbers, e.g. 1,3 (Enter = none): "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "e the numbers, e.g. 1,3 (Enter = none): "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Type the numbers, e.g. 1,3 [none]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "  Low: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "  Medium: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "  High: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "  Critical: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": true,
+   "ok": false,
+   "prompt": "nswers are kept as the defaults) (y/n): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Total applications [12]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Number of dependencies [20]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Number of APIs [8]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Lines of code [250000]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Databases [3]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Storage (GB) [400]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Environments [2]: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Public Cloud]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Business units [2]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Active users [30]: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "ype the numbers, e.g. 1,3 [Java, .NET]: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "e numbers, e.g. 1,3 [HIPAA, ISO 27001]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "  Low [3]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "  Medium [4]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "  High [3]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "  Critical [5]: "
+  },
+  {
+   "rows": 37,
+   "lines": 35,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 39,
+   "lines": 37,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Total applications [12]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "ou want to logout, Sachin Kumar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "16-admin-applications": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Northwind Bank (ENT-001)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Application Name: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Application Name: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Business Unit: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Owner Team: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "work + version (e.g. Java 8 or .NET 6): "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "work + version (e.g. Java 8 or .NET 6): "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Age (years): "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Age (years): "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Lines of code: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Lines of code: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Known security issues: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Compliance policies that apply: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Application Name: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Business Unit: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Owner Team: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "work + version (e.g. Java 8 or .NET 6): "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Age (years): "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Lines of code: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Known security issues: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Compliance policies that apply: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Application Name: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Application Name: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Search name or ID (Enter = no search): "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 28,
+   "lines": 26,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 28,
+   "lines": 26,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Application Name [Flight Booking]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Business Unit [Sales]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Owner Team [Web Team]: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2 [Active]: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Public Cloud]: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Java]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "sion (e.g. Java 8 or .NET 6) [Java 17]: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3 [Supported]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Age (years) [6]: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3 [Good]: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3 [Medium]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Lines of code [300000]: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Critical]: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2 [Yes]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Known security issues [1]: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3 [Low]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Compliance policies that apply [1]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "m Update: update Flight Booking? (y/n): "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "oose 1-4 [Tailspin Airlines (ENT-004)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 30,
+   "lines": 28,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "pplier Portal from the inventory (y/n): "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Contoso Retail (ENT-002)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "ou want to logout, Sachin Kumar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "17-admin-components-dependencies": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Northwind Bank (ENT-001)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Component Name: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Component Name: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Component Name: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Description (optional, max 200) []: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Description (optional, max 200) []: "
+  },
+  {
+   "rows": 23,
+   "lines": 21,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Description (optional, max 200) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Try again? (y/n): "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Description (optional, max 200) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Try again? (y/n): "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Description (optional, max 200) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Try again? (y/n): "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Description (optional, max 200) []: "
+  },
+  {
+   "rows": 24,
+   "lines": 22,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Link number (#): "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "ose 1-5 [Crew Scheduler (Application)]: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "ose 1-5 [Flight Booking (Application)]: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [High]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "nal, max 200) [Reads the flight times]: "
+  },
+  {
+   "rows": 24,
+   "lines": 22,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Link number (#): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " dependency? Remove link DEP-023 (y/n): "
+  },
+  {
+   "rows": 23,
+   "lines": 21,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Component number (#): "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "component? Delete Roster Service (y/n): "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 29,
+   "lines": 27,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " description or ID (Enter = no search): "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 22,
+   "lines": 20,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "ou want to logout, Sachin Kumar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "18-admin-digital-twin": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Northwind Bank (ENT-001)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-2: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "oose 1-4 [Tailspin Airlines (ENT-004)]: "
+  },
+  {
+   "rows": 66,
+   "lines": 64,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 66,
+   "lines": 64,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Current Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm New Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "ou want to logout, Sachin Kumar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "19-architect-dashboard-applications": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 55,
+   "lines": 53,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Northwind Bank (ENT-001)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Search name or ID (Enter = no search): "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-3: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 30,
+   "lines": 28,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 43,
+   "lines": 41,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "want to logout, Amanjeet Sharma? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "20-architect-assessments": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": false,
+   "prompt": "ance Portal (APP-001, Northwind Bank)]: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 43,
+   "lines": 41,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 44,
+   "lines": 42,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 27,
+   "lines": 25,
+   "err": false,
+   "ok": false,
+   "prompt": " - Restructure the code for the cloud]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "want to logout, Amanjeet Sharma? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "21-architect-simulations": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "ance Portal (APP-001, Northwind Bank)]: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": " - Restructure the code for the cloud]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "ance Portal (APP-001, Northwind Bank)]: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": " - Restructure the code for the cloud]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "ance Portal (APP-001, Northwind Bank)]: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": " - Restructure the code for the cloud]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "ance Portal (APP-001, Northwind Bank)]: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": " - Restructure the code for the cloud]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "ance Portal (APP-001, Northwind Bank)]: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": " - Restructure the code for the cloud]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "want to logout, Amanjeet Sharma? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "22-architect-create-plan": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 47,
+   "lines": 45,
+   "err": false,
+   "ok": false,
+   "prompt": "an name [Flight Booking Refactor Plan]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "an name [Flight Booking Refactor Plan]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Notes (optional, max 500) []: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "Simulation number (#), 0 = back: "
+  },
+  {
+   "rows": 47,
+   "lines": 45,
+   "err": false,
+   "ok": false,
+   "prompt": "lan name [Flight Booking Rebuild Plan]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Notes (optional, max 500) []: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "Submit modernization plan? (y/n): "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": false,
+   "prompt": "Simulation number (#), 0 = back: "
+  },
+  {
+   "rows": 47,
+   "lines": 45,
+   "err": false,
+   "ok": false,
+   "prompt": "lan name [Flight Booking Rebuild Plan]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Notes (optional, max 500) []: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "Submit modernization plan? (y/n): "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 9,
+   "lines": 7,
+   "err": false,
+   "ok": false,
+   "prompt": "Simulation number (#), 0 = back: "
+  },
+  {
+   "rows": 47,
+   "lines": 45,
+   "err": false,
+   "ok": false,
+   "prompt": " name [Flight Booking Replatform Plan]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Notes (optional, max 500) []: "
+  },
+  {
+   "rows": 5,
+   "lines": 3,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "want to logout, Amanjeet Sharma? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "23-architect-my-plans": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " application or ID (Enter = no search): "
+  },
+  {
+   "rows": 11,
+   "lines": 9,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 35,
+   "lines": 33,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "an name [Flight Booking Refactor Plan]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": ", max 500) [Phase 1 starts in January]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 35,
+   "lines": 33,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "name [Flight Booking Refactor Plan v2]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " max 500) [Phase 1 starts in February]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "Submit modernization plan? (y/n): "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 49,
+   "lines": 47,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 49,
+   "lines": 47,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4 [Northwind Bank (ENT-001)]: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 30,
+   "lines": 28,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 31,
+   "lines": 29,
+   "err": false,
+   "ok": false,
+   "prompt": " - Restructure the code for the cloud]: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Current Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm New Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "want to logout, Amanjeet Sharma? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "24-executive-review-approve-reject": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 57,
+   "lines": 55,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Comment (optional, max 500) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "ld Plan (₹22.86 lakh, 19 weeks)? (y/n): "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 57,
+   "lines": 55,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "r rejection (at least 5 characters) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "r rejection (at least 5 characters) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "r rejection (at least 5 characters) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "Plan v2 (₹17.79 lakh, 17 weeks)? (y/n): "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 62,
+   "lines": 60,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Comment (optional, max 500) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "or Plan (₹22.15 lakh, 22 weeks)? (y/n): "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 62,
+   "lines": 60,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " to logout, Shivanand Kumatekar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "25-executive-all-plans-history": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 67,
+   "lines": 65,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 15,
+   "lines": 13,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 7,
+   "lines": 5,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-4: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 8,
+   "lines": 6,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose 1-5: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " to logout, Shivanand Kumatekar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ],
+ "26-live-db-change-users": [
+  {
+   "rows": 3
+  },
+  {
+   "rows": 4
+  },
+  {
+   "rows": 4
+  },
+  {
+   "rows": 3
+  },
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 21,
+   "lines": 19,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "u want to logout, Arya Mujumdar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  },
+  {
+   "rows": 4
+  },
+  {
+   "rows": 3
+  },
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 19,
+   "lines": 17,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  },
+  {
+   "rows": 4
+  }
+ ],
+ "27-live-db-change-plans": [
+  {
+   "rows": 3
+  },
+  {
+   "rows": 8
+  },
+  {
+   "rows": 13
+  },
+  {
+   "rows": 3
+  },
+  {
+   "rows": 4
+  },
+  {
+   "rows": 7
+  },
+  {
+   "rows": 3
+  },
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 14,
+   "lines": 12,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 62,
+   "lines": 60,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "r rejection (at least 5 characters) []: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": "or Plan (₹22.15 lakh, 22 weeks)? (y/n): "
+  },
+  {
+   "rows": 16,
+   "lines": 14,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " to logout, Shivanand Kumatekar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  },
+  {
+   "rows": 14
+  }
+ ],
+ "28-executive-profile-password-exit": [
+  {
+   "rows": 9
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 17,
+   "lines": 15,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Full Name [Shivanand Kumatekar]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Phone [9876543223]: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": true,
+   "ok": false,
+   "prompt": "Phone [9876543223]: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Department [Modernization Office]: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Current Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm New Password: "
+  },
+  {
+   "rows": 20,
+   "lines": 18,
+   "err": true,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Current Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm New Password: "
+  },
+  {
+   "rows": 18,
+   "lines": 16,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Current Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "New Password: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Confirm New Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " to logout, Shivanand Kumatekar? (y/n): "
+  },
+  {
+   "rows": 12,
+   "lines": 10,
+   "err": false,
+   "ok": false,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " to logout, Shivanand Kumatekar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 6,
+   "lines": 4,
+   "err": false,
+   "ok": false,
+   "prompt": "Email: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": "Password: "
+  },
+  {
+   "rows": 13,
+   "lines": 11,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 2,
+   "lines": 0,
+   "err": false,
+   "ok": false,
+   "prompt": " to logout, Shivanand Kumatekar? (y/n): "
+  },
+  {
+   "rows": 10,
+   "lines": 8,
+   "err": false,
+   "ok": true,
+   "prompt": "Choose: "
+  },
+  {
+   "rows": 3,
+   "lines": 1,
+   "err": false,
+   "ok": false,
+   "prompt": ""
+  }
+ ]
+}

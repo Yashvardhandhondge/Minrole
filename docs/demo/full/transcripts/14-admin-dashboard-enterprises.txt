@@ -1,0 +1,443 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: sachin.kumar@secureshift.io
+Password: **********
+[OK] Signed in as Sachin Kumar (Admin).
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 1
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: All · 3 of 3
+#  ID       Enterprise       City       Industry    Apps   EMSI  Category   Plan / Month
+-  -------  ---------------  ---------  ----------  ----  -----  ---------  ------------
+1  ENT-001  Northwind Bank   Mumbai     Banking        6  77.87  Strategic  ₹50,000
+2  ENT-002  Contoso Retail   Pune       Retail         4  44.91  Growth     ₹10,000
+3  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0      -  Pending    -
+Showing 1-3 of 3 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: S
+Search name, ID or city (Enter = no search): contoso
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: contoso · Category: All · 1 of 3
+#  ID       Enterprise      City  Industry  Apps   EMSI  Category  Plan / Month
+-  -------  --------------  ----  --------  ----  -----  --------  ------------
+1  ENT-002  Contoso Retail  Pune  Retail       4  44.91  Growth    ₹10,000
+Showing 1-1 of 1 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: C
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: All · 3 of 3
+#  ID       Enterprise       City       Industry    Apps   EMSI  Category   Plan / Month
+-  -------  ---------------  ---------  ----------  ----  -----  ---------  ------------
+1  ENT-001  Northwind Bank   Mumbai     Banking        6  77.87  Strategic  ₹50,000
+2  ENT-002  Contoso Retail   Pune       Retail         4  44.91  Growth     ₹10,000
+3  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0      -  Pending    -
+Showing 1-3 of 3 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: K
+Category:
+  1. All
+  2. Foundation
+  3. Growth
+  4. Enterprise
+  5. Strategic
+  6. Pending
+Choose 1-6: Pending
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: Pending · 1 of 3
+#  ID       Enterprise       City       Industry    Apps  EMSI  Category  Plan / Month
+-  -------  ---------------  ---------  ----------  ----  ----  --------  ------------
+1  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0     -  Pending   -
+Showing 1-1 of 1 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: C
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: All · 3 of 3
+#  ID       Enterprise       City       Industry    Apps   EMSI  Category   Plan / Month
+-  -------  ---------------  ---------  ----------  ----  -----  ---------  ------------
+1  ENT-001  Northwind Bank   Mumbai     Banking        6  77.87  Strategic  ₹50,000
+2  ENT-002  Contoso Retail   Pune       Retail         4  44.91  Growth     ₹10,000
+3  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0      -  Pending    -
+Showing 1-3 of 3 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: N
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: All · 3 of 3
+#  ID       Enterprise       City       Industry    Apps   EMSI  Category   Plan / Month
+-  -------  ---------------  ---------  ----------  ----  -----  ---------  ------------
+1  ENT-001  Northwind Bank   Mumbai     Banking        6  77.87  Strategic  ₹50,000
+2  ENT-002  Contoso Retail   Pune       Retail         4  44.91  Growth     ₹10,000
+3  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0      -  Pending    -
+Showing 1-3 of 3 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: P
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: All · 3 of 3
+#  ID       Enterprise       City       Industry    Apps   EMSI  Category   Plan / Month
+-  -------  ---------------  ---------  ----------  ----  -----  ---------  ------------
+1  ENT-001  Northwind Bank   Mumbai     Banking        6  77.87  Strategic  ₹50,000
+2  ENT-002  Contoso Retail   Pune       Retail         4  44.91  Growth     ₹10,000
+3  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0      -  Pending    -
+Showing 1-3 of 3 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: 1
+
+Northwind Bank (ENT-001) - Classified
+-------------------------------------
+  EMSI Score       : 77.87
+  Category         : Strategic
+  Applications     : 6
+  Dependency Links : 15 (14 components)
+Registration:
+  Enterprise ID  : ENT-001
+  Name           : Northwind Bank
+  Industry       : Banking
+  Headquarters   : Mumbai
+  Contact Person : Ravi Menon
+  Email          : ravi.menon@northwindbank.com
+  Phone          : 9820012345
+  Registered On  : 09/15/2026
+  Classified On  : 11/10/2026
+EMSI 77.87 / 100 · Category: Strategic
+Scale: Foundation 0-25  Growth 25-45  Enterprise 45-70  [Strategic 70-100]
+Strategic Subscription Plan: Monthly ₹50,000 · Annual (-10%) ₹5,40,000
+Parameter                  Your Input                       Score  Weight  Weighted
+-------------------------  -------------------------------  -----  ------  --------
+Total applications         120                                 60     14%       8.4
+Number of dependencies     180                                 75     14%      10.5
+Number of APIs             60                                  75      7%      5.25
+Databases and storage      22 DBs, 8,000 GB                  77.5      9%      6.98
+Number of environments     4                                  100      6%         6
+Number of business units   8                                   80      4%       3.2
+Technology diversity       Java + .NET + COBOL              87.16     15%     13.07
+Number of active users     850                                 80      4%       3.2
+Application criticality    10L / 30M / 50H / 30C            70.83      9%      6.37
+Governance policies used   GDPR, PCI DSS, ISO 27001, SOC 2    100      6%         6
+Cloud infrastructure type  Hybrid Cloud                        70      7%       4.9
+Lines of code              45,00,000                           80      5%         4
+  1. Edit registration
+  2. Edit classification details
+  0. Back
+Choose: 0
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: All · 3 of 3
+#  ID       Enterprise       City       Industry    Apps   EMSI  Category   Plan / Month
+-  -------  ---------------  ---------  ----------  ----  -----  ---------  ------------
+1  ENT-001  Northwind Bank   Mumbai     Banking        6  77.87  Strategic  ₹50,000
+2  ENT-002  Contoso Retail   Pune       Retail         4  44.91  Growth     ₹10,000
+3  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0      -  Pending    -
+Showing 1-3 of 3 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: Q
+[ERROR] Unknown choice. Type a row number, R, S, K, C, N, P or 0.
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: All · 3 of 3
+#  ID       Enterprise       City       Industry    Apps   EMSI  Category   Plan / Month
+-  -------  ---------------  ---------  ----------  ----  -----  ---------  ------------
+1  ENT-001  Northwind Bank   Mumbai     Banking        6  77.87  Strategic  ₹50,000
+2  ENT-002  Contoso Retail   Pune       Retail         4  44.91  Growth     ₹10,000
+3  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0      -  Pending    -
+Showing 1-3 of 3 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: R
+
+Register New Enterprise
+-----------------------
+Step 1 of onboarding. After registering, fill the classification to calculate the EMSI and category. Type 'cancel' to go back.
+Enterprise Name: cancel
+[INFO] Cancelled. Nothing was saved.
+
+Admin Dashboard - Enterprises
+-----------------------------
+  Total Enterprises      : 3
+  Classified             : 2
+  Pending Classification : 1
+  Total Applications     : 10
+Category: Growth 1 · Strategic 1 · Not classified 1
+Search: (none) · Category: All · 3 of 3
+#  ID       Enterprise       City       Industry    Apps   EMSI  Category   Plan / Month
+-  -------  ---------------  ---------  ----------  ----  -----  ---------  ------------
+1  ENT-001  Northwind Bank   Mumbai     Banking        6  77.87  Strategic  ₹50,000
+2  ENT-002  Contoso Retail   Pune       Retail         4  44.91  Growth     ₹10,000
+3  ENT-003  Fabrikam Health  Bengaluru  Healthcare     0      -  Pending    -
+Showing 1-3 of 3 enterprises · Page 1 of 1
+Type a row number to open an enterprise, or: R register · S search · K category · C clear · N next · P previous · 0 back
+Choose: 0
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 2
+
+Register New Enterprise
+-----------------------
+Step 1 of onboarding. After registering, fill the classification to calculate the EMSI and category. Type 'cancel' to go back.
+Enterprise Name: Northwind Bank
+[ERROR] This enterprise is already registered
+Enterprise Name: Tailspin Airlines
+Industry:
+  1. Banking
+  2. Insurance
+  3. Retail
+  4. Healthcare
+  5. Manufacturing
+  6. Telecom
+  7. Government
+  8. Other
+Choose 1-8: 
+[ERROR] Select an industry
+Choose 1-8: Other
+Headquarters City: Pune1
+[ERROR] Letters only, 3-50 characters
+Headquarters City: Pune
+Contact Person: Kavita Desai
+Contact Email: kavita.desai@tailspin
+[ERROR] Enter a valid email
+Contact Email: kavita.desai@tailspin.com
+Contact Phone: 5812300011
+[ERROR] 10 digits starting with 6, 7, 8 or 9
+Contact Phone: 9812300011
+[OK] Tailspin Airlines registered as ENT-004. Next: classification (menu 5 - EMSI Classification).
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Tailspin Airlines (ENT-004)]: 1
+[OK] Current enterprise: Northwind Bank (ENT-001)
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Northwind Bank (ENT-001)]: 4
+[OK] Current enterprise: Tailspin Airlines (ENT-004)
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 4
+
+Tailspin Airlines (ENT-004) - Pending Classification
+----------------------------------------------------
+  EMSI Score       : -
+  Category         : Pending
+  Applications     : 0
+  Dependency Links : 0 (0 components)
+Registration:
+  Enterprise ID  : ENT-004
+  Name           : Tailspin Airlines
+  Industry       : Other
+  Headquarters   : Pune
+  Contact Person : Kavita Desai
+  Email          : kavita.desai@tailspin.com
+  Phone          : 9812300011
+  Registered On  : 11/23/2026
+  Classified On  : -
+Not classified yet. Choose 2 to add the portfolio details: EMSI, category and pricing are calculated automatically.
+  1. Edit registration
+  2. Add classification details
+  0. Back
+Choose: 1
+
+Edit Registration
+-----------------
+Press Enter to keep the value in [brackets]. Type 'cancel' to go back.
+Headquarters City [Pune]: Mumbai
+Contact Person [Kavita Desai]: 
+Contact Email [kavita.desai@tailspin.com]: 
+Contact Phone [9812300011]: 
+[OK] Registration details saved
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 11
+[ERROR] Type a number from 0 to 10.
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Sachin Kumar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

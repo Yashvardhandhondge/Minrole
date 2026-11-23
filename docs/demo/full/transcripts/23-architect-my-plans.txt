@@ -1,0 +1,683 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: amanjeet.sharma@secureshift.io
+Password: **************
+[OK] Signed in as Amanjeet Sharma (Architect).
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 7
+
+My Plans
+--------
+Draft 2 · Submitted 4 · Approved 1 · Rejected 1
+Status: All · Search: (none)
+#  Plan ID   Plan Name                      Application           Strategy    Status     Date        Executive Comment
+-  --------  -----------------------------  --------------------  ----------  ---------  ----------  -----------------------------
+1  PLAN-008  Flight Booking Rebuild Plan    Flight Booking        Rebuild     Submitted  11/23/2026  -
+2  PLAN-007  Flight Booking Refactor Plan   Flight Booking        Refactor    Draft      11/23/2026  -
+3  PLAN-006  Payment Gateway Refactor Plan  Payment Gateway       Refactor    Draft      11/09/2026  -
+4  PLAN-005  HR System Rebuild Plan         HR System             Rebuild     Rejected   11/03/2026  Too costly for this year. Ev…
+5  PLAN-004  Online Store Replatform Plan   Online Store          Replatform  Approved   11/04/2026  Approved. Start after the fe…
+6  PLAN-003  Reporting Hub Rehost Plan      Reporting Hub         Rehost      Submitted  11/07/2026  -
+7  PLAN-002  Payment Gateway Replatform P…  Payment Gateway       Replatform  Submitted  11/08/2026  -
+8  PLAN-001  Trade Finance Portal Refacto…  Trade Finance Portal  Refactor    Submitted  11/10/2026  -
+Type a row number to view (Drafts can be edited and submitted), or: T status filter · S search · C clear · 0 back
+Choose: T
+Status:
+  1. All
+  2. Draft
+  3. Submitted
+  4. Approved
+  5. Rejected
+Choose 1-5: Draft
+
+My Plans
+--------
+Draft 2 · Submitted 4 · Approved 1 · Rejected 1
+Status: Draft · Search: (none)
+#  Plan ID   Plan Name                      Application      Strategy  Status  Date        Executive Comment
+-  --------  -----------------------------  ---------------  --------  ------  ----------  -----------------
+1  PLAN-007  Flight Booking Refactor Plan   Flight Booking   Refactor  Draft   11/23/2026  -
+2  PLAN-006  Payment Gateway Refactor Plan  Payment Gateway  Refactor  Draft   11/09/2026  -
+Type a row number to view (Drafts can be edited and submitted), or: T status filter · S search · C clear · 0 back
+Choose: S
+Search plan, application or ID (Enter = no search): flight
+
+My Plans
+--------
+Draft 2 · Submitted 4 · Approved 1 · Rejected 1
+Status: Draft · Search: flight
+#  Plan ID   Plan Name                     Application     Strategy  Status  Date        Executive Comment
+-  --------  ----------------------------  --------------  --------  ------  ----------  -----------------
+1  PLAN-007  Flight Booking Refactor Plan  Flight Booking  Refactor  Draft   11/23/2026  -
+Type a row number to view (Drafts can be edited and submitted), or: T status filter · S search · C clear · 0 back
+Choose: C
+
+My Plans
+--------
+Draft 2 · Submitted 4 · Approved 1 · Rejected 1
+Status: All · Search: (none)
+#  Plan ID   Plan Name                      Application           Strategy    Status     Date        Executive Comment
+-  --------  -----------------------------  --------------------  ----------  ---------  ----------  -----------------------------
+1  PLAN-008  Flight Booking Rebuild Plan    Flight Booking        Rebuild     Submitted  11/23/2026  -
+2  PLAN-007  Flight Booking Refactor Plan   Flight Booking        Refactor    Draft      11/23/2026  -
+3  PLAN-006  Payment Gateway Refactor Plan  Payment Gateway       Refactor    Draft      11/09/2026  -
+4  PLAN-005  HR System Rebuild Plan         HR System             Rebuild     Rejected   11/03/2026  Too costly for this year. Ev…
+5  PLAN-004  Online Store Replatform Plan   Online Store          Replatform  Approved   11/04/2026  Approved. Start after the fe…
+6  PLAN-003  Reporting Hub Rehost Plan      Reporting Hub         Rehost      Submitted  11/07/2026  -
+7  PLAN-002  Payment Gateway Replatform P…  Payment Gateway       Replatform  Submitted  11/08/2026  -
+8  PLAN-001  Trade Finance Portal Refacto…  Trade Finance Portal  Refactor    Submitted  11/10/2026  -
+Type a row number to view (Drafts can be edited and submitted), or: T status filter · S search · C clear · 0 back
+Choose: 2
+
+Flight Booking Refactor Plan (PLAN-007) · Draft
+-----------------------------------------------
+Draft plan - you can edit the name and notes, then submit.
+  Application        : Flight Booking
+  Strategy           : Refactor
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 56 · Medium
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+  Plan ID      : PLAN-007
+  Created From : SIM-009
+  Created By   : Amanjeet Sharma
+  Created On   : 11/23/2026
+  Submitted On : -
+  Notes        : Phase 1 starts in January
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            3
+3  Implementation            45%            8
+4  Testing and Validation    Remaining      3
+Total estimated effort: 17 = 17 weeks
+  1. Edit name and notes (stays Draft)
+  2. Submit for approval
+  0. Back
+Choose: 1
+Plan name [Flight Booking Refactor Plan]: Flight Booking Refactor Plan v2
+Notes (optional, max 500) [Phase 1 starts in January]: Phase 1 starts in February
+[OK] PLAN-007 saved as draft
+
+My Plans
+--------
+Draft 2 · Submitted 4 · Approved 1 · Rejected 1
+Status: All · Search: (none)
+#  Plan ID   Plan Name                      Application           Strategy    Status     Date        Executive Comment
+-  --------  -----------------------------  --------------------  ----------  ---------  ----------  -----------------------------
+1  PLAN-008  Flight Booking Rebuild Plan    Flight Booking        Rebuild     Submitted  11/23/2026  -
+2  PLAN-007  Flight Booking Refactor Plan…  Flight Booking        Refactor    Draft      11/23/2026  -
+3  PLAN-006  Payment Gateway Refactor Plan  Payment Gateway       Refactor    Draft      11/09/2026  -
+4  PLAN-005  HR System Rebuild Plan         HR System             Rebuild     Rejected   11/03/2026  Too costly for this year. Ev…
+5  PLAN-004  Online Store Replatform Plan   Online Store          Replatform  Approved   11/04/2026  Approved. Start after the fe…
+6  PLAN-003  Reporting Hub Rehost Plan      Reporting Hub         Rehost      Submitted  11/07/2026  -
+7  PLAN-002  Payment Gateway Replatform P…  Payment Gateway       Replatform  Submitted  11/08/2026  -
+8  PLAN-001  Trade Finance Portal Refacto…  Trade Finance Portal  Refactor    Submitted  11/10/2026  -
+Type a row number to view (Drafts can be edited and submitted), or: T status filter · S search · C clear · 0 back
+Choose: 2
+
+Flight Booking Refactor Plan v2 (PLAN-007) · Draft
+--------------------------------------------------
+Draft plan - you can edit the name and notes, then submit.
+  Application        : Flight Booking
+  Strategy           : Refactor
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 56 · Medium
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+  Plan ID      : PLAN-007
+  Created From : SIM-009
+  Created By   : Amanjeet Sharma
+  Created On   : 11/23/2026
+  Submitted On : -
+  Notes        : Phase 1 starts in February
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            3
+3  Implementation            45%            8
+4  Testing and Validation    Remaining      3
+Total estimated effort: 17 = 17 weeks
+  1. Edit name and notes (stays Draft)
+  2. Submit for approval
+  0. Back
+Choose: 2
+Plan name [Flight Booking Refactor Plan v2]: 
+Notes (optional, max 500) [Phase 1 starts in February]: 
+After submission, this plan will be locked and sent to the Executive for review.
+Submit modernization plan? (y/n): y
+[OK] PLAN-007 submitted for approval
+
+My Plans
+--------
+Draft 1 · Submitted 5 · Approved 1 · Rejected 1
+Status: All · Search: (none)
+#  Plan ID   Plan Name                      Application           Strategy    Status     Date        Executive Comment
+-  --------  -----------------------------  --------------------  ----------  ---------  ----------  -----------------------------
+1  PLAN-008  Flight Booking Rebuild Plan    Flight Booking        Rebuild     Submitted  11/23/2026  -
+2  PLAN-007  Flight Booking Refactor Plan…  Flight Booking        Refactor    Submitted  11/23/2026  -
+3  PLAN-006  Payment Gateway Refactor Plan  Payment Gateway       Refactor    Draft      11/09/2026  -
+4  PLAN-005  HR System Rebuild Plan         HR System             Rebuild     Rejected   11/03/2026  Too costly for this year. Ev…
+5  PLAN-004  Online Store Replatform Plan   Online Store          Replatform  Approved   11/04/2026  Approved. Start after the fe…
+6  PLAN-003  Reporting Hub Rehost Plan      Reporting Hub         Rehost      Submitted  11/07/2026  -
+7  PLAN-002  Payment Gateway Replatform P…  Payment Gateway       Replatform  Submitted  11/08/2026  -
+8  PLAN-001  Trade Finance Portal Refacto…  Trade Finance Portal  Refactor    Submitted  11/10/2026  -
+Type a row number to view (Drafts can be edited and submitted), or: T status filter · S search · C clear · 0 back
+Choose: 1
+
+Flight Booking Rebuild Plan (PLAN-008) · Submitted
+--------------------------------------------------
+This plan is read-only.
+Waiting for Executive review. Submitted on 11/23/2026. The plan is locked.
+  Application        : Flight Booking
+  Strategy           : Rebuild
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 61 · Medium
+  Estimated Effort   : 19 weeks
+  Estimated Cost     : ₹22.86 lakh
+  Plan ID      : PLAN-008
+  Created From : SIM-011
+  Created By   : Amanjeet Sharma
+  Created On   : 11/23/2026
+  Submitted On : 11/23/2026
+  Notes        : Full rewrite on a modern stack
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            4
+3  Implementation            45%            9
+4  Testing and Validation    Remaining      3
+Total estimated effort: 19 = 19 weeks
+
+My Plans
+--------
+Draft 1 · Submitted 5 · Approved 1 · Rejected 1
+Status: All · Search: (none)
+#  Plan ID   Plan Name                      Application           Strategy    Status     Date        Executive Comment
+-  --------  -----------------------------  --------------------  ----------  ---------  ----------  -----------------------------
+1  PLAN-008  Flight Booking Rebuild Plan    Flight Booking        Rebuild     Submitted  11/23/2026  -
+2  PLAN-007  Flight Booking Refactor Plan…  Flight Booking        Refactor    Submitted  11/23/2026  -
+3  PLAN-006  Payment Gateway Refactor Plan  Payment Gateway       Refactor    Draft      11/09/2026  -
+4  PLAN-005  HR System Rebuild Plan         HR System             Rebuild     Rejected   11/03/2026  Too costly for this year. Ev…
+5  PLAN-004  Online Store Replatform Plan   Online Store          Replatform  Approved   11/04/2026  Approved. Start after the fe…
+6  PLAN-003  Reporting Hub Rehost Plan      Reporting Hub         Rehost      Submitted  11/07/2026  -
+7  PLAN-002  Payment Gateway Replatform P…  Payment Gateway       Replatform  Submitted  11/08/2026  -
+8  PLAN-001  Trade Finance Portal Refacto…  Trade Finance Portal  Refactor    Submitted  11/10/2026  -
+Type a row number to view (Drafts can be edited and submitted), or: T status filter · S search · C clear · 0 back
+Choose: Z
+[ERROR] Unknown choice. Type a row number, T, S, C or 0.
+
+My Plans
+--------
+Draft 1 · Submitted 5 · Approved 1 · Rejected 1
+Status: All · Search: (none)
+#  Plan ID   Plan Name                      Application           Strategy    Status     Date        Executive Comment
+-  --------  -----------------------------  --------------------  ----------  ---------  ----------  -----------------------------
+1  PLAN-008  Flight Booking Rebuild Plan    Flight Booking        Rebuild     Submitted  11/23/2026  -
+2  PLAN-007  Flight Booking Refactor Plan…  Flight Booking        Refactor    Submitted  11/23/2026  -
+3  PLAN-006  Payment Gateway Refactor Plan  Payment Gateway       Refactor    Draft      11/09/2026  -
+4  PLAN-005  HR System Rebuild Plan         HR System             Rebuild     Rejected   11/03/2026  Too costly for this year. Ev…
+5  PLAN-004  Online Store Replatform Plan   Online Store          Replatform  Approved   11/04/2026  Approved. Start after the fe…
+6  PLAN-003  Reporting Hub Rehost Plan      Reporting Hub         Rehost      Submitted  11/07/2026  -
+7  PLAN-002  Payment Gateway Replatform P…  Payment Gateway       Replatform  Submitted  11/08/2026  -
+8  PLAN-001  Trade Finance Portal Refacto…  Trade Finance Portal  Refactor    Submitted  11/10/2026  -
+Type a row number to view (Drafts can be edited and submitted), or: T status filter · S search · C clear · 0 back
+Choose: 0
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 5
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  PLAN-008
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  PLAN-007
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: 2
+
+SIM-009 · Flight Booking · Refactor
+-----------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 75
+  Modernization Risk : 56 · Medium
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Open plan PLAN-007
+  2. (Discard not possible: the simulation has a plan)
+  0. Back
+Choose: 2
+[ERROR] SIM-009 already has a plan (PLAN-007), so it cannot be discarded.
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  PLAN-008
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  PLAN-007
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: 2
+
+SIM-009 · Flight Booking · Refactor
+-----------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 75
+  Modernization Risk : 56 · Medium
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Open plan PLAN-007
+  2. (Discard not possible: the simulation has a plan)
+  0. Back
+Choose: 1
+
+Flight Booking Refactor Plan v2 (PLAN-007) · Submitted
+------------------------------------------------------
+This plan is read-only.
+Waiting for Executive review. Submitted on 11/23/2026. The plan is locked.
+  Application        : Flight Booking
+  Strategy           : Refactor
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 56 · Medium
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+  Plan ID      : PLAN-007
+  Created From : SIM-009
+  Created By   : Amanjeet Sharma
+  Created On   : 11/23/2026
+  Submitted On : 11/23/2026
+  Notes        : Phase 1 starts in February
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            3
+3  Implementation            45%            8
+4  Testing and Validation    Remaining      3
+Total estimated effort: 17 = 17 weeks
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  PLAN-008
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  PLAN-007
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: 0
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 2
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Northwind Bank (ENT-001)]: 4
+[OK] Current enterprise: Tailspin Airlines (ENT-004)
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 0
+  Assessed Applications : 2
+  Submitted Plans       : 2
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ----------
+1  APP-011  Flight Booking  Java        Critical     Active  Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: 1
+
+Flight Booking (APP-011)
+------------------------
+  Enterprise          : Tailspin Airlines
+  Technology          : Java
+  Framework           : Java 17
+  Framework support   : Supported
+  Age                 : 6 years
+  Deployment          : Public Cloud
+  Lines of code       : 3,00,000
+  Business unit       : Sales
+  Owner team          : Web Team
+  Status              : Active
+  Criticality         : Critical
+  Sensitive data      : Yes
+  Security issues     : 2
+  Downtime tolerance  : Low
+  Compliance policies : 1
+  Documentation       : Good
+  Code complexity     : Medium
+  Assessment          : TD 27 · GR 85 (11/23/2026)
+Direct dependencies (1):
+System            Type      Criticality  Owner
+----------------  --------  -----------  ----------------
+Booking Database  Database  Critical     Same application
+  1. Re-assess
+  2. Simulate
+  0. Back
+Choose: 2
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  PLAN-008
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  PLAN-007
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+
+Simulation - Flight Booking (APP-011)
+-------------------------------------
+  Technical Debt       : 27 · Low
+  Governance Risk      : 85 · High
+  Direct Dependencies  : 1
+  Business Criticality : Critical
+  EMSI                 : 32.33 · Growth
+Modernization strategy:
+  1. Rehost - Move as-is to the cloud
+  2. Replatform - Small changes to use a managed platform
+  3. Refactor - Restructure the code for the cloud
+  4. Rebuild - Rewrite the application from scratch
+Choose 1-4 [Refactor - Restructure the code for the cloud]: 1
+[OK] Simulation SIM-012 complete: Medium risk
+
+SIM-012 · Flight Booking · Rehost
+---------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 25
+  Modernization Risk : 46 · Medium
+  Estimated Effort   : 13 weeks
+  Estimated Cost     : ₹9.71 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Create Plan from this simulation
+  2. Discard / Modify (delete this simulation and run again)
+  0. Back
+Choose: 0
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 0
+  Assessed Applications : 2
+  Submitted Plans       : 2
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ----------
+1  APP-011  Flight Booking  Java        Critical     Active  Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: 0
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 8
+
+Digital Twin - Tailspin Airlines (ENT-004)
+------------------------------------------
+Landscape Summary: Applications 2 · Services 0 · Databases 1 · APIs 1 · Links 2
+Filter - application: All · criticality: All
+
+[APP-011] Flight Booking  (Application · Critical · Dependency Impact 45/100)
+  depends on → Booking Database (Database)  [Critical]  DEP-021
+  used by    ← Crew Scheduler  [Critical]  DEP-022
+  ├─ [N-20] Booking Database (Database)
+  │    used by    ← Flight Booking  [Critical]  DEP-021
+  └─ [N-21] Booking API (API)
+
+[APP-012] Crew Scheduler  (Application · High · Dependency Impact 55/100)
+  depends on → Flight Booking (Application)  [Critical]  DEP-022
+
+A one application · K criticality filter · C clear · E choose enterprise · 0 back
+Choose: 0
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 9
+
+Profile & Settings
+==================
+Manage your account details and password.
+  Full Name    : Amanjeet Sharma
+  Email        : amanjeet.sharma@secureshift.io
+  Role         : Architect
+  Product      : Application Modernization - EMDT
+  User ID      : USR-013
+  Phone        : 9876543222
+  Department   : Modernization Office
+  Logged in at : 11/23/2026 09:05 PM
+  1. Edit details (name, phone, department)
+  2. Change password
+  0. Back
+Choose: 0
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 10
+
+Change Password
+---------------
+Minimum 8 characters with an uppercase letter, a lowercase letter, a number and a special character.
+Current Password: **********
+New Password: ***********
+Confirm New Password: ***********
+[ERROR] Current password: Current password is wrong
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Amanjeet Sharma? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

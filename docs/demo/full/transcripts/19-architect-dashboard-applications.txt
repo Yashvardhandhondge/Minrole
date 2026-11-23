@@ -1,0 +1,404 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: amanjeet.sharma@secureshift.io
+Password: **************
+[OK] Signed in as Amanjeet Sharma (Architect).
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 1
+
+Architect Dashboard
+-------------------
+  Enterprises           : 4
+  Applications          : 11
+  Assessed Applications : 5
+  Submitted Plans       : 3
+Enterprise         ID       Category                Applications  Assessed  Pending  Plans
+-----------------  -------  ----------------------  ------------  --------  -------  -----
+Northwind Bank     ENT-001  Strategic (EMSI 77.87)             6  4 / 6           2      5
+Contoso Retail     ENT-002  Growth (EMSI 44.91)                3  1 / 3           2      1
+Fabrikam Health    ENT-003  Not classified                     0  0 / 0           0      0
+Tailspin Airlines  ENT-004  Growth (EMSI 32.33)                2  0 / 2           2      0
+Recent assessments:
+ID       Application           Technical Debt  Governance Risk  Date
+-------  --------------------  --------------  ---------------  ----------
+ASM-001  Trade Finance Portal              95               90  11/10/2026
+ASM-002  Payment Gateway                   52               95  11/08/2026
+ASM-003  Reporting Hub                     45               32  11/06/2026
+ASM-004  Online Store                      28               85  11/04/2026
+ASM-005  HR System                         70               72  11/03/2026
+Recent simulations:
+ID       Application           Strategy    Risk       Effort
+-------  --------------------  ----------  ---------  ------
+SIM-001  Trade Finance Portal  Refactor    87 High    22 wk
+SIM-006  Payment Gateway       Refactor    75 High    21 wk
+SIM-002  Payment Gateway       Replatform  70 High    18 wk
+SIM-003  Reporting Hub         Rehost      41 Medium  13 wk
+SIM-004  Online Store          Replatform  54 Medium  14 wk
+My plans:
+Plan                             ID        Strategy    Status     Executive Comment
+-------------------------------  --------  ----------  ---------  ----------------------------------------
+Payment Gateway Refactor Plan    PLAN-006  Refactor    Draft      -
+HR System Rebuild Plan           PLAN-005  Rebuild     Rejected   Too costly for this year. Evaluate a Sa…
+Online Store Replatform Plan     PLAN-004  Replatform  Approved   Approved. Start after the festive sale.
+Reporting Hub Rehost Plan        PLAN-003  Rehost      Submitted  -
+Payment Gateway Replatform Plan  PLAN-002  Replatform  Submitted  -
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 2
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Northwind Bank (ENT-001)]: 4
+[OK] Current enterprise: Tailspin Airlines (ENT-004)
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 2
+  Assessed Applications : 0
+  Submitted Plans       : 0
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-011  Flight Booking  Java        Critical     Active  Not Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: S
+Search name or ID (Enter = no search): crew
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 2
+  Assessed Applications : 0
+  Submitted Plans       : 0
+Search: crew · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-1 of 1 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: C
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 2
+  Assessed Applications : 0
+  Submitted Plans       : 0
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-011  Flight Booking  Java        Critical     Active  Not Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: A
+Assessment:
+  1. All
+  2. Assessed
+  3. Not Assessed
+Choose 1-3: Not Assessed
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 2
+  Assessed Applications : 0
+  Submitted Plans       : 0
+Search: (none) · Assessment: Not Assessed
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-011  Flight Booking  Java        Critical     Active  Not Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: C
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 2
+  Assessed Applications : 0
+  Submitted Plans       : 0
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-011  Flight Booking  Java        Critical     Active  Not Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: N
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 2
+  Assessed Applications : 0
+  Submitted Plans       : 0
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-011  Flight Booking  Java        Critical     Active  Not Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: P
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 2
+  Assessed Applications : 0
+  Submitted Plans       : 0
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-011  Flight Booking  Java        Critical     Active  Not Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: Q
+[ERROR] Unknown choice. Type a row number, S, A, C, N, P or 0.
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 2
+  Assessed Applications : 0
+  Submitted Plans       : 0
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-011  Flight Booking  Java        Critical     Active  Not Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: 1
+
+Flight Booking (APP-011)
+------------------------
+  Enterprise          : Tailspin Airlines
+  Technology          : Java
+  Framework           : Java 17
+  Framework support   : Supported
+  Age                 : 6 years
+  Deployment          : Public Cloud
+  Lines of code       : 3,00,000
+  Business unit       : Sales
+  Owner team          : Web Team
+  Status              : Active
+  Criticality         : Critical
+  Sensitive data      : Yes
+  Security issues     : 2
+  Downtime tolerance  : Low
+  Compliance policies : 1
+  Documentation       : Good
+  Code complexity     : Medium
+  Assessment          : Not assessed
+Direct dependencies (1):
+System            Type      Criticality  Owner
+----------------  --------  -----------  ----------------
+Booking Database  Database  Critical     Same application
+  1. Assess
+  2. Simulate (assess the application first)
+  0. Back
+Choose: 1
+
+Assessment - Flight Booking (APP-011) · Not Assessed
+----------------------------------------------------
+  Application            : Flight Booking
+  Technology & Framework : Java · Java 17
+  Framework Support      : Supported
+  Age                    : 6 years
+  Business Criticality   : Critical
+  Direct Dependencies    : 1
+  Deployment Type        : Public Cloud
+  Enterprise             : Tailspin Airlines
+Not assessed yet. Run the assessment first. Simulation is enabled only for assessed applications.
+  1. Run Assessment
+  2. Continue to Simulation (run the assessment first)
+  0. Back
+Choose: 1
+[OK] Assessment ASM-006 saved: TD 27, GR 85
+
+Assessment - Flight Booking (APP-011) · Assessed
+------------------------------------------------
+  Application            : Flight Booking
+  Technology & Framework : Java · Java 17
+  Framework Support      : Supported
+  Age                    : 6 years
+  Business Criticality   : Critical
+  Direct Dependencies    : 1
+  Deployment Type        : Public Cloud
+  Enterprise             : Tailspin Airlines
+Assessed on 11/23/2026 by Amanjeet Sharma (ASM-006)
+Technical Debt: 27 / 100 · Low
+Factor                 Value                Points
+---------------------  -------------------  ------
+Application age        6 years                 +12
+Framework support      Java 17 (Supported)      +0
+Documentation quality  Good                     +0
+Code complexity        Medium                  +10
+Codebase size          3,00,000 lines           +5
+Total                                           27
+Governance Risk: 85 / 100 · High
+Factor                   Value              Points
+-----------------------  -----------------  ------
+Business criticality     Critical              +30
+Sensitive data           Yes                   +20
+Security issues          2 issues               +5
+Dependency criticality   Highest: Critical     +15
+Downtime tolerance       Low                   +10
+Compliance requirements  1 policy               +5
+Total                                           85
+Dependency Impact: 45 / 100 · Medium
+Assessment complete. Next: choose a strategy and simulate the modernization.
+History:
+ID       Date        Technical Debt  Governance Risk  Dependency Impact  By
+-------  ----------  --------------  ---------------  -----------------  ---------------
+ASM-006  11/23/2026              27               85                 45  Amanjeet Sharma
+  1. Recalculate Assessment
+  2. Continue to Simulation
+  0. Back
+Choose: 0
+
+Applications - Tailspin Airlines (ENT-004)
+------------------------------------------
+Read-only list. Choose an application to assess, then simulate.
+EMSI 32.33 · Growth
+  Total Applications    : 2
+  Pending Assessment    : 1
+  Assessed Applications : 1
+  Submitted Plans       : 0
+Search: (none) · Assessment: All
+#  ID       Application     Technology  Criticality  Status  Assessment
+-  -------  --------------  ----------  -----------  ------  ------------
+1  APP-011  Flight Booking  Java        Critical     Active  Assessed
+2  APP-012  Crew Scheduler  .NET        High         Legacy  Not Assessed
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / assess / simulate, or: S search · A assessment filter · C clear · N next · P previous · 0 back
+Choose: 0
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 11
+[ERROR] Type a number from 0 to 10.
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Amanjeet Sharma? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

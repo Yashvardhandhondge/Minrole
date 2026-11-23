@@ -96,6 +96,7 @@ public sealed class ArchitectMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu p
                 .Where(a => assessed is null || (assessed == "Assessed") == (a.Assessments.Count > 0)).ToList();
             var p = Paged<Application>.FromList(rows, page, PageSize);
             page = p.Page;
+            ui.WriteLine($"Search: {search ?? "(none)"} · Assessment: {assessed ?? "All"}");
             ui.Table(["#", "ID", "Application", "Technology", "Criticality", "Status", "Assessment"],
                 p.Items.Select((a, i) => (IReadOnlyList<string>)[(i + 1).ToString(), a.Code ?? "", a.Name, a.Technology, a.Criticality, a.Status, a.Assessments.Count > 0 ? "Assessed" : "Not Assessed"]).ToList(), 0);
             ui.WriteLine(ListNav.Footer(p, "applications"));

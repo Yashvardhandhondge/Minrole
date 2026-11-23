@@ -112,10 +112,17 @@ public sealed class SystemConsoleIO : IConsoleIO
         }
     }
 
+    /// <summary>
+    /// Optional: wrap the output as if the terminal had this many columns, also when the output is piped
+    /// (the demo recording's dry-run uses it to see exactly the lines the video will show).
+    /// </summary>
+    public const string WidthVariable = "SECURESHIFT_CONSOLE_WIDTH";
+
     public int Width
     {
         get
         {
+            if (int.TryParse(Environment.GetEnvironmentVariable(WidthVariable), out var forced) && forced >= 40) return forced;
             if (Console.IsOutputRedirected) return int.MaxValue;
             try { return Console.WindowWidth > 0 ? Console.WindowWidth : int.MaxValue; }
             catch (IOException) { return int.MaxValue; }

@@ -1,0 +1,220 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: amanjeet.sharma@secureshift.io
+Password: **************
+[OK] Signed in as Amanjeet Sharma (Architect).
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 4
+Application:
+  1. Trade Finance Portal (APP-001, Northwind Bank)
+  2. Customer360 (APP-002, Northwind Bank)
+  3. Payment Gateway (APP-003, Northwind Bank)
+  4. Core Banking (APP-004, Northwind Bank)
+  5. Reporting Hub (APP-005, Northwind Bank)
+  6. HR System (APP-006, Northwind Bank)
+  7. Online Store (APP-007, Contoso Retail)
+  8. Inventory Manager (APP-008, Contoso Retail)
+  9. Loyalty Program (APP-009, Contoso Retail)
+  10. Flight Booking (APP-011, Tailspin Airlines)
+  11. Crew Scheduler (APP-012, Tailspin Airlines)
+Choose 1-11 [Trade Finance Portal (APP-001, Northwind Bank)]: 11
+
+Assessment - Crew Scheduler (APP-012) · Not Assessed
+----------------------------------------------------
+  Application            : Crew Scheduler
+  Technology & Framework : .NET · .NET 4.8
+  Framework Support      : Unsupported
+  Age                    : 15 years
+  Business Criticality   : High
+  Direct Dependencies    : 1
+  Deployment Type        : On-Premise
+  Enterprise             : Tailspin Airlines
+Not assessed yet. Run the assessment first. Simulation is enabled only for assessed applications.
+  1. Run Assessment
+  2. Continue to Simulation (run the assessment first)
+  0. Back
+Choose: 2
+[ERROR] Run the assessment first
+
+Assessment - Crew Scheduler (APP-012) · Not Assessed
+----------------------------------------------------
+  Application            : Crew Scheduler
+  Technology & Framework : .NET · .NET 4.8
+  Framework Support      : Unsupported
+  Age                    : 15 years
+  Business Criticality   : High
+  Direct Dependencies    : 1
+  Deployment Type        : On-Premise
+  Enterprise             : Tailspin Airlines
+Not assessed yet. Run the assessment first. Simulation is enabled only for assessed applications.
+  1. Run Assessment
+  2. Continue to Simulation (run the assessment first)
+  0. Back
+Choose: 1
+[OK] Assessment ASM-007 saved: TD 95, GR 57
+
+Assessment - Crew Scheduler (APP-012) · Assessed
+------------------------------------------------
+  Application            : Crew Scheduler
+  Technology & Framework : .NET · .NET 4.8
+  Framework Support      : Unsupported
+  Age                    : 15 years
+  Business Criticality   : High
+  Direct Dependencies    : 1
+  Deployment Type        : On-Premise
+  Enterprise             : Tailspin Airlines
+Assessed on 11/23/2026 by Amanjeet Sharma (ASM-007)
+Technical Debt: 95 / 100 · High
+Factor                 Value                   Points
+---------------------  ----------------------  ------
+Application age        15 years                   +25
+Framework support      .NET 4.8 (Unsupported)     +25
+Documentation quality  Poor                       +15
+Code complexity        High                       +20
+Codebase size          8,00,000 lines             +10
+Total                                              95
+Governance Risk: 57 / 100 · Medium
+Factor                   Value              Points
+-----------------------  -----------------  ------
+Business criticality     High                  +22
+Sensitive data           No                     +0
+Security issues          4 issues              +10
+Dependency criticality   Highest: Critical     +15
+Downtime tolerance       Medium                 +5
+Compliance requirements  2 policies             +5
+Total                                           57
+Dependency Impact: 55 / 100 · Medium
+Assessment complete. Next: choose a strategy and simulate the modernization.
+History:
+ID       Date        Technical Debt  Governance Risk  Dependency Impact  By
+-------  ----------  --------------  ---------------  -----------------  ---------------
+ASM-007  11/23/2026              95               57                 55  Amanjeet Sharma
+  1. Recalculate Assessment
+  2. Continue to Simulation
+  0. Back
+Choose: 1
+[OK] Assessment ASM-008 saved: TD 95, GR 57
+
+Assessment - Crew Scheduler (APP-012) · Assessed
+------------------------------------------------
+  Application            : Crew Scheduler
+  Technology & Framework : .NET · .NET 4.8
+  Framework Support      : Unsupported
+  Age                    : 15 years
+  Business Criticality   : High
+  Direct Dependencies    : 1
+  Deployment Type        : On-Premise
+  Enterprise             : Tailspin Airlines
+Assessed on 11/23/2026 by Amanjeet Sharma (ASM-008)
+Technical Debt: 95 / 100 · High
+Factor                 Value                   Points
+---------------------  ----------------------  ------
+Application age        15 years                   +25
+Framework support      .NET 4.8 (Unsupported)     +25
+Documentation quality  Poor                       +15
+Code complexity        High                       +20
+Codebase size          8,00,000 lines             +10
+Total                                              95
+Governance Risk: 57 / 100 · Medium
+Factor                   Value              Points
+-----------------------  -----------------  ------
+Business criticality     High                  +22
+Sensitive data           No                     +0
+Security issues          4 issues              +10
+Dependency criticality   Highest: Critical     +15
+Downtime tolerance       Medium                 +5
+Compliance requirements  2 policies             +5
+Total                                           57
+Dependency Impact: 55 / 100 · Medium
+Assessment complete. Next: choose a strategy and simulate the modernization.
+History:
+ID       Date        Technical Debt  Governance Risk  Dependency Impact  By
+-------  ----------  --------------  ---------------  -----------------  ---------------
+ASM-008  11/23/2026              95               57                 55  Amanjeet Sharma
+ASM-007  11/23/2026              95               57                 55  Amanjeet Sharma
+  1. Recalculate Assessment
+  2. Continue to Simulation
+  0. Back
+Choose: 2
+
+Simulations
+-----------
+#  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+-  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+1  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+2  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+3  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+4  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+5  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+6  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+
+Simulation - Crew Scheduler (APP-012)
+-------------------------------------
+  Technical Debt       : 95 · High
+  Governance Risk      : 57 · Medium
+  Direct Dependencies  : 1
+  Business Criticality : High
+  EMSI                 : 32.33 · Growth
+Modernization strategy:
+  1. Rehost - Move as-is to the cloud
+  2. Replatform - Small changes to use a managed platform
+  3. Refactor - Restructure the code for the cloud
+  4. Rebuild - Rewrite the application from scratch
+Choose 1-4 [Refactor - Restructure the code for the cloud]: cancel
+[INFO] Cancelled. Nothing was saved.
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Amanjeet Sharma? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

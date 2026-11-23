@@ -1,0 +1,525 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: shivanand.kumatekar@secureshift.io
+Password: *********
+[OK] Signed in as Shivanand Kumatekar (Executive).
+
+Executive · Application Modernization
+=====================================
+Logged in as Shivanand Kumatekar (Executive) · Application Modernization - EMDT
+  1. Plans awaiting review (5)
+  2. All plans (filters)
+  3. Decision history
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 1
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: Submitted plans (5)
+#  Plan                  ID        Enterprise         Strategy    Risk       Effort  Cost         Submitted By           Status
+-  --------------------  --------  -----------------  ----------  ---------  ------  -----------  ---------------------  ---------
+1  Flight Booking Rebu…  PLAN-008  Tailspin Airlines  Rebuild     61 Medium  19 wk   ₹22.86 lakh  Amanjeet Sharma 11/2…  Submitted
+2  Flight Booking Refa…  PLAN-007  Tailspin Airlines  Refactor    56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/2…  Submitted
+3  Trade Finance Porta…  PLAN-001  Northwind Bank     Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/1…  Submitted
+4  Payment Gateway Rep…  PLAN-002  Northwind Bank     Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/0…  Submitted
+5  Reporting Hub Rehos…  PLAN-003  Northwind Bank     Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/0…  Submitted
+Showing 1-5 of 5 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: R
+Risk level:
+  1. All
+  2. High
+  3. Medium
+  4. Low
+Choose 1-4: High
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: Submitted plans · High risk (2)
+#  Plan                     ID        Enterprise      Strategy    Risk     Effort  Cost         Submitted By             Status
+-  -----------------------  --------  --------------  ----------  -------  ------  -----------  -----------------------  ---------
+1  Trade Finance Portal R…  PLAN-001  Northwind Bank  Refactor    87 High  22 wk   ₹22.15 lakh  Amanjeet Sharma 11/10/…  Submitted
+2  Payment Gateway Replat…  PLAN-002  Northwind Bank  Replatform  70 High  18 wk   ₹15.50 lakh  Amanjeet Sharma 11/08/…  Submitted
+Showing 1-2 of 2 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: C
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: Submitted plans (5)
+#  Plan                  ID        Enterprise         Strategy    Risk       Effort  Cost         Submitted By           Status
+-  --------------------  --------  -----------------  ----------  ---------  ------  -----------  ---------------------  ---------
+1  Flight Booking Rebu…  PLAN-008  Tailspin Airlines  Rebuild     61 Medium  19 wk   ₹22.86 lakh  Amanjeet Sharma 11/2…  Submitted
+2  Flight Booking Refa…  PLAN-007  Tailspin Airlines  Refactor    56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/2…  Submitted
+3  Trade Finance Porta…  PLAN-001  Northwind Bank     Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/1…  Submitted
+4  Payment Gateway Rep…  PLAN-002  Northwind Bank     Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/0…  Submitted
+5  Reporting Hub Rehos…  PLAN-003  Northwind Bank     Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/0…  Submitted
+Showing 1-5 of 5 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: E
+Enterprise:
+  1. All
+  2. Northwind Bank (ENT-001)
+  3. Contoso Retail (ENT-002)
+  4. Fabrikam Health (ENT-003)
+  5. Tailspin Airlines (ENT-004)
+Choose 1-5: Tailspin Airlines (ENT-004)
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: Submitted plans · Tailspin Airlines (2)
+#  Plan                   ID        Enterprise         Strategy  Risk       Effort  Cost         Submitted By            Status
+-  ---------------------  --------  -----------------  --------  ---------  ------  -----------  ----------------------  ---------
+1  Flight Booking Rebui…  PLAN-008  Tailspin Airlines  Rebuild   61 Medium  19 wk   ₹22.86 lakh  Amanjeet Sharma 11/23…  Submitted
+2  Flight Booking Refac…  PLAN-007  Tailspin Airlines  Refactor  56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/23…  Submitted
+Showing 1-2 of 2 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: T
+Status:
+  1. All
+  2. Submitted
+  3. Approved
+  4. Rejected
+Choose 1-4: All
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: All plans · Tailspin Airlines (2)
+#  Plan                   ID        Enterprise         Strategy  Risk       Effort  Cost         Submitted By            Status
+-  ---------------------  --------  -----------------  --------  ---------  ------  -----------  ----------------------  ---------
+1  Flight Booking Rebui…  PLAN-008  Tailspin Airlines  Rebuild   61 Medium  19 wk   ₹22.86 lakh  Amanjeet Sharma 11/23…  Submitted
+2  Flight Booking Refac…  PLAN-007  Tailspin Airlines  Refactor  56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/23…  Submitted
+Showing 1-2 of 2 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: C
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: Submitted plans (5)
+#  Plan                  ID        Enterprise         Strategy    Risk       Effort  Cost         Submitted By           Status
+-  --------------------  --------  -----------------  ----------  ---------  ------  -----------  ---------------------  ---------
+1  Flight Booking Rebu…  PLAN-008  Tailspin Airlines  Rebuild     61 Medium  19 wk   ₹22.86 lakh  Amanjeet Sharma 11/2…  Submitted
+2  Flight Booking Refa…  PLAN-007  Tailspin Airlines  Refactor    56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/2…  Submitted
+3  Trade Finance Porta…  PLAN-001  Northwind Bank     Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/1…  Submitted
+4  Payment Gateway Rep…  PLAN-002  Northwind Bank     Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/0…  Submitted
+5  Reporting Hub Rehos…  PLAN-003  Northwind Bank     Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/0…  Submitted
+Showing 1-5 of 5 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: N
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: Submitted plans (5)
+#  Plan                  ID        Enterprise         Strategy    Risk       Effort  Cost         Submitted By           Status
+-  --------------------  --------  -----------------  ----------  ---------  ------  -----------  ---------------------  ---------
+1  Flight Booking Rebu…  PLAN-008  Tailspin Airlines  Rebuild     61 Medium  19 wk   ₹22.86 lakh  Amanjeet Sharma 11/2…  Submitted
+2  Flight Booking Refa…  PLAN-007  Tailspin Airlines  Refactor    56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/2…  Submitted
+3  Trade Finance Porta…  PLAN-001  Northwind Bank     Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/1…  Submitted
+4  Payment Gateway Rep…  PLAN-002  Northwind Bank     Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/0…  Submitted
+5  Reporting Hub Rehos…  PLAN-003  Northwind Bank     Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/0…  Submitted
+Showing 1-5 of 5 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: P
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: Submitted plans (5)
+#  Plan                  ID        Enterprise         Strategy    Risk       Effort  Cost         Submitted By           Status
+-  --------------------  --------  -----------------  ----------  ---------  ------  -----------  ---------------------  ---------
+1  Flight Booking Rebu…  PLAN-008  Tailspin Airlines  Rebuild     61 Medium  19 wk   ₹22.86 lakh  Amanjeet Sharma 11/2…  Submitted
+2  Flight Booking Refa…  PLAN-007  Tailspin Airlines  Refactor    56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/2…  Submitted
+3  Trade Finance Porta…  PLAN-001  Northwind Bank     Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/1…  Submitted
+4  Payment Gateway Rep…  PLAN-002  Northwind Bank     Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/0…  Submitted
+5  Reporting Hub Rehos…  PLAN-003  Northwind Bank     Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/0…  Submitted
+Showing 1-5 of 5 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: Q
+[ERROR] Unknown choice. Type a row number, T, R, E, C, N, P or 0.
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 5
+  Approved Plans  : 1
+  Rejected Plans  : 1
+Showing: Submitted plans (5)
+#  Plan                  ID        Enterprise         Strategy    Risk       Effort  Cost         Submitted By           Status
+-  --------------------  --------  -----------------  ----------  ---------  ------  -----------  ---------------------  ---------
+1  Flight Booking Rebu…  PLAN-008  Tailspin Airlines  Rebuild     61 Medium  19 wk   ₹22.86 lakh  Amanjeet Sharma 11/2…  Submitted
+2  Flight Booking Refa…  PLAN-007  Tailspin Airlines  Refactor    56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/2…  Submitted
+3  Trade Finance Porta…  PLAN-001  Northwind Bank     Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/1…  Submitted
+4  Payment Gateway Rep…  PLAN-002  Northwind Bank     Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/0…  Submitted
+5  Reporting Hub Rehos…  PLAN-003  Northwind Bank     Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/0…  Submitted
+Showing 1-5 of 5 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: 1
+
+Flight Booking Rebuild Plan · PLAN-008 · from SIM-011 · Submitted
+-----------------------------------------------------------------
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 61 · Medium
+  Strategy           : Rebuild
+  Estimated Effort   : 19 weeks
+  Estimated Cost     : ₹22.86 lakh
+  EMSI Category      : Growth x1.00
+Simulation snapshot (SIM-011, 11/23/2026):
+Item                     Value
+-----------------------  ----------------------
+EMSI score / multiplier  32.33 / x1.00 (Growth)
+Technical Debt           27
+Governance Risk          85
+Dependency Impact        45
+Strategy Risk            100
+Modernization Risk       61
+Base effort              13.32 wk
+Team size                6
+Person-months            4.39
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹15.80 lakh
+Testing cost (10%)       ₹1.58 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹22.86 lakh
+  Application          : Flight Booking
+  Enterprise           : Tailspin Airlines
+  Business Criticality : Critical
+  Submitted By         : Amanjeet Sharma (Architect)
+  Submitted On         : 11/23/2026
+  Source               : Simulation SIM-011
+  Executive Comment    : -
+System recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Architect notes: Full rewrite on a modern stack
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            4
+3  Implementation            45%            9
+4  Testing and Validation    Remaining      3
+Total estimated effort: 19 = 19 weeks
+Waiting for Executive review. Submitted on 11/23/2026. The plan is locked.
+  1. Approve
+  2. Reject (a reason is required)
+  0. Back
+Choose: 1
+Comment (optional, max 500) []: Approved for the Q1 2027 budget
+This decision cannot be changed later.
+Approve Flight Booking Rebuild Plan (₹22.86 lakh, 19 weeks)? (y/n): y
+[OK] PLAN-008 approved
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 4
+  Approved Plans  : 2
+  Rejected Plans  : 1
+Showing: Submitted plans (4)
+#  Plan                  ID        Enterprise         Strategy    Risk       Effort  Cost         Submitted By           Status
+-  --------------------  --------  -----------------  ----------  ---------  ------  -----------  ---------------------  ---------
+1  Flight Booking Refa…  PLAN-007  Tailspin Airlines  Refactor    56 Medium  17 wk   ₹17.79 lakh  Amanjeet Sharma 11/2…  Submitted
+2  Trade Finance Porta…  PLAN-001  Northwind Bank     Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/1…  Submitted
+3  Payment Gateway Rep…  PLAN-002  Northwind Bank     Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/0…  Submitted
+4  Reporting Hub Rehos…  PLAN-003  Northwind Bank     Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/0…  Submitted
+Showing 1-4 of 4 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: 1
+
+Flight Booking Refactor Plan v2 · PLAN-007 · from SIM-009 · Submitted
+---------------------------------------------------------------------
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 56 · Medium
+  Strategy           : Refactor
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+  EMSI Category      : Growth x1.00
+Simulation snapshot (SIM-009, 11/23/2026):
+Item                     Value
+-----------------------  ----------------------
+EMSI score / multiplier  32.33 / x1.00 (Growth)
+Technical Debt           27
+Governance Risk          85
+Dependency Impact        45
+Strategy Risk            75
+Modernization Risk       56
+Base effort              12.72 wk
+Team size                5
+Person-months            3.93
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹11.79 lakh
+Testing cost (10%)       ₹1.18 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹17.79 lakh
+  Application          : Flight Booking
+  Enterprise           : Tailspin Airlines
+  Business Criticality : Critical
+  Submitted By         : Amanjeet Sharma (Architect)
+  Submitted On         : 11/23/2026
+  Source               : Simulation SIM-009
+  Executive Comment    : -
+System recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Architect notes: Phase 1 starts in February
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            3
+3  Implementation            45%            8
+4  Testing and Validation    Remaining      3
+Total estimated effort: 17 = 17 weeks
+Waiting for Executive review. Submitted on 11/23/2026. The plan is locked.
+  1. Approve
+  2. Reject (a reason is required)
+  0. Back
+Choose: 2
+Reason for rejection (at least 5 characters) []: 
+[ERROR] Please give a reason (at least 5 characters) to reject
+Reason for rejection (at least 5 characters) []: No
+[ERROR] Please give a reason (at least 5 characters) to reject
+Reason for rejection (at least 5 characters) []: Too costly this year - revisit in Q3
+This decision cannot be changed later.
+Reject Flight Booking Refactor Plan v2 (₹17.79 lakh, 17 weeks)? (y/n): y
+[OK] PLAN-007 rejected
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 3
+  Approved Plans  : 2
+  Rejected Plans  : 2
+Showing: Submitted plans (3)
+#  Plan                    ID        Enterprise      Strategy    Risk       Effort  Cost         Submitted By            Status
+-  ----------------------  --------  --------------  ----------  ---------  ------  -----------  ----------------------  ---------
+1  Trade Finance Portal …  PLAN-001  Northwind Bank  Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/10…  Submitted
+2  Payment Gateway Repla…  PLAN-002  Northwind Bank  Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/08…  Submitted
+3  Reporting Hub Rehost …  PLAN-003  Northwind Bank  Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/07…  Submitted
+Showing 1-3 of 3 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: 1
+
+Trade Finance Portal Refactor Plan · PLAN-001 · from SIM-001 · Submitted
+------------------------------------------------------------------------
+  Technical Debt     : 95
+  Governance Risk    : 90
+  Dependency Impact  : 83
+  Modernization Risk : 87 · High
+  Strategy           : Refactor
+  Estimated Effort   : 22 weeks
+  Estimated Cost     : ₹22.15 lakh
+  EMSI Category      : Strategic x1.10
+Simulation snapshot (SIM-001, 11/10/2026):
+Item                     Value
+-----------------------  -------------------------
+EMSI score / multiplier  77.87 / x1.10 (Strategic)
+Technical Debt           95
+Governance Risk          90
+Dependency Impact        83
+Strategy Risk            75
+Modernization Risk       87
+Base effort              16.44 wk
+Team size                5
+Person-months            5.08
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹15.24 lakh
+Testing cost (10%)       ₹1.52 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹22.15 lakh
+  Application          : Trade Finance Portal
+  Enterprise           : Northwind Bank
+  Business Criticality : Critical
+  Submitted By         : Amanjeet Sharma (Architect)
+  Submitted On         : 11/10/2026
+  Source               : Simulation SIM-001
+  Executive Comment    : -
+System recommendation: High modernization risk. Use a phased implementation with a parallel run. Stabilise the critical
+dependencies first.
+Architect notes: Refactoring is recommended because the application has high technical debt, critical dependencies and an
+unsupported framework. Use phased implementation.
+Affected systems (4, in the suggested order - most critical dependency first):
+#  System                  Dependency Type  Criticality  Owner
+-  ----------------------  ---------------  -----------  ----------------
+1  Authentication Service  Service          Critical     Customer360
+2  Reporting API           API              High         Reporting Hub
+3  Notification Service    Service          Medium       Customer360
+4  Trade Database          Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            4
+3  Implementation            45%           10
+4  Testing and Validation    Remaining      5
+Total estimated effort: 22 = 22 weeks
+Waiting for Executive review. Submitted on 11/10/2026. The plan is locked.
+  1. Approve
+  2. Reject (a reason is required)
+  0. Back
+Choose: 1
+Comment (optional, max 500) []: 
+This decision cannot be changed later.
+Approve Trade Finance Portal Refactor Plan (₹22.15 lakh, 22 weeks)? (y/n): n
+[INFO] No decision was saved.
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 3
+  Approved Plans  : 2
+  Rejected Plans  : 2
+Showing: Submitted plans (3)
+#  Plan                    ID        Enterprise      Strategy    Risk       Effort  Cost         Submitted By            Status
+-  ----------------------  --------  --------------  ----------  ---------  ------  -----------  ----------------------  ---------
+1  Trade Finance Portal …  PLAN-001  Northwind Bank  Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/10…  Submitted
+2  Payment Gateway Repla…  PLAN-002  Northwind Bank  Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/08…  Submitted
+3  Reporting Hub Rehost …  PLAN-003  Northwind Bank  Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/07…  Submitted
+Showing 1-3 of 3 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: 1
+
+Trade Finance Portal Refactor Plan · PLAN-001 · from SIM-001 · Submitted
+------------------------------------------------------------------------
+  Technical Debt     : 95
+  Governance Risk    : 90
+  Dependency Impact  : 83
+  Modernization Risk : 87 · High
+  Strategy           : Refactor
+  Estimated Effort   : 22 weeks
+  Estimated Cost     : ₹22.15 lakh
+  EMSI Category      : Strategic x1.10
+Simulation snapshot (SIM-001, 11/10/2026):
+Item                     Value
+-----------------------  -------------------------
+EMSI score / multiplier  77.87 / x1.10 (Strategic)
+Technical Debt           95
+Governance Risk          90
+Dependency Impact        83
+Strategy Risk            75
+Modernization Risk       87
+Base effort              16.44 wk
+Team size                5
+Person-months            5.08
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹15.24 lakh
+Testing cost (10%)       ₹1.52 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹22.15 lakh
+  Application          : Trade Finance Portal
+  Enterprise           : Northwind Bank
+  Business Criticality : Critical
+  Submitted By         : Amanjeet Sharma (Architect)
+  Submitted On         : 11/10/2026
+  Source               : Simulation SIM-001
+  Executive Comment    : -
+System recommendation: High modernization risk. Use a phased implementation with a parallel run. Stabilise the critical
+dependencies first.
+Architect notes: Refactoring is recommended because the application has high technical debt, critical dependencies and an
+unsupported framework. Use phased implementation.
+Affected systems (4, in the suggested order - most critical dependency first):
+#  System                  Dependency Type  Criticality  Owner
+-  ----------------------  ---------------  -----------  ----------------
+1  Authentication Service  Service          Critical     Customer360
+2  Reporting API           API              High         Reporting Hub
+3  Notification Service    Service          Medium       Customer360
+4  Trade Database          Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            4
+3  Implementation            45%           10
+4  Testing and Validation    Remaining      5
+Total estimated effort: 22 = 22 weeks
+Waiting for Executive review. Submitted on 11/10/2026. The plan is locked.
+  1. Approve
+  2. Reject (a reason is required)
+  0. Back
+Choose: 0
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 3
+  Approved Plans  : 2
+  Rejected Plans  : 2
+Showing: Submitted plans (3)
+#  Plan                    ID        Enterprise      Strategy    Risk       Effort  Cost         Submitted By            Status
+-  ----------------------  --------  --------------  ----------  ---------  ------  -----------  ----------------------  ---------
+1  Trade Finance Portal …  PLAN-001  Northwind Bank  Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/10…  Submitted
+2  Payment Gateway Repla…  PLAN-002  Northwind Bank  Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/08…  Submitted
+3  Reporting Hub Rehost …  PLAN-003  Northwind Bank  Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/07…  Submitted
+Showing 1-3 of 3 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: 0
+
+Executive · Application Modernization
+=====================================
+Logged in as Shivanand Kumatekar (Executive) · Application Modernization - EMDT
+  1. Plans awaiting review (3)
+  2. All plans (filters)
+  3. Decision history
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Shivanand Kumatekar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

@@ -1,0 +1,255 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: aarav.mehta@secureshift.io
+Password: **********
+[OK] Signed in as Aarav Mehta (Cloud Admin).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 2
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 11 companies · Page 1 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: N
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+#  Company        Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+-  -------------  ----------  ---------  ----------------  -------------  ----------
+1  Margie Travel           0          0                 0  Not analysed   PENDING
+Showing 11-11 of 11 companies · Page 2 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: 1
+
+Margie Travel
+-------------
+  Identities       : 0
+  Average Score    : 0.00
+  High-Risk Unused : 0
+  Last analysis    : Not analysed
+  Risk level       : PENDING
+  Azure Tenant ID  : 8f2b6c1d-4e5a-4f3b-9c7d-2a1b3c4d5e6f
+  Subscriptions    : 1
+  1. Run New Analysis
+  2. View Identities
+  0. Back
+Choose: 1
+
+Analysis Wizard - Step 1 of 4: Company, period and files
+--------------------------------------------------------
+Type 'cancel' at any question to stop. Nothing is saved before step 3.
+Company: Margie Travel
+Analysis period:
+  1. Last 30 days
+  2. Last 60 days
+  3. Last 90 days
+  4. Custom range
+Choose 1-4 [Last 90 days]: 4
+From (MM/DD/YYYY): 08/12/2026
+To (MM/DD/YYYY): 11/09/2026
+Period: 08/12/2026 - 11/09/2026 · 90 days
+Type the path of each JSON file (Enter = the sample file shown in [brackets]).
+Role Assignments (JSON) [samples\governance\role-assignments.json]: samples\governance\role-assignments.json
+    Uploaded: role-assignments.json (12 KB)
+Activity Log (JSON) [samples\governance\activity-log-90d.json]: C:\Demo\SecureShift\samples\governance\activity-log-90d.json
+    Uploaded: activity-log-90d.json (765 KB)
+Roles Catalog (JSON) [samples\governance\roles-catalog.json]: 
+    Uploaded: roles-catalog.json (20 KB)
+
+Analysis Wizard - Step 2 of 4: Validate
+---------------------------------------
+[OK] Schema validation - All 3 files match the expected JSON structure
+[OK] Missing fields check - principalId, roleDefinitionId and scope present in every record
+[OK] Duplicate data check - 0 duplicate role assignments found
+[OK] Activity coverage - Activity Log covers 08/12/2026 - 11/09/2026 (90 days) for Margie Travel
+[OK] Validation passed
+20 role assignments, 12 role definitions, 3714 events used (1 outside the period, 1 not successful, 1 from unknown callers -
+ignored)
+Run the analysis now? (y/n): y
+
+Analysis Wizard - Step 3 of 4: Run
+----------------------------------
+  [ 17%] Data Processing & Validation ... done
+  [ 33%] Identity & Permission Analysis ... done
+  [ 50%] Usage & Telemetry Assessment ... done
+  [ 67%] Over-Privilege & Evidence Scoring ... done
+  [ 83%] Recommendation Engine (least-privilege roles) ... done
+  [100%] Audit & Reporting ... done
+
+Analysis Wizard - Step 4 of 4: Results
+--------------------------------------
+  Analysis ID                     : AN-2026-1115
+  Date                            : 11/23/2026 09:03 PM
+  Company                         : Margie Travel
+  Period                          : 08/12/2026 - 11/09/2026 (90 days)
+  Identities analysed             : 20
+  Average score                   : 48.05
+  High-risk unused permissions    : 186
+  Least-privilege roles generated : 17
+[OK] Analysis AN-2026-1115 saved. Next: Identities, High-Risk Findings or Generated Roles.
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+#  Company        Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+-  -------------  ----------  ---------  ----------------  -------------  ----------
+1  Margie Travel          20      48.05               186  11/23/2026     MEDIUM
+Showing 11-11 of 11 companies · Page 2 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 4
+
+Previous Analyses
+-----------------
+Analysis ID   Company             Period                   Days  Completed            Identities  Avg Score  Status
+------------  ------------------  -----------------------  ----  -------------------  ----------  ---------  --------
+AN-2026-1115  Margie Travel       08/12/2026 - 11/09/2026    90  11/23/2026 09:03 PM          20      48.05  Complete
+AN-2026-1110  Northwind Traders   08/12/2026 - 11/09/2026    90  11/10/2026 09:42 PM         128      54.00  Complete
+AN-2026-1103  Northwind Traders   08/05/2026 - 11/02/2026    90  11/03/2026 09:10 PM         126      57.00  Complete
+AN-2026-1027  Contoso Retail      09/27/2026 - 10/26/2026    30  10/27/2026 04:35 PM          74      49.00  Complete
+AN-2026-1020  Fabrikam Logistics  07/22/2026 - 10/19/2026    90  10/20/2026 03:30 PM          91      62.00  Complete
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 1
+
+Governance Dashboard
+--------------------
+Welcome back, Aarav Mehta
+Latest analysis complete - Margie Travel
+20 identities analysed from 90 days of Activity Log (08/12/2026 - 11/09/2026) · AN-2026-1115 · 11/23/2026 09:03 PM
+  Total Identities     : 20
+  Average Score        : 48.05
+  High-Risk Unused     : 186
+  Roles Pending Review : 17
+  Analysis Period      : 08/12/2026 - 11/09/2026 (90 days)
+
+Identities by risk
+------------------
+Risk            Identities
+--------------  ----------  --------------------
+High (70-100)            7  #############.......
+Medium (40-69)           2  ####................
+Low (0-39)              11  ####################
+
+Top 5 identities to fix
+-----------------------
+Identity                    User Name          Type               Current Role  Scope           Granted  Used  Score  Risk
+--------------------------  -----------------  -----------------  ------------  --------------  -------  ----  -----  ----
+Web App Deploy Pipeline     svc-webapp-deploy  Service Principal  Contributor   Subscription         76    14     91  HIGH
+Notify Function (Managed)   mi-notify-func     Managed Identity   Contributor   rg-notify            76     7     84  HIGH
+Rahul Verma                 rahul.verma        User               Owner         Subscription         80    26     84  HIGH
+Reports Function (Managed)  mi-reports-func    Managed Identity   Contributor   rg-reports           76     8     83  HIGH
+GitHub CI Pipeline          svc-github-ci      Service Principal  Owner         rg-webapp-prod       80    10     82  HIGH
+
+Average score trend (Margie Travel)
+-----------------------------------
+Analysis      Period                   Avg Score
+------------  -----------------------  ---------  --------------------
+AN-2026-1115  08/12/2026 - 11/09/2026      48.05  ##########..........
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Aarav Mehta? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+
