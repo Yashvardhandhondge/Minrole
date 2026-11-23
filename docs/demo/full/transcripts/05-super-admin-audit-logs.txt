@@ -1,0 +1,319 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: arya.mujumdar@secureshift.io
+Password: **********
+[OK] Signed in as Arya Mujumdar (Super Admin).
+
+Super Admin
+===========
+Logged in as Arya Mujumdar (Super Admin) · Application Modernization - EMDT
+  1. Dashboard
+  2. User Management
+  3. Audit Logs
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 3
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: - · To: - · Search: (none)
+Time                 Performed By   Action               Target         Details
+-------------------  -------------  -------------------  -------------  ----------------------------------------
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+Showing 1-10 of 31 log entries · Page 1 of 4
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: N
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: - · To: - · Search: (none)
+Time                 Performed By     Action            Target           Details
+-------------------  ---------------  ----------------  ---------------  ----------------------------------------
+11/23/2026 09:16 PM  Arya Mujumdar    User Created      Nisha Verma      Role: Architect
+11/23/2026 09:16 PM  Arya Mujumdar    Logged In         Arya Mujumdar    Console session
+11/23/2026 09:16 PM  Arya Mujumdar    Logged Out        Arya Mujumdar    Console session
+11/23/2026 09:16 PM  Arya Mujumdar    Logged In         Arya Mujumdar    Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Logged In         Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Password Changed  Mohit Choudhary  Temporary password replaced at first lo…
+11/23/2026 09:16 PM  Mohit Choudhary  Logged In         Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
+Showing 11-20 of 31 log entries · Page 2 of 4
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: P
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: - · To: - · Search: (none)
+Time                 Performed By   Action               Target         Details
+-------------------  -------------  -------------------  -------------  ----------------------------------------
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+Showing 1-10 of 31 log entries · Page 1 of 4
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: A
+Action:
+  1. All
+  2. Account Activated
+  3. Account Deactivated
+  4. Dependency Added
+  5. Enterprise Classified
+  6. Logged In
+  7. Logged Out
+  8. Login Blocked
+  9. Login Failed
+  10. Password Changed
+  11. Password Reset
+  12. Plan Approved
+  13. Role Changed
+  14. Simulation Run
+  15. User Created
+  16. User Updated
+Choose 1-16: User Created
+
+Audit Logs (newest first)
+-------------------------
+Action: User Created · Performed By: All · From: - · To: - · Search: (none)
+Time                 Performed By   Action        Target       Details
+-------------------  -------------  ------------  -----------  ---------------
+11/23/2026 09:16 PM  Arya Mujumdar  User Created  Nisha Verma  Role: Architect
+11/11/2026 03:54 PM  Arya Mujumdar  User Created  Rutuja More  Role: Executive
+Showing 1-2 of 2 log entries · Page 1 of 1
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: U
+Performed By:
+  1. All
+  2. Amanjeet Sharma (USR-013)
+  3. Arya Mujumdar (USR-001)
+  4. Mohit Choudhary (USR-015)
+  5. Sachin Kumar (USR-012)
+  6. Sakshi Patil (USR-006)
+  7. Shivanand Kumatekar (USR-014)
+Choose 1-7: Arya Mujumdar (USR-001)
+
+Audit Logs (newest first)
+-------------------------
+Action: User Created · Performed By: Arya Mujumdar · From: - · To: - · Search: (none)
+Time                 Performed By   Action        Target       Details
+-------------------  -------------  ------------  -----------  ---------------
+11/23/2026 09:16 PM  Arya Mujumdar  User Created  Nisha Verma  Role: Architect
+11/11/2026 03:54 PM  Arya Mujumdar  User Created  Rutuja More  Role: Executive
+Showing 1-2 of 2 log entries · Page 1 of 1
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: C
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: - · To: - · Search: (none)
+Time                 Performed By   Action               Target         Details
+-------------------  -------------  -------------------  -------------  ----------------------------------------
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+Showing 1-10 of 31 log entries · Page 1 of 4
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: D
+Enter the dates of the range (both days included). Enter = keep, '-' = no limit.
+From (MM/DD/YYYY) [none]: 11/30/2026
+To (MM/DD/YYYY) [none]: 11/01/2026
+[ERROR] From date must be before To date
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: - · To: - · Search: (none)
+Time                 Performed By   Action               Target         Details
+-------------------  -------------  -------------------  -------------  ----------------------------------------
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+Showing 1-10 of 31 log entries · Page 1 of 4
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: D
+Enter the dates of the range (both days included). Enter = keep, '-' = no limit.
+From (MM/DD/YYYY) [none]: 11/01/2026
+To (MM/DD/YYYY) [none]: -
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: 11/01/2026 · To: - · Search: (none)
+Time                 Performed By   Action               Target         Details
+-------------------  -------------  -------------------  -------------  ----------------------------------------
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+Showing 1-10 of 31 log entries · Page 1 of 4
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: S
+Search user, action, target or details (Enter = no search): Password
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: 11/01/2026 · To: - · Search: Password
+Time                 Performed By     Action            Target           Details
+-------------------  ---------------  ----------------  ---------------  ----------------------------------------
+11/23/2026 09:17 PM  Arya Mujumdar    Password Reset    Nisha Verma      Temporary password given manually
+11/23/2026 09:16 PM  Mohit Choudhary  Password Changed  Mohit Choudhary  Temporary password replaced at first lo…
+11/23/2026 09:16 PM  Arya Mujumdar    Login Failed      Arya Mujumdar    Wrong password
+11/08/2026 04:15 PM  Arya Mujumdar    Password Reset    Aditi Jain       Temporary password given manually
+Showing 1-4 of 4 log entries · Page 1 of 1
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: C
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: - · To: - · Search: (none)
+Time                 Performed By   Action               Target         Details
+-------------------  -------------  -------------------  -------------  ----------------------------------------
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+Showing 1-10 of 31 log entries · Page 1 of 4
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: X
+[ERROR] Unknown choice. Type A, U, D, S, C, N, P or 0.
+
+Audit Logs (newest first)
+-------------------------
+Action: All · Performed By: All · From: - · To: - · Search: (none)
+Time                 Performed By   Action               Target         Details
+-------------------  -------------  -------------------  -------------  ----------------------------------------
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+Showing 1-10 of 31 log entries · Page 1 of 4
+A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
+Choose: 0
+
+Super Admin
+===========
+Logged in as Arya Mujumdar (Super Admin) · Application Modernization - EMDT
+  1. Dashboard
+  2. User Management
+  3. Audit Logs
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 4
+
+Profile & Settings
+==================
+Manage your account details and password.
+  Full Name    : Arya Mujumdar
+  Email        : arya.mujumdar@secureshift.io
+  Role         : Super Admin
+  Product      : Application Modernization - EMDT
+  User ID      : USR-001
+  Phone        : 9876543210
+  Department   : Platform Administration
+  Logged in at : 11/23/2026 09:17 PM
+  1. Edit details (name, phone, department)
+  2. Change password
+  0. Back
+Choose: 0
+
+Super Admin
+===========
+Logged in as Arya Mujumdar (Super Admin) · Application Modernization - EMDT
+  1. Dashboard
+  2. User Management
+  3. Audit Logs
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 5
+
+Change Password
+---------------
+Minimum 8 characters with an uppercase letter, a lowercase letter, a number and a special character.
+Current Password: **********
+New Password: ***********
+Confirm New Password: ***********
+[ERROR] Current password: Current password is wrong
+
+Super Admin
+===========
+Logged in as Arya Mujumdar (Super Admin) · Application Modernization - EMDT
+  1. Dashboard
+  2. User Management
+  3. Audit Logs
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Arya Mujumdar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

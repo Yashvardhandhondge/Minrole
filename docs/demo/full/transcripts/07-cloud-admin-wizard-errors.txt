@@ -1,0 +1,310 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: aarav.mehta@secureshift.io
+Password: **********
+[OK] Signed in as Aarav Mehta (Cloud Admin).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 3
+
+Analysis Wizard - Step 1 of 4: Company, period and files
+--------------------------------------------------------
+Type 'cancel' at any question to stop. Nothing is saved before step 3.
+Company:
+  1. Northwind Traders
+  2. Contoso Retail
+  3. Fabrikam Logistics
+  4. Tailspin Airlines
+  5. Adventure Works
+  6. Litware Health
+  7. Proseware Finance
+  8. Wingtip Media
+  9. Fourth Coffee
+  10. Woodgrove Bank
+  11. Margie Travel
+Choose 1-11: Margie Travel
+Company: Margie Travel
+Analysis period:
+  1. Last 30 days
+  2. Last 60 days
+  3. Last 90 days
+  4. Custom range
+Choose 1-4 [Last 90 days]: 4
+From (MM/DD/YYYY): 11/01/2026
+To (MM/DD/YYYY): 11/05/2026
+[ERROR] Period must be at least 7 days
+Analysis period:
+  1. Last 30 days
+  2. Last 60 days
+  3. Last 90 days
+  4. Custom range
+Choose 1-4 [Last 90 days]: 4
+From (MM/DD/YYYY): 08/12/2026
+To (MM/DD/YYYY): 12/31/2026
+[ERROR] To date cannot be in the future
+Analysis period:
+  1. Last 30 days
+  2. Last 60 days
+  3. Last 90 days
+  4. Custom range
+Choose 1-4 [Last 90 days]: 4
+From (MM/DD/YYYY): 08/12/2026
+To (MM/DD/YYYY): 11/09/2026
+Period: 08/12/2026 - 11/09/2026 · 90 days
+Type the path of each JSON file (Enter = the sample file shown in [brackets]).
+Role Assignments (JSON) [samples\governance\role-assignments.json]: samples\governance\role-assignment.json
+[ERROR] Role Assignments (JSON): file not found: C:\Demo\SecureShift\samples\governance\role-assignment.json. Check the path (tip:
+drag the file into this window to paste its full path).
+Role Assignments (JSON) [samples\governance\role-assignments.json]: samples\governance\README.md
+[ERROR] Role Assignments (JSON): please choose a .json file (samples\governance\README.md).
+Role Assignments (JSON) [samples\governance\role-assignments.json]: samples\governance\role-assignments.json
+    Uploaded: role-assignments.json (12 KB)
+Activity Log (JSON) [samples\governance\activity-log-90d.json]: samples\governance\bad\activity-log-broken.json
+    Uploaded: activity-log-broken.json (1 KB)
+Roles Catalog (JSON) [samples\governance\roles-catalog.json]: 
+    Uploaded: roles-catalog.json (20 KB)
+
+Analysis Wizard - Step 2 of 4: Validate
+---------------------------------------
+[ERROR] Schema validation - activity-log-broken.json is not valid JSON (line 3, position 3). Open it in an editor and fix it, or
+export it again.
+Nothing was saved. Fix the file (or choose another one) and run the wizard again.
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 3
+
+Analysis Wizard - Step 1 of 4: Company, period and files
+--------------------------------------------------------
+Type 'cancel' at any question to stop. Nothing is saved before step 3.
+Company:
+  1. Northwind Traders
+  2. Contoso Retail
+  3. Fabrikam Logistics
+  4. Tailspin Airlines
+  5. Adventure Works
+  6. Litware Health
+  7. Proseware Finance
+  8. Wingtip Media
+  9. Fourth Coffee
+  10. Woodgrove Bank
+  11. Margie Travel
+Choose 1-11: Margie Travel
+Company: Margie Travel
+Analysis period:
+  1. Last 30 days
+  2. Last 60 days
+  3. Last 90 days
+  4. Custom range
+Choose 1-4 [Last 90 days]: 4
+From (MM/DD/YYYY): 08/12/2026
+To (MM/DD/YYYY): 11/09/2026
+Period: 08/12/2026 - 11/09/2026 · 90 days
+Type the path of each JSON file (Enter = the sample file shown in [brackets]).
+Role Assignments (JSON) [samples\governance\role-assignments.json]: samples\governance\bad\role-assignments-missing-fields.json
+    Uploaded: role-assignments-missing-fields.json (1 KB)
+Activity Log (JSON) [samples\governance\activity-log-90d.json]: 
+    Uploaded: activity-log-90d.json (765 KB)
+Roles Catalog (JSON) [samples\governance\roles-catalog.json]: 
+    Uploaded: roles-catalog.json (20 KB)
+
+Analysis Wizard - Step 2 of 4: Validate
+---------------------------------------
+[OK] Schema validation - All 3 files match the expected JSON structure
+[ERROR] Missing fields check - role-assignments-missing-fields.json record 2 has no principalId, scope
+Nothing was saved. Fix the file (or choose another one) and run the wizard again.
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 3
+
+Analysis Wizard - Step 1 of 4: Company, period and files
+--------------------------------------------------------
+Type 'cancel' at any question to stop. Nothing is saved before step 3.
+Company:
+  1. Northwind Traders
+  2. Contoso Retail
+  3. Fabrikam Logistics
+  4. Tailspin Airlines
+  5. Adventure Works
+  6. Litware Health
+  7. Proseware Finance
+  8. Wingtip Media
+  9. Fourth Coffee
+  10. Woodgrove Bank
+  11. Margie Travel
+Choose 1-11: Margie Travel
+Company: Margie Travel
+Analysis period:
+  1. Last 30 days
+  2. Last 60 days
+  3. Last 90 days
+  4. Custom range
+Choose 1-4 [Last 90 days]: 4
+From (MM/DD/YYYY): 08/12/2026
+To (MM/DD/YYYY): 11/09/2026
+Period: 08/12/2026 - 11/09/2026 · 90 days
+Type the path of each JSON file (Enter = the sample file shown in [brackets]).
+Role Assignments (JSON) [samples\governance\role-assignments.json]: samples\governance\bad\role-assignments-wrong-shape.json
+    Uploaded: role-assignments-wrong-shape.json (1 KB)
+Activity Log (JSON) [samples\governance\activity-log-90d.json]: 
+    Uploaded: activity-log-90d.json (765 KB)
+Roles Catalog (JSON) [samples\governance\roles-catalog.json]: 
+    Uploaded: roles-catalog.json (20 KB)
+
+Analysis Wizard - Step 2 of 4: Validate
+---------------------------------------
+[ERROR] Schema validation - role-assignments-wrong-shape.json must be a JSON array of role assignments (or an object with a
+"value" array), but it is a JSON object
+Nothing was saved. Fix the file (or choose another one) and run the wizard again.
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 3
+
+Analysis Wizard - Step 1 of 4: Company, period and files
+--------------------------------------------------------
+Type 'cancel' at any question to stop. Nothing is saved before step 3.
+Company:
+  1. Northwind Traders
+  2. Contoso Retail
+  3. Fabrikam Logistics
+  4. Tailspin Airlines
+  5. Adventure Works
+  6. Litware Health
+  7. Proseware Finance
+  8. Wingtip Media
+  9. Fourth Coffee
+  10. Woodgrove Bank
+  11. Margie Travel
+Choose 1-11: Northwind Traders
+Company: Northwind Traders
+Analysis period:
+  1. Last 30 days
+  2. Last 60 days
+  3. Last 90 days
+  4. Custom range
+Choose 1-4 [Last 90 days]: Last 90 days
+Period: 08/25/2026 - 11/22/2026 · 90 days
+Type the path of each JSON file (Enter = the sample file shown in [brackets]).
+Role Assignments (JSON) [samples\governance\role-assignments.json]: 
+    Uploaded: role-assignments.json (12 KB)
+Activity Log (JSON) [samples\governance\activity-log-90d.json]: 
+    Uploaded: activity-log-90d.json (765 KB)
+Roles Catalog (JSON) [samples\governance\roles-catalog.json]: 
+    Uploaded: roles-catalog.json (20 KB)
+
+Analysis Wizard - Step 2 of 4: Validate
+---------------------------------------
+[OK] Schema validation - All 3 files match the expected JSON structure
+[OK] Missing fields check - principalId, roleDefinitionId and scope present in every record
+[OK] Duplicate data check - 0 duplicate role assignments found
+[OK] Activity coverage - Activity Log covers 08/25/2026 - 11/22/2026 (90 days) for Northwind Traders
+[OK] Validation passed
+20 role assignments, 12 role definitions, 3433 events used (282 outside the period, 1 not successful, 1 from unknown callers -
+ignored)
+Run the analysis now? (y/n): n
+[INFO] Cancelled. Nothing was saved.
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Aarav Mehta? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

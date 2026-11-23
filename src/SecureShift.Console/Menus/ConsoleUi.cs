@@ -17,7 +17,41 @@ public sealed class ConsoleUi(IConsoleIO io)
     public IConsoleIO IO => io;
 
     // ----- output -----
-    public void WriteLine(string text = "") => io.WriteLine(text);
+    /// <summary>Usable characters per line (the terminal width; very large when the output is piped or in tests).</summary>
+    public int Width => Math.Max(40, io.Width - 1);
+
+    /// <summary>One line of text; a line longer than the terminal is wrapped at spaces (never cut off).</summary>
+    public void WriteLine(string text = "")
+    {
+        foreach (var line in Wrap(text, Width)) io.WriteLine(line);
+    }
+
+    /// <summary>Word wrap: continuation lines keep the indentation of the first line.</summary>
+    public static IEnumerable<string> Wrap(string text, int width)
+    {
+        // a message with several lines (e.g. one error per field): every line is wrapped on its own
+        if (text.Contains('\n'))
+        {
+            foreach (var part in text.Split('\n'))
+                foreach (var line in Wrap(part.TrimEnd('\r'), width)) yield return line;
+            yield break;
+        }
+        if (text.Length <= width) { yield return text; yield break; }
+        var indent = new string(' ', Math.Min(text.Length - text.TrimStart().Length, width / 3));
+        var rest = text;
+        var first = true;
+        while (rest.Length > 0)
+        {
+            var prefix = first ? "" : indent;
+            var room = width - prefix.Length;
+            if (rest.Length <= room) { yield return prefix + rest; break; }
+            var cut = rest.LastIndexOf(' ', room);
+            if (cut <= 0) cut = room;   // one very long word (a path): hard cut
+            yield return prefix + rest[..cut].TrimEnd();
+            rest = rest[cut..].TrimStart();
+            first = false;
+        }
+    }
     public void Write(string text) => io.Write(text);
     public void ErrorLine(string text) => io.WriteErrorLine(text);
 
@@ -53,8 +87,10 @@ public sealed class ConsoleUi(IConsoleIO io)
             io.WriteErrorLine($"[{tag}] {text}");
             return;
         }
+        var lines = Wrap($"[{tag}] {text}", Width).ToList();
         io.WriteColored($"[{tag}] ", color);
-        io.WriteLine(text);
+        io.WriteLine(lines[0][(tag.Length + 3)..]);
+        foreach (var line in lines.Skip(1)) io.WriteLine(line);
     }
 
     /// <summary>Key/value lines with aligned values ("Name      : Arya").</summary>
@@ -63,7 +99,7 @@ public sealed class ConsoleUi(IConsoleIO io)
         var list = pairs.ToList();
         if (list.Count == 0) return;
         var width = list.Max(p => p.Key.Length);
-        foreach (var (key, value) in list) io.WriteLine($"  {key.PadRight(width)} : {value}");
+        foreach (var (key, value) in list) WriteLine($"  {key.PadRight(width)} : {value}");
     }
 
     /// <summary>A framed box (used for "User Created" / "Password Reset").</summary>
@@ -77,12 +113,25 @@ public sealed class ConsoleUi(IConsoleIO io)
         io.WriteLine("+" + new string('-', width + 2) + "+");
     }
 
-    /// <summary>Prints rows as an aligned table. Columns listed in rightAlign are right-aligned (numbers).</summary>
+    /// <summary>
+    /// Prints rows as an aligned table. Columns listed in rightAlign are right-aligned (numbers).
+    /// When the table is wider than the terminal, the widest text columns are made narrower and their cells
+    /// end with "…", so a table never wraps onto the next line.
+    /// </summary>
     public void Table(IReadOnlyList<string> headers, IReadOnlyList<IReadOnlyList<string>> rows, params int[] rightAlign)
     {
         var widths = headers.Select((h, i) => Math.Max(h.Length, rows.Count == 0 ? 0 : rows.Max(r => (r[i] ?? "").Length))).ToArray();
+        int Total() => widths.Sum() + 2 * (widths.Length - 1);
+        while (Total() > Width)
+        {
+            var candidates = Enumerable.Range(0, widths.Length).Where(i => !rightAlign.Contains(i) && widths[i] > Math.Max(6, Math.Min(headers[i].Length, 12))).ToList();
+            if (candidates.Count == 0) break;
+            var widest = candidates.OrderByDescending(i => widths[i]).First();
+            widths[widest]--;
+        }
+        string Cell(string? c, int i) => Fmt.Cut(c ?? "", widths[i]);
         string Line(IReadOnlyList<string> cells) => string.Join("  ", cells.Select((c, i) =>
-            rightAlign.Contains(i) ? (c ?? "").PadLeft(widths[i]) : (c ?? "").PadRight(widths[i]))).TrimEnd();
+            rightAlign.Contains(i) ? Cell(c, i).PadLeft(widths[i]) : Cell(c, i).PadRight(widths[i]))).TrimEnd();
 
         io.WriteLine(Line(headers));
         io.WriteLine(string.Join("  ", widths.Select(w => new string('-', w))));

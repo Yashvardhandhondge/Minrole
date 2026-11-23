@@ -1,0 +1,237 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 9
+[ERROR] Type 1, 2 or 0.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 2
+
+Forgot Password
+---------------
+Please contact your Super Admin.
+They will reset your password in User Management and give you a temporary password directly.
+Change it on the Profile page after you log in.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: 
+Password: 
+[ERROR] Please enter your email and password.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: arya.mujumdar
+Password: **********
+[ERROR] Please enter a valid email address.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: arya.mujumdar@secureshift.io
+Password: **********
+[ERROR] Invalid email or password.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: nobody@secureshift.io
+Password: **********
+[ERROR] Invalid email or password.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: sakshi.patil@company.com
+Password: ************
+[ERROR] Your account is inactive. Please contact your Super Admin.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: mohit.choudhary@company.com
+Password: ************
+
+Change your password
+--------------------
+You are using a temporary password. Choose a new password before you continue.
+Minimum 8 characters with an uppercase letter, a lowercase letter, a number and a special character.
+(Type 'cancel' as the current password to log out.)
+Current (temporary) password: ******
+[INFO] Logged out. Your password was not changed.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: mohit.choudhary@company.com
+Password: ************
+
+Change your password
+--------------------
+You are using a temporary password. Choose a new password before you continue.
+Minimum 8 characters with an uppercase letter, a lowercase letter, a number and a special character.
+(Type 'cancel' as the current password to log out.)
+Current (temporary) password: ************
+New password: ********
+Confirm new password: ********
+[ERROR] Current password: Current password is wrong
+        New password: Min 8 characters with uppercase, lowercase, number and special character
+        Confirm: Passwords do not match
+Current (temporary) password: ************
+New password: ************
+Confirm new password: ************
+[ERROR] New password: New password must be different from the current password
+Current (temporary) password: ************
+New password: **********
+Confirm new password: **********
+[OK] Password updated. Use the new password next time you log in.
+[OK] Signed in as Mohit Choudhary (Architect).
+
+Architect · Application Modernization
+=====================================
+Logged in as Mohit Choudhary (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Mohit Choudhary? (y/n): n
+
+Architect · Application Modernization
+=====================================
+Logged in as Mohit Choudhary (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Mohit Choudhary? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: mohit.choudhary@company.com
+Password: **********
+[OK] Signed in as Mohit Choudhary (Architect).
+
+Architect · Application Modernization
+=====================================
+Logged in as Mohit Choudhary (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Mohit Choudhary? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

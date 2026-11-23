@@ -1,0 +1,738 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: sachin.kumar@secureshift.io
+Password: **********
+[OK] Signed in as Sachin Kumar (Admin).
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Northwind Bank (ENT-001)]: 4
+[OK] Current enterprise: Tailspin Airlines (ENT-004)
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 6
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 0
+  Critical Applications : 0
+  Legacy Applications   : 0
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID  Application  Owner  Technology  Framework · Support  Criticality  Deployment  Age  Links  Status
+-  --  -----------  -----  ----------  -------------------  -----------  ----------  ---  -----  ------
+No applications found.
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: R
+
+Register Application - Tailspin Airlines
+----------------------------------------
+Type 'cancel' at any question to go back.
+Application Name: FB
+[ERROR] 3-60 characters: letters, numbers, space & . -
+Application Name: Flight Booking
+Business Unit: Sales
+Owner Team: Web Team
+Status:
+  1. Active
+  2. Legacy
+Choose 1-2: Active
+Deployment:
+  1. On-Premise
+  2. Private Cloud
+  3. Public Cloud
+  4. Hybrid Cloud
+Choose 1-4: Public Cloud
+Technology:
+  1. Java
+  2. PHP
+  3. .NET
+  4. COBOL
+Choose 1-4: Java
+Framework + version (e.g. Java 8 or .NET 6): Java
+[ERROR] Name + version number, e.g. Java 8 or .NET 6
+Framework + version (e.g. Java 8 or .NET 6): Java 17
+Framework support:
+  1. Supported
+  2. Extended
+  3. Unsupported
+Choose 1-3: Supported
+Age (years): 60
+[ERROR] Whole number from 0 to 50
+Age (years): 6
+Documentation quality:
+  1. Good
+  2. Average
+  3. Poor
+Choose 1-3: Good
+Code complexity:
+  1. Low
+  2. Medium
+  3. High
+Choose 1-3: Medium
+Lines of code: 50
+[ERROR] Whole number, at least 100
+Lines of code: 300000
+Business criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4: Critical
+Sensitive data:
+  1. Yes
+  2. No
+Choose 1-2: Yes
+Known security issues: 1
+Downtime tolerance:
+  1. Low
+  2. Medium
+  3. High
+Choose 1-3: Low
+Compliance policies that apply: 1
+[OK] Flight Booking registered as APP-011. Next: add its components and dependencies (menu 7).
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 1
+  Critical Applications : 1
+  Legacy Applications   : 0
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support  Criticality  Deployment      Age  Links  Status
+-  -------  --------------  --------  ----------  -------------------  -----------  ------------  -----  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported  Critical     Public Cloud  6 yrs      0  Active
+Showing 1-1 of 1 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: R
+
+Register Application - Tailspin Airlines
+----------------------------------------
+Type 'cancel' at any question to go back.
+Application Name: Crew Scheduler
+Business Unit: Operations
+Owner Team: Ops Team
+Status:
+  1. Active
+  2. Legacy
+Choose 1-2: Legacy
+Deployment:
+  1. On-Premise
+  2. Private Cloud
+  3. Public Cloud
+  4. Hybrid Cloud
+Choose 1-4: On-Premise
+Technology:
+  1. Java
+  2. PHP
+  3. .NET
+  4. COBOL
+Choose 1-4: .NET
+Framework + version (e.g. Java 8 or .NET 6): .NET 4.8
+Framework support:
+  1. Supported
+  2. Extended
+  3. Unsupported
+Choose 1-3: Unsupported
+Age (years): 15
+Documentation quality:
+  1. Good
+  2. Average
+  3. Poor
+Choose 1-3: Poor
+Code complexity:
+  1. Low
+  2. Medium
+  3. High
+Choose 1-3: High
+Lines of code: 800000
+Business criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4: High
+Sensitive data:
+  1. Yes
+  2. No
+Choose 1-2: No
+Known security issues: 4
+Downtime tolerance:
+  1. Low
+  2. Medium
+  3. High
+Choose 1-3: Medium
+Compliance policies that apply: 2
+[OK] Crew Scheduler registered as APP-012. Next: add its components and dependencies (menu 7).
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: R
+
+Register Application - Tailspin Airlines
+----------------------------------------
+Type 'cancel' at any question to go back.
+Application Name: Flight Booking
+[ERROR] This application already exists in Tailspin Airlines
+Application Name: cancel
+[INFO] Cancelled. Nothing was saved.
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: S
+Search name or ID (Enter = no search): flight
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: flight · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support  Criticality  Deployment      Age  Links  Status
+-  -------  --------------  --------  ----------  -------------------  -----------  ------------  -----  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported  Critical     Public Cloud  6 yrs      0  Active
+Showing 1-1 of 1 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: C
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: T
+Technology:
+  1. All
+  2. Java
+  3. PHP
+  4. .NET
+  5. COBOL
+Choose 1-5: Java
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: Java · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support  Criticality  Deployment      Age  Links  Status
+-  -------  --------------  --------  ----------  -------------------  -----------  ------------  -----  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported  Critical     Public Cloud  6 yrs      0  Active
+Showing 1-1 of 1 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: K
+Criticality:
+  1. All
+  2. Low
+  3. Medium
+  4. High
+  5. Critical
+Choose 1-5: Critical
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: Java · Criticality: Critical · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support  Criticality  Deployment      Age  Links  Status
+-  -------  --------------  --------  ----------  -------------------  -----------  ------------  -----  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported  Critical     Public Cloud  6 yrs      0  Active
+Showing 1-1 of 1 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: A
+Assessment:
+  1. All
+  2. Assessed
+  3. Not Assessed
+Choose 1-3: Not Assessed
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: Java · Criticality: Critical · Assessment: Not Assessed
+#  ID       Application     Owner     Technology  Framework · Support  Criticality  Deployment      Age  Links  Status
+-  -------  --------------  --------  ----------  -------------------  -----------  ------------  -----  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported  Critical     Public Cloud  6 yrs      0  Active
+Showing 1-1 of 1 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: C
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: N
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: P
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: 2
+
+Crew Scheduler (APP-012)
+------------------------
+  Enterprise          : Tailspin Airlines
+  Technology          : .NET
+  Framework           : .NET 4.8
+  Framework support   : Unsupported
+  Age                 : 15 years
+  Deployment          : On-Premise
+  Lines of code       : 8,00,000
+  Business unit       : Operations
+  Owner team          : Ops Team
+  Status              : Legacy
+  Criticality         : High
+  Sensitive data      : No
+  Security issues     : 4
+  Downtime tolerance  : Medium
+  Compliance policies : 2
+  Documentation       : Poor
+  Code complexity     : High
+  Assessment          : Not assessed
+Direct dependencies (0):
+  No dependencies mapped.
+  1. Edit application
+  2. Delete application
+  0. Back
+Choose: 0
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: 1
+
+Flight Booking (APP-011)
+------------------------
+  Enterprise          : Tailspin Airlines
+  Technology          : Java
+  Framework           : Java 17
+  Framework support   : Supported
+  Age                 : 6 years
+  Deployment          : Public Cloud
+  Lines of code       : 3,00,000
+  Business unit       : Sales
+  Owner team          : Web Team
+  Status              : Active
+  Criticality         : Critical
+  Sensitive data      : Yes
+  Security issues     : 1
+  Downtime tolerance  : Low
+  Compliance policies : 1
+  Documentation       : Good
+  Code complexity     : Medium
+  Assessment          : Not assessed
+Direct dependencies (0):
+  No dependencies mapped.
+  1. Edit application
+  2. Delete application
+  0. Back
+Choose: 1
+
+Edit Application - APP-011
+--------------------------
+Update application information to keep the inventory accurate. Enter keeps the value in [brackets].
+Application Name [Flight Booking]: 
+Business Unit [Sales]: 
+Owner Team [Web Team]: 
+Status:
+  1. Active
+  2. Legacy
+Choose 1-2 [Active]: 
+Deployment:
+  1. On-Premise
+  2. Private Cloud
+  3. Public Cloud
+  4. Hybrid Cloud
+Choose 1-4 [Public Cloud]: 
+Technology:
+  1. Java
+  2. PHP
+  3. .NET
+  4. COBOL
+Choose 1-4 [Java]: 
+Framework + version (e.g. Java 8 or .NET 6) [Java 17]: 
+Framework support:
+  1. Supported
+  2. Extended
+  3. Unsupported
+Choose 1-3 [Supported]: 
+Age (years) [6]: 
+Documentation quality:
+  1. Good
+  2. Average
+  3. Poor
+Choose 1-3 [Good]: 
+Code complexity:
+  1. Low
+  2. Medium
+  3. High
+Choose 1-3 [Medium]: 
+Lines of code [300000]: 
+Business criticality:
+  1. Low
+  2. Medium
+  3. High
+  4. Critical
+Choose 1-4 [Critical]: 
+Sensitive data:
+  1. Yes
+  2. No
+Choose 1-2 [Yes]: 
+Known security issues [1]: 2
+Downtime tolerance:
+  1. Low
+  2. Medium
+  3. High
+Choose 1-3 [Low]: 
+Compliance policies that apply [1]: 
+Existing assessments keep their old scores. Re-assess the application to use the new values.
+Confirm Update: update Flight Booking? (y/n): y
+[OK] Flight Booking updated
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: Q
+[ERROR] Unknown choice. Type a row number, R, S, T, K, A, C, N, P or 0.
+
+Application Inventory - Tailspin Airlines (ENT-004)
+---------------------------------------------------
+EMSI 32.33 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 12 apps
+  Total Applications    : 2
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 0
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application     Owner     Technology  Framework · Support     Criticality  Deployment       Age  Links  Status
+-  -------  --------------  --------  ----------  ----------------------  -----------  ------------  ------  -----  ------
+1  APP-011  Flight Booking  Web Team  Java        Java 17 · Supported     Critical     Public Cloud   6 yrs      0  Active
+2  APP-012  Crew Scheduler  Ops Team  .NET        .NET 4.8 · Unsupported  High         On-Premise    15 yrs      0  Legacy
+Showing 1-2 of 2 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: 0
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Tailspin Airlines (ENT-004)]: 2
+[OK] Current enterprise: Contoso Retail (ENT-002)
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Contoso Retail (ENT-002)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 6
+
+Application Inventory - Contoso Retail (ENT-002)
+------------------------------------------------
+EMSI 44.91 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 40 apps
+  Total Applications    : 4
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 5
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application        Owner      Technology  Framework · Support    Criticality  Deployment       Age  Links  Status
+-  -------  -----------------  ---------  ----------  ---------------------  -----------  ------------  ------  -----  ------
+1  APP-007  Online Store       Web Team   Java        Java 17 · Supported    Critical     Public Cloud   4 yrs      2  Active
+2  APP-008  Inventory Manager  Ops IT     PHP         PHP 8.1 · Supported    High         Public Cloud   5 yrs      1  Active
+3  APP-009  Loyalty Program    CRM Team   PHP         PHP 5.6 · Unsupported  Medium       On-Premise    10 yrs      1  Legacy
+4  APP-010  Supplier Portal    Vendor IT  Java        Java 8 · Extended      Medium       Hybrid Cloud   8 yrs      1  Active
+Showing 1-4 of 4 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: 4
+
+Supplier Portal (APP-010)
+-------------------------
+  Enterprise          : Contoso Retail
+  Technology          : Java
+  Framework           : Java 8
+  Framework support   : Extended
+  Age                 : 8 years
+  Deployment          : Hybrid Cloud
+  Lines of code       : 1,80,000
+  Business unit       : Procurement
+  Owner team          : Vendor IT
+  Status              : Active
+  Criticality         : Medium
+  Sensitive data      : No
+  Security issues     : 2
+  Downtime tolerance  : High
+  Compliance policies : 1
+  Documentation       : Average
+  Code complexity     : Low
+  Assessment          : Not assessed
+Direct dependencies (1):
+System       Type  Criticality  Owner
+-----------  ----  -----------  -----------------
+Product API  API   Medium       Inventory Manager
+  1. Edit application
+  2. Delete application
+  0. Back
+Choose: 2
+Its 1 dependency link(s) and components will also be removed.
+Delete application? Delete Supplier Portal from the inventory (y/n): y
+[OK] Supplier Portal deleted
+
+Application Inventory - Contoso Retail (ENT-002)
+------------------------------------------------
+EMSI 44.91 · Growth · Subscription Growth ₹10,000/month · Portfolio (declared) 40 apps
+  Total Applications    : 3
+  Critical Applications : 1
+  Legacy Applications   : 1
+  Dependency Links      : 4
+Search: (none) · Technology: All · Criticality: All · Assessment: All
+#  ID       Application        Owner     Technology  Framework · Support    Criticality  Deployment       Age  Links  Status
+-  -------  -----------------  --------  ----------  ---------------------  -----------  ------------  ------  -----  ------
+1  APP-007  Online Store       Web Team  Java        Java 17 · Supported    Critical     Public Cloud   4 yrs      2  Active
+2  APP-008  Inventory Manager  Ops IT    PHP         PHP 8.1 · Supported    High         Public Cloud   5 yrs      1  Active
+3  APP-009  Loyalty Program    CRM Team  PHP         PHP 5.6 · Unsupported  Medium       On-Premise    10 yrs      1  Legacy
+Showing 1-3 of 3 applications · Page 1 of 1
+Type a row number to view / edit / delete, or: R register · S search · T technology · K criticality · A assessment · C clear · N
+next · P previous · 0 back
+Choose: 0
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Contoso Retail (ENT-002)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 3
+Enterprise:
+  1. Northwind Bank (ENT-001)
+  2. Contoso Retail (ENT-002)
+  3. Fabrikam Health (ENT-003)
+  4. Tailspin Airlines (ENT-004)
+Choose 1-4 [Contoso Retail (ENT-002)]: 4
+[OK] Current enterprise: Tailspin Airlines (ENT-004)
+
+Admin · Application Modernization
+=================================
+Logged in as Sachin Kumar (Admin) · Application Modernization - EMDT
+Current enterprise: Tailspin Airlines (ENT-004)
+  1. Dashboard (all enterprises)
+  2. Register New Enterprise
+  3. Choose current enterprise
+  4. Enterprise Details (registration, EMSI, pricing)
+  5. EMSI Classification
+  6. Application Inventory
+  7. Components & Dependencies
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Sachin Kumar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

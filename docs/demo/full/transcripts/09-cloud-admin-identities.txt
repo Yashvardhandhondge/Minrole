@@ -1,0 +1,542 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: aarav.mehta@secureshift.io
+Password: **********
+[OK] Signed in as Aarav Mehta (Cloud Admin).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 5
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: N
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity                User Name          Type               Current Role            Scope         Granted  Used  Score  Risk
+--  ----------------------  -----------------  -----------------  ----------------------  ------------  -------  ----  -----  ----
+ 1  Sneha Patil             sneha.patil        User               Key Vault Officer       rg-security         7     4     39  LOW
+ 2  Pooja Patil             pooja.patil        User               Reader                  rg-crm             29    15     38  LOW
+ 3  Data Pipeline Service   svc-data-pipeline  Service Principal  Virtual Machine Contr…  rg-data            19    14     27  LOW
+ 4  Deepak Shinde           deepak.shinde      User               Website Contributor     rg-catalog         13     9     27  LOW
+ 5  Billing Job (Managed)   mi-billing-job     Managed Identity   Storage Blob Data Con…  rg-billing          4     3     24  LOW
+ 6  Kavya Iyer              kavya.iyer         User               Reader                  Subscription       29    29     20  LOW
+ 7  Rohan Desai             rohan.desai        User               SQL DB Contributor      rg-data             7     6     18  LOW
+ 8  Search Function (Mana…  mi-search-021      Managed Identity   Monitoring Reader       rg-search           6     5     17  LOW
+ 9  Backup Service          svc-backup         Service Principal  Backup Contributor      rg-backup           6     6      8  LOW
+10  Orders API (Managed)    mi-orders-api      Managed Identity   Reader                  rg-orders          29    29      8  LOW
+Showing 11-20 of 20 identities · Page 2 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: P
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: S
+Search name, user name, role or scope (Enter = no search): svc
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: svc · Type: All · Risk: All
+#  Identity               User Name          Type               Current Role            Scope           Granted  Used  Score  Risk
+-  ---------------------  -----------------  -----------------  ----------------------  --------------  -------  ----  -----  ----
+1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor             Subscription         76    14     91  HIGH
+2  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                   rg-webapp-prod       80    10     82  HIGH
+3  Etl Service            svc-etl-020        Service Principal  Contributor             rg-etl               76    12     80  HIGH
+4  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor         rg-aks               11     5     39  LOW
+5  Data Pipeline Service  svc-data-pipeline  Service Principal  Virtual Machine Contr…  rg-data              19    14     27  LOW
+6  Backup Service         svc-backup         Service Principal  Backup Contributor      rg-backup             6     6      8  LOW
+Showing 1-6 of 6 identities · Page 1 of 1
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: C
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: T
+Type:
+  1. All
+  2. User
+  3. Service Principal
+  4. Managed Identity
+Choose 1-4: Service Principal
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: Service Principal · Risk: All
+#  Identity               User Name          Type               Current Role            Scope           Granted  Used  Score  Risk
+-  ---------------------  -----------------  -----------------  ----------------------  --------------  -------  ----  -----  ----
+1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor             Subscription         76    14     91  HIGH
+2  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                   rg-webapp-prod       80    10     82  HIGH
+3  Etl Service            svc-etl-020        Service Principal  Contributor             rg-etl               76    12     80  HIGH
+4  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor         rg-aks               11     5     39  LOW
+5  Data Pipeline Service  svc-data-pipeline  Service Principal  Virtual Machine Contr…  rg-data              19    14     27  LOW
+6  Backup Service         svc-backup         Service Principal  Backup Contributor      rg-backup             6     6      8  LOW
+Showing 1-6 of 6 identities · Page 1 of 1
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: R
+Risk:
+  1. All
+  2. High (70-100)
+  3. Medium (40-69)
+  4. Low (0-39)
+Choose 1-4: 2
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: Service Principal · Risk: HIGH
+#  Identity                 User Name          Type               Current Role  Scope           Granted  Used  Score  Risk
+-  -----------------------  -----------------  -----------------  ------------  --------------  -------  ----  -----  ----
+1  Web App Deploy Pipeline  svc-webapp-deploy  Service Principal  Contributor   Subscription         76    14     91  HIGH
+2  GitHub CI Pipeline       svc-github-ci      Service Principal  Owner         rg-webapp-prod       80    10     82  HIGH
+3  Etl Service              svc-etl-020        Service Principal  Contributor   rg-etl               76    12     80  HIGH
+Showing 1-3 of 3 identities · Page 1 of 1
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: C
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: E
+[OK] Saved 20 identities to C:\Demo\SecureShift\exports\identities-export.csv
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: A
+Analysis:
+  1. AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+  2. AN-2026-1110 · Northwind Traders · 08/12/2026 - 11/09/2026
+  3. AN-2026-1103 · Northwind Traders · 08/05/2026 - 11/02/2026
+  4. AN-2026-1027 · Contoso Retail · 09/27/2026 - 10/26/2026
+  5. AN-2026-1020 · Fabrikam Logistics · 07/22/2026 - 10/19/2026
+Choose 1-5 [AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026]: 2
+
+Identities - AN-2026-1110 · Northwind Traders · 08/12/2026 - 11/09/2026
+-----------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription      1,850    12     91  HIGH
+ 2  Rahul Verma            rahul.verma        User               Owner                Subscription      2,100    40     88  HIGH
+ 3  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod    2,100    25     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports        1,850    30     80  HIGH
+ 5  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify         1,850    52     77  HIGH
+ 6  Priya Sharma           priya.sharma       User               Contributor          rg-sales          1,850    95     71  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr             1,850   210     66  MEDIUM
+ 8  Crm Function (Manage…  mi-crm-113         Managed Identity   Contributor          rg-crm              210    66     65  MEDIUM
+ 9  Hr Service             svc-hr-104         Service Principal  Website Contributor  rg-hr               320   101     65  MEDIUM
+10  Hr Service             svc-hr-032         Service Principal  Website Contributor  rg-hr               140    44     65  MEDIUM
+Showing 1-10 of 128 identities · Page 1 of 13
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: A
+Analysis:
+  1. AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+  2. AN-2026-1110 · Northwind Traders · 08/12/2026 - 11/09/2026
+  3. AN-2026-1103 · Northwind Traders · 08/05/2026 - 11/02/2026
+  4. AN-2026-1027 · Contoso Retail · 09/27/2026 - 10/26/2026
+  5. AN-2026-1020 · Fabrikam Logistics · 07/22/2026 - 10/19/2026
+Choose 1-5 [AN-2026-1110 · Northwind Traders · 08/12/2026 - 11/09/2026]: 1
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: 1
+
+Identity - Web App Deploy Pipeline
+----------------------------------
+  Display Name    : Web App Deploy Pipeline
+  User Name       : svc-webapp-deploy
+  Type            : Service Principal
+  Current Role    : Contributor
+  Scope           : Subscription
+  Analysis Period : 08/12/2026 - 11/09/2026
+  Suggested Scope : rg-webapp-prod (Resource Group)
+  Risk Score      : 91 / 100 · HIGH
+
+Why this score
+--------------
+Signal                    Value                                    Weight
+------------------------  ---------------------------------------  ------
+Unused permission ratio   82%                                      50%
+Unused high-risk actions  20                                       30%
+Scope breadth             Subscription (work in 1 resource group)  20%
+  Granted : 76
+  Used    : 14
+  Unused  : 62
+
+Permissions Used (14 of 76)
+---------------------------
+Action                                                 First Seen  Last Seen   Events  Resource Group
+-----------------------------------------------------  ----------  ----------  ------  --------------
+Microsoft.Web/sites/read                               08/14/2026  11/09/2026     212  rg-webapp-prod
+Microsoft.Web/sites/config/read                        08/14/2026  11/09/2026     140  rg-webapp-prod
+Microsoft.Resources/subscriptions/resourceGroups/read  08/14/2026  11/09/2026      88  rg-webapp-prod
+Microsoft.Web/serverfarms/read                         08/15/2026  11/09/2026      64  rg-webapp-prod
+Microsoft.Resources/deployments/read                   08/14/2026  11/09/2026      52  rg-webapp-prod
+Microsoft.Resources/deployments/write                  08/14/2026  11/09/2026      52  rg-webapp-prod
+Microsoft.Web/sites/write                              08/14/2026  11/09/2026      46  rg-webapp-prod
+Microsoft.Web/sites/config/write                       08/14/2026  11/09/2026      31  rg-webapp-prod
+Microsoft.Insights/components/read                     08/18/2026  11/09/2026      27  rg-webapp-prod
+Microsoft.Web/sites/slots/read                         08/20/2026  11/08/2026      18  rg-webapp-prod
+Microsoft.Web/sites/slots/write                        08/20/2026  11/08/2026      18  rg-webapp-prod
+Microsoft.Web/sites/restart/action                     09/01/2026  11/07/2026       9  rg-webapp-prod
+Microsoft.Web/sites/backup/action                      08/31/2026  08/31/2026       1  rg-webapp-prod
+Microsoft.Web/sites/delete                             08/16/2026  08/16/2026       1  rg-webapp-prod
+
+Unused High-Risk Permissions (20)
+---------------------------------
+  ! Microsoft.Web/serverfarms/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Resources/deployments/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Resources/subscriptions/resourceGroups/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Compute/virtualMachines/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Compute/disks/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Network/virtualNetworks/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Network/networkSecurityGroups/write  (Network, HIGH) - Never used
+  ! Microsoft.Network/networkSecurityGroups/delete  (Network, HIGH) - Never used
+  ! Microsoft.Network/networkSecurityGroups/securityRules/delete  (Network, HIGH) - Never used
+  ! Microsoft.Network/publicIPAddresses/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Storage/storageAccounts/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Storage/storageAccounts/blobServices/containers/delete  (Delete, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/read  (Key Vault, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/write  (Key Vault, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/delete  (Key Vault, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/secrets/read  (Key Vault, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/secrets/write  (Key Vault, HIGH) - Never used
+  ! Microsoft.Sql/servers/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Sql/servers/databases/delete  (Delete, HIGH) - Never used
+  ! Microsoft.ContainerService/managedClusters/delete  (Delete, HIGH) - Never used
+
+  1. View generated role (svc-webapp-deploy-custom-role)
+  2. Export evidence (JSON file)
+  0. Back
+Choose: 1
+
+Generated Role
+==============
+  Role                  : svc-webapp-deploy-custom-role
+  Status                : Pending review
+  Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
+  Original Role         : Contributor (Subscription)
+  Suggested Scope       : rg-webapp-prod (Resource Group)
+  Actions               : 12
+  Baseline read actions : Included
+  Rare / Review Actions (2) - used fewer than 3 times, confirm before keeping them in the role:
+    - Microsoft.Web/sites/backup/action - used once, 70 days ago
+    - Microsoft.Web/sites/delete - used once, 85 days ago
+  Role definition (JSON):
+    {
+      "Name": "svc-webapp-deploy-custom-role",
+      "IsCustom": true,
+      "Description": "Least-privilege role generated by SecureShift Cloud Governance for svc-webapp-deploy",
+      "Actions": [
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Web/sites/config/write",
+        "Microsoft.Web/sites/restart/action",
+        "Microsoft.Web/sites/slots/write",
+        "Microsoft.Web/sites/write",
+        "Microsoft.Insights/components/read",
+        "Microsoft.Resources/deployments/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Web/serverfarms/read",
+        "Microsoft.Web/sites/config/read",
+        "Microsoft.Web/sites/read",
+        "Microsoft.Web/sites/slots/read"
+      ],
+      "NotActions": [],
+      "AssignableScopes": [
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-webapp-prod"
+      ]
+    }
+  Azure CLI: az role definition create --role-definition svc-webapp-deploy-custom-role.json
+  1. Mark as Reviewed
+  2. Exclude baseline read actions
+  3. Save role JSON file
+  0. Back
+Choose: 0
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: 1
+
+Identity - Web App Deploy Pipeline
+----------------------------------
+  Display Name    : Web App Deploy Pipeline
+  User Name       : svc-webapp-deploy
+  Type            : Service Principal
+  Current Role    : Contributor
+  Scope           : Subscription
+  Analysis Period : 08/12/2026 - 11/09/2026
+  Suggested Scope : rg-webapp-prod (Resource Group)
+  Risk Score      : 91 / 100 · HIGH
+
+Why this score
+--------------
+Signal                    Value                                    Weight
+------------------------  ---------------------------------------  ------
+Unused permission ratio   82%                                      50%
+Unused high-risk actions  20                                       30%
+Scope breadth             Subscription (work in 1 resource group)  20%
+  Granted : 76
+  Used    : 14
+  Unused  : 62
+
+Permissions Used (14 of 76)
+---------------------------
+Action                                                 First Seen  Last Seen   Events  Resource Group
+-----------------------------------------------------  ----------  ----------  ------  --------------
+Microsoft.Web/sites/read                               08/14/2026  11/09/2026     212  rg-webapp-prod
+Microsoft.Web/sites/config/read                        08/14/2026  11/09/2026     140  rg-webapp-prod
+Microsoft.Resources/subscriptions/resourceGroups/read  08/14/2026  11/09/2026      88  rg-webapp-prod
+Microsoft.Web/serverfarms/read                         08/15/2026  11/09/2026      64  rg-webapp-prod
+Microsoft.Resources/deployments/read                   08/14/2026  11/09/2026      52  rg-webapp-prod
+Microsoft.Resources/deployments/write                  08/14/2026  11/09/2026      52  rg-webapp-prod
+Microsoft.Web/sites/write                              08/14/2026  11/09/2026      46  rg-webapp-prod
+Microsoft.Web/sites/config/write                       08/14/2026  11/09/2026      31  rg-webapp-prod
+Microsoft.Insights/components/read                     08/18/2026  11/09/2026      27  rg-webapp-prod
+Microsoft.Web/sites/slots/read                         08/20/2026  11/08/2026      18  rg-webapp-prod
+Microsoft.Web/sites/slots/write                        08/20/2026  11/08/2026      18  rg-webapp-prod
+Microsoft.Web/sites/restart/action                     09/01/2026  11/07/2026       9  rg-webapp-prod
+Microsoft.Web/sites/backup/action                      08/31/2026  08/31/2026       1  rg-webapp-prod
+Microsoft.Web/sites/delete                             08/16/2026  08/16/2026       1  rg-webapp-prod
+
+Unused High-Risk Permissions (20)
+---------------------------------
+  ! Microsoft.Web/serverfarms/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Resources/deployments/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Resources/subscriptions/resourceGroups/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Compute/virtualMachines/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Compute/disks/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Network/virtualNetworks/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Network/networkSecurityGroups/write  (Network, HIGH) - Never used
+  ! Microsoft.Network/networkSecurityGroups/delete  (Network, HIGH) - Never used
+  ! Microsoft.Network/networkSecurityGroups/securityRules/delete  (Network, HIGH) - Never used
+  ! Microsoft.Network/publicIPAddresses/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Storage/storageAccounts/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Storage/storageAccounts/blobServices/containers/delete  (Delete, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/read  (Key Vault, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/write  (Key Vault, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/delete  (Key Vault, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/secrets/read  (Key Vault, HIGH) - Never used
+  ! Microsoft.KeyVault/vaults/secrets/write  (Key Vault, HIGH) - Never used
+  ! Microsoft.Sql/servers/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Sql/servers/databases/delete  (Delete, HIGH) - Never used
+  ! Microsoft.ContainerService/managedClusters/delete  (Delete, HIGH) - Never used
+
+  1. View generated role (svc-webapp-deploy-custom-role)
+  2. Export evidence (JSON file)
+  0. Back
+Choose: 2
+[OK] Saved C:\Demo\SecureShift\exports\svc-webapp-deploy-evidence.json
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: W
+[ERROR] Unknown choice. Type a row number, S, T, R, A, E, C, N, P or 0.
+
+Identities - AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+-------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription         76    14     91  HIGH
+ 2  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify            76     7     84  HIGH
+ 3  Rahul Verma            rahul.verma        User               Owner                Subscription         80    26     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports           76     8     83  HIGH
+ 5  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod       80    10     82  HIGH
+ 6  Etl Service            svc-etl-020        Service Principal  Contributor          rg-etl               76    12     80  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr                76    20     75  HIGH
+ 8  Priya Sharma           priya.sharma       User               Contributor          rg-sales             76    30     69  MEDIUM
+ 9  Neha Kulkarni          neha.kulkarni      User               Network Contributor  rg-network           18    10     48  MEDIUM
+10  AKS Operations Servi…  svc-aks-ops        Service Principal  AKS Contributor      rg-aks               11     5     39  LOW
+Showing 1-10 of 20 identities · Page 1 of 2
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Aarav Mehta? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

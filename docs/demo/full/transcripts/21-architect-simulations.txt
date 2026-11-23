@@ -1,0 +1,417 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: amanjeet.sharma@secureshift.io
+Password: **************
+[OK] Signed in as Amanjeet Sharma (Architect).
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 5
+
+Simulations
+-----------
+#  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+-  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+1  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+2  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+3  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+4  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+5  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+6  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: R
+Assessed application:
+  1. Trade Finance Portal (APP-001, Northwind Bank)
+  2. Payment Gateway (APP-003, Northwind Bank)
+  3. Reporting Hub (APP-005, Northwind Bank)
+  4. HR System (APP-006, Northwind Bank)
+  5. Online Store (APP-007, Contoso Retail)
+  6. Flight Booking (APP-011, Tailspin Airlines)
+  7. Crew Scheduler (APP-012, Tailspin Airlines)
+Choose 1-7 [Trade Finance Portal (APP-001, Northwind Bank)]: 6
+
+Simulation - Flight Booking (APP-011)
+-------------------------------------
+  Technical Debt       : 27 · Low
+  Governance Risk      : 85 · High
+  Direct Dependencies  : 1
+  Business Criticality : Critical
+  EMSI                 : 32.33 · Growth
+Modernization strategy:
+  1. Rehost - Move as-is to the cloud
+  2. Replatform - Small changes to use a managed platform
+  3. Refactor - Restructure the code for the cloud
+  4. Rebuild - Rewrite the application from scratch
+Choose 1-4 [Refactor - Restructure the code for the cloud]: 1
+[OK] Simulation SIM-007 complete: Medium risk
+
+SIM-007 · Flight Booking · Rehost
+---------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 25
+  Modernization Risk : 46 · Medium
+  Estimated Effort   : 13 weeks
+  Estimated Cost     : ₹9.71 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Create Plan from this simulation
+  2. Discard / Modify (delete this simulation and run again)
+  0. Back
+Choose: 0
+
+Simulations
+-----------
+#  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+-  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+1  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+2  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+3  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+4  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+5  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+6  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+7  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: R
+Assessed application:
+  1. Trade Finance Portal (APP-001, Northwind Bank)
+  2. Payment Gateway (APP-003, Northwind Bank)
+  3. Reporting Hub (APP-005, Northwind Bank)
+  4. HR System (APP-006, Northwind Bank)
+  5. Online Store (APP-007, Contoso Retail)
+  6. Flight Booking (APP-011, Tailspin Airlines)
+  7. Crew Scheduler (APP-012, Tailspin Airlines)
+Choose 1-7 [Trade Finance Portal (APP-001, Northwind Bank)]: 6
+
+Simulation - Flight Booking (APP-011)
+-------------------------------------
+  Technical Debt       : 27 · Low
+  Governance Risk      : 85 · High
+  Direct Dependencies  : 1
+  Business Criticality : Critical
+  EMSI                 : 32.33 · Growth
+Modernization strategy:
+  1. Rehost - Move as-is to the cloud
+  2. Replatform - Small changes to use a managed platform
+  3. Refactor - Restructure the code for the cloud
+  4. Rebuild - Rewrite the application from scratch
+Choose 1-4 [Refactor - Restructure the code for the cloud]: 2
+[OK] Simulation SIM-008 complete: Medium risk
+
+SIM-008 · Flight Booking · Replatform
+-------------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 50
+  Modernization Risk : 51 · Medium
+  Estimated Effort   : 14 weeks
+  Estimated Cost     : ₹12.68 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Create Plan from this simulation
+  2. Discard / Modify (delete this simulation and run again)
+  0. Back
+Choose: 0
+
+Simulations
+-----------
+#  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+-  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+1  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+2  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+3  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+4  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+5  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+6  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+7  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+8  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: R
+Assessed application:
+  1. Trade Finance Portal (APP-001, Northwind Bank)
+  2. Payment Gateway (APP-003, Northwind Bank)
+  3. Reporting Hub (APP-005, Northwind Bank)
+  4. HR System (APP-006, Northwind Bank)
+  5. Online Store (APP-007, Contoso Retail)
+  6. Flight Booking (APP-011, Tailspin Airlines)
+  7. Crew Scheduler (APP-012, Tailspin Airlines)
+Choose 1-7 [Trade Finance Portal (APP-001, Northwind Bank)]: 6
+
+Simulation - Flight Booking (APP-011)
+-------------------------------------
+  Technical Debt       : 27 · Low
+  Governance Risk      : 85 · High
+  Direct Dependencies  : 1
+  Business Criticality : Critical
+  EMSI                 : 32.33 · Growth
+Modernization strategy:
+  1. Rehost - Move as-is to the cloud
+  2. Replatform - Small changes to use a managed platform
+  3. Refactor - Restructure the code for the cloud
+  4. Rebuild - Rewrite the application from scratch
+Choose 1-4 [Refactor - Restructure the code for the cloud]: 
+[OK] Simulation SIM-009 complete: Medium risk
+
+SIM-009 · Flight Booking · Refactor
+-----------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 75
+  Modernization Risk : 56 · Medium
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Create Plan from this simulation
+  2. Discard / Modify (delete this simulation and run again)
+  0. Back
+Choose: 0
+
+Simulations
+-----------
+#  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+-  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+1  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  -
+2  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+3  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+4  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+5  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+6  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+7  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+8  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+9  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: R
+Assessed application:
+  1. Trade Finance Portal (APP-001, Northwind Bank)
+  2. Payment Gateway (APP-003, Northwind Bank)
+  3. Reporting Hub (APP-005, Northwind Bank)
+  4. HR System (APP-006, Northwind Bank)
+  5. Online Store (APP-007, Contoso Retail)
+  6. Flight Booking (APP-011, Tailspin Airlines)
+  7. Crew Scheduler (APP-012, Tailspin Airlines)
+Choose 1-7 [Trade Finance Portal (APP-001, Northwind Bank)]: 6
+
+Simulation - Flight Booking (APP-011)
+-------------------------------------
+  Technical Debt       : 27 · Low
+  Governance Risk      : 85 · High
+  Direct Dependencies  : 1
+  Business Criticality : Critical
+  EMSI                 : 32.33 · Growth
+Modernization strategy:
+  1. Rehost - Move as-is to the cloud
+  2. Replatform - Small changes to use a managed platform
+  3. Refactor - Restructure the code for the cloud
+  4. Rebuild - Rewrite the application from scratch
+Choose 1-4 [Refactor - Restructure the code for the cloud]: 4
+[OK] Simulation SIM-010 complete: Medium risk
+
+SIM-010 · Flight Booking · Rebuild
+----------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 100
+  Modernization Risk : 61 · Medium
+  Estimated Effort   : 19 weeks
+  Estimated Cost     : ₹22.86 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Create Plan from this simulation
+  2. Discard / Modify (delete this simulation and run again)
+  0. Back
+Choose: 2
+[INFO] Simulation discarded. Change the application or strategy and run again.
+
+Simulations
+-----------
+#  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+-  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+1  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  -
+2  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+3  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+4  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+5  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+6  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+7  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+8  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+9  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: R
+Assessed application:
+  1. Trade Finance Portal (APP-001, Northwind Bank)
+  2. Payment Gateway (APP-003, Northwind Bank)
+  3. Reporting Hub (APP-005, Northwind Bank)
+  4. HR System (APP-006, Northwind Bank)
+  5. Online Store (APP-007, Contoso Retail)
+  6. Flight Booking (APP-011, Tailspin Airlines)
+  7. Crew Scheduler (APP-012, Tailspin Airlines)
+Choose 1-7 [Trade Finance Portal (APP-001, Northwind Bank)]: 6
+
+Simulation - Flight Booking (APP-011)
+-------------------------------------
+  Technical Debt       : 27 · Low
+  Governance Risk      : 85 · High
+  Direct Dependencies  : 1
+  Business Criticality : Critical
+  EMSI                 : 32.33 · Growth
+Modernization strategy:
+  1. Rehost - Move as-is to the cloud
+  2. Replatform - Small changes to use a managed platform
+  3. Refactor - Restructure the code for the cloud
+  4. Rebuild - Rewrite the application from scratch
+Choose 1-4 [Refactor - Restructure the code for the cloud]: 4
+[OK] Simulation SIM-011 complete: Medium risk
+
+SIM-011 · Flight Booking · Rebuild
+----------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 100
+  Modernization Risk : 61 · Medium
+  Estimated Effort   : 19 weeks
+  Estimated Cost     : ₹22.86 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Create Plan from this simulation
+  2. Discard / Modify (delete this simulation and run again)
+  0. Back
+Choose: 0
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  -
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  -
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: 4
+
+SIM-007 · Flight Booking · Rehost
+---------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 25
+  Modernization Risk : 46 · Medium
+  Estimated Effort   : 13 weeks
+  Estimated Cost     : ₹9.71 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Create Plan from this simulation
+  2. Discard / Modify (delete this simulation and run again)
+  0. Back
+Choose: 0
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  -
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  -
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: Q
+[ERROR] Type R, a row number or 0.
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  -
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  -
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: 0
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Amanjeet Sharma? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

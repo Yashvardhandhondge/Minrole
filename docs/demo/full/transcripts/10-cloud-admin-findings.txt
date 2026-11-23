@@ -1,0 +1,403 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: aarav.mehta@secureshift.io
+Password: **********
+[OK] Signed in as Aarav Mehta (Cloud Admin).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 6
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                 Unused High-Risk Action                             Category  Last Used  Current Role  Severity
+--  ----  -----------------------  --------------------------------------------------  --------  ---------  ------------  --------
+ 1  F-38  Web App Deploy Pipeline  Microsoft.Web/serverfarms/delete                    Delete    Never      Contributor   HIGH
+ 2  F-39  Web App Deploy Pipeline  Microsoft.Resources/deployments/delete              Delete    Never      Contributor   HIGH
+ 3  F-40  Web App Deploy Pipeline  Microsoft.Resources/subscriptions/resourceGroups/…  Delete    Never      Contributor   HIGH
+ 4  F-41  Web App Deploy Pipeline  Microsoft.Compute/virtualMachines/delete            Delete    Never      Contributor   HIGH
+ 5  F-42  Web App Deploy Pipeline  Microsoft.Compute/disks/delete                      Delete    Never      Contributor   HIGH
+ 6  F-43  Web App Deploy Pipeline  Microsoft.Network/virtualNetworks/delete            Delete    Never      Contributor   HIGH
+ 7  F-44  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/write       Network   Never      Contributor   HIGH
+ 8  F-45  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/delete      Network   Never      Contributor   HIGH
+ 9  F-46  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/securityR…  Network   Never      Contributor   HIGH
+10  F-47  Web App Deploy Pipeline  Microsoft.Network/publicIPAddresses/delete          Delete    Never      Contributor   HIGH
+Showing 1-10 of 186 findings · Page 1 of 19
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: N
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                 Unused High-Risk Action                            Category   Last Used  Current Role  Severity
+--  ----  -----------------------  -------------------------------------------------  ---------  ---------  ------------  --------
+ 1  F-48  Web App Deploy Pipeline  Microsoft.Storage/storageAccounts/delete           Delete     Never      Contributor   HIGH
+ 2  F-49  Web App Deploy Pipeline  Microsoft.Storage/storageAccounts/blobServices/c…  Delete     Never      Contributor   HIGH
+ 3  F-50  Web App Deploy Pipeline  Microsoft.KeyVault/vaults/read                     Key Vault  Never      Contributor   HIGH
+ 4  F-51  Web App Deploy Pipeline  Microsoft.KeyVault/vaults/write                    Key Vault  Never      Contributor   HIGH
+ 5  F-52  Web App Deploy Pipeline  Microsoft.KeyVault/vaults/delete                   Key Vault  Never      Contributor   HIGH
+ 6  F-53  Web App Deploy Pipeline  Microsoft.KeyVault/vaults/secrets/read             Key Vault  Never      Contributor   HIGH
+ 7  F-54  Web App Deploy Pipeline  Microsoft.KeyVault/vaults/secrets/write            Key Vault  Never      Contributor   HIGH
+ 8  F-55  Web App Deploy Pipeline  Microsoft.Sql/servers/delete                       Delete     Never      Contributor   HIGH
+ 9  F-56  Web App Deploy Pipeline  Microsoft.Sql/servers/databases/delete             Delete     Never      Contributor   HIGH
+10  F-57  Web App Deploy Pipeline  Microsoft.ContainerService/managedClusters/delete  Delete     Never      Contributor   HIGH
+Showing 11-20 of 186 findings · Page 2 of 19
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: P
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                 Unused High-Risk Action                             Category  Last Used  Current Role  Severity
+--  ----  -----------------------  --------------------------------------------------  --------  ---------  ------------  --------
+ 1  F-38  Web App Deploy Pipeline  Microsoft.Web/serverfarms/delete                    Delete    Never      Contributor   HIGH
+ 2  F-39  Web App Deploy Pipeline  Microsoft.Resources/deployments/delete              Delete    Never      Contributor   HIGH
+ 3  F-40  Web App Deploy Pipeline  Microsoft.Resources/subscriptions/resourceGroups/…  Delete    Never      Contributor   HIGH
+ 4  F-41  Web App Deploy Pipeline  Microsoft.Compute/virtualMachines/delete            Delete    Never      Contributor   HIGH
+ 5  F-42  Web App Deploy Pipeline  Microsoft.Compute/disks/delete                      Delete    Never      Contributor   HIGH
+ 6  F-43  Web App Deploy Pipeline  Microsoft.Network/virtualNetworks/delete            Delete    Never      Contributor   HIGH
+ 7  F-44  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/write       Network   Never      Contributor   HIGH
+ 8  F-45  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/delete      Network   Never      Contributor   HIGH
+ 9  F-46  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/securityR…  Network   Never      Contributor   HIGH
+10  F-47  Web App Deploy Pipeline  Microsoft.Network/publicIPAddresses/delete          Delete    Never      Contributor   HIGH
+Showing 1-10 of 186 findings · Page 1 of 19
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: K
+Category:
+  1. All
+  2. Delete
+  3. Network
+  4. Key Vault
+  5. Role Assignment
+Choose 1-5: Delete
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: Delete · Identity: All · Severity: All
+ #  ID    Identity                 Unused High-Risk Action                             Category  Last Used  Current Role  Severity
+--  ----  -----------------------  --------------------------------------------------  --------  ---------  ------------  --------
+ 1  F-38  Web App Deploy Pipeline  Microsoft.Web/serverfarms/delete                    Delete    Never      Contributor   HIGH
+ 2  F-39  Web App Deploy Pipeline  Microsoft.Resources/deployments/delete              Delete    Never      Contributor   HIGH
+ 3  F-40  Web App Deploy Pipeline  Microsoft.Resources/subscriptions/resourceGroups/…  Delete    Never      Contributor   HIGH
+ 4  F-41  Web App Deploy Pipeline  Microsoft.Compute/virtualMachines/delete            Delete    Never      Contributor   HIGH
+ 5  F-42  Web App Deploy Pipeline  Microsoft.Compute/disks/delete                      Delete    Never      Contributor   HIGH
+ 6  F-43  Web App Deploy Pipeline  Microsoft.Network/virtualNetworks/delete            Delete    Never      Contributor   HIGH
+ 7  F-47  Web App Deploy Pipeline  Microsoft.Network/publicIPAddresses/delete          Delete    Never      Contributor   HIGH
+ 8  F-48  Web App Deploy Pipeline  Microsoft.Storage/storageAccounts/delete            Delete    Never      Contributor   HIGH
+ 9  F-49  Web App Deploy Pipeline  Microsoft.Storage/storageAccounts/blobServices/co…  Delete    Never      Contributor   HIGH
+10  F-55  Web App Deploy Pipeline  Microsoft.Sql/servers/delete                        Delete    Never      Contributor   HIGH
+Showing 1-10 of 112 findings · Page 1 of 12
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: V
+Severity:
+  1. All
+  2. HIGH
+  3. MEDIUM
+  4. LOW
+Choose 1-4: HIGH
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: Delete · Identity: All · Severity: HIGH
+ #  ID    Identity                 Unused High-Risk Action                             Category  Last Used  Current Role  Severity
+--  ----  -----------------------  --------------------------------------------------  --------  ---------  ------------  --------
+ 1  F-38  Web App Deploy Pipeline  Microsoft.Web/serverfarms/delete                    Delete    Never      Contributor   HIGH
+ 2  F-39  Web App Deploy Pipeline  Microsoft.Resources/deployments/delete              Delete    Never      Contributor   HIGH
+ 3  F-40  Web App Deploy Pipeline  Microsoft.Resources/subscriptions/resourceGroups/…  Delete    Never      Contributor   HIGH
+ 4  F-41  Web App Deploy Pipeline  Microsoft.Compute/virtualMachines/delete            Delete    Never      Contributor   HIGH
+ 5  F-42  Web App Deploy Pipeline  Microsoft.Compute/disks/delete                      Delete    Never      Contributor   HIGH
+ 6  F-43  Web App Deploy Pipeline  Microsoft.Network/virtualNetworks/delete            Delete    Never      Contributor   HIGH
+ 7  F-47  Web App Deploy Pipeline  Microsoft.Network/publicIPAddresses/delete          Delete    Never      Contributor   HIGH
+ 8  F-48  Web App Deploy Pipeline  Microsoft.Storage/storageAccounts/delete            Delete    Never      Contributor   HIGH
+ 9  F-49  Web App Deploy Pipeline  Microsoft.Storage/storageAccounts/blobServices/co…  Delete    Never      Contributor   HIGH
+10  F-55  Web App Deploy Pipeline  Microsoft.Sql/servers/delete                        Delete    Never      Contributor   HIGH
+Showing 1-10 of 25 findings · Page 1 of 3
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: C
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                 Unused High-Risk Action                             Category  Last Used  Current Role  Severity
+--  ----  -----------------------  --------------------------------------------------  --------  ---------  ------------  --------
+ 1  F-38  Web App Deploy Pipeline  Microsoft.Web/serverfarms/delete                    Delete    Never      Contributor   HIGH
+ 2  F-39  Web App Deploy Pipeline  Microsoft.Resources/deployments/delete              Delete    Never      Contributor   HIGH
+ 3  F-40  Web App Deploy Pipeline  Microsoft.Resources/subscriptions/resourceGroups/…  Delete    Never      Contributor   HIGH
+ 4  F-41  Web App Deploy Pipeline  Microsoft.Compute/virtualMachines/delete            Delete    Never      Contributor   HIGH
+ 5  F-42  Web App Deploy Pipeline  Microsoft.Compute/disks/delete                      Delete    Never      Contributor   HIGH
+ 6  F-43  Web App Deploy Pipeline  Microsoft.Network/virtualNetworks/delete            Delete    Never      Contributor   HIGH
+ 7  F-44  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/write       Network   Never      Contributor   HIGH
+ 8  F-45  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/delete      Network   Never      Contributor   HIGH
+ 9  F-46  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/securityR…  Network   Never      Contributor   HIGH
+10  F-47  Web App Deploy Pipeline  Microsoft.Network/publicIPAddresses/delete          Delete    Never      Contributor   HIGH
+Showing 1-10 of 186 findings · Page 1 of 19
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: I
+Identity:
+  1. All
+  2. AKS Operations Service (svc-aks-ops)
+  3. Amit Joshi (amit.joshi)
+  4. Billing Job (Managed) (mi-billing-job)
+  5. Data Pipeline Service (svc-data-pipeline)
+  6. Deepak Shinde (deepak.shinde)
+  7. Etl Service (svc-etl-020)
+  8. GitHub CI Pipeline (svc-github-ci)
+  9. Neha Kulkarni (neha.kulkarni)
+  10. Notify Function (Managed) (mi-notify-func)
+  11. Pooja Patil (pooja.patil)
+  12. Priya Sharma (priya.sharma)
+  13. Rahul Verma (rahul.verma)
+  14. Reports Function (Managed) (mi-reports-func)
+  15. Rohan Desai (rohan.desai)
+  16. Sneha Patil (sneha.patil)
+  17. Web App Deploy Pipeline (svc-webapp-deploy)
+Choose 1-17: 2
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: All · Identity: AKS Operations Service · Severity: All
+#  ID     Identity                Unused High-Risk Action                           Category  Last Used  Current Role     Severity
+-  -----  ----------------------  ------------------------------------------------  --------  ---------  ---------------  --------
+1  F-151  AKS Operations Service  Microsoft.ContainerService/managedClusters/dele…  Delete    Never      AKS Contributor  MEDIUM
+Showing 1-1 of 1 findings · Page 1 of 1
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: C
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                 Unused High-Risk Action                             Category  Last Used  Current Role  Severity
+--  ----  -----------------------  --------------------------------------------------  --------  ---------  ------------  --------
+ 1  F-38  Web App Deploy Pipeline  Microsoft.Web/serverfarms/delete                    Delete    Never      Contributor   HIGH
+ 2  F-39  Web App Deploy Pipeline  Microsoft.Resources/deployments/delete              Delete    Never      Contributor   HIGH
+ 3  F-40  Web App Deploy Pipeline  Microsoft.Resources/subscriptions/resourceGroups/…  Delete    Never      Contributor   HIGH
+ 4  F-41  Web App Deploy Pipeline  Microsoft.Compute/virtualMachines/delete            Delete    Never      Contributor   HIGH
+ 5  F-42  Web App Deploy Pipeline  Microsoft.Compute/disks/delete                      Delete    Never      Contributor   HIGH
+ 6  F-43  Web App Deploy Pipeline  Microsoft.Network/virtualNetworks/delete            Delete    Never      Contributor   HIGH
+ 7  F-44  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/write       Network   Never      Contributor   HIGH
+ 8  F-45  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/delete      Network   Never      Contributor   HIGH
+ 9  F-46  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/securityR…  Network   Never      Contributor   HIGH
+10  F-47  Web App Deploy Pipeline  Microsoft.Network/publicIPAddresses/delete          Delete    Never      Contributor   HIGH
+Showing 1-10 of 186 findings · Page 1 of 19
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: E
+[OK] Saved 186 findings to C:\Demo\SecureShift\exports\high-risk-findings.csv
+
+High-Risk Findings - AN-2026-1115 · Margie Travel
+-------------------------------------------------
+Total Findings 186 · Delete Actions 112 · Network (NSG) 27 · Key Vault 40 · Role Assignment 7
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                 Unused High-Risk Action                             Category  Last Used  Current Role  Severity
+--  ----  -----------------------  --------------------------------------------------  --------  ---------  ------------  --------
+ 1  F-38  Web App Deploy Pipeline  Microsoft.Web/serverfarms/delete                    Delete    Never      Contributor   HIGH
+ 2  F-39  Web App Deploy Pipeline  Microsoft.Resources/deployments/delete              Delete    Never      Contributor   HIGH
+ 3  F-40  Web App Deploy Pipeline  Microsoft.Resources/subscriptions/resourceGroups/…  Delete    Never      Contributor   HIGH
+ 4  F-41  Web App Deploy Pipeline  Microsoft.Compute/virtualMachines/delete            Delete    Never      Contributor   HIGH
+ 5  F-42  Web App Deploy Pipeline  Microsoft.Compute/disks/delete                      Delete    Never      Contributor   HIGH
+ 6  F-43  Web App Deploy Pipeline  Microsoft.Network/virtualNetworks/delete            Delete    Never      Contributor   HIGH
+ 7  F-44  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/write       Network   Never      Contributor   HIGH
+ 8  F-45  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/delete      Network   Never      Contributor   HIGH
+ 9  F-46  Web App Deploy Pipeline  Microsoft.Network/networkSecurityGroups/securityR…  Network   Never      Contributor   HIGH
+10  F-47  Web App Deploy Pipeline  Microsoft.Network/publicIPAddresses/delete          Delete    Never      Contributor   HIGH
+Showing 1-10 of 186 findings · Page 1 of 19
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: A
+Analysis:
+  1. AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+  2. AN-2026-1110 · Northwind Traders · 08/12/2026 - 11/09/2026
+  3. AN-2026-1103 · Northwind Traders · 08/05/2026 - 11/02/2026
+  4. AN-2026-1027 · Contoso Retail · 09/27/2026 - 10/26/2026
+  5. AN-2026-1020 · Fabrikam Logistics · 07/22/2026 - 10/19/2026
+Choose 1-5 [AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026]: 2
+
+High-Risk Findings - AN-2026-1110 · Northwind Traders
+-----------------------------------------------------
+Total Findings 37 · Delete Actions 14 · Network (NSG) 8 · Key Vault 7 · Role Assignment 8
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                    Unused High-Risk Action                   Category         Last Used  Current Role  Severity
+--  ----  --------------------------  ----------------------------------------  ---------------  ---------  ------------  --------
+ 1  F-1   Web App Deploy Pipeline     Microsoft.Compute/virtualMachines/delete  Delete           Never      Contributor   HIGH
+ 2  F-2   Web App Deploy Pipeline     Microsoft.Network/networkSecurityGroups…  Network          Never      Contributor   HIGH
+ 3  F-3   Rahul Verma                 Microsoft.Authorization/roleAssignments…  Role Assignment  Never      Owner         HIGH
+ 4  F-4   Rahul Verma                 Microsoft.KeyVault/vaults/write           Key Vault        Never      Owner         HIGH
+ 5  F-5   Priya Sharma                Microsoft.Sql/servers/databases/delete    Delete           Never      Contributor   HIGH
+ 6  F-6   Reports Function (Managed)  Microsoft.Storage/storageAccounts/delete  Delete           Never      Contributor   MEDIUM
+ 7  F-7   Web App Deploy Pipeline     Microsoft.Compute/disks/delete            Delete           Never      Contributor   MEDIUM
+ 8  F-8   Rahul Verma                 Microsoft.Network/virtualNetworks/delete  Delete           Never      Owner         HIGH
+ 9  F-9   Priya Sharma                Microsoft.Network/networkSecurityGroups…  Network          Never      Contributor   HIGH
+10  F-10  Reports Function (Managed)  Microsoft.KeyVault/vaults/secrets/write   Key Vault        Never      Contributor   MEDIUM
+Showing 1-10 of 37 findings · Page 1 of 4
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: 1
+
+Identity - Web App Deploy Pipeline
+----------------------------------
+  Display Name    : Web App Deploy Pipeline
+  User Name       : svc-webapp-deploy
+  Type            : Service Principal
+  Current Role    : Contributor
+  Scope           : Subscription
+  Analysis Period : 08/12/2026 - 11/09/2026
+  Suggested Scope : rg-webapp-prod (Resource Group)
+  Risk Score      : 91 / 100 · HIGH
+
+Why this score
+--------------
+Signal                    Value                                    Weight
+------------------------  ---------------------------------------  ------
+Unused permission ratio   99%                                      50%
+Unused high-risk actions  7                                        30%
+Scope breadth             Subscription (work in 1 resource group)  20%
+  Granted : 1,850
+  Used    : 12
+  Unused  : 1,838
+
+Permissions Used (12 of 1,850)
+------------------------------
+Action                                                 First Seen  Last Seen   Events  Resource Group
+-----------------------------------------------------  ----------  ----------  ------  --------------
+Microsoft.Web/sites/read                               08/14/2026  11/10/2026     212  rg-webapp-prod
+Microsoft.Web/sites/config/read                        08/14/2026  11/10/2026     140  rg-webapp-prod
+Microsoft.Resources/subscriptions/resourceGroups/read  08/14/2026  11/10/2026      88  rg-webapp-prod
+Microsoft.Web/serverfarms/read                         08/15/2026  11/09/2026      64  rg-webapp-prod
+Microsoft.Resources/deployments/read                   08/14/2026  11/09/2026      52  rg-webapp-prod
+Microsoft.Resources/deployments/write                  08/14/2026  11/09/2026      52  rg-webapp-prod
+Microsoft.Web/sites/write                              08/14/2026  11/09/2026      46  rg-webapp-prod
+Microsoft.Web/sites/config/write                       08/14/2026  11/09/2026      31  rg-webapp-prod
+Microsoft.Insights/components/read                     08/18/2026  11/09/2026      27  rg-webapp-prod
+Microsoft.Web/sites/slots/read                         08/20/2026  11/08/2026      18  rg-webapp-prod
+Microsoft.Web/sites/slots/write                        08/20/2026  11/08/2026      18  rg-webapp-prod
+Microsoft.Web/sites/restart/action                     09/01/2026  11/07/2026       9  rg-webapp-prod
+
+Unused High-Risk Permissions (6)
+--------------------------------
+  ! Microsoft.Compute/virtualMachines/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Network/networkSecurityGroups/write  (Network, HIGH) - Never used
+  ! Microsoft.Compute/disks/delete  (Delete, MEDIUM) - Never used
+  ! Microsoft.Compute/disks/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Compute/disks/delete  (Delete, HIGH) - Never used
+  ! Microsoft.Compute/disks/delete  (Delete, MEDIUM) - Never used
+
+  1. View generated role (svc-webapp-deploy-custom-role)
+  2. Export evidence (JSON file)
+  0. Back
+Choose: 0
+
+High-Risk Findings - AN-2026-1110 · Northwind Traders
+-----------------------------------------------------
+Total Findings 37 · Delete Actions 14 · Network (NSG) 8 · Key Vault 7 · Role Assignment 8
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                    Unused High-Risk Action                   Category         Last Used  Current Role  Severity
+--  ----  --------------------------  ----------------------------------------  ---------------  ---------  ------------  --------
+ 1  F-1   Web App Deploy Pipeline     Microsoft.Compute/virtualMachines/delete  Delete           Never      Contributor   HIGH
+ 2  F-2   Web App Deploy Pipeline     Microsoft.Network/networkSecurityGroups…  Network          Never      Contributor   HIGH
+ 3  F-3   Rahul Verma                 Microsoft.Authorization/roleAssignments…  Role Assignment  Never      Owner         HIGH
+ 4  F-4   Rahul Verma                 Microsoft.KeyVault/vaults/write           Key Vault        Never      Owner         HIGH
+ 5  F-5   Priya Sharma                Microsoft.Sql/servers/databases/delete    Delete           Never      Contributor   HIGH
+ 6  F-6   Reports Function (Managed)  Microsoft.Storage/storageAccounts/delete  Delete           Never      Contributor   MEDIUM
+ 7  F-7   Web App Deploy Pipeline     Microsoft.Compute/disks/delete            Delete           Never      Contributor   MEDIUM
+ 8  F-8   Rahul Verma                 Microsoft.Network/virtualNetworks/delete  Delete           Never      Owner         HIGH
+ 9  F-9   Priya Sharma                Microsoft.Network/networkSecurityGroups…  Network          Never      Contributor   HIGH
+10  F-10  Reports Function (Managed)  Microsoft.KeyVault/vaults/secrets/write   Key Vault        Never      Contributor   MEDIUM
+Showing 1-10 of 37 findings · Page 1 of 4
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: X
+[ERROR] Unknown choice. Type a row number, K, I, V, A, E, C, N, P or 0.
+
+High-Risk Findings - AN-2026-1110 · Northwind Traders
+-----------------------------------------------------
+Total Findings 37 · Delete Actions 14 · Network (NSG) 8 · Key Vault 7 · Role Assignment 8
+Category: All · Identity: All · Severity: All
+ #  ID    Identity                    Unused High-Risk Action                   Category         Last Used  Current Role  Severity
+--  ----  --------------------------  ----------------------------------------  ---------------  ---------  ------------  --------
+ 1  F-1   Web App Deploy Pipeline     Microsoft.Compute/virtualMachines/delete  Delete           Never      Contributor   HIGH
+ 2  F-2   Web App Deploy Pipeline     Microsoft.Network/networkSecurityGroups…  Network          Never      Contributor   HIGH
+ 3  F-3   Rahul Verma                 Microsoft.Authorization/roleAssignments…  Role Assignment  Never      Owner         HIGH
+ 4  F-4   Rahul Verma                 Microsoft.KeyVault/vaults/write           Key Vault        Never      Owner         HIGH
+ 5  F-5   Priya Sharma                Microsoft.Sql/servers/databases/delete    Delete           Never      Contributor   HIGH
+ 6  F-6   Reports Function (Managed)  Microsoft.Storage/storageAccounts/delete  Delete           Never      Contributor   MEDIUM
+ 7  F-7   Web App Deploy Pipeline     Microsoft.Compute/disks/delete            Delete           Never      Contributor   MEDIUM
+ 8  F-8   Rahul Verma                 Microsoft.Network/virtualNetworks/delete  Delete           Never      Owner         HIGH
+ 9  F-9   Priya Sharma                Microsoft.Network/networkSecurityGroups…  Network          Never      Contributor   HIGH
+10  F-10  Reports Function (Managed)  Microsoft.KeyVault/vaults/secrets/write   Key Vault        Never      Contributor   MEDIUM
+Showing 1-10 of 37 findings · Page 1 of 4
+Type a row number to view the identity, or: K category · I identity · V severity · A other analysis · E export CSV · C clear · N
+next · P previous · 0 back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Aarav Mehta? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

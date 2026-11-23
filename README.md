@@ -19,6 +19,7 @@ The `src/` folder holds the complete console version of SecureShift (all 5 roles
 | know every menu and the exact keys to type | [docs/backend/USER_GUIDE.md](docs/backend/USER_GUIDE.md) |
 | the database commands, the faculty DB, tests, schema changes | [docs/backend/RUNNING.md](docs/backend/RUNNING.md) |
 | give a 10-minute live demo / watch the videos | [docs/demo/DEMO_SCRIPT.md](docs/demo/DEMO_SCRIPT.md), [docs/demo/](docs/demo/) |
+| watch EVERY menu option of every role (the complete walkthrough video, with chapters) | [docs/demo/full/](docs/demo/full/) (release [demo-full](https://github.com/Yashvardhandhondge/Minrole/releases/tag/demo-full)) |
 | the sprint status, decisions and fixed bugs | [docs/backend/PROGRESS.md](docs/backend/PROGRESS.md) |
 
 Quick start (Windows PowerShell, in this folder):

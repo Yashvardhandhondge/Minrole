@@ -1,0 +1,452 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: aarav.mehta@secureshift.io
+Password: **********
+[OK] Signed in as Aarav Mehta (Cloud Admin).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 1
+
+Governance Dashboard
+--------------------
+Welcome back, Aarav Mehta
+Latest analysis complete - Northwind Traders
+128 identities analysed from 90 days of Activity Log (08/12/2026 - 11/09/2026) · AN-2026-1110 · 11/10/2026 09:42 PM
+  Total Identities     : 128
+  Average Score        : 54.00
+  High-Risk Unused     : 37
+  Roles Pending Review : 4
+  Analysis Period      : 08/12/2026 - 11/09/2026 (90 days)
+
+Identities by risk
+------------------
+Risk            Identities
+--------------  ----------  --------------------
+High (70-100)            6  ##..................
+Medium (40-69)          48  #############.......
+Low (0-39)              74  ####################
+
+Top 5 identities to fix
+-----------------------
+Identity                    User Name          Type               Current Role  Scope           Granted  Used  Score  Risk
+--------------------------  -----------------  -----------------  ------------  --------------  -------  ----  -----  ----
+Web App Deploy Pipeline     svc-webapp-deploy  Service Principal  Contributor   Subscription      1,850    12     91  HIGH
+Rahul Verma                 rahul.verma        User               Owner         Subscription      2,100    40     88  HIGH
+GitHub CI Pipeline          svc-github-ci      Service Principal  Owner         rg-webapp-prod    2,100    25     84  HIGH
+Reports Function (Managed)  mi-reports-func    Managed Identity   Contributor   rg-reports        1,850    30     80  HIGH
+Notify Function (Managed)   mi-notify-func     Managed Identity   Contributor   rg-notify         1,850    52     77  HIGH
+
+Average score trend (Northwind Traders)
+---------------------------------------
+Analysis      Period                   Avg Score
+------------  -----------------------  ---------  --------------------
+AN-2026-1103  08/05/2026 - 11/02/2026      57.00  ###########.........
+AN-2026-1110  08/12/2026 - 11/09/2026      54.00  ###########.........
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 2
+
+Companies - 10 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 10 companies · Page 1 of 1
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: S
+Search company name (Enter = no search): contoso
+
+Companies - 10 companies analysed in this workspace
+---------------------------------------------------
+Search: contoso · Risk level: All
+#  Company         Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+-  --------------  ----------  ---------  ----------------  -------------  ----------
+1  Contoso Retail          74      49.00                21  10/27/2026     MEDIUM
+Showing 1-1 of 1 companies · Page 1 of 1
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: C
+
+Companies - 10 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 10 companies · Page 1 of 1
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: R
+Risk level:
+  1. All
+  2. HIGH
+  3. MEDIUM
+  4. LOW
+Choose 1-4: HIGH
+
+Companies - 10 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: HIGH
+#  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+-  ------------------  ----------  ---------  ----------------  -------------  ----------
+1  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+Showing 1-1 of 1 companies · Page 1 of 1
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: C
+
+Companies - 10 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 10 companies · Page 1 of 1
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: A
+
+Add Company Data
+----------------
+Type 'cancel' at any question to go back. After adding, run the Analysis Wizard to upload this company's files.
+Company Name: AB
+[ERROR] Enter at least 3 characters
+Company Name: Margie Travel
+Azure Tenant ID: 1234
+[ERROR] Enter a valid tenant ID
+Azure Tenant ID: 8f2b6c1d-4e5a-4f3b-9c7d-2a1b3c4d5e6f
+Subscriptions [1]: 
+[OK] Margie Travel added. Run the Analysis Wizard next.
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 11 companies · Page 1 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: A
+
+Add Company Data
+----------------
+Type 'cancel' at any question to go back. After adding, run the Analysis Wizard to upload this company's files.
+Company Name: Northwind Traders
+Azure Tenant ID: 9a8b7c6d-1111-2222-3333-444455556666
+Subscriptions [1]: 2
+[ERROR] Company name: This company already exists
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 11 companies · Page 1 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: N
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+#  Company        Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+-  -------------  ----------  ---------  ----------------  -------------  ----------
+1  Margie Travel           0          0                 0  Not analysed   PENDING
+Showing 11-11 of 11 companies · Page 2 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: P
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 11 companies · Page 1 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: 1
+
+Northwind Traders
+-----------------
+  Identities       : 128
+  Average Score    : 54.00
+  High-Risk Unused : 37
+  Last analysis    : AN-2026-1110 on 11/10/2026 09:42 PM
+  Risk level       : MEDIUM
+  Azure Tenant ID  : d4d09c07-07f6-4c71-4a6f-beaa7d6d22bc
+  Subscriptions    : 2
+  1. Run New Analysis
+  2. View Identities
+  0. Back
+Choose: 2
+
+Identities - AN-2026-1110 · Northwind Traders · 08/12/2026 - 11/09/2026
+-----------------------------------------------------------------------
+Search: (none) · Type: All · Risk: All
+ #  Identity               User Name          Type               Current Role         Scope           Granted  Used  Score  Risk
+--  ---------------------  -----------------  -----------------  -------------------  --------------  -------  ----  -----  ------
+ 1  Web App Deploy Pipel…  svc-webapp-deploy  Service Principal  Contributor          Subscription      1,850    12     91  HIGH
+ 2  Rahul Verma            rahul.verma        User               Owner                Subscription      2,100    40     88  HIGH
+ 3  GitHub CI Pipeline     svc-github-ci      Service Principal  Owner                rg-webapp-prod    2,100    25     84  HIGH
+ 4  Reports Function (Ma…  mi-reports-func    Managed Identity   Contributor          rg-reports        1,850    30     80  HIGH
+ 5  Notify Function (Man…  mi-notify-func     Managed Identity   Contributor          rg-notify         1,850    52     77  HIGH
+ 6  Priya Sharma           priya.sharma       User               Contributor          rg-sales          1,850    95     71  HIGH
+ 7  Amit Joshi             amit.joshi         User               Contributor          rg-hr             1,850   210     66  MEDIUM
+ 8  Crm Function (Manage…  mi-crm-113         Managed Identity   Contributor          rg-crm              210    66     65  MEDIUM
+ 9  Hr Service             svc-hr-104         Service Principal  Website Contributor  rg-hr               320   101     65  MEDIUM
+10  Hr Service             svc-hr-032         Service Principal  Website Contributor  rg-hr               140    44     65  MEDIUM
+Showing 1-10 of 128 identities · Page 1 of 13
+Type a row number to open an identity, or: S search · T type · R risk · A other analysis · E export CSV · C clear · N next · P
+previous · 0 back
+Choose: 0
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 11 companies · Page 1 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: 4
+
+Tailspin Airlines
+-----------------
+  Identities       : 0
+  Average Score    : 0.00
+  High-Risk Unused : 0
+  Last analysis    : Not analysed
+  Risk level       : PENDING
+  Azure Tenant ID  : 4323d38c-658e-905f-d9c6-1a15a074cda8
+  Subscriptions    : 1
+  1. Run New Analysis
+  2. View Identities
+  0. Back
+Choose: 2
+[ERROR] Tailspin Airlines has no analysis yet. Run the Analysis Wizard first.
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 11 companies · Page 1 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: 2
+
+Contoso Retail
+--------------
+  Identities       : 74
+  Average Score    : 49.00
+  High-Risk Unused : 21
+  Last analysis    : AN-2026-1027 on 10/27/2026 04:35 PM
+  Risk level       : MEDIUM
+  Azure Tenant ID  : 317ae58c-152a-72e8-4be9-2939ff262354
+  Subscriptions    : 3
+  1. Run New Analysis
+  2. View Identities
+  0. Back
+Choose: 0
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 11 companies · Page 1 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: Q
+[ERROR] Unknown choice. Type a row number, A, S, R, C, N, P or 0.
+
+Companies - 11 companies analysed in this workspace
+---------------------------------------------------
+Search: (none) · Risk level: All
+ #  Company             Identities  Avg Score  High-Risk Unused  Last Analysis  Risk Level
+--  ------------------  ----------  ---------  ----------------  -------------  ----------
+ 1  Northwind Traders          128      54.00                37  11/10/2026     MEDIUM
+ 2  Contoso Retail              74      49.00                21  10/27/2026     MEDIUM
+ 3  Fabrikam Logistics          91      62.00                30  10/20/2026     HIGH
+ 4  Tailspin Airlines            0          0                 0  Not analysed   PENDING
+ 5  Adventure Works              0          0                 0  Not analysed   PENDING
+ 6  Litware Health               0          0                 0  Not analysed   PENDING
+ 7  Proseware Finance            0          0                 0  Not analysed   PENDING
+ 8  Wingtip Media                0          0                 0  Not analysed   PENDING
+ 9  Fourth Coffee                0          0                 0  Not analysed   PENDING
+10  Woodgrove Bank               0          0                 0  Not analysed   PENDING
+Showing 1-10 of 11 companies · Page 1 of 2
+Type a row number to open a company, or: A add company · S search · R risk filter · C clear · N next · P previous · 0 back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 99
+[ERROR] Type a number from 0 to 13.
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (1 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Aarav Mehta? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

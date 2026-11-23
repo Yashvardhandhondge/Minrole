@@ -69,8 +69,11 @@ tests/SecureShift.Tests/       xUnit, runs in CI against a real Postgres (Phase2
 tests/e2e/                     phase*.sh: pipe keystrokes into the built app + check the DB with psql (CI runs them all)
 tests/prototype/               prototype-expected.js: runs js/data/*.js in Node -> expected numbers for the C# tests
 samples/governance/            Analysis Wizard input files (+ bad/ for the error demo), made by make-samples.js
-scripts/windows/               setup-postgres-portable.ps1 (no admin, no Docker), stop-postgres.ps1, run.ps1
-docs/demo/                     VHS .tape files, record.ps1, DEMO_SCRIPT.md, the videos (or a release asset link)
+scripts/windows/               setup-postgres-portable.ps1 (no admin, no Docker), stop-postgres.ps1, run.ps1,
+                               make-offline-package.ps1, record-full-demo.ps1 (the complete walkthrough video)
+docs/demo/                     VHS .tape files, record.ps1, DEMO_SCRIPT.md (videos only in GitHub releases)
+docs/demo/full/                complete walkthrough: clips.js (every clip/key/expected text + the 287-option checklist),
+                               tapes/ (generated), transcripts/, sql/, COVERAGE.md, CHAPTERS.md (release demo-full)
 database/postgres/             Postgres scripts (01 create, 02 seed, 03 verify, 04 migration history,
                                migrations/V00x__name.sql, tools/)
 docs/backend/RUNNING.md        beginner guide (PowerShell, simple English)
@@ -192,3 +195,13 @@ Do one phase per session unless the owner says otherwise. Finish each phase with
 - Windows PowerShell 5.1 pipes text as UTF-8 WITH BOM (stripped by SystemConsoleIO) and `Set-Content -Encoding utf8`
   writes a BOM (VHS tapes must be BOM-free). pg_ctl must be started in its own window (Start-Process), or the server
   keeps the caller's output pipe open.
+- Full walkthrough recording (docs/demo/full): edit clips.js, never the tapes. `node docs/demo/full/clips.js dryrun`
+  types the same keys into the real app (SECURESHIFT_CONSOLE_WIDTH=131 makes piped output wrap like the video
+  terminal) and checks every expected text before VHS records anything. VHS facts: FontSize 25 at 1920x1080 with
+  Padding 24 = 131x35; LineHeight cannot be below 1; `Wait+Screen` reads the TOP of the scrollback (useless after the
+  first screen) - wait for the prompt on the cursor line instead; frames ARE recorded during Wait; ScrollUp/ScrollDown
+  show screens taller than 35 rows; typed arrows (→) are lost but the app's own output shows them. A new Admin /
+  Architect session always starts on the first enterprise (choose the enterprise again in each clip).
+  record-full-demo.ps1 gotchas: PowerShell variable names ignore case (a local `$card` IS the `[double]$Card`
+  parameter); ffmpeg drawtext needs `expansion=none` or a `%` in a title breaks it; the RAM monitor counts only the
+  script's own processes (an editor's node.exe once made it report 7.9 GB).

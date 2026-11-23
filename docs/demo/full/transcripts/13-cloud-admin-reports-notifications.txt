@@ -1,0 +1,301 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: aarav.mehta@secureshift.io
+Password: **********
+[OK] Signed in as Aarav Mehta (Cloud Admin).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 10
+
+Reports
+-------
+#  Report ID  Company             Date        Identities  Avg Score  High-Risk
+-  ---------  ------------------  ----------  ----------  ---------  ---------
+1  RPT-1110   Northwind Traders   11/10/2026         128      54.00         37
+2  RPT-1103   Northwind Traders   11/03/2026         126      57.00         41
+3  RPT-1027   Contoso Retail      10/27/2026          74      49.00         21
+4  RPT-1020   Fabrikam Logistics  10/20/2026          91      62.00         30
+Type a row number to preview a report, or: G generate new report · 0 back
+Choose: G
+The report uses the latest analysis for the selected company.
+Company:
+  1. Northwind Traders
+  2. Contoso Retail
+  3. Fabrikam Logistics
+  4. Tailspin Airlines
+  5. Adventure Works
+  6. Litware Health
+  7. Proseware Finance
+  8. Wingtip Media
+  9. Fourth Coffee
+  10. Woodgrove Bank
+  11. Margie Travel
+Choose 1-11: Margie Travel
+[OK] RPT-1111 generated for Margie Travel
+
+Reports
+-------
+#  Report ID  Company             Date        Identities  Avg Score  High-Risk
+-  ---------  ------------------  ----------  ----------  ---------  ---------
+1  RPT-1111   Margie Travel       11/23/2026          20      48.05        186
+2  RPT-1110   Northwind Traders   11/10/2026         128      54.00         37
+3  RPT-1103   Northwind Traders   11/03/2026         126      57.00         41
+4  RPT-1027   Contoso Retail      10/27/2026          74      49.00         21
+5  RPT-1020   Fabrikam Logistics  10/20/2026          91      62.00         30
+Type a row number to preview a report, or: G generate new report · 0 back
+Choose: G
+The report uses the latest analysis for the selected company.
+Company:
+  1. Northwind Traders
+  2. Contoso Retail
+  3. Fabrikam Logistics
+  4. Tailspin Airlines
+  5. Adventure Works
+  6. Litware Health
+  7. Proseware Finance
+  8. Wingtip Media
+  9. Fourth Coffee
+  10. Woodgrove Bank
+  11. Margie Travel
+Choose 1-11: Tailspin Airlines
+[ERROR] Tailspin Airlines has no analysis yet. Run the Analysis Wizard first.
+
+Reports
+-------
+#  Report ID  Company             Date        Identities  Avg Score  High-Risk
+-  ---------  ------------------  ----------  ----------  ---------  ---------
+1  RPT-1111   Margie Travel       11/23/2026          20      48.05        186
+2  RPT-1110   Northwind Traders   11/10/2026         128      54.00         37
+3  RPT-1103   Northwind Traders   11/03/2026         126      57.00         41
+4  RPT-1027   Contoso Retail      10/27/2026          74      49.00         21
+5  RPT-1020   Fabrikam Logistics  10/20/2026          91      62.00         30
+Type a row number to preview a report, or: G generate new report · 0 back
+Choose: 1
+
+Report Preview - RPT-1111
+-------------------------
+Cloud Governance Report · RPT-1111 · Margie Travel · 11/23/2026 · analysis AN-2026-1115
+  Identities       : 20
+  Avg score        : 48.05
+  High-risk unused : 186
+Fix First:
+  1. Web App Deploy Pipeline (svc-webapp-deploy) - score 91 (Contributor)
+  2. Notify Function (Managed) (mi-notify-func) - score 84 (Contributor)
+  3. Rahul Verma (rahul.verma) - score 84 (Owner)
+Score by risk band:
+Band            Identities
+--------------  ----------  --------------------
+High (70-100)            7  #############.......
+Medium (40-69)           2  ####................
+Low (0-39)              11  ####################
+Save the full report as an HTML file (open it in a browser to print)? (y/n): y
+[OK] Saved C:\Demo\SecureShift\exports\RPT-1111.html
+
+Reports
+-------
+#  Report ID  Company             Date        Identities  Avg Score  High-Risk
+-  ---------  ------------------  ----------  ----------  ---------  ---------
+1  RPT-1111   Margie Travel       11/23/2026          20      48.05        186
+2  RPT-1110   Northwind Traders   11/10/2026         128      54.00         37
+3  RPT-1103   Northwind Traders   11/03/2026         126      57.00         41
+4  RPT-1027   Contoso Retail      10/27/2026          74      49.00         21
+5  RPT-1020   Fabrikam Logistics  10/20/2026          91      62.00         30
+Type a row number to preview a report, or: G generate new report · 0 back
+Choose: X
+[ERROR] Unknown choice. Type a row number, G or 0.
+
+Reports
+-------
+#  Report ID  Company             Date        Identities  Avg Score  High-Risk
+-  ---------  ------------------  ----------  ----------  ---------  ---------
+1  RPT-1111   Margie Travel       11/23/2026          20      48.05        186
+2  RPT-1110   Northwind Traders   11/10/2026         128      54.00         37
+3  RPT-1103   Northwind Traders   11/03/2026         126      57.00         41
+4  RPT-1027   Contoso Retail      10/27/2026          74      49.00         21
+5  RPT-1020   Fabrikam Logistics  10/20/2026          91      62.00         30
+Type a row number to preview a report, or: G generate new report · 0 back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 11
+
+Notifications
+-------------
+  * 186 new high-risk unused permissions found   (11/23/2026 09:17 PM)
+  * 17 generated roles are waiting for review   (11/23/2026 09:17 PM)
+  * Analysis AN-2026-1115 completed for Margie Travel   (11/23/2026 09:17 PM)
+  * Analysis AN-2026-1110 completed for Northwind Traders   (11/23/2026 09:16 PM)
+    4 generated roles are waiting for review   (11/22/2026 09:16 PM)
+    7 new high-risk unused permissions found   (11/21/2026 09:16 PM)
+  (* = unread)
+Mark all read? (y/n): y
+[OK] All notifications marked as read (4).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (0 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 12
+
+Profile & Settings
+==================
+Manage your account details, password, notifications and see your recent activity.
+  Full Name    : Aarav Mehta
+  Email        : aarav.mehta@secureshift.io
+  Role         : Cloud Admin
+  Product      : Cloud Governance
+  User ID      : USR-025
+  Phone        : 9811122233
+  Department   : Cloud Security
+  Logged in at : 11/23/2026 09:18 PM
+  1. Edit details (name, phone, department)
+  2. Change password
+  3. My recent activity
+  0. Back
+Choose: 3
+
+My recent activity
+------------------
+Time                 Action            Details
+-------------------  ----------------  ----------------------------------------------------------------------
+11/23/2026 09:18 PM  Report Generated  RPT-1111 · Margie Travel · AN-2026-1115
+11/23/2026 09:18 PM  Logged In         Aarav Mehta · Console session
+11/23/2026 09:18 PM  Logged Out        Aarav Mehta · Console session
+11/23/2026 09:18 PM  Pattern Removed   Microsoft.Sql/servers/*/delete · High-risk pattern
+11/23/2026 09:18 PM  Pattern Enabled   Microsoft.Sql/servers/*/delete · High-risk pattern
+11/23/2026 09:18 PM  Pattern Disabled  Microsoft.Sql/servers/*/delete · High-risk pattern
+11/23/2026 09:18 PM  Pattern Added     Microsoft.Sql/servers/*/delete · High-risk pattern
+11/23/2026 09:18 PM  Patterns Reset    rules.json · Default high-risk patterns restored
+11/23/2026 09:18 PM  Rules Reset       rules.json · Weights 50/30/20, window 90 days, rare < 3, baseline rea…
+11/23/2026 09:18 PM  Rules Updated     rules.json · Weights 40/40/20, window 60 days, rare < 5, baseline rea…
+
+Profile & Settings
+==================
+Manage your account details, password, notifications and see your recent activity.
+  Full Name    : Aarav Mehta
+  Email        : aarav.mehta@secureshift.io
+  Role         : Cloud Admin
+  Product      : Cloud Governance
+  User ID      : USR-025
+  Phone        : 9811122233
+  Department   : Cloud Security
+  Logged in at : 11/23/2026 09:18 PM
+  1. Edit details (name, phone, department)
+  2. Change password
+  3. My recent activity
+  0. Back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (0 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 13
+
+Change Password
+---------------
+Minimum 8 characters with an uppercase letter, a lowercase letter, a number and a special character.
+Current Password: **********
+New Password: ***********
+Confirm New Password: ***********
+[ERROR] Current password: Current password is wrong
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (0 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Aarav Mehta? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

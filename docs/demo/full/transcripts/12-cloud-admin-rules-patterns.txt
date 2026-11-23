@@ -1,0 +1,373 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: aarav.mehta@secureshift.io
+Password: **********
+[OK] Signed in as Aarav Mehta (Cloud Admin).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 8
+
+Rule Settings (rules.json)
+--------------------------
+Signal                          Weight
+------------------------  ------------
+Unused permission ratio            50%
+Unused high-risk actions           30%
+Scope breadth                      20%
+Total                     100% (Valid)
+  Default analysis window       : 90 days
+  Rare action threshold         : used fewer than 3 times
+  Include baseline read actions : Yes
+  Last updated                  : 11/23/2026 09:16 PM by Aarav Mehta
+  1. Edit weights and settings
+  2. View rules.json
+  3. Reset to default
+  0. Back
+Choose: 2
+
+rules.json (current values)
+---------------------------
+{
+  "weights": {
+    "unused": 50,
+    "highRisk": 30,
+    "scope": 20
+  },
+  "patterns": [
+    {
+      "p": "*/delete",
+      "on": true
+    },
+    {
+      "p": "Microsoft.Authorization/*/write",
+      "on": true
+    },
+    {
+      "p": "Microsoft.KeyVault/*",
+      "on": true
+    },
+    {
+      "p": "Microsoft.Network/networkSecurityGroups/write",
+      "on": true
+    }
+  ],
+  "window": "90 days",
+  "baselineRead": true,
+  "rareThreshold": 3
+}
+
+Rule Settings (rules.json)
+--------------------------
+Signal                          Weight
+------------------------  ------------
+Unused permission ratio            50%
+Unused high-risk actions           30%
+Scope breadth                      20%
+Total                     100% (Valid)
+  Default analysis window       : 90 days
+  Rare action threshold         : used fewer than 3 times
+  Include baseline read actions : Yes
+  Last updated                  : 11/23/2026 09:16 PM by Aarav Mehta
+  1. Edit weights and settings
+  2. View rules.json
+  3. Reset to default
+  0. Back
+Choose: 1
+Weights are percentages and must add up to 100. Enter keeps the value in [brackets]. Type 'cancel' to go back.
+Unused permission ratio weight [50]: 50
+Unused high-risk actions weight [30]: 30
+Scope breadth weight [20]: 30
+Total: 110%
+Default analysis window:
+  1. 30 days
+  2. 60 days
+  3. 90 days
+  4. 180 days
+Choose 1-4 [90 days]: 
+Rare action threshold [3]: 
+Include baseline read actions:
+  1. Yes
+  2. No
+Choose 1-2 [Yes]: 
+[ERROR] Weights must add up to 100% before saving
+
+Rule Settings (rules.json)
+--------------------------
+Signal                          Weight
+------------------------  ------------
+Unused permission ratio            50%
+Unused high-risk actions           30%
+Scope breadth                      20%
+Total                     100% (Valid)
+  Default analysis window       : 90 days
+  Rare action threshold         : used fewer than 3 times
+  Include baseline read actions : Yes
+  Last updated                  : 11/23/2026 09:16 PM by Aarav Mehta
+  1. Edit weights and settings
+  2. View rules.json
+  3. Reset to default
+  0. Back
+Choose: 1
+Weights are percentages and must add up to 100. Enter keeps the value in [brackets]. Type 'cancel' to go back.
+Unused permission ratio weight [50]: 101
+[ERROR] Whole number from 0 to 100
+Unused permission ratio weight [50]: 40
+Unused high-risk actions weight [30]: 40
+Scope breadth weight [20]: 20
+Total: 100%
+Default analysis window:
+  1. 30 days
+  2. 60 days
+  3. 90 days
+  4. 180 days
+Choose 1-4 [90 days]: 60 days
+Rare action threshold [3]: 60
+[ERROR] Rare action threshold must be 1 to 50
+Rare action threshold [3]: 5
+Include baseline read actions:
+  1. Yes
+  2. No
+Choose 1-2 [Yes]: No
+[OK] rules.json saved
+
+Rule Settings (rules.json)
+--------------------------
+Signal                          Weight
+------------------------  ------------
+Unused permission ratio            40%
+Unused high-risk actions           40%
+Scope breadth                      20%
+Total                     100% (Valid)
+  Default analysis window       : 60 days
+  Rare action threshold         : used fewer than 5 times
+  Include baseline read actions : No
+  Last updated                  : 11/23/2026 09:18 PM by Aarav Mehta
+  1. Edit weights and settings
+  2. View rules.json
+  3. Reset to default
+  0. Back
+Choose: 3
+Reset to default? All weights, patterns and settings will go back to the default values (y/n): y
+[OK] Rules reset to default
+
+Rule Settings (rules.json)
+--------------------------
+Signal                          Weight
+------------------------  ------------
+Unused permission ratio            50%
+Unused high-risk actions           30%
+Scope breadth                      20%
+Total                     100% (Valid)
+  Default analysis window       : 90 days
+  Rare action threshold         : used fewer than 3 times
+  Include baseline read actions : Yes
+  Last updated                  : 11/23/2026 09:18 PM by Aarav Mehta
+  1. Edit weights and settings
+  2. View rules.json
+  3. Reset to default
+  0. Back
+Choose: 7
+[ERROR] Type 1, 2, 3 or 0.
+
+Rule Settings (rules.json)
+--------------------------
+Signal                          Weight
+------------------------  ------------
+Unused permission ratio            50%
+Unused high-risk actions           30%
+Scope breadth                      20%
+Total                     100% (Valid)
+  Default analysis window       : 90 days
+  Rare action threshold         : used fewer than 3 times
+  Include baseline read actions : Yes
+  Last updated                  : 11/23/2026 09:18 PM by Aarav Mehta
+  1. Edit weights and settings
+  2. View rules.json
+  3. Reset to default
+  0. Back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 9
+
+High-Risk Patterns (an unused granted action that matches an enabled pattern is a finding)
+------------------------------------------------------------------------------------------
+#  Pattern                                        Enabled
+-  ---------------------------------------------  -------
+1  */delete                                       Yes
+2  Microsoft.Authorization/*/write                Yes
+3  Microsoft.KeyVault/*                           Yes
+4  Microsoft.Network/networkSecurityGroups/write  Yes
+Type a row number to enable/disable or delete a pattern, or: A add pattern · 0 back
+Choose: A
+Use * as a wildcard. Example: Microsoft.Compute/*/delete  (type 'cancel' to go back)
+Pattern: Microsoft.Compute/$all
+[ERROR] Only letters, numbers, . / * - are allowed
+Pattern: Microsoft.Sql/servers/*/delete
+[OK] Pattern added
+
+High-Risk Patterns (an unused granted action that matches an enabled pattern is a finding)
+------------------------------------------------------------------------------------------
+#  Pattern                                        Enabled
+-  ---------------------------------------------  -------
+1  */delete                                       Yes
+2  Microsoft.Authorization/*/write                Yes
+3  Microsoft.KeyVault/*                           Yes
+4  Microsoft.Network/networkSecurityGroups/write  Yes
+5  Microsoft.Sql/servers/*/delete                 Yes
+Type a row number to enable/disable or delete a pattern, or: A add pattern · 0 back
+Choose: A
+Use * as a wildcard. Example: Microsoft.Compute/*/delete  (type 'cancel' to go back)
+Pattern: Microsoft.Sql/servers/*/delete
+[ERROR] This pattern already exists
+Pattern: cancel
+[INFO] Cancelled. Nothing was saved.
+
+High-Risk Patterns (an unused granted action that matches an enabled pattern is a finding)
+------------------------------------------------------------------------------------------
+#  Pattern                                        Enabled
+-  ---------------------------------------------  -------
+1  */delete                                       Yes
+2  Microsoft.Authorization/*/write                Yes
+3  Microsoft.KeyVault/*                           Yes
+4  Microsoft.Network/networkSecurityGroups/write  Yes
+5  Microsoft.Sql/servers/*/delete                 Yes
+Type a row number to enable/disable or delete a pattern, or: A add pattern · 0 back
+Choose: 5
+  1. Disable Microsoft.Sql/servers/*/delete
+  2. Delete Microsoft.Sql/servers/*/delete
+  0. Back
+Choose: 1
+[OK] Pattern disabled
+
+High-Risk Patterns (an unused granted action that matches an enabled pattern is a finding)
+------------------------------------------------------------------------------------------
+#  Pattern                                        Enabled
+-  ---------------------------------------------  -------
+1  */delete                                       Yes
+2  Microsoft.Authorization/*/write                Yes
+3  Microsoft.KeyVault/*                           Yes
+4  Microsoft.Network/networkSecurityGroups/write  Yes
+5  Microsoft.Sql/servers/*/delete                 No
+Type a row number to enable/disable or delete a pattern, or: A add pattern · 0 back
+Choose: 5
+  1. Enable Microsoft.Sql/servers/*/delete
+  2. Delete Microsoft.Sql/servers/*/delete
+  0. Back
+Choose: 1
+[OK] Pattern enabled
+
+High-Risk Patterns (an unused granted action that matches an enabled pattern is a finding)
+------------------------------------------------------------------------------------------
+#  Pattern                                        Enabled
+-  ---------------------------------------------  -------
+1  */delete                                       Yes
+2  Microsoft.Authorization/*/write                Yes
+3  Microsoft.KeyVault/*                           Yes
+4  Microsoft.Network/networkSecurityGroups/write  Yes
+5  Microsoft.Sql/servers/*/delete                 Yes
+Type a row number to enable/disable or delete a pattern, or: A add pattern · 0 back
+Choose: 5
+  1. Disable Microsoft.Sql/servers/*/delete
+  2. Delete Microsoft.Sql/servers/*/delete
+  0. Back
+Choose: 2
+Delete pattern? Remove Microsoft.Sql/servers/*/delete (y/n): y
+[OK] Pattern removed
+
+High-Risk Patterns (an unused granted action that matches an enabled pattern is a finding)
+------------------------------------------------------------------------------------------
+#  Pattern                                        Enabled
+-  ---------------------------------------------  -------
+1  */delete                                       Yes
+2  Microsoft.Authorization/*/write                Yes
+3  Microsoft.KeyVault/*                           Yes
+4  Microsoft.Network/networkSecurityGroups/write  Yes
+Type a row number to enable/disable or delete a pattern, or: A add pattern · 0 back
+Choose: Z
+[ERROR] Unknown choice. Type a row number, A or 0.
+
+High-Risk Patterns (an unused granted action that matches an enabled pattern is a finding)
+------------------------------------------------------------------------------------------
+#  Pattern                                        Enabled
+-  ---------------------------------------------  -------
+1  */delete                                       Yes
+2  Microsoft.Authorization/*/write                Yes
+3  Microsoft.KeyVault/*                           Yes
+4  Microsoft.Network/networkSecurityGroups/write  Yes
+Type a row number to enable/disable or delete a pattern, or: A add pattern · 0 back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Aarav Mehta? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

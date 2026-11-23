@@ -1,0 +1,192 @@
+> # 1. An old (SHA-256) password hash, like the original SQL Server seed data
+> Get-Content C:\Demo\live\04-legacy-hash.sql
+-- Store the Executive's demo password the OLD way: uppercase hex SHA-256 (the format of the SQL Server seed data)
+UPDATE dev."Users"
+   SET "PasswordHash" = upper(encode(sha256(convert_to('Exec@2026', 'UTF8')), 'hex'))
+ WHERE "Email" = 'shivanand.kumatekar@secureshift.io';
+SELECT "Email", left("PasswordHash", 20) || '...' AS "PasswordHash"
+  FROM dev."Users" WHERE "Email" = 'shivanand.kumatekar@secureshift.io';
+> & $psql -h 127.0.0.1 -p 5434 -U postgres -d secureshift -e -f C:\Demo\live\04-legacy-hash.sql
+UPDATE dev."Users"
+   SET "PasswordHash" = upper(encode(sha256(convert_to('Exec@2026', 'UTF8')), 'hex'))
+ WHERE "Email" = 'shivanand.kumatekar@secureshift.io';
+UPDATE 1
+SELECT "Email", left("PasswordHash", 20) || '...' AS "PasswordHash"
+  FROM dev."Users" WHERE "Email" = 'shivanand.kumatekar@secureshift.io';
+               Email                |      PasswordHash       
+------------------------------------+-------------------------
+ shivanand.kumatekar@secureshift.io | 57F1E7675C7FBB982374...
+(1 row)
+
+> # 2. Another executive approves PLAN-001 in psql while this review screen is open
+> function Teammate($file, $seconds) { Start-Process -NoNewWindow powershell -ArgumentList '-NoProfile', '-Command', "Start-Sleep $seconds; & '$psql' -h 127.0.0.1 -p 5434 -U postgres -d secureshift -e -f $file; Write-Host -NoNewline '(psql done) '" }
+> Get-Content C:\Demo\live\05-approve-plan.sql
+-- Another executive (Tejas Pathak, user 3) approves PLAN-001 directly in the database
+UPDATE dev."Plans"
+   SET "Status" = 'Approved', "ExecutiveComment" = 'Approved in the board meeting',
+       "DecidedBy" = 3, "DecidedAt" = CURRENT_TIMESTAMP
+ WHERE "Code" = 'PLAN-001' AND "Status" = 'Submitted';
+> Teammate C:\Demo\live\05-approve-plan.sql
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: shivanand.kumatekar@secureshift.io
+Password: *********
+[INFO] Your password was stored in an old format; it has been upgraded to the new secure format.
+[OK] Signed in as Shivanand Kumatekar (Executive).
+
+Executive · Application Modernization
+=====================================
+Logged in as Shivanand Kumatekar (Executive) · Application Modernization - EMDT
+  1. Plans awaiting review (3)
+  2. All plans (filters)
+  3. Decision history
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 1
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 3
+  Approved Plans  : 2
+  Rejected Plans  : 2
+Showing: Submitted plans (3)
+#  Plan                    ID        Enterprise      Strategy    Risk       Effort  Cost         Submitted By            Status
+-  ----------------------  --------  --------------  ----------  ---------  ------  -----------  ----------------------  ---------
+1  Trade Finance Portal …  PLAN-001  Northwind Bank  Refactor    87 High    22 wk   ₹22.15 lakh  Amanjeet Sharma 11/10…  Submitted
+2  Payment Gateway Repla…  PLAN-002  Northwind Bank  Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/08…  Submitted
+3  Reporting Hub Rehost …  PLAN-003  Northwind Bank  Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/07…  Submitted
+Showing 1-3 of 3 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: 1
+
+Trade Finance Portal Refactor Plan · PLAN-001 · from SIM-001 · Submitted
+------------------------------------------------------------------------
+  Technical Debt     : 95
+  Governance Risk    : 90
+  Dependency Impact  : 83
+  Modernization Risk : 87 · High
+  Strategy           : Refactor
+  Estimated Effort   : 22 weeks
+  Estimated Cost     : ₹22.15 lakh
+  EMSI Category      : Strategic x1.10
+Simulation snapshot (SIM-001, 11/10/2026):
+Item                     Value
+-----------------------  -------------------------
+EMSI score / multiplier  77.87 / x1.10 (Strategic)
+Technical Debt           95
+Governance Risk          90
+Dependency Impact        83
+Strategy Risk            75
+Modernization Risk       87
+Base effort              16.44 wk
+Team size                5
+Person-months            5.08
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹15.24 lakh
+Testing cost (10%)       ₹1.52 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹22.15 lakh
+  Application          : Trade Finance Portal
+  Enterprise           : Northwind Bank
+  Business Criticality : Critical
+  Submitted By         : Amanjeet Sharma (Architect)
+  Submitted On         : 11/10/2026
+  Source               : Simulation SIM-001
+  Executive Comment    : -
+System recommendation: High modernization risk. Use a phased implementation with a parallel run. Stabilise the critical
+dependencies first.
+Architect notes: Refactoring is recommended because the application has high technical debt, critical dependencies and an
+unsupported framework. Use phased implementation.
+Affected systems (4, in the suggested order - most critical dependency first):
+#  System                  Dependency Type  Criticality  Owner
+-  ----------------------  ---------------  -----------  ----------------
+1  Authentication Service  Service          Critical     Customer360
+2  Reporting API           API              High         Reporting Hub
+3  Notification Service    Service          Medium       Customer360
+4  Trade Database          Database         Critical     Same application
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            4
+3  Implementation            45%           10
+4  Testing and Validation    Remaining      5
+Total estimated effort: 22 = 22 weeks
+Waiting for Executive review. Submitted on 11/10/2026. The plan is locked.
+  1. Approve
+  2. Reject (a reason is required)
+  0. Back
+Choose: UPDATE dev."Plans"
+   SET "Status" = 'Approved', "ExecutiveComment" = 'Approved in the board meeting',
+       "DecidedBy" = 3, "DecidedAt" = CURRENT_TIMESTAMP
+ WHERE "Code" = 'PLAN-001' AND "Status" = 'Submitted';
+UPDATE 1
+(psql done) 2
+Reason for rejection (at least 5 characters) []: Budget is frozen
+This decision cannot be changed later.
+Reject Trade Finance Portal Refactor Plan (₹22.15 lakh, 22 weeks)? (y/n): y
+[ERROR] PLAN-001 was already approved. The decision cannot be changed.
+
+Executive Dashboard - Modernization Plans
+-----------------------------------------
+  Awaiting Review : 2
+  Approved Plans  : 3
+  Rejected Plans  : 2
+Showing: Submitted plans (2)
+#  Plan                    ID        Enterprise      Strategy    Risk       Effort  Cost         Submitted By            Status
+-  ----------------------  --------  --------------  ----------  ---------  ------  -----------  ----------------------  ---------
+1  Payment Gateway Repla…  PLAN-002  Northwind Bank  Replatform  70 High    18 wk   ₹15.50 lakh  Amanjeet Sharma 11/08…  Submitted
+2  Reporting Hub Rehost …  PLAN-003  Northwind Bank  Rehost      41 Medium  13 wk   ₹9.71 lakh   Amanjeet Sharma 11/07…  Submitted
+Showing 1-2 of 2 plans · Page 1 of 1
+Type a row number to review / view a plan, or: T status · R risk · E enterprise · C clear · N next · P previous · 0 back
+Choose: 0
+
+Executive · Application Modernization
+=====================================
+Logged in as Shivanand Kumatekar (Executive) · Application Modernization - EMDT
+  1. Plans awaiting review (2)
+  2. All plans (filters)
+  3. Decision history
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Shivanand Kumatekar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+
+> & $psql -h 127.0.0.1 -p 5434 -U postgres -d secureshift -f C:\Demo\live\06-show-plans.sql
+   Code   |  Status   | DecidedBy |                      ExecutiveComment                       
+----------+-----------+-----------+-------------------------------------------------------------
+ PLAN-001 | Approved  |         3 | Approved in the board meeting
+ PLAN-002 | Submitted |           | 
+ PLAN-003 | Submitted |           | 
+ PLAN-004 | Approved  |        14 | Approved. Start after the festive sale.
+ PLAN-005 | Rejected  |        14 | Too costly for this year. Evaluate a SaaS HR product first.
+ PLAN-006 | Draft     |           | 
+ PLAN-007 | Rejected  |        14 | Too costly this year - revisit in Q3
+ PLAN-008 | Approved  |        14 | Approved for the Q1 2027 budget
+(8 rows)
+

@@ -1,0 +1,381 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: aarav.mehta@secureshift.io
+Password: **********
+[OK] Signed in as Aarav Mehta (Cloud Admin).
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 7
+
+Generated Roles - AN-2026-1115 · Margie Travel · 0 of 17 reviewed
+-----------------------------------------------------------------
+ #  Role                           Identity                    Original Role                     Suggested Scope  Actions  Status
+--  -----------------------------  --------------------------  --------------------------------  ---------------  -------  -------
+ 1  svc-webapp-deploy-custom-role  Web App Deploy Pipeline     Contributor (Subscription)        rg-webapp-prod        12  Pending
+ 2  rahul.verma-custom-role        Rahul Verma                 Owner (Subscription)              rg-finance            23  Pending
+ 3  priya.sharma-custom-role       Priya Sharma                Contributor (rg-sales)            rg-sales              27  Pending
+ 4  svc-data-pipeline-custom-role  Data Pipeline Service       Virtual Machine Contributor (rg…  rg-data               14  Pending
+ 5  neha.kulkarni-custom-role      Neha Kulkarni               Network Contributor (rg-network)  rg-network            10  Pending
+ 6  mi-reports-func-custom-role    Reports Function (Managed)  Contributor (rg-reports)          rg-reports             8  Pending
+ 7  amit.joshi-custom-role         Amit Joshi                  Contributor (rg-hr)               rg-hr                 20  Pending
+ 8  svc-aks-ops-custom-role        AKS Operations Service      AKS Contributor (rg-aks)          rg-aks                 4  Pending
+ 9  mi-billing-job-custom-role     Billing Job (Managed)       Storage Blob Data Contributor (…  rg-billing             1  Pending
+10  svc-github-ci-custom-role      GitHub CI Pipeline          Owner (rg-webapp-prod)            rg-webapp-prod         9  Pending
+Showing 1-10 of 17 roles · Page 1 of 2
+Type a row number to open a role, or: A other analysis · N next · P previous · 0 back
+Choose: N
+
+Generated Roles - AN-2026-1115 · Margie Travel · 0 of 17 reviewed
+-----------------------------------------------------------------
+#  Role                        Identity                   Original Role                     Suggested Scope  Actions  Status
+-  --------------------------  -------------------------  --------------------------------  ---------------  -------  -------
+1  rohan.desai-custom-role     Rohan Desai                SQL DB Contributor (rg-data)      rg-data                6  Pending
+2  mi-notify-func-custom-role  Notify Function (Managed)  Contributor (rg-notify)           rg-notify              7  Pending
+3  sneha.patil-custom-role     Sneha Patil                Key Vault Officer (rg-security)   rg-security            3  Pending
+4  deepak.shinde-custom-role   Deepak Shinde              Website Contributor (rg-catalog)  rg-catalog             8  Pending
+5  svc-etl-020-custom-role     Etl Service                Contributor (rg-etl)              rg-etl                12  Pending
+6  mi-search-021-custom-role   Search Function (Managed)  Monitoring Reader (rg-search)     rg-search              4  Pending
+7  pooja.patil-custom-role     Pooja Patil                Reader (rg-crm)                   rg-crm                14  Pending
+Showing 11-17 of 17 roles · Page 2 of 2
+Type a row number to open a role, or: A other analysis · N next · P previous · 0 back
+Choose: P
+
+Generated Roles - AN-2026-1115 · Margie Travel · 0 of 17 reviewed
+-----------------------------------------------------------------
+ #  Role                           Identity                    Original Role                     Suggested Scope  Actions  Status
+--  -----------------------------  --------------------------  --------------------------------  ---------------  -------  -------
+ 1  svc-webapp-deploy-custom-role  Web App Deploy Pipeline     Contributor (Subscription)        rg-webapp-prod        12  Pending
+ 2  rahul.verma-custom-role        Rahul Verma                 Owner (Subscription)              rg-finance            23  Pending
+ 3  priya.sharma-custom-role       Priya Sharma                Contributor (rg-sales)            rg-sales              27  Pending
+ 4  svc-data-pipeline-custom-role  Data Pipeline Service       Virtual Machine Contributor (rg…  rg-data               14  Pending
+ 5  neha.kulkarni-custom-role      Neha Kulkarni               Network Contributor (rg-network)  rg-network            10  Pending
+ 6  mi-reports-func-custom-role    Reports Function (Managed)  Contributor (rg-reports)          rg-reports             8  Pending
+ 7  amit.joshi-custom-role         Amit Joshi                  Contributor (rg-hr)               rg-hr                 20  Pending
+ 8  svc-aks-ops-custom-role        AKS Operations Service      AKS Contributor (rg-aks)          rg-aks                 4  Pending
+ 9  mi-billing-job-custom-role     Billing Job (Managed)       Storage Blob Data Contributor (…  rg-billing             1  Pending
+10  svc-github-ci-custom-role      GitHub CI Pipeline          Owner (rg-webapp-prod)            rg-webapp-prod         9  Pending
+Showing 1-10 of 17 roles · Page 1 of 2
+Type a row number to open a role, or: A other analysis · N next · P previous · 0 back
+Choose: 1
+
+Generated Role
+==============
+  Role                  : svc-webapp-deploy-custom-role
+  Status                : Pending review
+  Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
+  Original Role         : Contributor (Subscription)
+  Suggested Scope       : rg-webapp-prod (Resource Group)
+  Actions               : 12
+  Baseline read actions : Included
+  Rare / Review Actions (2) - used fewer than 3 times, confirm before keeping them in the role:
+    - Microsoft.Web/sites/backup/action - used once, 70 days ago
+    - Microsoft.Web/sites/delete - used once, 85 days ago
+  Role definition (JSON):
+    {
+      "Name": "svc-webapp-deploy-custom-role",
+      "IsCustom": true,
+      "Description": "Least-privilege role generated by SecureShift Cloud Governance for svc-webapp-deploy",
+      "Actions": [
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Web/sites/config/write",
+        "Microsoft.Web/sites/restart/action",
+        "Microsoft.Web/sites/slots/write",
+        "Microsoft.Web/sites/write",
+        "Microsoft.Insights/components/read",
+        "Microsoft.Resources/deployments/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Web/serverfarms/read",
+        "Microsoft.Web/sites/config/read",
+        "Microsoft.Web/sites/read",
+        "Microsoft.Web/sites/slots/read"
+      ],
+      "NotActions": [],
+      "AssignableScopes": [
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-webapp-prod"
+      ]
+    }
+  Azure CLI: az role definition create --role-definition svc-webapp-deploy-custom-role.json
+  1. Mark as Reviewed
+  2. Exclude baseline read actions
+  3. Save role JSON file
+  0. Back
+Choose: 1
+[OK] svc-webapp-deploy-custom-role marked as reviewed
+
+Generated Role
+==============
+  Role                  : svc-webapp-deploy-custom-role
+  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:18 PM
+  Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
+  Original Role         : Contributor (Subscription)
+  Suggested Scope       : rg-webapp-prod (Resource Group)
+  Actions               : 12
+  Baseline read actions : Included
+  Rare / Review Actions (2) - used fewer than 3 times, confirm before keeping them in the role:
+    - Microsoft.Web/sites/backup/action - used once, 70 days ago
+    - Microsoft.Web/sites/delete - used once, 85 days ago
+  Role definition (JSON):
+    {
+      "Name": "svc-webapp-deploy-custom-role",
+      "IsCustom": true,
+      "Description": "Least-privilege role generated by SecureShift Cloud Governance for svc-webapp-deploy",
+      "Actions": [
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Web/sites/config/write",
+        "Microsoft.Web/sites/restart/action",
+        "Microsoft.Web/sites/slots/write",
+        "Microsoft.Web/sites/write",
+        "Microsoft.Insights/components/read",
+        "Microsoft.Resources/deployments/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Web/serverfarms/read",
+        "Microsoft.Web/sites/config/read",
+        "Microsoft.Web/sites/read",
+        "Microsoft.Web/sites/slots/read"
+      ],
+      "NotActions": [],
+      "AssignableScopes": [
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-webapp-prod"
+      ]
+    }
+  Azure CLI: az role definition create --role-definition svc-webapp-deploy-custom-role.json
+  1. Mark as Pending
+  2. Exclude baseline read actions
+  3. Save role JSON file
+  0. Back
+Choose: 2
+[OK] Saved.
+
+Generated Role
+==============
+  Role                  : svc-webapp-deploy-custom-role
+  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:18 PM
+  Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
+  Original Role         : Contributor (Subscription)
+  Suggested Scope       : rg-webapp-prod (Resource Group)
+  Actions               : 5
+  Baseline read actions : Not included
+  Rare / Review Actions (2) - used fewer than 3 times, confirm before keeping them in the role:
+    - Microsoft.Web/sites/backup/action - used once, 70 days ago
+    - Microsoft.Web/sites/delete - used once, 85 days ago
+  Role definition (JSON):
+    {
+      "Name": "svc-webapp-deploy-custom-role",
+      "IsCustom": true,
+      "Description": "Least-privilege role generated by SecureShift Cloud Governance for svc-webapp-deploy",
+      "Actions": [
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Web/sites/config/write",
+        "Microsoft.Web/sites/restart/action",
+        "Microsoft.Web/sites/slots/write",
+        "Microsoft.Web/sites/write"
+      ],
+      "NotActions": [],
+      "AssignableScopes": [
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-webapp-prod"
+      ]
+    }
+  Azure CLI: az role definition create --role-definition svc-webapp-deploy-custom-role.json
+  1. Mark as Pending
+  2. Include baseline read actions
+  3. Save role JSON file
+  0. Back
+Choose: 2
+[OK] Saved.
+
+Generated Role
+==============
+  Role                  : svc-webapp-deploy-custom-role
+  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:18 PM
+  Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
+  Original Role         : Contributor (Subscription)
+  Suggested Scope       : rg-webapp-prod (Resource Group)
+  Actions               : 12
+  Baseline read actions : Included
+  Rare / Review Actions (2) - used fewer than 3 times, confirm before keeping them in the role:
+    - Microsoft.Web/sites/backup/action - used once, 70 days ago
+    - Microsoft.Web/sites/delete - used once, 85 days ago
+  Role definition (JSON):
+    {
+      "Name": "svc-webapp-deploy-custom-role",
+      "IsCustom": true,
+      "Description": "Least-privilege role generated by SecureShift Cloud Governance for svc-webapp-deploy",
+      "Actions": [
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Web/sites/config/write",
+        "Microsoft.Web/sites/restart/action",
+        "Microsoft.Web/sites/slots/write",
+        "Microsoft.Web/sites/write",
+        "Microsoft.Insights/components/read",
+        "Microsoft.Resources/deployments/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Web/serverfarms/read",
+        "Microsoft.Web/sites/config/read",
+        "Microsoft.Web/sites/read",
+        "Microsoft.Web/sites/slots/read"
+      ],
+      "NotActions": [],
+      "AssignableScopes": [
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-webapp-prod"
+      ]
+    }
+  Azure CLI: az role definition create --role-definition svc-webapp-deploy-custom-role.json
+  1. Mark as Pending
+  2. Exclude baseline read actions
+  3. Save role JSON file
+  0. Back
+Choose: 3
+[OK] Saved C:\Demo\SecureShift\exports\svc-webapp-deploy-custom-role.json
+
+Generated Role
+==============
+  Role                  : svc-webapp-deploy-custom-role
+  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:18 PM
+  Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
+  Original Role         : Contributor (Subscription)
+  Suggested Scope       : rg-webapp-prod (Resource Group)
+  Actions               : 12
+  Baseline read actions : Included
+  Rare / Review Actions (2) - used fewer than 3 times, confirm before keeping them in the role:
+    - Microsoft.Web/sites/backup/action - used once, 70 days ago
+    - Microsoft.Web/sites/delete - used once, 85 days ago
+  Role definition (JSON):
+    {
+      "Name": "svc-webapp-deploy-custom-role",
+      "IsCustom": true,
+      "Description": "Least-privilege role generated by SecureShift Cloud Governance for svc-webapp-deploy",
+      "Actions": [
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Web/sites/config/write",
+        "Microsoft.Web/sites/restart/action",
+        "Microsoft.Web/sites/slots/write",
+        "Microsoft.Web/sites/write",
+        "Microsoft.Insights/components/read",
+        "Microsoft.Resources/deployments/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Web/serverfarms/read",
+        "Microsoft.Web/sites/config/read",
+        "Microsoft.Web/sites/read",
+        "Microsoft.Web/sites/slots/read"
+      ],
+      "NotActions": [],
+      "AssignableScopes": [
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-webapp-prod"
+      ]
+    }
+  Azure CLI: az role definition create --role-definition svc-webapp-deploy-custom-role.json
+  1. Mark as Pending
+  2. Exclude baseline read actions
+  3. Save role JSON file
+  0. Back
+Choose: 0
+
+Generated Roles - AN-2026-1115 · Margie Travel · 1 of 17 reviewed
+-----------------------------------------------------------------
+ #  Role                           Identity                    Original Role                    Suggested Scope  Actions  Status
+--  -----------------------------  --------------------------  -------------------------------  ---------------  -------  --------
+ 1  svc-webapp-deploy-custom-role  Web App Deploy Pipeline     Contributor (Subscription)       rg-webapp-prod        12  Reviewed
+ 2  rahul.verma-custom-role        Rahul Verma                 Owner (Subscription)             rg-finance            23  Pending
+ 3  priya.sharma-custom-role       Priya Sharma                Contributor (rg-sales)           rg-sales              27  Pending
+ 4  svc-data-pipeline-custom-role  Data Pipeline Service       Virtual Machine Contributor (r…  rg-data               14  Pending
+ 5  neha.kulkarni-custom-role      Neha Kulkarni               Network Contributor (rg-networ…  rg-network            10  Pending
+ 6  mi-reports-func-custom-role    Reports Function (Managed)  Contributor (rg-reports)         rg-reports             8  Pending
+ 7  amit.joshi-custom-role         Amit Joshi                  Contributor (rg-hr)              rg-hr                 20  Pending
+ 8  svc-aks-ops-custom-role        AKS Operations Service      AKS Contributor (rg-aks)         rg-aks                 4  Pending
+ 9  mi-billing-job-custom-role     Billing Job (Managed)       Storage Blob Data Contributor …  rg-billing             1  Pending
+10  svc-github-ci-custom-role      GitHub CI Pipeline          Owner (rg-webapp-prod)           rg-webapp-prod         9  Pending
+Showing 1-10 of 17 roles · Page 1 of 2
+Type a row number to open a role, or: A other analysis · N next · P previous · 0 back
+Choose: A
+Analysis:
+  1. AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026
+  2. AN-2026-1110 · Northwind Traders · 08/12/2026 - 11/09/2026
+  3. AN-2026-1103 · Northwind Traders · 08/05/2026 - 11/02/2026
+  4. AN-2026-1027 · Contoso Retail · 09/27/2026 - 10/26/2026
+  5. AN-2026-1020 · Fabrikam Logistics · 07/22/2026 - 10/19/2026
+Choose 1-5 [AN-2026-1115 · Margie Travel · 08/12/2026 - 11/09/2026]: 2
+
+Generated Roles - AN-2026-1110 · Northwind Traders · 1 of 5 reviewed
+--------------------------------------------------------------------
+#  Role                           Identity                    Original Role               Suggested Scope  Actions  Status
+-  -----------------------------  --------------------------  --------------------------  ---------------  -------  --------
+1  svc-webapp-deploy-custom-role  Web App Deploy Pipeline     Contributor (Subscription)  rg-webapp-prod        12  Pending
+2  rahul.verma-custom-role        Rahul Verma                 Owner (Subscription)        rg-finance             0  Pending
+3  priya.sharma-custom-role       Priya Sharma                Contributor (rg-sales)      rg-sales               0  Pending
+4  svc-data-pipeline-custom-role  Data Pipeline Service       VM Contributor (rg-data)    rg-data                0  Reviewed
+5  mi-reports-func-custom-role    Reports Function (Managed)  Contributor (rg-reports)    rg-reports             0  Pending
+Showing 1-5 of 5 roles · Page 1 of 1
+Type a row number to open a role, or: A other analysis · N next · P previous · 0 back
+Choose: Q
+[ERROR] Unknown choice. Type a row number, A, N, P or 0.
+
+Generated Roles - AN-2026-1110 · Northwind Traders · 1 of 5 reviewed
+--------------------------------------------------------------------
+#  Role                           Identity                    Original Role               Suggested Scope  Actions  Status
+-  -----------------------------  --------------------------  --------------------------  ---------------  -------  --------
+1  svc-webapp-deploy-custom-role  Web App Deploy Pipeline     Contributor (Subscription)  rg-webapp-prod        12  Pending
+2  rahul.verma-custom-role        Rahul Verma                 Owner (Subscription)        rg-finance             0  Pending
+3  priya.sharma-custom-role       Priya Sharma                Contributor (rg-sales)      rg-sales               0  Pending
+4  svc-data-pipeline-custom-role  Data Pipeline Service       VM Contributor (rg-data)    rg-data                0  Reviewed
+5  mi-reports-func-custom-role    Reports Function (Managed)  Contributor (rg-reports)    rg-reports             0  Pending
+Showing 1-5 of 5 roles · Page 1 of 1
+Type a row number to open a role, or: A other analysis · N next · P previous · 0 back
+Choose: 0
+
+Cloud Admin · Cloud Governance
+==============================
+Logged in as Aarav Mehta (Cloud Admin) · Cloud Governance
+  1. Dashboard
+  2. Companies
+  3. Run Analysis (Analysis Wizard)
+  4. Previous Analyses
+  5. Identities
+  6. High-Risk Findings
+  7. Generated Roles
+  8. Rule Settings
+  9. High-Risk Patterns
+  10. Reports
+  11. Notifications (4 unread)
+  12. My Profile
+  13. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Aarav Mehta? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

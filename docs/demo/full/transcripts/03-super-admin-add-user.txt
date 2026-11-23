@@ -1,0 +1,195 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: arya.mujumdar@secureshift.io
+Password: **********
+[OK] Signed in as Arya Mujumdar (Super Admin).
+
+Super Admin
+===========
+Logged in as Arya Mujumdar (Super Admin) · Application Modernization - EMDT
+  1. Dashboard
+  2. User Management
+  3. Audit Logs
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 2
+
+User Management - Users (24)
+----------------------------
+Search: (none) · Role: All · Status: All
+ #  ID       Full Name      Email                         Phone Number  Role         Status
+--  -------  -------------  ----------------------------  ------------  -----------  --------
+ 1  USR-001  Arya Mujumdar  arya.mujumdar@secureshift.io  9876543210    Super Admin  Active
+ 2  USR-002  Rohan Kapoor   rohan.kapoor@company.com      9876543211    Super Admin  Active
+ 3  USR-003  Tejas Pathak   tejas.pathak@company.com      9876543212    Executive    Active
+ 4  USR-004  Aditya Ghate   aditya.ghate@company.com      9876543213    Admin        Active
+ 5  USR-005  Sonal Shende   sonal.shende@company.com      9876543214    Executive    Active
+ 6  USR-006  Sakshi Patil   sakshi.patil@company.com      9876543215    Architect    Inactive
+ 7  USR-007  Vivek Randive  vivek.randive@company.com     9876543216    Admin        Active
+ 8  USR-008  Aditi Jain     aditi.jain@company.com        9876543217    Executive    Active
+ 9  USR-009  Rohit Kale     rohit.kale@company.com        9876543218    Architect    Inactive
+10  USR-010  Sneha Gupta    sneha.gupta@company.com       9876543219    Admin        Active
+Showing 1-10 of 24 users · Page 1 of 3
+Type a row number (#) to open a user, or: A add user · S search · R role filter · T status filter · C clear · N next · P previous
+· 0 back
+Choose: A
+
+Add New User
+------------
+Type 'cancel' at any question to go back. After the account is created you will see the login details.
+Full Name: Nisha V3rma
+[ERROR] Only letters and single spaces, 3-50 characters
+Full Name: Nisha Verma
+Email: nisha.verma@company
+[ERROR] Enter a valid email (name@domain.com)
+Email: nisha.verma@company.com
+Phone Number: 12345
+[ERROR] Exactly 10 digits, starting with 6, 7, 8 or 9
+Phone Number: 9811223344
+Role:
+  1. Super Admin
+  2. Admin
+  3. Architect
+  4. Executive
+Choose 1-4: 
+[ERROR] Select a role
+Choose 1-4: Architect
+[OK] Nisha Verma created as USR-026.
++--------------------------------------------------------------------------------+
+|  User Created                                                                  |
++--------------------------------------------------------------------------------+
+|  Name               : Nisha Verma                                              |
+|  Role               : Architect                                                |
+|  Email (login)      : nisha.verma@company.com                                  |
+|  Temporary password : Temp@6803x                                               |
+|                                                                                |
+|  Share these details with the user yourself. No email is sent.                 |
+|  The password is shown only once. The user must change it at the first login.  |
++--------------------------------------------------------------------------------+
+
+User Management - Users (25)
+----------------------------
+Search: (none) · Role: All · Status: All
+ #  ID       Full Name      Email                         Phone Number  Role         Status
+--  -------  -------------  ----------------------------  ------------  -----------  --------
+ 1  USR-001  Arya Mujumdar  arya.mujumdar@secureshift.io  9876543210    Super Admin  Active
+ 2  USR-002  Rohan Kapoor   rohan.kapoor@company.com      9876543211    Super Admin  Active
+ 3  USR-003  Tejas Pathak   tejas.pathak@company.com      9876543212    Executive    Active
+ 4  USR-004  Aditya Ghate   aditya.ghate@company.com      9876543213    Admin        Active
+ 5  USR-005  Sonal Shende   sonal.shende@company.com      9876543214    Executive    Active
+ 6  USR-006  Sakshi Patil   sakshi.patil@company.com      9876543215    Architect    Inactive
+ 7  USR-007  Vivek Randive  vivek.randive@company.com     9876543216    Admin        Active
+ 8  USR-008  Aditi Jain     aditi.jain@company.com        9876543217    Executive    Active
+ 9  USR-009  Rohit Kale     rohit.kale@company.com        9876543218    Architect    Inactive
+10  USR-010  Sneha Gupta    sneha.gupta@company.com       9876543219    Admin        Active
+Showing 1-10 of 25 users · Page 1 of 3
+Type a row number (#) to open a user, or: A add user · S search · R role filter · T status filter · C clear · N next · P previous
+· 0 back
+Choose: A
+
+Add New User
+------------
+Type 'cancel' at any question to go back. After the account is created you will see the login details.
+Full Name: Arya Second
+Email: arya.mujumdar@secureshift.io
+Phone Number: 9876501234
+Role:
+  1. Super Admin
+  2. Admin
+  3. Architect
+  4. Executive
+Choose 1-4: Admin
+[ERROR] Email: Email already exists
+
+User Management - Users (25)
+----------------------------
+Search: (none) · Role: All · Status: All
+ #  ID       Full Name      Email                         Phone Number  Role         Status
+--  -------  -------------  ----------------------------  ------------  -----------  --------
+ 1  USR-001  Arya Mujumdar  arya.mujumdar@secureshift.io  9876543210    Super Admin  Active
+ 2  USR-002  Rohan Kapoor   rohan.kapoor@company.com      9876543211    Super Admin  Active
+ 3  USR-003  Tejas Pathak   tejas.pathak@company.com      9876543212    Executive    Active
+ 4  USR-004  Aditya Ghate   aditya.ghate@company.com      9876543213    Admin        Active
+ 5  USR-005  Sonal Shende   sonal.shende@company.com      9876543214    Executive    Active
+ 6  USR-006  Sakshi Patil   sakshi.patil@company.com      9876543215    Architect    Inactive
+ 7  USR-007  Vivek Randive  vivek.randive@company.com     9876543216    Admin        Active
+ 8  USR-008  Aditi Jain     aditi.jain@company.com        9876543217    Executive    Active
+ 9  USR-009  Rohit Kale     rohit.kale@company.com        9876543218    Architect    Inactive
+10  USR-010  Sneha Gupta    sneha.gupta@company.com       9876543219    Admin        Active
+Showing 1-10 of 25 users · Page 1 of 3
+Type a row number (#) to open a user, or: A add user · S search · R role filter · T status filter · C clear · N next · P previous
+· 0 back
+Choose: A
+
+Add New User
+------------
+Type 'cancel' at any question to go back. After the account is created you will see the login details.
+Full Name: cancel
+[INFO] Cancelled. Nothing was saved.
+
+User Management - Users (25)
+----------------------------
+Search: (none) · Role: All · Status: All
+ #  ID       Full Name      Email                         Phone Number  Role         Status
+--  -------  -------------  ----------------------------  ------------  -----------  --------
+ 1  USR-001  Arya Mujumdar  arya.mujumdar@secureshift.io  9876543210    Super Admin  Active
+ 2  USR-002  Rohan Kapoor   rohan.kapoor@company.com      9876543211    Super Admin  Active
+ 3  USR-003  Tejas Pathak   tejas.pathak@company.com      9876543212    Executive    Active
+ 4  USR-004  Aditya Ghate   aditya.ghate@company.com      9876543213    Admin        Active
+ 5  USR-005  Sonal Shende   sonal.shende@company.com      9876543214    Executive    Active
+ 6  USR-006  Sakshi Patil   sakshi.patil@company.com      9876543215    Architect    Inactive
+ 7  USR-007  Vivek Randive  vivek.randive@company.com     9876543216    Admin        Active
+ 8  USR-008  Aditi Jain     aditi.jain@company.com        9876543217    Executive    Active
+ 9  USR-009  Rohit Kale     rohit.kale@company.com        9876543218    Architect    Inactive
+10  USR-010  Sneha Gupta    sneha.gupta@company.com       9876543219    Admin        Active
+Showing 1-10 of 25 users · Page 1 of 3
+Type a row number (#) to open a user, or: A add user · S search · R role filter · T status filter · C clear · N next · P previous
+· 0 back
+Choose: S
+Search name, email or phone (Enter = no search): nisha
+
+User Management - Users (1)
+---------------------------
+Search: nisha · Role: All · Status: All
+#  ID       Full Name    Email                    Phone Number  Role       Status
+-  -------  -----------  -----------------------  ------------  ---------  ------
+1  USR-026  Nisha Verma  nisha.verma@company.com  9811223344    Architect  Active
+Showing 1-1 of 1 users · Page 1 of 1
+Type a row number (#) to open a user, or: A add user · S search · R role filter · T status filter · C clear · N next · P previous
+· 0 back
+Choose: 0
+
+Super Admin
+===========
+Logged in as Arya Mujumdar (Super Admin) · Application Modernization - EMDT
+  1. Dashboard
+  2. User Management
+  3. Audit Logs
+  4. My Profile
+  5. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Arya Mujumdar? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+

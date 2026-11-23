@@ -1,0 +1,405 @@
+> dotnet app\SecureShift.Console.dll
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 1
+
+Login
+-----
+User accounts are managed by SecureShift Administrators.
+Email: amanjeet.sharma@secureshift.io
+Password: **************
+[OK] Signed in as Amanjeet Sharma (Architect).
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 5
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  -
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  -
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: 2
+
+SIM-009 · Flight Booking · Refactor
+-----------------------------------
+  Dependency Impact  : 45 · Medium
+  Strategy Risk      : 75
+  Modernization Risk : 56 · Medium
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+Recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Suggested order (most critical dependency first): Booking Database → Flight Booking
+  1. Create Plan from this simulation
+  2. Discard / Modify (delete this simulation and run again)
+  0. Back
+Choose: 1
+
+Create Plan - from SIM-009
+--------------------------
+  Application        : Flight Booking
+  Strategy           : Refactor
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 56 · Medium
+  Estimated Effort   : 17 weeks
+  Estimated Cost     : ₹17.79 lakh
+Simulation snapshot (SIM-009, 11/23/2026):
+Item                     Value
+-----------------------  ----------------------
+EMSI score / multiplier  32.33 / x1.00 (Growth)
+Technical Debt           27
+Governance Risk          85
+Dependency Impact        45
+Strategy Risk            75
+Modernization Risk       56
+Base effort              12.72 wk
+Team size                5
+Person-months            3.93
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹11.79 lakh
+Testing cost (10%)       ₹1.18 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹17.79 lakh
+System recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+(The phase weeks are calculated from the effort and cannot be edited.)
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            3
+3  Implementation            45%            8
+4  Testing and Validation    Remaining      3
+Total estimated effort: 17 = 17 weeks
+Type 'cancel' at any question to go back. Nothing is saved until you choose Save or Submit.
+Plan name [Flight Booking Refactor Plan]: HR System Rebuild Plan
+[ERROR] A plan with this name already exists
+Plan name [Flight Booking Refactor Plan]: 
+Notes (optional, max 500) []: Phase 1 starts in January
+  1. Save as Draft
+  2. Submit for approval
+  0. Cancel
+Choose: 1
+[OK] PLAN-007 saved as draft
+
+Simulations
+-----------
+ #  ID       Application           Strategy    DI  Modernization Risk  Effort  Cost         Date        Plan
+--  -------  --------------------  ----------  --  ------------------  ------  -----------  ----------  --------
+ 1  SIM-011  Flight Booking        Rebuild     45  61 Medium           19 wk   ₹22.86 lakh  11/23/2026  -
+ 2  SIM-009  Flight Booking        Refactor    45  56 Medium           17 wk   ₹17.79 lakh  11/23/2026  PLAN-007
+ 3  SIM-008  Flight Booking        Replatform  45  51 Medium           14 wk   ₹12.68 lakh  11/23/2026  -
+ 4  SIM-007  Flight Booking        Rehost      45  46 Medium           13 wk   ₹9.71 lakh   11/23/2026  -
+ 5  SIM-001  Trade Finance Portal  Refactor    83  87 High             22 wk   ₹22.15 lakh  11/10/2026  PLAN-001
+ 6  SIM-006  Payment Gateway       Refactor    83  75 High             21 wk   ₹21.29 lakh  11/09/2026  PLAN-006
+ 7  SIM-002  Payment Gateway       Replatform  83  70 High             18 wk   ₹15.50 lakh  11/08/2026  PLAN-002
+ 8  SIM-003  Reporting Hub         Rehost      59  41 Medium           13 wk   ₹9.71 lakh   11/06/2026  PLAN-003
+ 9  SIM-004  Online Store          Replatform  59  54 Medium           14 wk   ₹12.68 lakh  11/04/2026  PLAN-004
+10  SIM-005  HR System             Rebuild     53  72 High             22 wk   ₹26.01 lakh  11/03/2026  PLAN-005
+R run a new simulation · type a row number to open a simulation · 0 back
+Choose: 0
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 6
+
+Create Modernization Plan - choose a simulation
+-----------------------------------------------
+#  Simulation  Application     Strategy    Risk       Effort  Cost
+-  ----------  --------------  ----------  ---------  ------  -----------
+1  SIM-011     Flight Booking  Rebuild     61 Medium  19 wk   ₹22.86 lakh
+2  SIM-008     Flight Booking  Replatform  51 Medium  14 wk   ₹12.68 lakh
+3  SIM-007     Flight Booking  Rehost      46 Medium  13 wk   ₹9.71 lakh
+Simulation number (#), 0 = back: 1
+
+Create Plan - from SIM-011
+--------------------------
+  Application        : Flight Booking
+  Strategy           : Rebuild
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 61 · Medium
+  Estimated Effort   : 19 weeks
+  Estimated Cost     : ₹22.86 lakh
+Simulation snapshot (SIM-011, 11/23/2026):
+Item                     Value
+-----------------------  ----------------------
+EMSI score / multiplier  32.33 / x1.00 (Growth)
+Technical Debt           27
+Governance Risk          85
+Dependency Impact        45
+Strategy Risk            100
+Modernization Risk       61
+Base effort              13.32 wk
+Team size                6
+Person-months            4.39
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹15.80 lakh
+Testing cost (10%)       ₹1.58 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹22.86 lakh
+System recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+(The phase weeks are calculated from the effort and cannot be edited.)
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            4
+3  Implementation            45%            9
+4  Testing and Validation    Remaining      3
+Total estimated effort: 19 = 19 weeks
+Type 'cancel' at any question to go back. Nothing is saved until you choose Save or Submit.
+Plan name [Flight Booking Rebuild Plan]: 
+Notes (optional, max 500) []: Full rewrite on a modern stack
+  1. Save as Draft
+  2. Submit for approval
+  0. Cancel
+Choose: 2
+After submission, this plan will be locked and sent to the Executive for review.
+Submit modernization plan? (y/n): n
+[INFO] Not submitted. Nothing was saved.
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 6
+
+Create Modernization Plan - choose a simulation
+-----------------------------------------------
+#  Simulation  Application     Strategy    Risk       Effort  Cost
+-  ----------  --------------  ----------  ---------  ------  -----------
+1  SIM-011     Flight Booking  Rebuild     61 Medium  19 wk   ₹22.86 lakh
+2  SIM-008     Flight Booking  Replatform  51 Medium  14 wk   ₹12.68 lakh
+3  SIM-007     Flight Booking  Rehost      46 Medium  13 wk   ₹9.71 lakh
+Simulation number (#), 0 = back: 1
+
+Create Plan - from SIM-011
+--------------------------
+  Application        : Flight Booking
+  Strategy           : Rebuild
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 61 · Medium
+  Estimated Effort   : 19 weeks
+  Estimated Cost     : ₹22.86 lakh
+Simulation snapshot (SIM-011, 11/23/2026):
+Item                     Value
+-----------------------  ----------------------
+EMSI score / multiplier  32.33 / x1.00 (Growth)
+Technical Debt           27
+Governance Risk          85
+Dependency Impact        45
+Strategy Risk            100
+Modernization Risk       61
+Base effort              13.32 wk
+Team size                6
+Person-months            4.39
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹15.80 lakh
+Testing cost (10%)       ₹1.58 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹22.86 lakh
+System recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+(The phase weeks are calculated from the effort and cannot be edited.)
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            3
+2  Architecture and Design   20%            4
+3  Implementation            45%            9
+4  Testing and Validation    Remaining      3
+Total estimated effort: 19 = 19 weeks
+Type 'cancel' at any question to go back. Nothing is saved until you choose Save or Submit.
+Plan name [Flight Booking Rebuild Plan]: 
+Notes (optional, max 500) []: Full rewrite on a modern stack
+  1. Save as Draft
+  2. Submit for approval
+  0. Cancel
+Choose: 2
+After submission, this plan will be locked and sent to the Executive for review.
+Submit modernization plan? (y/n): y
+[OK] PLAN-008 submitted for approval
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 6
+
+Create Modernization Plan - choose a simulation
+-----------------------------------------------
+#  Simulation  Application     Strategy    Risk       Effort  Cost
+-  ----------  --------------  ----------  ---------  ------  -----------
+1  SIM-008     Flight Booking  Replatform  51 Medium  14 wk   ₹12.68 lakh
+2  SIM-007     Flight Booking  Rehost      46 Medium  13 wk   ₹9.71 lakh
+Simulation number (#), 0 = back: 1
+
+Create Plan - from SIM-008
+--------------------------
+  Application        : Flight Booking
+  Strategy           : Replatform
+  Technical Debt     : 27
+  Governance Risk    : 85
+  Dependency Impact  : 45
+  Modernization Risk : 51 · Medium
+  Estimated Effort   : 14 weeks
+  Estimated Cost     : ₹12.68 lakh
+Simulation snapshot (SIM-008, 11/23/2026):
+Item                     Value
+-----------------------  ----------------------
+EMSI score / multiplier  32.33 / x1.00 (Growth)
+Technical Debt           27
+Governance Risk          85
+Dependency Impact        45
+Strategy Risk            50
+Modernization Risk       51
+Base effort              12.12 wk
+Team size                4
+Person-months            3.23
+Cost per person-month    ₹0.60 lakh
+Labour cost              ₹7.75 lakh
+Testing cost (10%)       ₹0.78 lakh
+Tools cost               ₹1.00 lakh
+Other fixed cost         ₹1.50 lakh
+Contingency              15%
+Final cost               ₹12.68 lakh
+System recommendation: Moderate risk. Proceed in planned releases with dependency testing at every step.
+Affected systems (1, in the suggested order - most critical dependency first):
+#  System            Dependency Type  Criticality  Owner
+-  ----------------  ---------------  -----------  ----------------
+1  Booking Database  Database         Critical     Same application
+(The phase weeks are calculated from the effort and cannot be edited.)
+Phases:
+#  Phase                     Share      Weeks
+-  ------------------------  ---------  -----
+1  Assessment and Readiness  15%            2
+2  Architecture and Design   20%            3
+3  Implementation            45%            6
+4  Testing and Validation    Remaining      3
+Total estimated effort: 14 = 14 weeks
+Type 'cancel' at any question to go back. Nothing is saved until you choose Save or Submit.
+Plan name [Flight Booking Replatform Plan]: 
+Notes (optional, max 500) []: 
+  1. Save as Draft
+  2. Submit for approval
+  0. Cancel
+Choose: 0
+[INFO] Cancelled. Nothing was saved.
+
+Architect · Application Modernization
+=====================================
+Logged in as Amanjeet Sharma (Architect) · Application Modernization - EMDT
+Current enterprise: Northwind Bank (ENT-001)
+  1. Dashboard
+  2. Choose current enterprise
+  3. Applications (read-only)
+  4. Assessments
+  5. Simulations
+  6. Create Plan
+  7. My Plans
+  8. Digital Twin
+  9. My Profile
+  10. Change Password
+  0. Logout
+Choose: 0
+Are you sure you want to logout, Amanjeet Sharma? (y/n): y
+[OK] You have been logged out. Thank you for using SecureShift.
+
+SECURESHIFT · Modernize · Govern · Secure
+=========================================
+Welcome Back. Sign in to access your SecureShift account.
+  1. Log in
+  2. Forgot password?
+  0. Exit
+Choose: 0
+Goodbye.
+
