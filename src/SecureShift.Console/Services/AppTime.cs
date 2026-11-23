@@ -16,15 +16,21 @@ public static class AppTime
     public static void Configure(string? zoneId) => Zone = Resolve(string.IsNullOrWhiteSpace(zoneId) ? DefaultZoneId : zoneId.Trim());
 
     /// <summary>
-    /// The zone for an id: the id itself (IANA like "Asia/Kolkata" or Windows like "India Standard Time"),
-    /// then its Windows equivalent, then "India Standard Time" (older Windows without IANA ids), finally UTC.
+    /// The zone for an id: the id itself (IANA like "Asia/Kolkata" or Windows like "India Standard Time"), then the
+    /// same zone under its other name (IANA &lt;-&gt; Windows), then "India Standard Time" (older Windows without IANA
+    /// ids). For the India ids a fixed UTC+05:30 zone is the last resort (India has no daylight saving time), so the
+    /// India date is right on every machine; any other unknown id falls back to UTC.
     /// </summary>
     public static TimeZoneInfo Resolve(string zoneId, Func<string, TimeZoneInfo?>? find = null)
     {
         find ??= TryFind;
         var zone = find(zoneId);
         if (zone is null && TimeZoneInfo.TryConvertIanaIdToWindowsId(zoneId, out var windowsId)) zone = find(windowsId);
-        return zone ?? find(WindowsFallbackId) ?? TimeZoneInfo.Utc;
+        if (zone is null && TimeZoneInfo.TryConvertWindowsIdToIanaId(zoneId, out var ianaId)) zone = find(ianaId);
+        zone ??= find(WindowsFallbackId);
+        if (zone is null && (zoneId == DefaultZoneId || zoneId == WindowsFallbackId))
+            zone = TimeZoneInfo.CreateCustomTimeZone(DefaultZoneId, TimeSpan.FromHours(5.5), WindowsFallbackId, WindowsFallbackId);
+        return zone ?? TimeZoneInfo.Utc;
     }
 
     private static TimeZoneInfo? TryFind(string id)
