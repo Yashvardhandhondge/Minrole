@@ -72,7 +72,7 @@ Type "# 5. Start the app"
 Enter
 Type "dotnet $app"
 Enter
-Wait+Screen@30s /Choose:/
+Sleep 5s
 Sleep 2s
 Type "1"
 Enter
@@ -80,7 +80,7 @@ Type "arya.mujumdar@secureshift.io"
 Enter
 Type "Super@2026"
 Enter
-Wait+Screen@20s /Logout/
+Sleep 4s
 Sleep 3s
 Type "0"
 Enter

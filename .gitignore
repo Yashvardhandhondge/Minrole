@@ -17,3 +17,6 @@ appsettings.Local.json
 # Downloaded CI artifacts
 scaffold-output/
 exports/
+# demo GIFs over 10 MB are only in the GitHub release sprint4-demo
+docs/demo/03-admin-modernization.gif
+docs/demo/06-full-workflow.gif

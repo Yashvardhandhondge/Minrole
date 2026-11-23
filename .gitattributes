@@ -3,3 +3,5 @@
 *.tape text eol=lf
 tests/SecureShift.Tests/Data/*.json text eol=lf
 samples/governance/**/*.json text eol=lf
+*.gif binary
+*.mp4 binary

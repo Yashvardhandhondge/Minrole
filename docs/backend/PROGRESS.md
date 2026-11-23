@@ -8,6 +8,8 @@ Read this after CLAUDE.md when a session starts (or after a context reset).
 
 ## Status
 
+**Sprint 4 console app complete** (2026-11-23). PR #2 (sprint4-full -> main) is ready for review, not merged.
+
 | Phase | What | Status |
 |---|---|---|
 | 1 | Foundation (scripts, solution, scaffold, db commands, CI) | DONE (PR #1 merged) |
@@ -15,7 +17,7 @@ Read this after CLAUDE.md when a session starts (or after a context reset).
 | 3 | Cloud Admin – Governance | DONE – CI green run 45057316072 (124 tests, e2e phase2+3 PASS) |
 | 4 | Admin – Modernization | DONE – CI green run 45058221064 (143 tests, e2e phase2-4 PASS) |
 | 5 | Architect + Executive | DONE – CI green run 45059083751 (152 tests, e2e phase2-5 + full workflow PASS) |
-| 6 | Full e2e, manual run, Windows rehearsal, videos, docs | in progress (full workflow e2e DONE) |
+| 6 | Full e2e, manual run, Windows rehearsal, videos, docs | DONE |
 
 ## Phase 6 checklist
 
@@ -23,8 +25,8 @@ Read this after CLAUDE.md when a session starts (or after a context reset).
 - [x] Manual run on Docker Postgres: db setup / status / smoke, every menu of every role, live psql change (bugs 1-4 below fixed)
 - [x] Windows rehearsal from a fresh clone (no Docker): setup-postgres-portable.ps1 -> run.ps1 -SetupOnly -> app (bug 5 fixed)
 - [x] Docs: TCS_LAPTOP_SETUP.md, USER_GUIDE.md, DEMO_SCRIPT.md, RUNNING.md, README.md, CLAUDE.md
-- [ ] Videos 00-06 recorded with VHS (PowerShell) and checked frame by frame
-- [ ] Final CI green, PR description, cleanup (docker compose down -v, stop portable PostgreSQL, temp images)
+- [x] Videos 00-06 recorded with VHS (Windows PowerShell) and checked frame by frame: docs/demo/ + release sprint4-demo
+- [x] Final CI green, PR description, cleanup (docker compose down -v, portable PostgreSQL stopped, no temporary images were pulled)
 
 ## Environment notes (this laptop)
 
@@ -85,6 +87,10 @@ See the list at the end of this file; it is copied into the final report.
 5. setup-postgres-portable.ps1 hung after "server started": the server kept the script's output pipe open.
    Fix: pg_ctl is started in its own hidden window (Start-Process + WaitForExit).
 6. Docker Desktop: Host=localhost timed out (IPv6 ::1). Fix: docs and scripts use 127.0.0.1.
+7. (videos) The live psql change failed: Windows PowerShell 5.1 drops embedded " quotes from native arguments.
+   Fix: the SQL goes through a file (psql -f) in the tape and in DEMO_SCRIPT.md.
+8. (videos) Expand-Archive drew a progress bar over the window (and is slow). Fix: System.IO.Compression.ZipFile.
+9. Cosmetic: decision-history comment column wrapped; plan screens got a "Phases:" heading.
 
 ## Known bugs
 
