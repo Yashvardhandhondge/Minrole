@@ -73,7 +73,7 @@ Choose 1-4: Architect
 |  Name               : Nisha Verma                                              |
 |  Role               : Architect                                                |
 |  Email (login)      : nisha.verma@company.com                                  |
-|  Temporary password : Temp@5133x                                               |
+|  Temporary password : Temp@6803x                                               |
 |                                                                                |
 |  Share these details with the user yourself. No email is sent.                 |
 |  The password is shown only once. The user must change it at the first login.  |

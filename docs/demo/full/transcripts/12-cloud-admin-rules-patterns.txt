@@ -45,7 +45,7 @@ Total                     100% (Valid)
   Default analysis window       : 90 days
   Rare action threshold         : used fewer than 3 times
   Include baseline read actions : Yes
-  Last updated                  : 11/23/2026 09:01 PM by Aarav Mehta
+  Last updated                  : 11/23/2026 09:16 PM by Aarav Mehta
   1. Edit weights and settings
   2. View rules.json
   3. Reset to default
@@ -63,21 +63,19 @@ rules.json (current values)
   "patterns": [
     {
       "p": "*/delete",
-"on": true
+      "on": true
     },
     {
       "p": "Microsoft.Authorization/*/write",
       "on": true
     },
     {
-      "p":
-"Microsoft.KeyVault/*",
+      "p": "Microsoft.KeyVault/*",
       "on": true
     },
     {
       "p": "Microsoft.Network/networkSecurityGroups/write",
-      "on":
-true
+      "on": true
     }
   ],
   "window": "90 days",
@@ -96,7 +94,7 @@ Total                     100% (Valid)
   Default analysis window       : 90 days
   Rare action threshold         : used fewer than 3 times
   Include baseline read actions : Yes
-  Last updated                  : 11/23/2026 09:01 PM by Aarav Mehta
+  Last updated                  : 11/23/2026 09:16 PM by Aarav Mehta
   1. Edit weights and settings
   2. View rules.json
   3. Reset to default
@@ -131,7 +129,7 @@ Total                     100% (Valid)
   Default analysis window       : 90 days
   Rare action threshold         : used fewer than 3 times
   Include baseline read actions : Yes
-  Last updated                  : 11/23/2026 09:01 PM by Aarav Mehta
+  Last updated                  : 11/23/2026 09:16 PM by Aarav Mehta
   1. Edit weights and settings
   2. View rules.json
   3. Reset to default
@@ -170,7 +168,7 @@ Total                     100% (Valid)
   Default analysis window       : 60 days
   Rare action threshold         : used fewer than 5 times
   Include baseline read actions : No
-  Last updated                  : 11/23/2026 09:03 PM by Aarav Mehta
+  Last updated                  : 11/23/2026 09:18 PM by Aarav Mehta
   1. Edit weights and settings
   2. View rules.json
   3. Reset to default
@@ -190,7 +188,7 @@ Total                     100% (Valid)
   Default analysis window       : 90 days
   Rare action threshold         : used fewer than 3 times
   Include baseline read actions : Yes
-  Last updated                  : 11/23/2026 09:03 PM by Aarav Mehta
+  Last updated                  : 11/23/2026 09:18 PM by Aarav Mehta
   1. Edit weights and settings
   2. View rules.json
   3. Reset to default
@@ -209,7 +207,7 @@ Total                     100% (Valid)
   Default analysis window       : 90 days
   Rare action threshold         : used fewer than 3 times
   Include baseline read actions : Yes
-  Last updated                  : 11/23/2026 09:03 PM by Aarav Mehta
+  Last updated                  : 11/23/2026 09:18 PM by Aarav Mehta
   1. Edit weights and settings
   2. View rules.json
   3. Reset to default

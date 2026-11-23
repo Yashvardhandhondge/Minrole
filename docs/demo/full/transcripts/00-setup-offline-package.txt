@@ -9,7 +9,7 @@ Microsoft.WindowsDesktop.App 8.0.34 [C:\Program Files\dotnet\shared\Microsoft.Wi
 Name                                           Length
 ----                                           ------
 postgresql-16.11-1-windows-x64-binaries.zip 324093756
-SecureShift-offline.zip                       3686172
+SecureShift-offline.zip                       3686463
 > Expand-Archive C:\Demo\PenDrive\SecureShift-offline.zip -DestinationPath C:\Demo
 > Copy-Item C:\Demo\PenDrive\postgresql-16.11-1-windows-x64-binaries.zip C:\Demo\SecureShift
 > cd C:\Demo\SecureShift
@@ -156,7 +156,7 @@ Migrations (dev."__SchemaMigrations")
 -------------------------------------
 Version  Name      Script                                                              Applied at (UTC)  By
 -------  --------  ------------------------------------------------------------------  ----------------  --------
-V001     baseline  01_create_secureshift_in_dev.sql + 02_seed_data_postgresql_dev.sql  2026-11-23 15:31  postgres
+V001     baseline  01_create_secureshift_in_dev.sql + 02_seed_data_postgresql_dev.sql  2026-11-23 15:46  postgres
 Pending migration files: none
 
 [OK] All 28 tables, 4 views and 46 foreign keys are present.

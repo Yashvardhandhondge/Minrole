@@ -31,16 +31,16 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: - · To: - · Search: (none)
 Time                 Performed By   Action               Target         Details
 -------------------  -------------  -------------------  -------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Account Activated    Nisha Verma
-11/23/2026 09:02 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
-11/23/2026 09:02 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
-11/23/2026 09:02 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
 Showing 1-10 of 31 log entries · Page 1 of 4
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
 Choose: N
@@ -50,16 +50,16 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: - · To: - · Search: (none)
 Time                 Performed By     Action            Target           Details
 -------------------  ---------------  ----------------  ---------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar    User Created      Nisha Verma      Role: Architect
-11/23/2026 09:02 PM  Arya Mujumdar    Logged In         Arya Mujumdar    Console session
-11/23/2026 09:02 PM  Arya Mujumdar    Logged Out        Arya Mujumdar    Console session
-11/23/2026 09:02 PM  Arya Mujumdar    Logged In         Arya Mujumdar    Console session
-11/23/2026 09:02 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
-11/23/2026 09:02 PM  Mohit Choudhary  Logged In         Mohit Choudhary  Console session
-11/23/2026 09:02 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
-11/23/2026 09:02 PM  Mohit Choudhary  Password Changed  Mohit Choudhary  Temporary password replaced at first lo…
-11/23/2026 09:01 PM  Mohit Choudhary  Logged In         Mohit Choudhary  Console session
-11/23/2026 09:01 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Arya Mujumdar    User Created      Nisha Verma      Role: Architect
+11/23/2026 09:16 PM  Arya Mujumdar    Logged In         Arya Mujumdar    Console session
+11/23/2026 09:16 PM  Arya Mujumdar    Logged Out        Arya Mujumdar    Console session
+11/23/2026 09:16 PM  Arya Mujumdar    Logged In         Arya Mujumdar    Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Logged In         Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Password Changed  Mohit Choudhary  Temporary password replaced at first lo…
+11/23/2026 09:16 PM  Mohit Choudhary  Logged In         Mohit Choudhary  Console session
+11/23/2026 09:16 PM  Mohit Choudhary  Logged Out        Mohit Choudhary  Console session
 Showing 11-20 of 31 log entries · Page 2 of 4
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
 Choose: P
@@ -69,16 +69,16 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: - · To: - · Search: (none)
 Time                 Performed By   Action               Target         Details
 -------------------  -------------  -------------------  -------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Account Activated    Nisha Verma
-11/23/2026 09:02 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
-11/23/2026 09:02 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
-11/23/2026 09:02 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
 Showing 1-10 of 31 log entries · Page 1 of 4
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
 Choose: A
@@ -106,7 +106,7 @@ Audit Logs (newest first)
 Action: User Created · Performed By: All · From: - · To: - · Search: (none)
 Time                 Performed By   Action        Target       Details
 -------------------  -------------  ------------  -----------  ---------------
-11/23/2026 09:02 PM  Arya Mujumdar  User Created  Nisha Verma  Role: Architect
+11/23/2026 09:16 PM  Arya Mujumdar  User Created  Nisha Verma  Role: Architect
 11/11/2026 03:54 PM  Arya Mujumdar  User Created  Rutuja More  Role: Executive
 Showing 1-2 of 2 log entries · Page 1 of 1
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
@@ -126,7 +126,7 @@ Audit Logs (newest first)
 Action: User Created · Performed By: Arya Mujumdar · From: - · To: - · Search: (none)
 Time                 Performed By   Action        Target       Details
 -------------------  -------------  ------------  -----------  ---------------
-11/23/2026 09:02 PM  Arya Mujumdar  User Created  Nisha Verma  Role: Architect
+11/23/2026 09:16 PM  Arya Mujumdar  User Created  Nisha Verma  Role: Architect
 11/11/2026 03:54 PM  Arya Mujumdar  User Created  Rutuja More  Role: Executive
 Showing 1-2 of 2 log entries · Page 1 of 1
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
@@ -137,16 +137,16 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: - · To: - · Search: (none)
 Time                 Performed By   Action               Target         Details
 -------------------  -------------  -------------------  -------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Account Activated    Nisha Verma
-11/23/2026 09:02 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
-11/23/2026 09:02 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
-11/23/2026 09:02 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
 Showing 1-10 of 31 log entries · Page 1 of 4
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
 Choose: D
@@ -160,16 +160,16 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: - · To: - · Search: (none)
 Time                 Performed By   Action               Target         Details
 -------------------  -------------  -------------------  -------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Account Activated    Nisha Verma
-11/23/2026 09:02 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
-11/23/2026 09:02 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
-11/23/2026 09:02 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
 Showing 1-10 of 31 log entries · Page 1 of 4
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
 Choose: D
@@ -182,16 +182,16 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: 11/01/2026 · To: - · Search: (none)
 Time                 Performed By   Action               Target         Details
 -------------------  -------------  -------------------  -------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Account Activated    Nisha Verma
-11/23/2026 09:02 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
-11/23/2026 09:02 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
-11/23/2026 09:02 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
 Showing 1-10 of 31 log entries · Page 1 of 4
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
 Choose: S
@@ -202,9 +202,9 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: 11/01/2026 · To: - · Search: Password
 Time                 Performed By     Action            Target           Details
 -------------------  ---------------  ----------------  ---------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar    Password Reset    Nisha Verma      Temporary password given manually
-11/23/2026 09:02 PM  Mohit Choudhary  Password Changed  Mohit Choudhary  Temporary password replaced at first lo…
-11/23/2026 09:01 PM  Arya Mujumdar    Login Failed      Arya Mujumdar    Wrong password
+11/23/2026 09:17 PM  Arya Mujumdar    Password Reset    Nisha Verma      Temporary password given manually
+11/23/2026 09:16 PM  Mohit Choudhary  Password Changed  Mohit Choudhary  Temporary password replaced at first lo…
+11/23/2026 09:16 PM  Arya Mujumdar    Login Failed      Arya Mujumdar    Wrong password
 11/08/2026 04:15 PM  Arya Mujumdar    Password Reset    Aditi Jain       Temporary password given manually
 Showing 1-4 of 4 log entries · Page 1 of 1
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
@@ -215,16 +215,16 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: - · To: - · Search: (none)
 Time                 Performed By   Action               Target         Details
 -------------------  -------------  -------------------  -------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Account Activated    Nisha Verma
-11/23/2026 09:02 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
-11/23/2026 09:02 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
-11/23/2026 09:02 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
 Showing 1-10 of 31 log entries · Page 1 of 4
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
 Choose: X
@@ -235,16 +235,16 @@ Audit Logs (newest first)
 Action: All · Performed By: All · From: - · To: - · Search: (none)
 Time                 Performed By   Action               Target         Details
 -------------------  -------------  -------------------  -------------  ----------------------------------------
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Account Activated    Nisha Verma
-11/23/2026 09:02 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
-11/23/2026 09:02 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
-11/23/2026 09:02 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
-11/23/2026 09:02 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
-11/23/2026 09:02 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
-11/23/2026 09:02 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Rohan Kapoor   Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Account Activated    Nisha Verma
+11/23/2026 09:17 PM  Arya Mujumdar  Account Deactivated  Nisha Verma    On leave until January
+11/23/2026 09:17 PM  Arya Mujumdar  Password Reset       Nisha Verma    Temporary password given manually
+11/23/2026 09:17 PM  Arya Mujumdar  Role Changed         Nisha Verma    Architect → Admin · Moved to the platfo…
+11/23/2026 09:17 PM  Arya Mujumdar  User Updated         Nisha Verma    Details edited
+11/23/2026 09:17 PM  Arya Mujumdar  Logged In            Arya Mujumdar  Console session
+11/23/2026 09:17 PM  Arya Mujumdar  Logged Out           Arya Mujumdar  Console session
 Showing 1-10 of 31 log entries · Page 1 of 4
 A action filter · U user filter · D date range · S search · C clear · N next · P previous · 0 back
 Choose: 0
@@ -270,7 +270,7 @@ Manage your account details and password.
   User ID      : USR-001
   Phone        : 9876543210
   Department   : Platform Administration
-  Logged in at : 11/23/2026 09:02 PM
+  Logged in at : 11/23/2026 09:17 PM
   1. Edit details (name, phone, department)
   2. Change password
   0. Back

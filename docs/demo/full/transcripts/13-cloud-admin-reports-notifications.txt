@@ -164,12 +164,12 @@ Choose: 11
 
 Notifications
 -------------
-  * 186 new high-risk unused permissions found   (11/23/2026 09:03 PM)
-  * 17 generated roles are waiting for review   (11/23/2026 09:03 PM)
-  * Analysis AN-2026-1115 completed for Margie Travel   (11/23/2026 09:03 PM)
-  * Analysis AN-2026-1110 completed for Northwind Traders   (11/23/2026 09:01 PM)
-    4 generated roles are waiting for review   (11/22/2026 09:01 PM)
-    7 new high-risk unused permissions found   (11/21/2026 09:01 PM)
+  * 186 new high-risk unused permissions found   (11/23/2026 09:17 PM)
+  * 17 generated roles are waiting for review   (11/23/2026 09:17 PM)
+  * Analysis AN-2026-1115 completed for Margie Travel   (11/23/2026 09:17 PM)
+  * Analysis AN-2026-1110 completed for Northwind Traders   (11/23/2026 09:16 PM)
+    4 generated roles are waiting for review   (11/22/2026 09:16 PM)
+    7 new high-risk unused permissions found   (11/21/2026 09:16 PM)
   (* = unread)
 Mark all read? (y/n): y
 [OK] All notifications marked as read (4).
@@ -203,7 +203,7 @@ Manage your account details, password, notifications and see your recent activit
   User ID      : USR-025
   Phone        : 9811122233
   Department   : Cloud Security
-  Logged in at : 11/23/2026 09:03 PM
+  Logged in at : 11/23/2026 09:18 PM
   1. Edit details (name, phone, department)
   2. Change password
   3. My recent activity
@@ -214,16 +214,16 @@ My recent activity
 ------------------
 Time                 Action            Details
 -------------------  ----------------  ----------------------------------------------------------------------
-11/23/2026 09:03 PM  Report Generated  RPT-1111 · Margie Travel · AN-2026-1115
-11/23/2026 09:03 PM  Logged In         Aarav Mehta · Console session
-11/23/2026 09:03 PM  Logged Out        Aarav Mehta · Console session
-11/23/2026 09:03 PM  Pattern Removed   Microsoft.Sql/servers/*/delete · High-risk pattern
-11/23/2026 09:03 PM  Pattern Enabled   Microsoft.Sql/servers/*/delete · High-risk pattern
-11/23/2026 09:03 PM  Pattern Disabled  Microsoft.Sql/servers/*/delete · High-risk pattern
-11/23/2026 09:03 PM  Pattern Added     Microsoft.Sql/servers/*/delete · High-risk pattern
-11/23/2026 09:03 PM  Patterns Reset    rules.json · Default high-risk patterns restored
-11/23/2026 09:03 PM  Rules Reset       rules.json · Weights 50/30/20, window 90 days, rare < 3, baseline rea…
-11/23/2026 09:03 PM  Rules Updated     rules.json · Weights 40/40/20, window 60 days, rare < 5, baseline rea…
+11/23/2026 09:18 PM  Report Generated  RPT-1111 · Margie Travel · AN-2026-1115
+11/23/2026 09:18 PM  Logged In         Aarav Mehta · Console session
+11/23/2026 09:18 PM  Logged Out        Aarav Mehta · Console session
+11/23/2026 09:18 PM  Pattern Removed   Microsoft.Sql/servers/*/delete · High-risk pattern
+11/23/2026 09:18 PM  Pattern Enabled   Microsoft.Sql/servers/*/delete · High-risk pattern
+11/23/2026 09:18 PM  Pattern Disabled  Microsoft.Sql/servers/*/delete · High-risk pattern
+11/23/2026 09:18 PM  Pattern Added     Microsoft.Sql/servers/*/delete · High-risk pattern
+11/23/2026 09:18 PM  Patterns Reset    rules.json · Default high-risk patterns restored
+11/23/2026 09:18 PM  Rules Reset       rules.json · Weights 50/30/20, window 90 days, rare < 3, baseline rea…
+11/23/2026 09:18 PM  Rules Updated     rules.json · Weights 40/40/20, window 60 days, rare < 5, baseline rea…
 
 Profile & Settings
 ==================
@@ -235,7 +235,7 @@ Manage your account details, password, notifications and see your recent activit
   User ID      : USR-025
   Phone        : 9811122233
   Department   : Cloud Security
-  Logged in at : 11/23/2026 09:03 PM
+  Logged in at : 11/23/2026 09:18 PM
   1. Edit details (name, phone, department)
   2. Change password
   3. My recent activity

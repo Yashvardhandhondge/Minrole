@@ -45,9 +45,9 @@ Enter
 Sleep 300ms
 Wait@120s /Choose:\s*$/
 Sleep 1s
-ScrollUp 17
+ScrollUp 15
 Sleep 3s
-ScrollDown 17
+ScrollDown 15
 Sleep 2s
 Type "1"
 Enter

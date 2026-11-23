@@ -143,8 +143,7 @@ Current (temporary) password: ************
 New password: ********
 Confirm new password: ********
 [ERROR] Current password: Current password is wrong
-        New password: Min 8 characters with uppercase, lowercase, number and
-special character
+        New password: Min 8 characters with uppercase, lowercase, number and special character
         Confirm: Passwords do not match
 Current (temporary) password: ************
 New password: ************

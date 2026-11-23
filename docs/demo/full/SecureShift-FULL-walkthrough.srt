@@ -1,0 +1,144 @@
+1
+00:00:00,000 --> 00:00:05,500
+Step 00 – Setup – Setup from zero with the offline package
+Only .NET 8 on the laptop: unzip, PostgreSQL zip from the pen drive, run.ps1, db status, smoke, login screen
+
+2
+00:02:23,760 --> 00:02:29,260
+Step 01 – Login – Login errors and the forced password change
+Wrong number, forgot password, empty / invalid / wrong / unknown login, Inactive user, temporary password must be changed
+
+3
+00:04:16,320 --> 00:04:21,820
+Step 02 – Super Admin – Dashboard and the user list
+Dashboard, users table: next / previous page, search, role + status filters, clear, open a user
+
+4
+00:05:23,840 --> 00:05:29,340
+Step 03 – Super Admin – Add a user: validation, temporary password, duplicate, cancel
+Every field is checked; the temporary password is shown on screen once (no email)
+
+5
+00:06:35,680 --> 00:06:41,180
+Step 04 – Super Admin – User details: edit, role, reset password, deactivate, Super Admin rules
+Edit, change role, reset password (new temporary password), deactivate + activate; a Super Admin and yourself are protected
+
+6
+00:08:09,400 --> 00:08:14,900
+Step 05 – Super Admin – Audit logs with every filter, profile, change password
+Next / previous page, action + user filters, date range (with the From > To error), search, clear
+
+7
+00:09:27,360 --> 00:09:32,860
+Step 06 – Cloud Admin – Dashboard and companies
+Dashboard, companies: search, risk filter, add company (errors + duplicate), paging, company detail
+
+8
+00:11:06,280 --> 00:11:11,780
+Step 07 – Cloud Admin – Analysis Wizard: every input error
+Bad period, missing file, not a .json file, broken JSON, missing fields, wrong JSON shape, cancel before saving
+
+9
+00:13:01,640 --> 00:13:07,140
+Step 08 – Cloud Admin – Analysis Wizard with the 3 JSON paths, results, previous analyses
+Company > Run New Analysis: role assignments (typed path), activity log (full path), roles catalog (Enter = sample) - scores
+
+10
+00:14:07,760 --> 00:14:13,260
+Step 09 – Cloud Admin – Identities and scores
+Paging, search, type + risk filters, CSV export, other analysis, identity detail, generated role, evidence JSON
+
+11
+00:15:47,160 --> 00:15:52,660
+Step 10 – Cloud Admin – High-risk findings with every filter
+Category, severity and identity filters, paging, CSV export, other analysis, open the identity
+
+12
+00:16:56,040 --> 00:17:01,540
+Step 11 – Cloud Admin – Generated least-privilege roles
+Role list, role JSON, mark reviewed, baseline read actions on / off, save the JSON file, other analysis
+
+13
+00:18:11,640 --> 00:18:17,140
+Step 12 – Cloud Admin – Rule settings and high-risk patterns
+rules.json, weights must total 100%, inline errors, reset to default; add / duplicate / disable / enable / delete a pattern
+
+14
+00:19:54,280 --> 00:19:59,780
+Step 13 – Cloud Admin – Reports, notifications, profile and activity
+Generate a report (and the error without an analysis), preview + HTML file, mark notifications read, my recent activity
+
+15
+00:21:00,560 --> 00:21:06,060
+Step 14 – Admin – Dashboard, register an enterprise, choose the enterprise, edit registration
+Search, category filter, paging, enterprise details; registration errors; current enterprise; edit registration
+
+16
+00:22:55,800 --> 00:23:01,300
+Step 15 – Admin – EMSI classification
+12 parameters with inline errors, levels must match the total, fix and calculate: EMSI, category and plan price
+
+17
+00:24:34,920 --> 00:24:40,420
+Step 16 – Admin – Application inventory: register, filters, edit, delete
+Register 2 applications (with field errors and a duplicate), search + filters, view, edit, delete
+
+18
+00:28:07,040 --> 00:28:12,540
+Step 17 – Admin – Components and dependencies, with every error
+Add components, add links (duplicate, self, own parent refused), edit + delete a link, delete a component, impact
+
+19
+00:30:55,120 --> 00:31:00,620
+Step 18 – Admin – Digital twin, profile, change password
+Text view of applications, components and links: one application, criticality filter, another enterprise
+
+20
+00:32:19,880 --> 00:32:25,380
+Step 19 – Architect – Dashboard, current enterprise, applications, first assessment
+Dashboard, choose Tailspin Airlines, read-only application list with filters, assess Flight Booking
+
+21
+00:33:37,680 --> 00:33:43,180
+Step 20 – Architect – Assessments: not assessed yet, run, recalculate
+Crew Scheduler: simulation is refused before the assessment; run it, recalculate it, history
+
+22
+00:34:27,560 --> 00:34:33,060
+Step 21 – Architect – Simulations for every strategy
+Flight Booking with Rehost, Replatform, Refactor (default) and Rebuild; discard one and run again; open a saved one
+
+23
+00:35:49,920 --> 00:35:55,420
+Step 22 – Architect – Create plans: phases 15/20/45/rest, draft, submit
+Phase weeks come from the effort (rounding goes to the last phase); name check; save as draft; submit (no / yes); cancel
+
+24
+00:37:26,800 --> 00:37:32,300
+Step 23 – Architect – My plans: edit the draft, submit, read-only plans
+Status filter, search, edit a draft, submit it (locked), a submitted plan is read-only, a simulation with a plan cannot be discarded
+
+25
+00:39:29,960 --> 00:39:35,460
+Step 24 – Executive – Review, approve one plan, reject another
+Filters on the pending list, the full review screen, approve with a comment, reject (a reason is required), cancel a decision
+
+26
+00:41:28,320 --> 00:41:33,820
+Step 25 – Executive – All plans with filters, decided plans, decision history
+Status / risk / enterprise filters, an approved plan cannot be decided again, decision history
+
+27
+00:42:42,760 --> 00:42:48,260
+Step 26 – Live DB change – psql changes users while the app is open
+Every screen reads fresh from the database: a renamed user shows at once, a deactivated user is logged out at the next click
+
+28
+00:45:10,960 --> 00:45:16,460
+Step 27 – Live DB change – Legacy password hash, a plan decided by someone else
+An old SHA-256 password hash is upgraded at login; a plan approved in psql while the review is open cannot be rejected
+
+29
+00:47:15,800 --> 00:47:21,300
+Step 28 – Executive – Profile, change password, logout, exit
+Edit details (phone check), change password in the profile (errors first), change it back from the menu, logout, exit

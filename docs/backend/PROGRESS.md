@@ -89,6 +89,13 @@ Owner decisions after the final report (2026-11-23):
     database scripts + samples + docs; run.ps1 / setup-postgres-portable.ps1 work from it with no Git, no build and
     no internet when the PostgreSQL zip is next to run.ps1 (or in C:\SecureShiftTools).
 
+27. The COMPLETE walkthrough video (docs/demo/full, release demo-full): every menu option of every role (287 options
+    and error cases, docs/demo/full/COVERAGE.md), 29 clips recorded in order on one database, starting from the
+    offline package. The clips are data (docs/demo/full/clips.js); a dry run types the same keys into the real app
+    first and checks every expected text; scripts/windows/record-full-demo.ps1 records everything with one command.
+28. The console wraps long lines and fits wide tables to the terminal width (text cells end with "..."), so nothing
+    is cut off or wrapped mid-table on a ~120-column window. Piped output (e2e tests) is never wrapped.
+
 ## Bugs found in the manual run / rehearsal (all fixed, with a test)
 
 1. Windows PowerShell 5.1 pipes input as UTF-8 WITH a byte-order mark: the first typed line ("1") was not recognised.
@@ -105,6 +112,14 @@ Owner decisions after the final report (2026-11-23):
    Fix: the SQL goes through a file (psql -f) in the tape and in DEMO_SCRIPT.md.
 8. (videos) Expand-Archive drew a progress bar over the window (and is slow). Fix: System.IO.Compression.ZipFile.
 9. Cosmetic: decision-history comment column wrapped; plan screens got a "Phases:" heading.
+10. (full walkthrough) On a 131-column terminal long lines and wide tables wrapped in the middle of a row.
+    Fix: ConsoleUi wraps text at spaces and narrows the widest text columns (ConsoleWidthTests).
+11. (full walkthrough) A message with one error per line (password change with 3 field errors) was wrapped as one
+    long line ("... number and" / "special character"). Fix: every line is wrapped on its own (ConsoleWidthTests).
+12. (full walkthrough) A Super Admin trying to deactivate their own account got "a Super Admin cannot be deactivated";
+    now the clearer "You cannot deactivate your own account" comes first (same order as the service).
+13. (full walkthrough) The Architect's application list did not show the active search / assessment filter
+    (the Admin's list did). It now shows "Search: ... · Assessment: ...".
 
 ## Known bugs
 

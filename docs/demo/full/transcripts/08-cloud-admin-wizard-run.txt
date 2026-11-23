@@ -121,7 +121,7 @@ Analysis Wizard - Step 3 of 4: Run
 Analysis Wizard - Step 4 of 4: Results
 --------------------------------------
   Analysis ID                     : AN-2026-1115
-  Date                            : 11/23/2026 09:03 PM
+  Date                            : 11/23/2026 09:17 PM
   Company                         : Margie Travel
   Period                          : 08/12/2026 - 11/09/2026 (90 days)
   Identities analysed             : 20
@@ -163,7 +163,7 @@ Previous Analyses
 -----------------
 Analysis ID   Company             Period                   Days  Completed            Identities  Avg Score  Status
 ------------  ------------------  -----------------------  ----  -------------------  ----------  ---------  --------
-AN-2026-1115  Margie Travel       08/12/2026 - 11/09/2026    90  11/23/2026 09:03 PM          20      48.05  Complete
+AN-2026-1115  Margie Travel       08/12/2026 - 11/09/2026    90  11/23/2026 09:17 PM          20      48.05  Complete
 AN-2026-1110  Northwind Traders   08/12/2026 - 11/09/2026    90  11/10/2026 09:42 PM         128      54.00  Complete
 AN-2026-1103  Northwind Traders   08/05/2026 - 11/02/2026    90  11/03/2026 09:10 PM         126      57.00  Complete
 AN-2026-1027  Contoso Retail      09/27/2026 - 10/26/2026    30  10/27/2026 04:35 PM          74      49.00  Complete
@@ -192,7 +192,7 @@ Governance Dashboard
 --------------------
 Welcome back, Aarav Mehta
 Latest analysis complete - Margie Travel
-20 identities analysed from 90 days of Activity Log (08/12/2026 - 11/09/2026) · AN-2026-1115 · 11/23/2026 09:03 PM
+20 identities analysed from 90 days of Activity Log (08/12/2026 - 11/09/2026) · AN-2026-1115 · 11/23/2026 09:17 PM
   Total Identities     : 20
   Average Score        : 48.05
   High-Risk Unused     : 186

@@ -132,7 +132,7 @@ Choose: 1
 Generated Role
 ==============
   Role                  : svc-webapp-deploy-custom-role
-  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:03 PM
+  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:18 PM
   Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
   Original Role         : Contributor (Subscription)
   Suggested Scope       : rg-webapp-prod (Resource Group)
@@ -176,7 +176,7 @@ Choose: 2
 Generated Role
 ==============
   Role                  : svc-webapp-deploy-custom-role
-  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:03 PM
+  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:18 PM
   Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
   Original Role         : Contributor (Subscription)
   Suggested Scope       : rg-webapp-prod (Resource Group)
@@ -213,7 +213,7 @@ Choose: 2
 Generated Role
 ==============
   Role                  : svc-webapp-deploy-custom-role
-  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:03 PM
+  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:18 PM
   Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
   Original Role         : Contributor (Subscription)
   Suggested Scope       : rg-webapp-prod (Resource Group)
@@ -257,7 +257,7 @@ Choose: 3
 Generated Role
 ==============
   Role                  : svc-webapp-deploy-custom-role
-  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:03 PM
+  Status                : Reviewed by Aarav Mehta on 11/23/2026 09:18 PM
   Identity              : Web App Deploy Pipeline (svc-webapp-deploy)
   Original Role         : Contributor (Subscription)
   Suggested Scope       : rg-webapp-prod (Resource Group)

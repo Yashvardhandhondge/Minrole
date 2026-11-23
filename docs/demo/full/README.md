@@ -7,14 +7,37 @@ app (the offline package) and a real PostgreSQL 16 database, starting from zero.
 The videos are **not** in the repository. They are attached to the GitHub pre-release **demo-full**:
 https://github.com/Yashvardhandhondge/Minrole/releases/tag/demo-full
 
-__VIDEO_TABLE__
+| Video | Steps | Length | Size |
+|---|---|---:|---:|
+| **[SecureShift-FULL-walkthrough.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/demo-full/SecureShift-FULL-walkthrough.mp4)** | all 29 steps (00-28) | **48:38** | 242 MB |
+| [SecureShift-01-setup-and-login.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/demo-full/SecureShift-01-setup-and-login.mp4) | 00 setup from zero with the offline package · 01 login errors + forced password change | 4:16 | 20 MB |
+| [SecureShift-02-super-admin.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/demo-full/SecureShift-02-super-admin.mp4) | 02-05 dashboard, users (add / edit / reset / deactivate), audit logs, profile | 5:11 | 23 MB |
+| [SecureShift-03-cloud-admin.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/demo-full/SecureShift-03-cloud-admin.mp4) | 06-13 companies, Analysis Wizard (3 JSON paths + bad files), identities, findings, roles, rules, patterns, reports, notifications | 11:33 | 64 MB |
+| [SecureShift-04-admin.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/demo-full/SecureShift-04-admin.mp4) | 14-18 enterprises, EMSI, applications, components + dependencies, digital twin | 11:19 | 53 MB |
+| [SecureShift-05-architect.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/demo-full/SecureShift-05-architect.mp4) | 19-23 applications, assessments, simulations, create plan (15/20/45/rest %), my plans, submit | 7:10 | 39 MB |
+| [SecureShift-06-executive.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/demo-full/SecureShift-06-executive.mp4) | 24, 25, 28 review, approve, reject, all plans, decision history, profile, change password, exit | 4:35 | 27 MB |
+| [SecureShift-07-live-db-change.mp4](https://github.com/Yashvardhandhondge/Minrole/releases/download/demo-full/SecureShift-07-live-db-change.mp4) | 26, 27 a teammate changes the database with `psql -f` while the app is open | 4:33 | 17 MB |
+
+Each step starts with a 2.5 s title card. H.264 (veryfast, CRF 26), 1920 x 1080, 25 fps.
 
 Chapters (start times of every step): [CHAPTERS.md](CHAPTERS.md) · YouTube chapter list: [chapters-youtube.txt](chapters-youtube.txt)
 · subtitles with the step titles: [SecureShift-FULL-walkthrough.srt](SecureShift-FULL-walkthrough.srt)
 
 ## Coverage
 
-__COVERAGE_SUMMARY__
+**287 / 287 menu options and error cases recorded (100 %)** - nothing was left out as "not recordable".
+
+| Role | Options + error cases | Clips |
+|---|---:|---|
+| Setup (offline package, run.ps1, db status, smoke) | 5 | 00 |
+| Login (wrong number, forgot password, wrong / empty / inactive login, forced password change, deactivated while logged in, legacy SHA-256 hash) | 17 | 01, 26, 27 |
+| Super Admin | 39 | 02-05 |
+| Cloud Admin (Cloud Governance) | 90 | 06-13 |
+| Admin (Application Modernization) | 59 | 14-18 |
+| Architect | 50 | 19-23 |
+| Executive | 26 | 24, 25, 27, 28 |
+| Live database change with `psql -f` (a user renamed while the list is open; the deactivate / legacy-hash / plan-decided-elsewhere cases are counted under Login and Executive) | 1 | 26, 27 |
+| **Total** | **287** | 29 clips |
 
 The full table (step, role, menu path, what is typed, expected result, clip, start time in the full video) is in
 [COVERAGE.md](COVERAGE.md). The text of every screen of every clip is in [transcripts/](transcripts/) (from the dry run:
@@ -62,4 +85,13 @@ powershell -ExecutionPolicy Bypass -File scripts\windows\record-full-demo.ps1 -S
 powershell -ExecutionPolicy Bypass -File scripts\windows\record-full-demo.ps1 -Steps restore
 ```
 
-__RECORDING_FACTS__
+## Facts from the recording (2026-11-23)
+
+- 29 clips, 2918 s of video (FULL = sum of the clips and title cards, checked with ffprobe: difference 0.02 s).
+- Terminal 131 x 35 characters, font size 25, typing speed 70 ms, Windows PowerShell 5.1, VHS 0.12 with Edge headless.
+- Frame check: 948 frames (one every 3 s) read with the Windows OCR - no exception text, no stack trace, no empty
+  screen, the typed logins readable.
+- RAM of the recording processes (VHS + ttyd + PowerShell + the app + headless Edge + PostgreSQL, or ffmpeg):
+  about 1.4 GB while recording, 1.6 GB peak while encoding - one heavy job at a time.
+- Recording all clips takes about 75 minutes (VHS records in real time and renders afterwards); assembling and the
+  frame check about 10 minutes; the dry run before it about 6 minutes.

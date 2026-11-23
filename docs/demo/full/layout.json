@@ -224,8 +224,8 @@
    "prompt": "Confirm new password: "
   },
   {
-   "rows": 6,
-   "lines": 4,
+   "rows": 5,
+   "lines": 3,
    "err": true,
    "ok": false,
    "prompt": "Current (temporary) password: "
@@ -2477,8 +2477,8 @@
    "prompt": "Choose: "
   },
   {
-   "rows": 52,
-   "lines": 50,
+   "rows": 50,
+   "lines": 48,
    "err": false,
    "ok": false,
    "prompt": "Choose: "
@@ -6770,8 +6770,8 @@
    "prompt": "Confirm New Password: "
   },
   {
-   "rows": 20,
-   "lines": 18,
+   "rows": 19,
+   "lines": 17,
    "err": true,
    "ok": false,
    "prompt": "Choose: "

@@ -43,7 +43,7 @@ Executive        8  ####################
 
 Recent activity
 ---------------
-  Password Changed · Mohit Choudhary   (Mohit Choudhary · 11/23/2026 09:02 PM)
+  Password Changed · Mohit Choudhary   (Mohit Choudhary · 11/23/2026 09:16 PM)
   User Created · Rutuja More   (Arya Mujumdar · 11/11/2026 03:54 PM)
   Role Changed · Sonal Shende   (Arya Mujumdar · 11/11/2026 03:21 PM)
   Account Deactivated · Rohit Kale   (Arya Mujumdar · 11/11/2026 12:10 AM)
@@ -53,7 +53,7 @@ Recent access changes
 ---------------------
 User Name        Action               Details                                   Changed By       Updated On
 ---------------  -------------------  ----------------------------------------  ---------------  -------------------
-Mohit Choudhary  Password Changed     Temporary password replaced at first lo…  Mohit Choudhary  11/23/2026 09:02 PM
+Mohit Choudhary  Password Changed     Temporary password replaced at first lo…  Mohit Choudhary  11/23/2026 09:16 PM
 Rutuja More      User Created         Role: Executive                           Arya Mujumdar    11/11/2026 03:54 PM
 Sonal Shende     Role Changed         Admin → Executive                         Arya Mujumdar    11/11/2026 03:21 PM
 Rohit Kale       Account Deactivated  Left project                              Arya Mujumdar    11/11/2026 12:10 AM

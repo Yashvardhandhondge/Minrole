@@ -296,7 +296,7 @@ Manage your account details and password.
   User ID      : USR-012
   Phone        : 9876543221
   Department   : Modernization Office
-  Logged in at : 11/23/2026 09:05 PM
+  Logged in at : 11/23/2026 09:19 PM
   1. Edit details (name, phone, department)
   2. Change password
   0. Back

@@ -22,3 +22,6 @@ The same release also has **SecureShift-offline.zip** (the app without Git, with
 see [docs/backend/TCS_LAPTOP_SETUP.md](../backend/TCS_LAPTOP_SETUP.md).
 
 The live demo keystrokes (about 10 minutes, all roles) are in [DEMO_SCRIPT.md](DEMO_SCRIPT.md).
+
+**The complete walkthrough** (every menu option of every role, every important error case, about 50 minutes, with
+chapters and per-role videos) is in [full/](full/README.md) - release **demo-full**.
