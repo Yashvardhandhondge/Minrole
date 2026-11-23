@@ -58,8 +58,13 @@ if (Test-Path (Join-Path $bin "pg_ctl.exe")) {
     } else {
         Write-Host "Using the zip $ZipPath"
     }
-    Write-Host "Unzipping to $ToolsDir ..."
-    try { Expand-Archive -Path $ZipPath -DestinationPath $ToolsDir -Force -ErrorAction Stop }
+    Write-Host "Unzipping to $ToolsDir (about 1 minute) ..."
+    # .NET's ZipFile instead of Expand-Archive: much faster, and no progress bar drawn over the window
+    if (Test-Path $pgDir) { Remove-Item -Recurse -Force $pgDir }   # a half-unzipped folder from an earlier try
+    try {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipPath, $ToolsDir)
+    }
     catch { Fail "Could not unzip $($ZipPath): $($_.Exception.Message)" }
     if (-not (Test-Path (Join-Path $bin "pg_ctl.exe"))) { Fail "The zip did not contain pgsql\bin\pg_ctl.exe. Is it the 'binaries' zip from EnterpriseDB?" }
     Ok "Unzipped."

@@ -35,7 +35,7 @@ Type "# 1. Portable PostgreSQL 16 in C:\SecureShiftTools (port 5434, this comput
 Enter
 Type "powershell -ExecutionPolicy Bypass -File scripts\windows\setup-postgres-portable.ps1"
 Enter
-Wait+Screen@300s /Or simply run/
+Wait@400s
 Sleep 3s
 
 Type "# 2. The connection string, for this window only"
@@ -48,7 +48,7 @@ Type "# 3. Build (Release)"
 Enter
 Type "dotnet build SecureShift.sln -c Release -v q -nologo"
 Enter
-Wait+Screen@400s /Time Elapsed/
+Wait@600s
 Sleep 2s
 Type "$app = 'src\SecureShift.Console\bin\Release\net8.0\SecureShift.Console.dll'"
 Enter
@@ -57,15 +57,15 @@ Type "# 4. Tables + sample data, then check"
 Enter
 Type "dotnet $app db setup --yes"
 Enter
-Wait+Screen@120s /Run 'db status'/
+Wait@180s
 Sleep 3s
 Type "dotnet $app db status"
 Enter
-Wait+Screen@60s /foreign keys are present/
+Wait@120s
 Sleep 4s
 Type "dotnet $app smoke"
 Enter
-Wait+Screen@60s /EF Core can read/
+Wait@120s
 Sleep 3s
 
 Type "# 5. Start the app"
