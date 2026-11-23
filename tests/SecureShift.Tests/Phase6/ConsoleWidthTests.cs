@@ -37,6 +37,20 @@ public class ConsoleWidthTests
     }
 
     [Fact]
+    public void A_message_with_one_error_per_line_is_wrapped_line_by_line()
+    {
+        // found in the recording: the field errors of a password change were wrapped as one long line
+        var (ui, io) = Narrow(131);
+        ui.ErrorsToStdErr = false;   // like inside the app
+        ui.Error("Current password: Current password is wrong\n        New password: Min 8 characters with uppercase, lowercase, number and special character\n        Confirm: Passwords do not match");
+        Assert.Equal(
+            ["[ERROR] Current password: Current password is wrong",
+             "        New password: Min 8 characters with uppercase, lowercase, number and special character",
+             "        Confirm: Passwords do not match"],
+            Lines(io));
+    }
+
+    [Fact]
     public void A_wide_table_is_narrowed_with_an_ellipsis_and_never_wraps()
     {
         var (ui, io) = Narrow(61);   // 60 usable characters

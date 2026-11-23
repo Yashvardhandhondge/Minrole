@@ -29,6 +29,13 @@ public sealed class ConsoleUi(IConsoleIO io)
     /// <summary>Word wrap: continuation lines keep the indentation of the first line.</summary>
     public static IEnumerable<string> Wrap(string text, int width)
     {
+        // a message with several lines (e.g. one error per field): every line is wrapped on its own
+        if (text.Contains('\n'))
+        {
+            foreach (var part in text.Split('\n'))
+                foreach (var line in Wrap(part.TrimEnd('\r'), width)) yield return line;
+            yield break;
+        }
         if (text.Length <= width) { yield return text; yield break; }
         var indent = new string(' ', Math.Min(text.Length - text.TrimStart().Length, width / 3));
         var rest = text;
