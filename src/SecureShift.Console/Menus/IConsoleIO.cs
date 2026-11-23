@@ -23,6 +23,9 @@ public interface IConsoleIO
 
     /// <summary>Clears the screen when it is a real terminal (does nothing when the output is redirected).</summary>
     void Clear();
+
+    /// <summary>Characters per line of the terminal (int.MaxValue when the output is piped: nothing is wrapped).</summary>
+    int Width { get; }
 }
 
 /// <summary>Thrown when the input ends (EOF, closed pipe). The app then says goodbye and exits with code 0.</summary>
@@ -106,6 +109,16 @@ public sealed class SystemConsoleIO : IConsoleIO
                 chars.Add(key.KeyChar);
                 Console.Write('*');
             }
+        }
+    }
+
+    public int Width
+    {
+        get
+        {
+            if (Console.IsOutputRedirected) return int.MaxValue;
+            try { return Console.WindowWidth > 0 ? Console.WindowWidth : int.MaxValue; }
+            catch (IOException) { return int.MaxValue; }
         }
     }
 

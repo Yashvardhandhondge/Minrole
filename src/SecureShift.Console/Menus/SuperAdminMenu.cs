@@ -200,8 +200,8 @@ public sealed class SuperAdminMenu(ConsoleUi ui, MenuRunner runner, ProfileMenu 
     {
         var u = await users.GetAsync(userId) ?? throw new UserFacingException("This user no longer exists.");
         var deactivate = u.Status == "Active";
-        if (deactivate && u.Role.RoleCode == RoleCodes.SuperAdmin) throw new UserFacingException(UserAdminService.SuperAdminCannotDeactivate);
         if (deactivate && u.UserId == me.UserId) throw new UserFacingException(UserAdminService.CannotDeactivateSelf);
+        if (deactivate && u.Role.RoleCode == RoleCodes.SuperAdmin) throw new UserFacingException(UserAdminService.SuperAdminCannotDeactivate);
         ui.Section(deactivate ? "Confirm Deactivation" : "Confirm Activation");
         ui.WriteLine(deactivate ? "The user will not be able to log in to the platform until activated." : "The user will be able to log in again.");
         if (!ui.AskYesNo($"Are you sure you want to {(deactivate ? "deactivate" : "activate")} {u.FullName}?")) return;

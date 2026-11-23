@@ -184,6 +184,10 @@ write("bad/role-assignments-missing-fields.json", [
   { principalId: guid("principal:rahul.verma"), principalName: "rahul.verma@northwindtraders.com", principalType: "User", displayName: "Rahul Verma", roleDefinitionId: roleId("Owner"), roleDefinitionName: "Owner", scope: `/subscriptions/${SUB}` },
   { principalName: "priya.sharma@northwindtraders.com", principalType: "User", displayName: "Priya Sharma", roleDefinitionId: roleId("Contributor"), roleDefinitionName: "Contributor" },
 ]);
+// valid JSON but the wrong shape: an object instead of a list of role assignments
+fs.writeFileSync(path.join(OUT, "bad/role-assignments-wrong-shape.json"),
+  JSON.stringify({ subscription: SUB, note: "an object, not a list of role assignments", count: 20 }, null, 2) + "\n");
+console.log("bad/role-assignments-wrong-shape.json: a JSON object instead of a list");
 fs.writeFileSync(path.join(OUT, "bad/activity-log-broken.json"),
   '[\n  {"caller": "rahul.verma@northwindtraders.com", "operationName": {"value": "Microsoft.Web/sites/read"}, "eventTimestamp": "2026-09-01T10:00:00Z"\n  {"caller": "priya.sharma@northwindtraders.com"\n');
 console.log("bad/activity-log-broken.json: broken on purpose (missing comma and closing brackets)");

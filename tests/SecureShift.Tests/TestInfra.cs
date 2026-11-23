@@ -123,6 +123,7 @@ public sealed class ScriptedConsoleIO : IConsoleIO
     public void WriteColored(string text, ConsoleColor color) => output.Append(text);
     public void WriteErrorLine(string text) => output.Append(text).Append('\n');
     public void Clear() { }
+    public int Width { get; init; } = 10_000;   // like piped output: nothing is wrapped
 
     public string? ReadLine()
     {

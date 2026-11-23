@@ -52,6 +52,13 @@ public class GovernanceInputTests
     }
 
     [Fact]
+    public async Task The_wrong_shape_sample_file_is_refused_with_a_clear_message()
+    {
+        var ex = await Assert.ThrowsAsync<GovernanceInputException>(() => Load(Samples.Path("bad/role-assignments-wrong-shape.json"), Samples.Activity, Samples.Catalog));
+        Assert.Equal("Schema validation failed: role-assignments-wrong-shape.json must be a JSON array of role assignments (or an object with a \"value\" array), but it is a JSON object", ex.Message);
+    }
+
+    [Fact]
     public async Task Wrong_shape_duplicates_and_unknown_roles()
     {
         var obj = Temp("assignments.json", "{\"hello\": 1}");
